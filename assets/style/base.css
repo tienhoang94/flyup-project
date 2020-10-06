@@ -1,0 +1,50 @@
+:root {
+    --primary-color: #a6ce39;
+    --secondary-color: #004a80;
+    --title-color: #33649f;
+    --text-color: #333333;
+    --bg-light-color: #ffffff;
+    --bg-dark-color: #f7f7f7;
+    --border-color: #d3d7d9;
+    --white-color: #ffffff;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Define Font */
+
+@font-face {
+    font-family: 'SVN-Avo';
+    src: url(../fonts/SVN-Avo.ttf);
+}
+
+
+body {
+    font-family: 'SVN-Avo', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+}
+a {
+    text-decoration: underline;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+button {
+    cursor: pointer;
+}
+input, textarea, button {
+    outline: none;
+    box-shadow: none;
+    font-family: "SVN-Avo", sans-serif;
+}
