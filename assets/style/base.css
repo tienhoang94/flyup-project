@@ -26,6 +26,26 @@ html {
     font-family: 'SVN-Avo';
     src: url(../fonts/SVN-Avo.ttf);
 }
+@font-face {
+    font-family: 'helvetica-neue-condensed-black';
+    src: url(../fonts/helvetica-neue-condensed-black.ttf);
+}
+@font-face {
+    font-family: 'Alegreya-Regular';
+    src: url(../fonts/Alegreya-Regular.ttf);
+}
+@font-face {
+    font-family: 'helvetica-neue-light';
+    src: url(../fonts/helvetica-neue-light.ttf);
+}
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url(../fonts/Helvetica-Bold.ttf);
+}
+@font-face {
+    font-family: 'helvetica-neue-regular';
+    src: url(../fonts/helvetica-neue-regular.ttf);
+}
 
 
 body {
@@ -47,4 +67,25 @@ input, textarea, button {
     outline: none;
     box-shadow: none;
     font-family: "SVN-Avo", sans-serif;
+}
+
+/* Button bow now */
+
+.btn-book {
+    width: 17rem;
+    height: 4rem;
+    border: none;
+    border-radius: 1.6rem;
+    background-color: var(--primary-color);
+    font-size: 1.88rem;
+    line-height: 1.88rem;
+    color: var(--white-color);
+    font-family: 'helvetica-neue-condensed-black';
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
 }
