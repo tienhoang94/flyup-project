@@ -145,7 +145,7 @@
 /* TOP SALES */
 
 .top__sale {
-    background-image: url(../images/top_sales_bg_demo1.png);
+    /* background-image: url(../images/top_sales_bg_demo1.png); */
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
@@ -248,7 +248,10 @@
     color: var(--white-color);
     font-weight: 700;
     line-height: 6rem;
- 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .top__sale-item-content {
@@ -314,11 +317,14 @@
 .top__sale-icon {
     width: 3rem;
     margin-right: 2.2rem ;
+    cursor: pointer;
 }
 
 .top__sale-icon-item {
     height: 4.6rem;
+    transition: height 3;
 }
+
 
 /* Email subcribe */
 
@@ -430,7 +436,6 @@
 .service-plus__list {
     display: flex;
     justify-content: space-between;
-    overflow-x: auto;
 }
 
 .service-plus__item {
@@ -917,13 +922,76 @@ x
 }
 
 
-
-
 .search__container-fly__type-ticket-lable {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     position: relative;
 }
+
+.search__container-option-ticket-list {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    z-index: 1;
+    height: auto;
+    width: 120%;
+    top: 120%;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px rgb(117, 117, 115, 0.5);
+    display: none;
+}
+
+.search__container-option-ticket-item {
+    padding: 10px 5px 10px 25px;
+}
+.search__container-option-ticket-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.search__container-option-ticket-item i {
+    float: right;
+    display: none;
+}
+
+.search__container-option-ticket-item.active i{
+    display: inline-block;
+}
+
+
+.search__container-option-class-list {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    z-index: 1;
+    height: auto;
+    width: 120%;
+    top: 120%;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px rgb(117, 117, 115, 0.5);
+    display: none;
+}
+
+.search__container-option-class-item {
+    padding: 10px 5px 10px 25px;
+}
+.search__container-option-class-item i{
+    float: right;
+    display: none;
+}
+.search__container-option-class-item.active i{
+    display: inline-block;
+}
+
+.search__container-option-class-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.search__container-fly__class-ticket-lable-item {
+
+}
+
+
 
 .search__box {
     margin-left: 12px;
@@ -962,15 +1030,17 @@ x
     justify-content: space-evenly;
     flex-direction: column;
     align-items: flex-start;
+    
+}
+
+.destination-from .content,
+.destination-to .content,
+.time-depature .content,
+.time-comeback .content{
     cursor: pointer;
 }
 
-.destination-from:hover,
-.destination-to:hover,
-.time-depature:hover,
-.time-comeback:hover {
-    background-color: rgba(3, 130, 179, 0.1);
-}
+
 
 .destination-from {
     flex: 5;
@@ -1117,6 +1187,203 @@ x
 
 }
 
+/* search destination */
+
+.destination__container {
+    position: absolute;
+    top: 100%;
+    background-color: var(--white-color);
+    width: 70%;
+    left: -1px;
+    z-index: 3;
+    border: 1px solid #e4e4e4;
+    display: none;
+}
+
+.destination__search-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.destination__search-bar input {
+    width: 100%;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    padding: 10px 10px 10px 15px;
+
+}
+.destination__search-bar i {
+    font-size: 1.5rem;
+    color: #6c757d;
+    padding-left: 15px;
+}
+.des__wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e4e4e4;
+}
+
+.destination__list {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #e4e4e4;
+    cursor: pointer;
+    position: relative;
+}   
+ 
+
+.des_country {
+    border-bottom: 1px solid #e4e4e4;
+    width: 100%;
+    position: relative;
+}
+
+.des_country--active::after{
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -5px;
+    top: 14px;
+    background-color: #2f6eb7;
+}  
+.des_country.des_country--active {
+    background-color: #2f6eb7;
+    color: var(--white-color);
+}   
+.des_country.active .des_country-name{
+    color: var(--white-color);
+}   
+
+.des_country-name {
+    display: block;
+    padding: 13px 20px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #393939;
+    font-weight: 700;
+}
+
+.destination__content {
+    flex: 8;
+    margin: 0 10px;
+}
+
+.des__tab-panel {
+    display: none;
+}
+.des__tab-panel--active {
+    display: block;
+}
+.des_item-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.des__suggestion__label {
+    display: block;
+    padding: 5px 10px;
+    background-color: #f2f2f4;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.des__suggestion__cities {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-bottom: 0.5rem;
+}
+
+.des__suggestion__city {
+    font-size: 1.2rem;
+    display: block;
+    padding: 5px 10px;
+    color: #393939;
+    width: 25%;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+.des__suggestion__city:hover {
+    color: #fff;
+    background-color: #2f6eb7;
+}
+
+.airport__result__wrapper {
+    display: none;
+}
+
+.scrollbar-container {
+
+}
+
+.airport__result {
+
+}
+
+.airport__result__items {
+    margin: 0;
+}
+
+.airport__result__item {
+    cursor: pointer;
+}
+.airport__result__item:nth-child(2n + 1)  {
+    background-color: #eaf5ff;
+}
+
+.airport__result__item--no-result {
+    padding: 10px 15px;
+    cursor: text;
+    font-size: 1.2rem;
+}
+
+.airport__result__link {
+    position: relative;
+    display: block;
+    padding: 7px 15px 7px 45px;
+    color: #393939;
+    font-size: 1.2rem;
+}
+
+.airport__result__icon {
+    position: absolute;
+    top: 3px;
+    left: 15px;
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+.airport__result__code {
+    color: #6c757d;
+    margin-right: 5px;
+}
+.airport__result__code::after {
+    content: '-';
+    margin-left: 5px;
+}
+
+.airport__result__name {
+
+}   
+
+.airport__result__description {
+    display: block;
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+
 
 
 /* Deal Attraction */
@@ -1203,6 +1470,13 @@ x
     height: 1px;
     width: 48%;
     border-bottom: 1px solid #bfdb7d;
+}
+
+.deal__head-nav-item:first-child:hover {
+    background-color: transparent;
+}
+.deal__head-nav-item:first-child:active {
+    color: rgba(116, 151, 21, 0.8);
 }
 
 .deal__head-nav-item:hover {
@@ -1401,10 +1675,6 @@ x
     text-decoration: none;
 }
 
-/* .flash__sale-view__link:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
-} */
 
 .flash__sale-view__container {
     background-color: var(--white-color);
@@ -1412,12 +1682,13 @@ x
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    transition: all 0.5s;
 }
 .flash__sale-view__container:hover {
-    box-sizing: content-box;
-    transform: translateY(-1px);
+    /* box-sizing: content-box; */
+    transform: translateY(-5px);
     box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.4);
-    border: 2px solid var(--primary-color);
+    border: 1px solid var( --primary-color);
 }
 .flash__sale-view__container:hover .flash__sale-view__price::after {
     background-color: var(--primary-color);
@@ -1584,3 +1855,4 @@ x
 .flash__sale-btn {
     margin-top: 5.4rem;
 }
+

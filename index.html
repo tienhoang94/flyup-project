@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/style/base.css">
     <link rel="stylesheet" href="./assets/style/homepage.css">
     <link rel="stylesheet" href="./assets/style/grid.css">
+    <link rel="stylesheet" href="./assets/style/datepicker.css">
 </head>
 <body>
     <div class="wrapper-fluid">
@@ -55,7 +56,7 @@
             </header>
         </div>
         <!-- Top_Sale -->
-        <div class="top__sale wrapper-fluid">
+        <div class="top__sale wrapper-fluid" id = "topSaleBackground" style="background-image: url(./assets/images/top_sales_bg_demo1.png);">
             
             <div class="top__sale-item wrapper">
                 <!-- <img src="./assets/images/top_sales_bg_demo1.png" alt="" class="top__sale-background"> -->
@@ -66,9 +67,9 @@
                 <div class="top__sale-body">
                     <div class="top__sale-content">
                         <div class="top__sale-number">
-                            <span class="top__sale-number-text top__sale-number--active">01.</span>
-                            <span class="top__sale-number-text">02.</span>
-                            <span class="top__sale-number-text">03.</span>
+                            <span class="top__sale-number-text top__sale-number--active" idx="1">01.</span>
+                            <span class="top__sale-number-text" idx="2">02.</span>
+                            <span class="top__sale-number-text" idx="3">03.</span>
                         </div>
                         <div class="top__sale-item-title">
                             <div class="top__sale-item-header">Quảng Châu chỉ từ 5.699K</div>
@@ -82,16 +83,14 @@
                         </div>
                     </div>
                     <div class="top__sale-btn">
-
-
-                        <a href="" class="top__sale-icon">
+                        <div class="top__sale-icon">
                             <!-- <i class="top__sale-icon-item fas fa-angle-left"></i> -->
-                            <img src="./assets/images/icon-left-arrow.png" alt="" class="top__sale-icon-item">
-                        </a>
-                        <a href="" class="top__sale-icon">
-                            <img src="./assets/images/icon-right-arrow.png" alt="" class="top__sale-icon-item">
+                            <img src="./assets/images/icon-left-arrow.png" alt="" class="top__sale-icon-item" action="previous">
+                        </div>
+                        <div class="top__sale-icon">
+                            <img src="./assets/images/icon-right-arrow.png" alt="" class="top__sale-icon-item" action="next">
                             <!-- <i class="top__sale-icon-item fas fa-angle-right"></i> -->
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,30 +103,56 @@
             <div class="wrapper form-search-all">
                 <div class="search__container-fly">
                     <ul class="search__container-fly__list">
-                        <li class="search__container-fly__item">
+                        <li class="search__container-fly__item" id="selectTypeFlyDirection">
                             <i class="fas fa-plane-departure"></i>
-                            <span class="search__container-fly__type-ticket-lable">Khứ hồi</span>
+                            <span class="search__container-fly__type-ticket-lable" id="typeTicketlableSelected">Khứ hồi</span>
                             <i class="fas fa-caret-down"></i>
-                            <!-- <ul class="search__container-option-ticket">
-
-                            </ul> -->
+                            <ul class="search__container-option-ticket-list">
+                                <li class="search__container-option-ticket-item">
+                                    <span class="search__container-fly__type-ticket-lable-item">Một chiều</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <li class="search__container-option-ticket-item active">
+                                    <span class="search__container-fly__type-ticket-lable-item ">Khứ hồi</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <!-- <li class="search__container-option-ticket-item">
+                                    <span class="search__container-fly__type-ticket-lable-item">Quốc tế</span>
+                                    <i class="fas fa-check"></i>
+                                </li> -->
+                            </ul>
                         </li>
                         <li class="search__container-fly__item">
                             <i class="fas fa-user-tie"></i>
                             <span class="search__container-fly__type-ticket-lable">01 người lớn</span>
                             <i class="fas fa-caret-down"></i>
                         </li>
-                        <li class="search__container-fly__item">
+                        <li class="search__container-fly__item" id="selectTypeFlyClass">
                             <i class="fas fa-couch"></i>
-                            <span class="search__container-fly__type-ticket-lable">Phổ thông</span>
+                            <span class="search__container-fly__type-ticket-lable" id="classTicketlableSelected">Phổ thông</span>
                             <i class="fas fa-caret-down"></i>
+                            <ul class="search__container-option-class-list">
+                                <li class="search__container-option-class-item active">
+                                    <span class="search__container-fly__class-ticket-lable-item">Phổ thông</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <li class="search__container-option-class-item">
+                                    <span class="search__container-fly__class-ticket-lable-item">Thương gia</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <li class="search__container-option-class-item">
+                                    <span class="search__container-fly__class-ticket-lable-item">Hạng nhất</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                               
+                            </ul>
                         </li>
                     </ul>
 
                     <div class="search__box">
                         <div class="destination-from">
                             <span class="title">Từ</span>
-                            <span class="content">Hà Nội(Tất cả các sân bay)(HAN)</span>
+                            <span class="content" id="des__name-from">Hà Nội(Tất cả các sân bay)(HAN)</span>
                         </div>
                         <div class="turn__des-icon">
                             <svg width="20px" height="20px" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg"><title>Group 11</title><desc>Created with Sketch.</desc><defs></defs><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" opacity="0.900000036" stroke-linejoin="round"><g transform="translate(-414.000000, -294.000000)" stroke="#41b4e8"><g transform="translate(180.000000, 222.000000)"><g transform="translate(0.000000, 48.000000)"><g><g transform="translate(226.000000, 16.000000)"><g transform="translate(9.000000, 8.000000)"><polyline points="0 6 13 6 8.99335057 0"></polyline><polyline transform="translate(6.500000, 13.000000) scale(-1, -1) translate(-6.500000, -13.000000) " points="0 16 13 16 8.99335057 10"></polyline></g></g></g></g></g></g></g></svg>
@@ -147,6 +172,243 @@
                         <div class="action__search-icon">
                             <i class="fas fa-search"></i>
                         </div>
+                        <div class="destination__container">
+                            <div class="destination__search-bar">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Thành phố hoặc sân bay">
+                            </div>
+                            <div class="des__wrapper">
+                                <ul class="destination__list">
+                                    <li class="des_country des_country--active" idx ="1">
+                                        <span class="des_country-name ">Việt Nam</span>
+                                    </li>
+                                    <li class="des_country" idx ="2">
+                                        <span class="des_country-name">Trung Quốc</span>
+                                    </li>
+                                    <li class="des_country" idx ="3">
+                                        <span class="des_country-name">Châu Á</span>
+                                    </li>
+                                    <li class="des_country" idx ="4">
+                                        <span class="des_country-name">Châu Âu</span>
+                                    </li>
+                                    <li class="des_country" idx ="5">
+                                        <span class="des_country-name">Châu Mỹ</span>
+                                    </li>
+                                    <li class="des_country" idx ="6">
+                                        <span class="des_country-name">Châu Úc</span>
+                                    </li>
+                                </ul>
+                                <div class="destination__content">
+                                    <div class="des__tab-panel des__tab-panel--active">
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Miền Bắc</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Miền Bắc</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="des__tab-panel ">
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Trung Quốc</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Miền Bắc</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="des__tab-panel ">
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Châu Á</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Miền Bắc</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="des__tab-panel ">
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Miền Bắc</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Châu Âu</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="des__tab-panel ">
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Châu Mỹ</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Miền Bắc</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="des__tab-panel ">
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Châu Úc</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                        <div class="des_item-section">
+                                            <label class="des__suggestion__label">Miền Bắc</label>
+                                            <div class="des__suggestion__cities">
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                                <span class="des__suggestion__city">Hà Nội</span>
+                                                <span class="des__suggestion__city">Hải Phòng</span>
+                                                <span class="des__suggestion__city">Vân Đồn</span>
+                                                <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="airport__result__wrapper ">
+                                <div class="scrollbar-container airport__result">
+                                    <ul class="airport__result__items">
+                                        <li class="airport__result__item airport__result__item--no-result">Không tìm thấy kết quả nào phù hợp</li>
+                                        <li class="airport__result__item">
+                                            <div class="airport__result__link">
+                                                <i class="fas fa-plane airport__result__icon"></i>
+                                                <span class="airport__result__code">HAN</span>
+                                                <span class="airport__result__name">Hà Nội, Việt Nam</span>
+                                                <span class="airport__result__description">Cảng hàng không quốc tế Nội Bài</span>
+                                            </div>
+                                        </li>
+                                        <li class="airport__result__item">
+                                            <div class="airport__result__link">
+                                                <i class="fas fa-plane airport__result__icon"></i>
+                                                <span class="airport__result__code">HAN</span>
+                                                <span class="airport__result__name">Hà Nội, Việt Nam</span>
+                                                <span class="airport__result__description">Cảng hàng không quốc tế Nội Bài</span>
+                                            </div>
+                                        </li>
+                                        <li class="airport__result__item">
+                                            <div class="airport__result__link">
+                                                <i class="fas fa-plane airport__result__icon"></i>
+                                                <span class="airport__result__code">HAN</span>
+                                                <span class="airport__result__name">Hà Nội, Việt Nam</span>
+                                                <span class="airport__result__description">Cảng hàng không quốc tế Nội Bài</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                    </div>
+                                    <div class="ps__rail-y" style="top: 0px; right: 0px; height: 400px;">
+                                        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class=" search__type">
@@ -299,7 +561,7 @@
                         <img src="./assets/images/icon_deal_path.png" alt="">
                     </div>
                     <ul class="deal__head-nav">
-                        <li class="deal__head-nav-item ">FLASH SALE</li>
+                        <li class="deal__head-nav-item " id="flashSaleClick">FLASH SALE</li>
                         <li class="deal__head-nav-item active" >Khách sạn</li>
                         <li class="deal__head-nav-item">Vé máy bay</li>
                         <li class="deal__head-nav-item">Tour du lịch</li>
@@ -320,15 +582,21 @@
                             <span class="flash__sale-time-title">THỜI HẠN BOOK DEAL CHỈ CÒN</span>
                             <ul class="flash__sale-time__list">
                                 <li class="flash__sale-time-item">
-                                    <div class="time__number">2</div>
+                                    <div class="time__number" id="dateTimeCountDown">
+                                        <span class="index">2</span>
+                                    </div>
                                     <div class="time__name">NGÀY</div>
                                 </li>
                                 <li class="flash__sale-time-item">
-                                    <div class="time__number">6</div>
+                                    <div class="time__number" id="hourTimeCountDown" width="150px" height="150px">
+                                        <span class="index">6</span>
+                                    </div>
                                     <div class="time__name">GIỜ</div>
                                 </li>
-                                <li class="flash__sale-time-item">
-                                    <div class="time__number">45</div>
+                                <li class="flash__sale-time-item" >
+                                    <div class="time__number" id="minuteTimeCountDown">
+                                        <span class="index">45</span>    
+                                    </div>
                                     <div class="time__name">PHÚT</div>
                                 </li>
                             </ul>
@@ -607,7 +875,7 @@
                     </li>
                     <li class="service-plus__item" idx="2">
                         <!-- <div class="service-plus__img" style="background-image: url(https://www.dulichdaiviet.com/temp/-uploaded-tour-maldives_tourdulichMaldives-5sao_cr_800x500.jpg);"></div> -->
-                        <img class="service-plus__img" src="data:image/jpeg;base64,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" alt="">
+                        <img class="service-plus__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwalDSlftr3vK3UL1Px8Lfv2B4jWdCYmJywg&usqp=CAU" alt="">
                         <h5 class="service-plus__body-with">đi kèm vé máy bay</h5>
                         <h4 class="service-plus__body-title">Xe đưa đón sân bay</h4>
                         <div class="service-plus__body-price">
@@ -738,7 +1006,10 @@
 
     <!-- Script  -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <!-- <script src="main.js"></script> -->
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <script src="./assets/js/main.js"></script>
+    <!-- <script src="./assets/js/kinetic.js"></script> -->
+    <!-- <script src="./assets/js/jquery-final-countdown.js"></script> -->
 
 </body>
 </html>
