@@ -42,7 +42,24 @@ $(document).ready(function () {
 
             
         });
+        
+        //Header
 
+        $("#openTabMenu").click (function () {
+            $(".navbar__overlay").show();
+            $(".nav__mobile").css("transform","translateX(0)");
+            // $("body .noscroll").css("overflow","hidden","position","fixed");
+        })
+
+        $(".nav_mobile-close").click(function() {
+            $(".nav__mobile").css("transform","translateX(-100%)");
+            $(".navbar__overlay").hide();
+        })
+        $(".navbar__overlay").click(function() {
+            $(".nav__mobile").css("transform","translateX(-100%)");
+            $(".navbar__overlay").hide();
+        })
+    
         // Flash Sales 
         $("#flashSaleClick").click(function(){
             $(".flash__sale").slideToggle("slow");
@@ -74,8 +91,14 @@ $(document).ready(function () {
             $(".top__sale-item-header").text(arrTopSale[targetIndex-1].header);
             $(".top__sale-item-content").text(arrTopSale[targetIndex-1].content);
             $(".top__sale-item-place-name").text(arrTopSale[targetIndex-1].destination);
-            $("#topSaleBackground").css("background-image","url(" + arrTopSale[targetIndex-1].img + ")");
+            $("#topSaleBackground").animate({opacity: '0.5'}, "slow",function() {
+                $(this).animate({opacity: '1'}, "slow");
+            }).css("background-image","url(" + arrTopSale[targetIndex-1].img + ")");
         })
+
+        // interval = setInterval(function () {
+        //     $("#top__sale-icon-item--next").click();
+        // }, 5000);
 
 
         // Box search
@@ -104,8 +127,15 @@ $(document).ready(function () {
         
 
         $("#des__name-from").click(function() {
+            $(".destination__container").css("left","0%")
             $(".destination__container").toggle();
         })
+
+        $("#des__name-to").click(function() {
+            $(".destination__container").css("left","20%")
+            $(".destination__container").toggle();
+        })
+
 
         $(".des_country").click(function(){
             $(".des_country").removeClass("des_country--active");
@@ -114,8 +144,6 @@ $(document).ready(function () {
             $(".des__tab-panel").removeClass("des__tab-panel--active");
             $(".des__tab-panel:nth-child("+currIndex+")").addClass("des__tab-panel--active");
         });
-
-     
 
         $(".destination__search-bar input").on('input',function() {
             let inputContent = $(this).val();
@@ -131,36 +159,74 @@ $(document).ready(function () {
         $(".des__suggestion__city").click(function () {
             let desText = $(this).text();
             $(".destination__container").hide();
-            console.log(desText);
-            $("#des__name-from").text(desText);
+            if ($(".destination__container").css("left") == "0%") {
+                $("#des__name-from").text(desText);
+            } else {
+                $("#des__name-to").text(desText);
+                $("#des__name-to").removeClass("placeholderName");
+            }
         })
+        $(".airport__result__item:not(.airport__result__item.airport__result__item--no-result)").click(function() {
+            let airportText = $(this).text();
+            $(".destination__container").hide();
+            $("#des__name-from").text(airportText);
+        });
+
+        $(".turn__des-icon").click(function() {
+            let airportNameFrom = $("#des__name-from").text();
+            $("#des__name-from").text($("#des__name-to").text());
+            $("#des__name-to").text(airportNameFrom);
+        })
+
 
         function ChangeSlideServicePlus () {
             var stt = 1;
             var endImg = $(".service-plus__item:last-child").attr("idx");
+            var iconShow = 0;
+            var listIconShowHtml = "";
+            if (endImg%3 == 0) {
+                iconShow = endImg/3;
+            } else {
+                iconShow = Math.floor(endImg/3) + 1;
+            }
+            for (let i = 1; i <= iconShow; ++i) {
+                if (i == 1) {
+                    listIconShowHtml += '<li class="service-plus__pagination-item-view service-plus__pagination--active" idx="'+i+'"> </li>';
+                } else {
+                    listIconShowHtml += '<li class="service-plus__pagination-item-view " idx="'+i+'"> </li>';
+                }
+                if (i == iconShow) {
+                    $(".service-plus__pagination-view").html(listIconShowHtml);
+                }
+            }
             $(".service-plus__pagination-item-view").click(function () {
                 stt = $(this).attr("idx");
-                console.log(stt);
+                stt = parseInt(stt)*2 + (stt - 2);
                 changeImg(stt);
             });
         
+           
             $(".service-plus__pagination-item:first-child").click(function () {
-                stt = $(this).attr("idx");
-                if (++stt > endImg) {
+                stt -=3;
+                if (stt < 1) {
+                    if (endImg%3 == 0) {
+                        stt = endImg - 2;
+                    } else {
+                        stt = Math.floor(endImg/3)*3 + 1;
+                    }
+                }
+        
+                changeImg(stt);
+            });
+            $(".service-plus__pagination-item:last-child").click(function () {
+                stt +=3;
+                if (stt > endImg) {
                     stt = 1;
                 }
         
                 changeImg(stt);
             });
         
-            $(".service-plus__pagination-item:last-child").click(function () {
-                stt = $(this).attr("idx");
-                if (--stt < 1) {
-                    stt = endImg;
-                }
-        
-                changeImg(stt);
-            });
         
             var interval = 0;
             var timer = function () {
@@ -174,28 +240,44 @@ $(document).ready(function () {
             //Remove active all buttton and set "active" for button have index "stt"
             //Reset timer when change image
             function changeImg(stt) {
+                stt = parseInt(stt)
                 $(".service-plus__item").hide();
-                $(".service-plus__item").eq(stt).fadeIn(500);
-                // $(".service-plus__item [idx='"+stt+"']").fadeIn(500);
-                $(".service-plus__pagination-item-view").removeClass(".service-plus__pagination--active");
-                $(".service-plus__pagination-item-view").eq(stt).addClass(".service-plus__pagination--active");
-        
-                // clearInterval(interval);
+                // $(".service-plus__item:nth-child("++")").fadeIn(500);
+                $(".service-plus__item:nth-child("+stt+")").fadeIn(1000);
+                $(".service-plus__item:nth-child("+(++stt)+")").fadeIn(1000);
+                $(".service-plus__item:nth-child("+(++stt)+")").fadeIn(1000);
+                $(".service-plus__pagination-item-view").removeClass("service-plus__pagination--active");
+                $(".service-plus__pagination-item-view:nth-child("+(stt/3)+")").addClass("service-plus__pagination--active");
+                
+                clearInterval(interval);
                 // timer();
             };
         }
 
         ChangeSlideServicePlus ();
+
+        
       
     }
     
-    $.ModuleCountDown = function () { 
-      
+    $.ModuleCountDown = function () {
+        // var currTimeNow = 0;
+        // var targetTime = 172800;
+        // var restTime = targetTime - currTimeNow;
+        // var minute = restTime / (60*1000);
+        // var hour = minute / 60;
+        // var day = hour/24;
+        
+        // var activeBorder = $(".time__number__container");
+
+        var timeNow, hour, minute, second;
+
         function GetTimeNow () {
-            var timeNow = new Date;
-            var hour = timeNow.getUTCHours();
-            var minute = timeNow.getUTCMinutes();
-            var second = timeNow.getUTCSeconds();
+            
+            timeNow = new Date;
+            hour = timeNow.getUTCHours();
+            minute = timeNow.getUTCMinutes();
+            second = timeNow.getUTCSeconds();
             if (hour + 7 < 10) {
                 hour = "0" + hour;
             }
@@ -205,61 +287,36 @@ $(document).ready(function () {
             if (second < 10) {
                 second = "0" + second;
             }
-            $("#dateTimeCountDown").text(hour + 7);
-            $("#hourTimeCountDown").text(minute);
-            $("#minuteTimeCountDown").text(second);
 
+            $("#dateTimeCountDown span").text(hour + 7);
+            $("#hourTimeCountDown span").text(minute);
+            $("#minuteTimeCountDown span").text(second);
+          
+            fillColorBorder(second*6,  $("#minuteTimeCountDown"));
+            fillColorBorder(minute*6,  $("#hourTimeCountDown"));
+            fillColorBorder((hour + 7)*6,  $("#dateTimeCountDown"));
+            
+            function fillColorBorder(deg, domBorder) {
+                if (deg <= 180){
+                    domBorder.css('background-image','linear-gradient(' + (90+deg) + 'deg, transparent 50%, #99def8 50%),linear-gradient(90deg, #99def8 50%, transparent 50%)');
+                }
+                else{
+                    domBorder.css('background-image','linear-gradient(' + (deg-90) + 'deg, transparent 50%, #a6ce39 50%),linear-gradient(90deg, #99def8 50%, transparent 50%)');
+                }
+            }
+          
         }
 
-        // var canvas = document.getElementById("hourTimeCountDown");
-        // var ctx = canvas.getContext("2d");
-        // ctx.beginPath();
-        // ctx.arc(75, 75 , 73, (- Math.PI/2), 60*30* Math.PI - Math.PI/2);
-        // ctx.fillStyle = "transparent";
-        // ctx.fill();
-        // ctx.stroke();
         // setInterval(function () {
         //     GetTimeNow ();
         // }, 1000);
 
 
-
-        // $('.countdown').final_countdown({
-        //     start: '1362139200',
-        //     end: '1388461320',
-        //     now: '1387461319',
-        //     selectors: {
-        //         value_seconds: '#minuteTimeCountDown .index',
-        //         canvas_seconds: 'minuteTimeCountDown',
-        //         value_minutes: 'hourTimeCountDown',
-        //         canvas_minutes: 'hourTimeCountDown',
-        //         value_hours: 'dateTimeCountDown',
-        //         canvas_hours: 'dateTimeCountDown',
-        //         value_days: '.dateTimeCountDown1',
-        //         canvas_days: 'dateTimeCountDown1'
-        //     },
-        //     seconds: {
-        //         borderColor: '#7995D5',
-        //         borderWidth: '6'
-        //     },
-        //     minutes: {
-        //         borderColor: '#ACC742',
-        //         borderWidth: '6'
-        //     },
-        //     hours: {
-        //         borderColor: '#ECEFCB',
-        //         borderWidth: '6'
-        //     },
-        //     days: {
-        //         borderColor: '#FF9900',
-        //         borderWidth: '6'
-        //     }}, function() {
-        //     // Finish callback
-        // });
     }
-    // $.ModuleCountDown ();
+    $.ModuleCountDown ();
     $.ModuleViewAction();
     
+
 
 });
 
