@@ -103,7 +103,7 @@ $(document).ready(function () {
 
         // Box search
         $("#selectTypeFlyDirection").click(function(){ 
-            $(".search__container-option-ticket-list").slideToggle("fast");
+            $(".search__container-option-ticket-list").toggle();
             $(".search__container-option-ticket-item").click(function () {
                 $(".search__container-option-ticket-item").removeClass("active");
                 $(this).addClass("active");
@@ -112,10 +112,24 @@ $(document).ready(function () {
             })
         })
 
+        $("#selectNumberGuest").click(function(){ 
+            $(".search__container__number").toggle();
+            let adultNumber, childrenNumber, infantNumber;
+            adultNumber = parseInt($("#adultNumber").text());
+            childrenNumber = parseInt($("#childrenNumber").text());
+            infantNumber = parseInt($("#infantNumber").text());
+
+            if (adultNumber === 1) {
+                $("#minusAdultNumber").off('hover');
+            }
+
+            $("#totalNumberGuest").text(adultNumber + childrenNumber + infantNumber);
+        })
+
     
 
         $("#selectTypeFlyClass").click(function(){ 
-            $(".search__container-option-class-list").slideToggle("fast");
+            $(".search__container-option-class-list").toggle();
             $(".search__container-option-class-item").click(function () {
                 $(".search__container-option-class-item").removeClass("active");
                 $(this).addClass("active");

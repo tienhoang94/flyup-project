@@ -21,9 +21,9 @@
 <body>
     <div class="wrapper-fluid ">
         <!-- Header -->
-        <div class="wrapper">
-            <header class="header">
-                <nav class="nav nav--margin ">
+        <div class=" wrapper__header-bg">
+            <header class="wrapper header">
+                <nav class="nav ">
                     <ul class="nav__list hide-on-mobile-table">
                         <li class="nav__item"><a href="index.html" class="nav__link">
                                 <img src="./assets/images/logo-FlyUp.png" alt="logo_flyup" class="nav__link-logo">
@@ -34,7 +34,7 @@
                         <li class="nav__item"><a href="#" class="nav__link">Tin tức</a></li>
                         <li class="nav__item">
                             <div class="nav__item-view-cart">
-                                <div class="nav__item-text">Tra cứu đơn hàng</div>
+                                <div class="nav__item-text-cart">Tra cứu đơn hàng</div>
                             </div>
                         </li>
                         <li class="nav__item nav__item--flex">
@@ -42,7 +42,7 @@
                                 alt="" class="nav__item-avatar">
                             <!-- Has Account -->
                             <div class="nav__item-infor-account">
-                                <div class="nav__item-infor-name">Xin chào</div>
+                                <div class="nav__item-infor-name">Xin chào <span>Antonio Banderas</span></div>
                                 <div class="nav__item-infor-logout">
                                     <a href="" class="nav__item-infor-text">Đăng xuất</a>
                                     <a href="" class="nav__item-infor-text">Chỉnh sửa profile</a>
@@ -190,10 +190,54 @@
                                 </li> -->
                             </ul>
                         </li>
-                        <li class="search__container-fly__item">
+                        <li class="search__container-fly__item" id="selectNumberGuest">
                             <i class="fas fa-user-tie"></i>
-                            <span class="search__container-fly__type-ticket-lable">01 người lớn</span>
+                            <span class="search__container-fly__type-ticket-lable"> <span id="totalNumberGuest">1</span> hành khách</span>
                             <i class="fas fa-caret-down"></i>
+                            <div class="search__container__number">
+                                <div class="search__container__number-title">Vui lòng lựa chọn số lượng hành khách chính xác để xem được mức giá tốt nhất.</div>
+                                <ul class="search__container__number-list">
+                                    <li class="search__container__number-item">
+                                        <div class="search__container__number-lable">Người lớn</div>
+                                        <div class="search__container__number-count">
+                                            <span class="search__container__number-icon" id="minusAdultNumber">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                            <span class="search__container__number-text" id="adultNumber">1</span>
+                                            <span class="search__container__number-icon"  id="plusAdultNumber">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="search__container__number-item">
+                                        <div class="search__container__number-lable">Trẻ em<span>2-11 tuổi</span></div>
+                                        <div class="search__container__number-count">
+                                            <span class="search__container__number-icon" id="minusChildrenNumber">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                            <span class="search__container__number-text" id="childrenNumber">0</span>
+                                            <span class="search__container__number-icon" id="plusChildrenNumber">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="search__container__number-item">
+                                        <div class="search__container__number-lable">Trẻ sơ sinh<span>&lt;2&nbsp;tuổi</span></div>
+                                        <div class="search__container__number-count">
+                                            <span class="search__container__number-icon" id="minusInfantNumber">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                            <span class="search__container__number-text" id="infantNumber">0</span>
+                                            <span class="search__container__number-icon" id="plusInfantNumber">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="search__container__number-done">
+                                    <span>Xong</span>
+                                </div>
+                            </div>
                         </li>
                         <li class="search__container-fly__item" id="selectTypeFlyClass">
                             <i class="fas fa-couch"></i>
@@ -510,7 +554,7 @@
 
                     </div>
                 </div>
-               
+
             </div>
         </div>
 
@@ -534,18 +578,6 @@
                     <h4 class="guide__list__name">NGUYỄN THỊ HẰNG</h4>
                     <h5 class="guide__list__feedback"> <span>TOP 1:</span> ĐÁNH GIÁ TỐT NHẨT</h5>
                     <h5 class="guide__list__major">Du lịch Biển đảo - Châu Á</h5>
-                    <ul class="guide__list-social">
-                        <li class="guide__list-social-icon">
-                            <a href="" class="guide__list-social-icon__link"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="guide__list-social-icon">
-                            <a href="" class="guide__list-social-icon__link guide__list-social-icon__link-color"><i
-                                    class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="guide__list-social-icon">
-                            <a href="" class="guide__list-social-icon__link"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
                     <div class="btn-book guide__list-btn">
                         <span>MUA NGAY</span>
                     </div>
@@ -557,18 +589,6 @@
                     <h4 class="guide__list__name">TRẦN TRUNG QUÂN</h4>
                     <h5 class="guide__list__feedback"> <span>TOP 1:</span> LƯỢT ĐẶT NHIỀU NHẤT</h5>
                     <h5 class="guide__list__major">Du lịch thiền/làm đẹp - Việt Nam</h5>
-                    <ul class="guide__list-social">
-                        <li class="guide__list-social-icon">
-                            <a href="" class="guide__list-social-icon__link"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="guide__list-social-icon">
-                            <a href="" class="guide__list-social-icon__link guide__list-social-icon__link-color"><i
-                                    class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="guide__list-social-icon">
-                            <a href="" class="guide__list-social-icon__link"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
                     <div class="btn-book guide__list-btn">
                         <span>MUA NGAY</span>
                     </div>
@@ -580,18 +600,6 @@
                     <h4 class="guide__list__name">HOÀNG NGỌC QUÝ</h4>
                     <h5 class="guide__list__feedback"> <span>TOP 1:</span> NHIỀU ĐỊA ĐIỂM NHẤT</h5>
                     <h5 class="guide__list__major">Du lịch Thể thao/Leo núi - Việt Nam</h5>
-                    <ul class="guide__list-social">
-                        <li class="guide__list-social-icon">
-                            <a href="" class="guide__list-social-icon__link"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="guide__list-social-icon">
-                            <a href="" class="guide__list-social-icon__link guide__list-social-icon__link-color"><i
-                                    class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="guide__list-social-icon">
-                            <a href="" class="guide__list-social-icon__link"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
                     <div class="btn-book guide__list-btn">
                         <span>MUA NGAY</span>
                     </div>
@@ -1066,58 +1074,118 @@
 
 
         <!-- Footer -->
-        <footer class="footer-background">
-            <div class="wrapper footer-content">
-                <div class="footer__top">
-                    <div class="footer__top-item">
-                        <div class="footer__top-icon">
-                            <img src="./assets/images/icon_address.png" alt="" class="footer__top-icon-img">
+        <footer class="footer__container">
+            <div class="footer__top__container">
+                <div class="wrapper footer__top">
+                    <div class="footer__top-social">
+                        <div class="footer__top-social-logo">
+                            <img src="./assets/images/logo-FlyUp_1.png" alt="logo_flyup" class="nav__link-logo">
                         </div>
-                        <div class="footer__top-title">Địa chỉ</div>
-                        <div class="footer__top-detail">3931 Hinkle Deegan Lake Road </div>
-                        <div class="footer__top-detail">Binghamton, NY 13904 </div>
-                    </div>
-                    <div class="footer__top-item">
-                        <div class="footer__top-icon">
-                            <img src="./assets/images/icon_mail.png" alt="" class="footer__top-icon-img">
+                        <div class="footer__top-social-des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt
                         </div>
-                        <div class="footer__top-title">Email</div>
-                        <div class="footer__top-detail">info@travel.com </div>
-                        <div class="footer__top-detail">info@tourism.com</div>
-                    </div>
-                    <div class="footer__top-item">
-                        <div class="footer__top-icon">
-                            <img src="./assets/images/icon_phone.png" alt="" class="footer__top-icon-img">
-                        </div>
-                        <div class="footer__top-title">Tổng đài 24/7</div>
-                        <div class="footer__top-detail">+1800 246 7813 </div>
-                        <div class="footer__top-detail">+1800 246 7813 </div>
-                    </div>
+                        <ul class="footer__top-social-icon-list">
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-youtube"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-twitter"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-google-plus-g"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-instagram"></i></a>
+                            </li>
+                           
+                        </ul>
 
+                    </div>
+                    <div class="footer__top-menu">
+                        <h5 class="footer__top-menu-title">MENU</h5>
+                        <ul class="footer__top-menu-list">
+                            <li class="footer__top-menu-item"><a href="">Vé máy bay</a></li>
+                            <li class="footer__top-menu-item"><a href="">Tour - Combo du lịch</a></li>
+                            <li class="footer__top-menu-item"><a href="">Khách sạn</a></li>
+                            <li class="footer__top-menu-item"><a href="">Thuê xe - Đưa đón</a></li>
+                            <li class="footer__top-menu-item"><a href="">Cố vấn du lịch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__top-menu">
+                        <h5 class="footer__top-menu-title">Hợp tác - đầu tư</h5>
+                        <ul class="footer__top-menu-list">
+                            <li class="footer__top-menu-item"><a href="">Đăng nhập (nhà cung cấp)</a></li>
+                            <li class="footer__top-menu-item"><a href="">Chính sách hợp tác</a></li>
+                            <li class="footer__top-menu-item"><a href="">Lĩnh vực - Danh mục đầu tư</a></li>
+                            <li class="footer__top-menu-item"><a href="">Cơ hội đầu tư </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__top-contact">
+                        <div class="footer__top-address">
+                            <div class="footer__top-icon">
+                                <img src="./assets/images/icon_address.png" alt="" class="footer__top-icon-img">
+                            </div>
+                            <div class="footer__top-title footer__top-title--margin">Địa chỉ</div>
+                            <div class="footer__top-detail">3931 Hinkle Deegan Lake Road </div>
+                            <div class="footer__top-detail">Binghamton, NY 13904 </div>
+                        </div>
+                        <div class="footer__top-email-tel">
+                            <div class="footer__top-email-tel-wrap">
+                                <div class="footer__top-icon">
+                                    <img src="./assets/images/icon_mail.png" alt="" class="footer__top-icon-img">
+                                </div>
+                                <div class="footer__top-title">Email</div>
+                            </div>
+                            <div>
+                                <div class="footer__top-detail">info@travel.com </div>
+                                <div class="footer__top-detail">info@tourism.com</div>
+                            </div>
+                        </div>
+                        <div class="footer__top-email-tel">
+                            <div class="footer__top-email-tel-wrap">
+                                <div class="footer__top-icon">
+                                    <img src="./assets/images/icon_phone.png" alt="" class="footer__top-icon-img">
+                                </div>
+                                <div class="footer__top-title">Tổng đài 24/7</div>
+                            </div>
+                           
+                            <div>
+                                <div class="footer__top-detail">+1800 246 7813 </div>
+                                <div class="footer__top-detail">+1800 246 7813 </div>
+                           </div>
+                        </div>
+                    </div>
                 </div>
+               
 
-                <div class="footer_bottom">
-                    <ul class="footer_bottom-list-icon">
-                        <li class="footer_bottom-icon">
-                            <a href="" class="footer_bottom-link"><i
-                                    class="footer_bottom-link-icon fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="footer_bottom-icon">
-                            <a href="" class="footer_bottom-link"><i
-                                    class="footer_bottom-link-icon fab fa-twitter"></i></a>
-                        </li>
-                        <li class="footer_bottom-icon">
-                            <a href="" class="footer_bottom-link"><i
-                                    class="footer_bottom-link-icon fab fa-instagram"></i></a>
-                        </li>
-                        <li class="footer_bottom-icon">
-                            <a href="" class="footer_bottom-link"><i
-                                    class="footer_bottom-link-icon fab fa-pinterest"></i></a>
-                        </li>
-                    </ul>
-                    <div class="footer_bottom-copyright">
-                        &copy; 2017 <span>Flyup.vn,</span> All Rights Reserved
+            </div>
+            <div class="footer__bottom__container">
+                <div class="wrapper footer__bottom">
+                    <div class="footer__bottom-copyright">
+                        Copyright@FlyUp2020
                     </div>
+                    <ul class="footer__bottom-infor-list">
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Chính sách bảo mật </a>
+                        </li>
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Chính sách bảo hành </a>
+                        </li>
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Điều khoản sử dụng </a>
+                        </li>
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Các câu hỏi thường gặp </a>
+                        </li>
+                    </ul>   
                 </div>
             </div>
         </footer>
