@@ -1237,7 +1237,7 @@ x
 
 .search__box .title {
     font-family: 'Alegreya-Regular';
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #0382b3;
     font-weight: 600;
     padding-top: 10px;
@@ -1266,6 +1266,7 @@ x
 .time-depature .content,
 .time-comeback .content{
     cursor: pointer;
+    font-size: 1.8rem;
 }
 
 
@@ -1822,8 +1823,6 @@ x
     display: flex;
     justify-content: center;
     align-items: center;
-  
-
     position: relative;
     top: 0.5rem;
     left: 0.5rem;
@@ -1840,8 +1839,6 @@ x
 
 .flash__sale-view {
     height: 72.6rem;
-    background-repeat: no-repeat;
-    /* background-size: cover; */
     position: relative;
     margin-top: 2.7rem;
     display: flex;
@@ -1849,12 +1846,27 @@ x
     padding-left: 15%;
 }
 
+.flash__sale-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+
+/* .flash__sale-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+} */
+
 
 .flash__sale-view-action {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 5%;
+    z-index: 1;
 }
 
 .view-direction {
@@ -1929,6 +1941,7 @@ x
     display: flex;
     justify-content: flex-end;
     padding-top: 3%;
+    z-index: 1;
 }
 
 .flash__sale-view-item {
@@ -2202,6 +2215,7 @@ x
     display: flex;
     font-size: 2.8rem;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .float-content__left-direction {
@@ -2345,4 +2359,27 @@ x
 .deal__attraction-img-change:hover {
     z-index: 1;
     width: 60%;
+}
+
+/* nav scroll to top */
+.btn-scroll-to-top {
+    position: fixed;
+    bottom: 34px;
+    right: 55px;
+    display: none;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 47px;
+    height: 47px;
+    visibility: visible;
+    color: rgb(255, 255, 255);
+    background: #32d093;
+    border-radius: 50%;
+    font-size: 20px;
+    -webkit-text-stroke: 2px #32d093;
+    padding-bottom: 4px;
+    z-index: 9998;
+    cursor: pointer;
 }

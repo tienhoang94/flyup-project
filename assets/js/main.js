@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $.ModuleViewAction = function () {
-        let arrTopSale = [
+        var arrTopSale = [
             {
                 header : 'Quảng Châu chỉ từ 5.699K',
                 content : '8 Ngày 7 đêm, bay khứ hồi, khách sạn 4 sao và full dịch vụ khác',
@@ -21,11 +21,71 @@ $(document).ready(function () {
             }
         ]
 
+        var arrDealAttractionFly = [
+            {
+                id: 1,
+                fromName : "hà nội",
+                toName : "sài gòn",
+                turn : "1" , //1: một chiều, 2: khứ hồi
+                price : "736.000đ",
+                totalDate : "5 ngày",
+                amountSold : "130",
+                description : "Đã bao gồm tất cả các loại thuế phí",
+                linkImg : "https://mytourcdn.com/upload_images/Image/Nhu_Ha%20Long/c%C3%B4n%20%C4%91%E1%BA%A3o/hon%20bay%20canh.jpg"
+            },
+            {
+                id: 2,
+                fromName : "hồ chí minh",
+                toName : "đà nẵng",
+                turn : "1" , //1: một chiều, 2: khứ hồi
+                price : "888.000đ",
+                totalDate : "2 ngày",
+                amountSold : "100",
+                description : "Đã bao gồm dịch vụ ăn uống",
+                linkImg : "https://www.bambooairways.com/image/d3AtY29udGVudC91cGxvYWRzL3NpdGVzLzYvMjAyMDA5MTcxNDI4NTIvMDExLmpwZw==?q=85&w=727&h=528&focus_top=50&focus_left=50"
+            },
+            {
+                id: 3,
+                fromName : "cam ranh",
+                toName : "hà nội",
+                turn : "2" , //1: một chiều, 2: khứ hồi
+                price : "666.000đ",
+                totalDate : "2 ngày",
+                amountSold : "100",
+                description : "Đã bao gồm tất cả các loại thuế phí",
+                linkImg : "https://vnn-imgs-f.vgcloud.vn/2019/04/10/18/phu-quoc.jpg"
+            },
+            {
+                id: 4,
+                fromName : "phú quốc",
+                toName : "hà nội",
+                turn : "2" , //1: một chiều, 2: khứ hồi
+                price : "999.000đ",
+                totalDate : "1 ngày",
+                amountSold : "130",
+                description : "Đã bao gồm tất cả các loại thuế phí",
+                linkImg : "https://cdn1.ivivu.com/iVivu/2020/06/20/14/vinpearl-phu-quoc-resort-spa-cr-800x450.jpg"
+            },
+            {
+                id: 5,
+                fromName : "hà nội",
+                toName : "sài gòn",
+                turn : "1" , //1: một chiều, 2: khứ hồi
+                price : "736.000đ",
+                totalDate : "5 ngày",
+                amountSold : "130",
+                description : "Đã bao gồm tất cả các loại thuế phí",
+                linkImg : "https://dongtayland.vn/wp-content/uploads/2019/12/Khach-san-cao-cap-o-Phu-quoc-tang-truong-nhanh.jpg"
+            },
+        ]
+
         // Close outside to hide content
         $(document).mouseup(function(e) {
             var containerDestination = $(".destination__container");
             var containerFlyDirection = $(".search__container-option-ticket-list");
             var containerFlyClass = $(".search__container-option-class-list");
+            var containerGuestNumber = $(".search__container__number");
+            var containerCalendar = $(".calendar__container");
             // if the target of the click isn't the container nor a descendant of the container
             if (!containerDestination.is(e.target) && containerDestination.has(e.target).length === 0) 
             {
@@ -39,6 +99,16 @@ $(document).ready(function () {
             {
                 containerFlyClass.hide();
             }   
+            if (!containerGuestNumber.is(e.target) && containerGuestNumber.has(e.target).length === 0) 
+            {
+                containerGuestNumber.hide();
+            }   
+        
+            if (!containerCalendar.is(e.target) && containerCalendar.has(e.target).length === 0) 
+            {
+                containerCalendar.hide();
+            }   
+        
 
             
         });
@@ -113,21 +183,58 @@ $(document).ready(function () {
         })
 
         $("#selectNumberGuest").click(function(){ 
-            $(".search__container__number").toggle();
+    
+            $(".search__container__number").show();
             let adultNumber, childrenNumber, infantNumber;
             adultNumber = parseInt($("#adultNumber").text());
             childrenNumber = parseInt($("#childrenNumber").text());
             infantNumber = parseInt($("#infantNumber").text());
-
-            if (adultNumber === 1) {
-                $("#minusAdultNumber").off('hover');
-            }
-
+            $("#plusAdultNumber").click(function(){
+                ++adultNumber;
+                $("#adultNumber").text(adultNumber);
+            })
+            $("#minusAdultNumber").click(function(){
+                if (adultNumber > 1) {
+                    --adultNumber;
+                    $("#adultNumber").text(adultNumber);
+                }
+            })
+            $("#plusChildrenNumber").click(function(){
+                ++childrenNumber;
+                $("#childrenNumber").text(childrenNumber);
+            })
+            $("#minusChildrenNumber").click(function(){
+                if (childrenNumber > 0) {
+                    --childrenNumber;
+                    $("#childrenNumber").text(childrenNumber);
+                }
+            })
+            $("#plusInfantNumber").click(function(){
+                ++infantNumber;
+                $("#infantNumber").text(infantNumber);
+            })
+            $("#minusInfantNumber").click(function(){
+                if (infantNumber > 0) {
+                    --infantNumber;
+                    $("#infantNumber").text(infantNumber);
+                }
+            })
             $("#totalNumberGuest").text(adultNumber + childrenNumber + infantNumber);
+
+            $("#closeTabNumberGuest").click(function(){
+                console.log("AAA");
+                $(".search__container__number").show();
+            })
+
         })
 
-    
+        $("#dateDepature").click(function() {
+            $(".calendar__container").show();
+            let date = new Date($("#valueDateDeparture").val());
+            console.log(date);
+        })
 
+       
         $("#selectTypeFlyClass").click(function(){ 
             $(".search__container-option-class-list").toggle();
             $(".search__container-option-class-item").click(function () {
@@ -138,7 +245,6 @@ $(document).ready(function () {
             })
         })
 
-        
 
         $("#des__name-from").click(function() {
             $(".destination__container").css("left","0%")
@@ -190,6 +296,38 @@ $(document).ready(function () {
             let airportNameFrom = $("#des__name-from").text();
             $("#des__name-from").text($("#des__name-to").text());
             $("#des__name-to").text(airportNameFrom);
+        })
+        
+        // Deal attraction
+        
+        $(".deal__attraction-img__left").css("background-image","url(" + arrDealAttractionFly[1-1].linkImg + ")");
+        $(".deal__attraction-img__right").css("background-image","url(" + arrDealAttractionFly[3-1].linkImg + ")");
+        $(".deal__attraction-img").css("background-image","url(" + arrDealAttractionFly[2-1].linkImg + ")");
+        $(".float-content-view-date span").text(arrDealAttractionFly[2-1].totalDate);
+        $(".float-content-view-amount span").text(arrDealAttractionFly[2-1].amountSold);
+        $(".float-content__left-des span:first-child").text(arrDealAttractionFly[2-1].fromName);
+        $(".float-content__left-des span:last-child").text(arrDealAttractionFly[2-1].toName);
+        $(".float-content__price").text(arrDealAttractionFly[2-1].price);
+        $(".float-content__note").text(arrDealAttractionFly[2-1].description);
+        if (arrDealAttractionFly[2-1].turn == "1") {
+            $(".float-content__left-direction i:last-child").hide();
+        }        
+        $(".deal__attraction-img__right").click(function(){
+            
+        })
+        // scroll back to top
+        $('.btn-scroll-to-top').fadeOut();
+        $(window).scroll(function() {
+            $('.btn-scroll-to-top').css('display', 'flex');
+            if ($(this).scrollTop()) {
+                $('.btn-scroll-to-top').fadeIn();
+            } else {
+                $('.btn-scroll-to-top').fadeOut();
+            }
+        });
+        
+        $(".btn-scroll-to-top").click(function(){
+            $("html, body").animate({scrollTop: 0}, 1000);
         })
 
 
