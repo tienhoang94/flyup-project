@@ -9,16 +9,16 @@
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
 
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" /> -->
-
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/reset.css">
     <link rel="stylesheet" href="./assets/style/base.css">
     <link rel="stylesheet" href="./assets/style/grid.css">
     <link rel="stylesheet" href="./assets/style/homepage.css">
+    <link rel="stylesheet" href="./assets/style/header.css">
+    <link rel="stylesheet" href="./assets/style/formsearch.css">
+    <link rel="stylesheet" href="./assets/style/tourguide.css">
+    <link rel="stylesheet" href="./assets/style/flashsale.css">
+    <link rel="stylesheet" href="./assets/style/footer.css">
     <link rel="stylesheet" href="./assets/style/responsive.css">
 </head>
 
@@ -181,11 +181,11 @@
                                 hồi</span>
                             <i class="fas fa-caret-down"></i>
                             <ul class="search__container-option-ticket-list">
-                                <li class="search__container-option-ticket-item">
-                                    <span class="search__container-fly__type-ticket-lable-item">Một chiều</span>
+                                <li class="search__container-option-ticket-item" type="1">
+                                    <span class="search__container-fly__type-ticket-lable-item" >Một chiều</span>
                                     <i class="fas fa-check"></i>
                                 </li>
-                                <li class="search__container-option-ticket-item active">
+                                <li class="search__container-option-ticket-item active" type="2">
                                     <span class="search__container-fly__type-ticket-lable-item ">Khứ hồi</span>
                                     <i class="fas fa-check"></i>
                                 </li>
@@ -205,7 +205,7 @@
                                     <li class="search__container__number-item">
                                         <div class="search__container__number-lable">Người lớn</div>
                                         <div class="search__container__number-count">
-                                            <span class="search__container__number-icon" id="minusAdultNumber">
+                                            <span class="search__container__number-icon disabled" id="minusAdultNumber">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                             <span class="search__container__number-text" id="adultNumber">1</span>
@@ -217,7 +217,7 @@
                                     <li class="search__container__number-item">
                                         <div class="search__container__number-lable">Trẻ em<span>2-11 tuổi</span></div>
                                         <div class="search__container__number-count">
-                                            <span class="search__container__number-icon" id="minusChildrenNumber">
+                                            <span class="search__container__number-icon disabled" id="minusChildrenNumber">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                             <span class="search__container__number-text" id="childrenNumber">0</span>
@@ -229,7 +229,7 @@
                                     <li class="search__container__number-item">
                                         <div class="search__container__number-lable">Trẻ sơ sinh<span>&lt;2&nbsp;tuổi</span></div>
                                         <div class="search__container__number-count">
-                                            <span class="search__container__number-icon" id="minusInfantNumber">
+                                            <span class="search__container__number-icon disabled" id="minusInfantNumber">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                             <span class="search__container__number-text" id="infantNumber">0</span>
@@ -304,13 +304,14 @@
                         </div>
                         <div class="time-depature">
                             <span class="title">Khởi hành</span>
-                            <span class="content" id="dateDepature">T3,30/06/2020</span>
-                            <!-- <span class="content" ><input type="text" id="dateDepature"></span> -->
+                            <!-- <span class="content" id="dateDeparture">T3,30/06/2020</span> -->
+                            <input class="content" type="date" id="dateDeparture">
                             
                         </div>
                         <div class="time-comeback">
                             <span class="title">Chiều về</span>
-                            <span class="content">T5,02/07/2020</span>
+                            <!-- <span class="content">T5,02/07/2020</span> -->
+                            <input class="content" type="date" id="dateComeback">
                         </div>
                         <div class="action__search-icon">
                             <i class="fas fa-search"></i>
@@ -704,32 +705,32 @@
                 <div class="flash__sale-view" >
                     <!-- <img class="flash__sale-bg" style="background-image: url(/assets/images/bg_flashsale_demo.png);">
                     </img> -->
-                    <div class="flash__sale-bg-container" style="background-image: url(/assets/images/bg_flashsale_demo.png);">
-                        <!-- <img class="flash__sale-bg" src="/assets/images/bg_flashsale_demo.png" alt=""> -->
-                    </div>
-                    <div class="flash__sale-view-action">
-                        <div class="view-direction">
-                            <div class="view-direction-item">
-                                <i class="fas fa-arrow-left"></i>
+                    <div class="flash__sale-bg-container">
+                        <img class="flash__sale-bg" src="/assets/images/bg_flashsale_demo.png" alt="">
+                        <div class="flash__sale-view-action">
+                            <div class="view-direction">
+                                <div class="view-direction-item">
+                                    <i class="fas fa-arrow-left"></i>
+                                </div>
+                                <div class="view-direction-item">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
-                            <div class="view-direction-item">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                        <div class="flash__sale-view-option">
-                            <h4>LOẠI ƯU ĐÃI</h4>
-                            <div class="flash__sale-type-service">
-                                <i class="fas fa-hotel"></i>
-                                <span>KHÁCH SẠN</span>
-                                <i class="fas fa-caret-down"></i>
+                            <div class="flash__sale-view-option">
+                                <h4>LOẠI ƯU ĐÃI</h4>
+                                <div class="flash__sale-type-service">
+                                    <i class="fas fa-hotel"></i>
+                                    <span>KHÁCH SẠN</span>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <ul class="flash__sale-view-list">
-                        <li class="flash__sale-view-item">
+                        <li class="flash__sale-view-item" idx="1">
                             <a href="" class="flash__sale-view__link">
                                 <div class="flash__sale-view__container">
-                                    <div class="flash__sale-view-img"></div>
+                                    <div class="flash__sale-view-img" style=" background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTbNjds2ISldVi7owHKDNTtuKLYbahQiUUQw&usqp=CAU)"></div>
                                     <h4 class="flash__sale-view-name">VINPEARL AOSIS RESORT PHÚ QUỐC</h4>
                                     <h5 class="flash__sale-view-subname">Dành cho khách hàng là member của Vin ID</h5>
                                     <div class="flash__sale-view__number">
@@ -770,10 +771,10 @@
                                 <span>MUA NGAY</span>
                             </div>
                         </li>
-                        <li class="flash__sale-view-item">
+                        <li class="flash__sale-view-item" idx="2">
                             <a href="" class="flash__sale-view__link">
                                 <div class="flash__sale-view__container">
-                                    <div class="flash__sale-view-img"></div>
+                                    <div class="flash__sale-view-img" style=" background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTbNjds2ISldVi7owHKDNTtuKLYbahQiUUQw&usqp=CAU)"></div>
                                     <h4 class="flash__sale-view-name">VINPEARL AOSIS RESORT PHÚ QUỐC</h4>
                                     <h5 class="flash__sale-view-subname">Dành cho khách hàng là member của Vin ID</h5>
                                     <div class="flash__sale-view__number">
@@ -814,10 +815,186 @@
                                 <span>MUA NGAY</span>
                             </div>
                         </li>
-                        <li class="flash__sale-view-item">
+                        <li class="flash__sale-view-item" idx="3">
                             <a href="" class="flash__sale-view__link">
                                 <div class="flash__sale-view__container">
-                                    <div class="flash__sale-view-img"></div>
+                                    <div class="flash__sale-view-img" style=" background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTbNjds2ISldVi7owHKDNTtuKLYbahQiUUQw&usqp=CAU)"></div>
+                                    <h4 class="flash__sale-view-name">VINPEARL AOSIS RESORT PHÚ QUỐC</h4>
+                                    <h5 class="flash__sale-view-subname">Dành cho khách hàng là member của Vin ID</h5>
+                                    <div class="flash__sale-view__number">
+                                        <div class="flash__sale-view-date">
+                                            <i class="far fa-clock"></i>
+                                            <span>05 ngày</span>
+                                        </div>
+                                        <div class="flash__sale-view-amount">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>136</span>
+                                        </div>
+                                        <div class="flash__sale-view__vote">
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class=" fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flash__sale-view__price">
+                                        <div class="flash__sale-view__price-sale">
+                                            <span>Chỉ còn</span>
+                                            <div class="flash__sale-view__price-number">
+                                                <h5>1250</h5>
+                                                <p><span>.000</span><span>VND</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="flash__sale-view__price-origin">
+                                            <span>4.334.000đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="label__sale__off">
+                                        <span class="label__sale__off__number">GIẢM 70%</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="btn-book flash__sale-btn">
+                                <span>MUA NGAY</span>
+                            </div>
+                        </li>
+                        <li class="flash__sale-view-item" idx="4">
+                            <a href="" class="flash__sale-view__link">
+                                <div class="flash__sale-view__container">
+                                    <div class="flash__sale-view-img" style=" background-image: url(https://1.bp.blogspot.com/-_SL0OKLqr4s/W5FMQ7GrNPI/AAAAAAAAZNA/hunRMDL0VyIAtRddr82NZ8O66IfJdemmACLcBGAs/s1600/resort-ho-tram-3.jpg)"></div>
+                                    <h4 class="flash__sale-view-name">VINPEARL AOSIS RESORT PHÚ QUỐC</h4>
+                                    <h5 class="flash__sale-view-subname">Dành cho khách hàng là member của Vin ID</h5>
+                                    <div class="flash__sale-view__number">
+                                        <div class="flash__sale-view-date">
+                                            <i class="far fa-clock"></i>
+                                            <span>05 ngày</span>
+                                        </div>
+                                        <div class="flash__sale-view-amount">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>136</span>
+                                        </div>
+                                        <div class="flash__sale-view__vote">
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class=" fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flash__sale-view__price">
+                                        <div class="flash__sale-view__price-sale">
+                                            <span>Chỉ còn</span>
+                                            <div class="flash__sale-view__price-number">
+                                                <h5>1250</h5>
+                                                <p><span>.000</span><span>VND</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="flash__sale-view__price-origin">
+                                            <span>4.334.000đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="label__sale__off">
+                                        <span class="label__sale__off__number">GIẢM 70%</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="btn-book flash__sale-btn">
+                                <span>MUA NGAY</span>
+                            </div>
+                        </li>
+                        <li class="flash__sale-view-item" idx="5">
+                            <a href="" class="flash__sale-view__link">
+                                <div class="flash__sale-view__container">
+                                    <div class="flash__sale-view-img" style=" background-image: url(https://1.bp.blogspot.com/-_SL0OKLqr4s/W5FMQ7GrNPI/AAAAAAAAZNA/hunRMDL0VyIAtRddr82NZ8O66IfJdemmACLcBGAs/s1600/resort-ho-tram-3.jpg)"></div>
+                                    <h4 class="flash__sale-view-name">VINPEARL AOSIS RESORT PHÚ QUỐC</h4>
+                                    <h5 class="flash__sale-view-subname">Dành cho khách hàng là member của Vin ID</h5>
+                                    <div class="flash__sale-view__number">
+                                        <div class="flash__sale-view-date">
+                                            <i class="far fa-clock"></i>
+                                            <span>05 ngày</span>
+                                        </div>
+                                        <div class="flash__sale-view-amount">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>136</span>
+                                        </div>
+                                        <div class="flash__sale-view__vote">
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class=" fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flash__sale-view__price">
+                                        <div class="flash__sale-view__price-sale">
+                                            <span>Chỉ còn</span>
+                                            <div class="flash__sale-view__price-number">
+                                                <h5>1250</h5>
+                                                <p><span>.000</span><span>VND</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="flash__sale-view__price-origin">
+                                            <span>4.334.000đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="label__sale__off">
+                                        <span class="label__sale__off__number">GIẢM 70%</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="btn-book flash__sale-btn">
+                                <span>MUA NGAY</span>
+                            </div>
+                        </li>
+                        <li class="flash__sale-view-item" idx="6">
+                            <a href="" class="flash__sale-view__link">
+                                <div class="flash__sale-view__container">
+                                    <div class="flash__sale-view-img" style=" background-image: url(https://1.bp.blogspot.com/-_SL0OKLqr4s/W5FMQ7GrNPI/AAAAAAAAZNA/hunRMDL0VyIAtRddr82NZ8O66IfJdemmACLcBGAs/s1600/resort-ho-tram-3.jpg)"></div>
+                                    <h4 class="flash__sale-view-name">VINPEARL AOSIS RESORT PHÚ QUỐC</h4>
+                                    <h5 class="flash__sale-view-subname">Dành cho khách hàng là member của Vin ID</h5>
+                                    <div class="flash__sale-view__number">
+                                        <div class="flash__sale-view-date">
+                                            <i class="far fa-clock"></i>
+                                            <span>05 ngày</span>
+                                        </div>
+                                        <div class="flash__sale-view-amount">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>136</span>
+                                        </div>
+                                        <div class="flash__sale-view__vote">
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class="star-voted fas fa-star"></i>
+                                            <i class=" fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flash__sale-view__price">
+                                        <div class="flash__sale-view__price-sale">
+                                            <span>Chỉ còn</span>
+                                            <div class="flash__sale-view__price-number">
+                                                <h5>1250</h5>
+                                                <p><span>.000</span><span>VND</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="flash__sale-view__price-origin">
+                                            <span>4.334.000đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="label__sale__off">
+                                        <span class="label__sale__off__number">GIẢM 70%</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="btn-book flash__sale-btn">
+                                <span>MUA NGAY</span>
+                            </div>
+                        </li>
+                        <li class="flash__sale-view-item" idx="7">
+                            <a href="" class="flash__sale-view__link">
+                                <div class="flash__sale-view__container">
+                                    <div class="flash__sale-view-img" style="background-image: url(data:image/jpeg;base64,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);"></div>
                                     <h4 class="flash__sale-view-name">VINPEARL AOSIS RESORT PHÚ QUỐC</h4>
                                     <h5 class="flash__sale-view-subname">Dành cho khách hàng là member của Vin ID</h5>
                                     <div class="flash__sale-view__number">
@@ -914,7 +1091,7 @@
                             <ul class="feature__list">
                                 <li class="feature__item">
                                     <div class="feature-icon">
-                                        <i class="fas fa-car-alt"></i>
+                                        <i class="fas fa-plane-departure"></i>
                                     </div>
                                     <span class="feature-text">
                                         khứ hồi
@@ -930,7 +1107,7 @@
                                 </li>
                                 <li class="feature__item">
                                     <div class="feature-icon">
-                                        <i class="fas fa-car-alt"></i>
+                                        <i class="fas fa-utensils"></i>
                                     </div>
                                     <span class="feature-text">
                                         bữa ăn trên máy bay
@@ -938,7 +1115,7 @@
                                 </li>
                                 <li class="feature__item">
                                     <div class="feature-icon">
-                                        <i class="fas fa-car-alt"></i>
+                                        <i class="fas fa-user-shield"></i>
                                     </div>
                                     <span class="feature-text">
                                         hạng economy
@@ -946,7 +1123,7 @@
                                 </li>
                                 <li class="feature__item">
                                     <div class="feature-icon">
-                                        <i class="fas fa-car-alt"></i>
+                                        <i class="fas fa-luggage-cart"></i>
                                     </div>
                                     <span class="feature-text">
                                         7kg xách tay 20kg kí gửi

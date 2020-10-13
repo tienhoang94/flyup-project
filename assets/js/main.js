@@ -141,6 +141,48 @@ $(document).ready(function () {
            
         });
 
+        ChangeSlideFlashSale();
+        function ChangeSlideFlashSale() {
+            let stt = 1;
+            let endImg = $(".flash__sale-view-item:last-child").attr("idx");
+            let iconShow = 0;
+            if (endImg%3 == 0) {
+                iconShow = endImg/3;
+            } else {
+                iconShow = Math.floor(endImg/3) + 1;
+            }
+        
+           
+            $(".view-direction-item:first-child").click(function () {
+                stt -=3;
+                if (stt < 1) {
+                    if (endImg%3 == 0) {
+                        stt = endImg - 2;
+                    } else {
+                        stt = Math.floor(endImg/3)*3 + 1;
+                    }
+                }
+                changeImg(stt);
+            });
+            $(".view-direction-item:last-child").click(function () {
+                stt +=3;
+                if (stt > endImg) {
+                    stt = 1;
+                }
+        
+                changeImg(stt);
+            });
+        
+            function changeImg(stt) {
+                stt = parseInt(stt)
+                $(".flash__sale-view-item").hide();
+                $(".flash__sale-view-item:nth-child("+stt+")").fadeIn(1000);
+                $(".flash__sale-view-item:nth-child("+(++stt)+")").fadeIn(1000);
+                $(".flash__sale-view-item:nth-child("+(++stt)+")").fadeIn(1000);
+                
+            };
+
+        }
         // Top__Sale
 
         $(".top__sale-icon-item").click(function(){ 
@@ -179,8 +221,16 @@ $(document).ready(function () {
                 $(this).addClass("active");
                 let textType = $(this).find("span").text();
                 $("#typeTicketlableSelected").text(textType);
+                // On off Date To 
+                console.log($(".search__container-option-ticket-item.active").attr("type"));
+                if ( $(".search__container-option-ticket-item.active").attr("type") == "1" ) {
+                    $(".time-comeback").hide();
+                } else {
+                    $(".time-comeback").show();
+                }
             })
         })
+        
 
         $("#selectNumberGuest").click(function(){ 
     
@@ -189,8 +239,12 @@ $(document).ready(function () {
             adultNumber = parseInt($("#adultNumber").text());
             childrenNumber = parseInt($("#childrenNumber").text());
             infantNumber = parseInt($("#infantNumber").text());
+
+            // Adult
+
             $("#plusAdultNumber").click(function(){
                 ++adultNumber;
+                $("#minusAdultNumber").removeClass("disabled");
                 $("#adultNumber").text(adultNumber);
             })
             $("#minusAdultNumber").click(function(){
@@ -199,26 +253,44 @@ $(document).ready(function () {
                     $("#adultNumber").text(adultNumber);
                 }
             })
+            if (adultNumber == 1)  $("#minusAdultNumber").addClass("disabled");
+
+
+            //Children
+
             $("#plusChildrenNumber").click(function(){
                 ++childrenNumber;
+                $("#minusChildrenNumber").removeClass("disabled");
                 $("#childrenNumber").text(childrenNumber);
             })
             $("#minusChildrenNumber").click(function(){
                 if (childrenNumber > 0) {
                     --childrenNumber;
                     $("#childrenNumber").text(childrenNumber);
+                } else {
+                    $(this).addClass("disabled");
                 }
             })
+            if (childrenNumber == 0)  $("#minusChildrenNumber").addClass("disabled");
+
+            // Infant 
+
             $("#plusInfantNumber").click(function(){
                 ++infantNumber;
                 $("#infantNumber").text(infantNumber);
+                $("#minusInfantNumber").removeClass("disabled");
             })
             $("#minusInfantNumber").click(function(){
                 if (infantNumber > 0) {
                     --infantNumber;
                     $("#infantNumber").text(infantNumber);
+                } else {
+                    $(this).addClass("disabled");
                 }
             })
+            if (infantNumber == 0)  $("#minusInfantNumber").addClass("disabled");
+
+
             $("#totalNumberGuest").text(adultNumber + childrenNumber + infantNumber);
 
             $("#closeTabNumberGuest").click(function(){
@@ -245,6 +317,7 @@ $(document).ready(function () {
             })
         })
 
+        // Airport Destinaton
 
         $("#des__name-from").click(function() {
             $(".destination__container").css("left","0%")
@@ -252,7 +325,7 @@ $(document).ready(function () {
         })
 
         $("#des__name-to").click(function() {
-            $(".destination__container").css("left","20%")
+            $(".destination__container").css("left","26%")
             $(".destination__container").toggle();
         })
 
@@ -289,7 +362,12 @@ $(document).ready(function () {
         $(".airport__result__item:not(.airport__result__item.airport__result__item--no-result)").click(function() {
             let airportText = $(this).text();
             $(".destination__container").hide();
-            $("#des__name-from").text(airportText);
+            if ($(".destination__container").css("left") == "0%") {
+                $("#des__name-from").text(airportText);
+            } else {
+                $("#des__name-to").text(airportText);
+                $("#des__name-to").removeClass("placeholderName");
+            }
         });
 
         $(".turn__des-icon").click(function() {
@@ -297,23 +375,58 @@ $(document).ready(function () {
             $("#des__name-from").text($("#des__name-to").text());
             $("#des__name-to").text(airportNameFrom);
         })
+
+        //Date Departure / Arrived
+        Date.prototype.toDateInputValue = (function() {
+            var local = new Date(this);
+            local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+            return local.toJSON().slice(0,10);
+        });
+        Date.prototype.addDays = function(days) {
+            var date = new Date(this.valueOf());
+            date.setDate(date.getDate() + days);
+            return date;
+        }
+        $('#dateDeparture').val(new Date().toDateInputValue());
+        $('#dateComeback').val(new Date().addDays(3).toDateInputValue());
+        // document.getElementById('dateDeparture').valueAsDate = new Date();
+        // document.getElementById('dateComeback').valueAsDate = new Date();
         
         // Deal attraction
         
-        $(".deal__attraction-img__left").css("background-image","url(" + arrDealAttractionFly[1-1].linkImg + ")");
-        $(".deal__attraction-img__right").css("background-image","url(" + arrDealAttractionFly[3-1].linkImg + ")");
-        $(".deal__attraction-img").css("background-image","url(" + arrDealAttractionFly[2-1].linkImg + ")");
-        $(".float-content-view-date span").text(arrDealAttractionFly[2-1].totalDate);
-        $(".float-content-view-amount span").text(arrDealAttractionFly[2-1].amountSold);
-        $(".float-content__left-des span:first-child").text(arrDealAttractionFly[2-1].fromName);
-        $(".float-content__left-des span:last-child").text(arrDealAttractionFly[2-1].toName);
-        $(".float-content__price").text(arrDealAttractionFly[2-1].price);
-        $(".float-content__note").text(arrDealAttractionFly[2-1].description);
-        if (arrDealAttractionFly[2-1].turn == "1") {
-            $(".float-content__left-direction i:last-child").hide();
-        }        
+        var mainID = 4;
+        var indexMain = arrDealAttractionFly.findIndex((item) => item.id == mainID);
+        ShowSlideDeal(indexMain);
+        function ShowSlideDeal(indexMain) {
+            $(".deal__attraction-img__left").css("background-image","url(" + arrDealAttractionFly[indexMain-1 < 0 ? arrDealAttractionFly.length - 1 : indexMain-1 ].linkImg + ")");
+            $(".deal__attraction-img__right").css("background-image","url(" + arrDealAttractionFly[indexMain+1 > arrDealAttractionFly.length - 1 ? 0 : indexMain+1 ].linkImg + ")");
+            $(".deal__attraction-img").css("background-image","url(" + arrDealAttractionFly[indexMain].linkImg + ")");
+            $(".float-content-view-date span").text(arrDealAttractionFly[indexMain].totalDate);
+            $(".float-content-view-amount span").text(arrDealAttractionFly[indexMain].amountSold);
+            $(".float-content__left-des span:first-child").text(arrDealAttractionFly[indexMain].fromName);
+            $(".float-content__left-des span:last-child").text(arrDealAttractionFly[indexMain].toName);
+            $(".float-content__price").text(arrDealAttractionFly[indexMain].price);
+            $(".float-content__note").text(arrDealAttractionFly[indexMain].description);
+            if (arrDealAttractionFly[indexMain].turn == "1") {
+                $(".float-content__left-direction i:last-child").hide();
+            }        
+        }
+      
         $(".deal__attraction-img__right").click(function(){
-            
+            if (indexMain + 1 > arrDealAttractionFly.length - 1) {
+                indexMain = 0;
+                ShowSlideDeal(indexMain);
+            } else {
+                ShowSlideDeal(++indexMain);
+            }
+        })
+        $(".deal__attraction-img__left").click(function(){
+            if (indexMain - 1 < 1) {
+                indexMain = arrDealAttractionFly.length - 1;
+                ShowSlideDeal(indexMain);
+            } else {
+                ShowSlideDeal(--indexMain);
+            }
         })
         // scroll back to top
         $('.btn-scroll-to-top').fadeOut();
