@@ -5,21 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlyUp Homepage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-        crossorigin="anonymous" />
+        crossorigin="anonymous" /> -->
 
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style/reset.css">
-    <link rel="stylesheet" href="./assets/style/base.css">
-    <link rel="stylesheet" href="./assets/style/grid.css">
-    <link rel="stylesheet" href="./assets/style/homepage.css">
-    <link rel="stylesheet" href="./assets/style/header.css">
-    <link rel="stylesheet" href="./assets/style/formsearch.css">
-    <link rel="stylesheet" href="./assets/style/tourguide.css">
-    <link rel="stylesheet" href="./assets/style/flashsale.css">
-    <link rel="stylesheet" href="./assets/style/footer.css">
-    <link rel="stylesheet" href="./assets/style/responsive.css">
+
+
+    
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/fonts/fontawesome-pro-5.0.13.css"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/css/all.min.css">
+
+
+
+    <link rel="stylesheet" type="text/css" href="./assets/style/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/base.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/grid.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/homepage.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/header.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/formsearch.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/tourguide.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/flashsale.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/footer.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
 </head>
 
 
@@ -95,16 +103,15 @@
             </header>
         </div>
         <!-- Top_Sale -->
-        <div class="top__sale wrapper-fluid hide-on-mobile-table" id="topSaleBackground"
+        <div class="top__sale wrapper-fluid " id="topSaleBackground"
             style="background-image: url(./assets/images/top_sales_bg_demo1.png);">
 
             <div class="top__sale-item wrapper">
                 <!-- <img src="./assets/images/top_sales_bg_demo1.png" alt="" class="top__sale-background"> -->
                 <div class="top__sale-title">
-                    <div>Tự do đi tới những điểm đến</div>
-                    <div>chưa bao giờ được khám phá!</div>
+                    <h1>Tự do đi tới những điểm đến chưa bao giờ được khám phá!</h1>
                 </div>
-                <div class="top__sale-body">
+                <div class="top__sale-body hide-on-mobile-table">
                     <div class="top__sale-content">
                         <div class="top__sale-number">
                             <span class="top__sale-number-text top__sale-number--active" idx="1">01.</span>
@@ -197,7 +204,7 @@
                         </li>
                         <li class="search__container-fly__item" id="selectNumberGuest">
                             <i class="fas fa-user-tie"></i>
-                            <span class="search__container-fly__type-ticket-lable"> <span id="totalNumberGuest">1</span> hành khách</span>
+                            <span class="search__container-fly__type-ticket-lable"> <span class="totalNumberGuest">1</span> hành khách</span>
                             <i class="fas fa-caret-down"></i>
                             <div class="search__container__number">
                                 <div class="search__container__number-title">Vui lòng lựa chọn số lượng hành khách chính xác để xem được mức giá tốt nhất.</div>
@@ -270,9 +277,9 @@
                     <div class="search__box">
                         <div class="destination-from">
                             <span class="title">Từ</span>
-                            <span class="content" id="des__name-from">Hà Nội(Tất cả các sân bay)(HAN)</span>
+                            <span class="content des__name-from">Hà Nội(Tất cả các sân bay)(HAN)</span>
                         </div>
-                        <div class="turn__des-icon">
+                        <div class="turn__des-icon reverseAirport">
                             <svg width="20px" height="20px" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg">
                                 <title>Group 11</title>
                                 <desc>Created with Sketch.</desc>
@@ -300,22 +307,24 @@
                         </div>
                         <div class="destination-to">
                             <span class="title">Đến</span>
-                            <span class="content placeholderName" id="des__name-to">Thành phố hoặc sân bay</span>
+                            <span class="content placeholderName des__name-to">Thành phố hoặc sân bay</span>
                         </div>
                         <div class="time-depature">
                             <span class="title">Khởi hành</span>
                             <!-- <span class="content" id="dateDeparture">T3,30/06/2020</span> -->
-                            <input class="content" type="date" id="dateDeparture">
+                            <input class="content dateDeparture" type="date">
                             
                         </div>
                         <div class="time-comeback">
                             <span class="title">Chiều về</span>
                             <!-- <span class="content">T5,02/07/2020</span> -->
-                            <input class="content" type="date" id="dateComeback">
+                            <input class="content dateComeback" type="date" >
                         </div>
-                        <div class="action__search-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
+                        <a href="./flyresult.html" class="action__search-link">
+                            <div class="action__search-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </a>
                         <div class="destination__container">
                             <div class="destination__search-bar">
                                 <i class="fas fa-search"></i>
@@ -556,18 +565,406 @@
 
                     </div>
                 </div>
-
             </div>
         </div>
+
+        <div class="form_search-mobile">
+            <ul class="form_search-mb-list">
+                <li class="form_search-mb-item" >
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>LƯU TRÚ</span>
+                </li>
+                <li class="form_search-mb-item" id="searchTicketFly">
+                    <i class="fal fa-plane"></i>
+                    <span>VÉ MÁY BAY</span>
+                </li>
+                <li class="form_search-mb-item">
+                    <i class="fas fa-suitcase-rolling"></i>
+                    <span>CỐ VẤN DU LỊCH</span>
+                </li>
+                <li class="form_search-mb-item">
+                    <i class="fas fa-car"></i>
+                    <span>XE - DU THUYỀN</span>
+                </li>
+            </ul>
+            <div class="search__mf">
+                <div class="search__flight__type">
+                    <div class="yv8vac-0 gPRCot">
+                        <div class="yv8vac-1 fkgrDx">
+                            <div class="yv8vac-2 iGCTyy oneWayFly">
+                                <div class="yv8vac-3 kqEYfX" id="oneWayFly">Một chiều</div>
+                            </div>
+                            <div class="yv8vac-2 cUMwIN twoWayFly">
+                                <div class="yv8vac-3 kqEYfX" id="twoWayFly">Khứ hồi</div>
+                            </div>
+                        </div>
+                        <div class="yv8vac-4 fsTXpv"></div>
+                    </div>
+                </div>
+                <div class="search__mf__view ">
+                    <div class="search__mf__view__airports">
+                        <div class="search__mf__view__item search__mf__view__item--departure">
+                            <div class="search__flight__view">
+                                <p class="search__flight__view__label">Từ</p>
+                                <p class="search__flight__view__value des__name-from" title="Hà Nội" >Hà Nội</p>
+                              
+                            </div>
+                        </div><a href="#" class="search__mf__view__location-swapper reverseAirport">
+                            <svg width="20px" height="20px"
+                                viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg">
+                                <title>Group 11</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                                    opacity="0.900000036" stroke-linejoin="round">
+                                    <g transform="translate(-414.000000, -294.000000)" stroke="#41b4e8">
+                                        <g transform="translate(180.000000, 222.000000)">
+                                            <g transform="translate(0.000000, 48.000000)">
+                                                <g>
+                                                    <g transform="translate(226.000000, 16.000000)">
+                                                        <g transform="translate(9.000000, 8.000000)">
+                                                            <polyline points="0 6 13 6 8.99335057 0"></polyline>
+                                                            <polyline
+                                                                transform="translate(6.500000, 13.000000) scale(-1, -1) translate(-6.500000, -13.000000) "
+                                                                points="0 16 13 16 8.99335057 10"></polyline>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg></a>
+                        <div class="search__mf__view__item search__mf__view__item--destination">
+                            <div class="search__flight__view">
+                                <p class="search__flight__view__label">Đến</p>
+                                <p class="search__flight__view__value des__name-to" title="Hồ Chí Minh">Hồ Chí Minh</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search__mf__view__dates">
+                        <div class="search__mf__view__item search__mf__view__item--departure-date">
+                            <div class="search__flight__view">
+                                <p class="search__flight__view__label">Chiều đi</p>
+                                <p class="search__flight__view__value"> <input class="content dateDeparture" type="date"></p>
+                            </div>
+                        </div>
+                        <div class="search__mf__view__date-icon"><i class="fas fa-arrow-right"></i></div>
+                        <div class="search__mf__view__item search__mf__view__item--return-date">
+                            <div class="search__flight__view">
+                                <p class="search__flight__view__label">Chiều về</p>
+                                <p class="search__flight__view__value"> <input class="content dateComeback" type="date"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search__mf__view__item search__mf__view__item--passenger">
+                        <div class="search__flight__view">
+                            <p class="search__flight__view__label">Hành khách</p>
+                            <p class="search__flight__view__value totalNumberGuestMobile">01 <span
+                                    class="search__flight__view__traveller">Khách</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="search__mf__submit"><button class="button button--filled-orange">Tìm chuyến bay</button></div>
+            </div>
+            <div class="destination__container-mb">
+                <div class="destination__container-mb-close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="destination__search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Thành phố hoặc sân bay">
+                </div>
+                <div class="des__wrapper">
+                    <ul class="destination__list">
+                        <li class="des_country des_country--active" idx="1">
+                            <span class="des_country-name ">Việt Nam</span>
+                        </li>
+                        <li class="des_country" idx="2">
+                            <span class="des_country-name">Trung Quốc</span>
+                        </li>
+                        <li class="des_country" idx="3">
+                            <span class="des_country-name">Châu Á</span>
+                        </li>
+                        <li class="des_country" idx="4">
+                            <span class="des_country-name">Châu Âu</span>
+                        </li>
+                        <li class="des_country" idx="5">
+                            <span class="des_country-name">Châu Mỹ</span>
+                        </li>
+                        <li class="des_country" idx="6">
+                            <span class="des_country-name">Châu Úc</span>
+                        </li>
+                    </ul>
+                    <div class="destination__content">
+                        <div class="des__tab-panel des__tab-panel--active">
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Miền Bắc</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Miền Bắc</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="des__tab-panel ">
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Trung Quốc</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Miền Bắc</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="des__tab-panel ">
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Châu Á</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Miền Bắc</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="des__tab-panel ">
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Miền Bắc</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Châu Âu</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="des__tab-panel ">
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Châu Mỹ</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Miền Bắc</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="des__tab-panel ">
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Châu Úc</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                            <div class="des_item-section">
+                                <label class="des__suggestion__label">Miền Bắc</label>
+                                <div class="des__suggestion__cities">
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                    <span class="des__suggestion__city">Hà Nội</span>
+                                    <span class="des__suggestion__city">Hải Phòng</span>
+                                    <span class="des__suggestion__city">Vân Đồn</span>
+                                    <span class="des__suggestion__city">Điện Biên Phủ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="airport__result__wrapper ">
+                    <div class="scrollbar-container airport__result">
+                        <ul class="airport__result__items">
+                            <li class="airport__result__item airport__result__item--no-result">Không tìm
+                                thấy kết quả nào phù hợp</li>
+                            <li class="airport__result__item">
+                                <div class="airport__result__link">
+                                    <i class="fas fa-plane airport__result__icon"></i>
+                                    <span class="airport__result__code">HAN</span>
+                                    <span class="airport__result__name">Hà Nội, Việt Nam</span>
+                                    <span class="airport__result__description">Cảng hàng không quốc tế Nội
+                                        Bài</span>
+                                </div>
+                            </li>
+                            <li class="airport__result__item">
+                                <div class="airport__result__link">
+                                    <i class="fas fa-plane airport__result__icon"></i>
+                                    <span class="airport__result__code">HAN</span>
+                                    <span class="airport__result__name">Hà Nội, Việt Nam</span>
+                                    <span class="airport__result__description">Cảng hàng không quốc tế Nội
+                                        Bài</span>
+                                </div>
+                            </li>
+                            <li class="airport__result__item">
+                                <div class="airport__result__link">
+                                    <i class="fas fa-plane airport__result__icon"></i>
+                                    <span class="airport__result__code">HAN</span>
+                                    <span class="airport__result__name">Hà Nội, Việt Nam</span>
+                                    <span class="airport__result__description">Cảng hàng không quốc tế Nội
+                                        Bài</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="search__container__number-mb">
+
+                <div class="search__container__number-mb-close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="search__container__number-done">
+                    <span >Xong</span>
+                </div>
+                <div class="search__container__number-title">Vui lòng lựa chọn số lượng hành khách chính xác để xem được mức giá tốt nhất.</div>
+                <ul class="search__container__number-list">
+                    <li class="search__container__number-item">
+                        <div class="search__container__number-lable">Người lớn</div>
+                        <div class="search__container__number-count">
+                            <span class="search__container__number-icon disabled" id="minusAdultNumberMobile">
+                                <i class="fas fa-minus"></i>
+                            </span>
+                            <span class="search__container__number-text" id="adultNumberMobile">1</span>
+                            <span class="search__container__number-icon"  id="plusAdultNumberMobile">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="search__container__number-item">
+                        <div class="search__container__number-lable">Trẻ em<span>2-11 tuổi</span></div>
+                        <div class="search__container__number-count">
+                            <span class="search__container__number-icon disabled" id="minusChildrenNumberMobile">
+                                <i class="fas fa-minus"></i>
+                            </span>
+                            <span class="search__container__number-text" id="childrenNumberMobile">0</span>
+                            <span class="search__container__number-icon" id="plusChildrenNumberMobile">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="search__container__number-item">
+                        <div class="search__container__number-lable">Trẻ sơ sinh<span>&lt;2&nbsp;tuổi</span></div>
+                        <div class="search__container__number-count">
+                            <span class="search__container__number-icon disabled" id="minusInfantNumberMobile">
+                                <i class="fas fa-minus"></i>
+                            </span>
+                            <span class="search__container__number-text" id="infantNumberMobile">0</span>
+                            <span class="search__container__number-icon" id="plusInfantNumberMobile">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        
 
         <!-- Tour Guide -->
         <div class="wrapper tour__guide">
             <div class="guide__heading">
-                <div class="guide__heading-title">
-                    <h4>Du lịch tự túc cùng</h4>
+                <div class="guide__heading-title ">
+                    <h4 class="hide-on-mobile-table">Du lịch tự túc cùng</h4>
                     <h2>TOP <span>CỐ VẤN DU LỊCH</span> CỦA FLY UP</h2>
                 </div>
-                <div class="guide__heading-banner">
+                <div class="guide__heading-banner hide-on-mobile-table">
                     <img src="./assets/images/guide_banner_demo.png" alt="banner tour guide">
                     <div class="btn-book guide__heading-btn--position">tìm hiểu ngay</div>
                 </div>
@@ -609,7 +1006,7 @@
 
             </ul>
 
-            <ul class="guide__standard">
+            <ul class="guide__standard hide-on-mobile-table">
                 <li class="guide__standard__item">
                     <div class="guide__standard__item-img">
                         <img src="./assets/images/icon_standard_bill.png" alt="">
@@ -644,7 +1041,7 @@
         </div>
 
         <!-- Deal attraction -->
-        <div class="deal__container hide-on-mobile-table">
+        <div class="deal__container hide-on-mobile">
 
             <div class="wrapper deal__head">
                 <div class="deal__head-title">
@@ -703,12 +1100,10 @@
                 </div>
 
                 <div class="flash__sale-view" >
-                    <!-- <img class="flash__sale-bg" style="background-image: url(/assets/images/bg_flashsale_demo.png);">
-                    </img> -->
                     <div class="flash__sale-bg-container">
-                        <img class="flash__sale-bg" src="/assets/images/bg_flashsale_demo.png" alt="">
+                        <img class="flash__sale-bg hide-on-table" src="./assets/images/bg_flashsale_demo.png" alt="">
                         <div class="flash__sale-view-action">
-                            <div class="view-direction">
+                            <div class="view-direction hide-on-table">
                                 <div class="view-direction-item">
                                     <i class="fas fa-arrow-left"></i>
                                 </div>
@@ -1045,12 +1440,12 @@
                 <div class="deal__attraction-img-change deal__attraction-img__right" id="3" style="background-image: url(https://vnn-imgs-f.vgcloud.vn/2019/04/10/18/phu-quoc.jpg);">
                 </div>
                 <div class="deal__attraction-item" id="2">
-                    <a href="" class="deal__attraction-img__link">
+                    <div class="deal__attraction-img__link">
                         <div class="deal__attraction-img" style="background-image: url(https://mytourcdn.com/upload_images/Image/Nhu_Ha%20Long/c%C3%B4n%20%C4%91%E1%BA%A3o/hon%20bay%20canh.jpg);">
                         </div>
-                    </a>
+                    </div>
                     
-                    <div class="float-content">
+                    <div class="float-content ">
                         <div class="float-content__left">
                             <div class="float-content__left__head">
                                 <div class="float-content-view-date">
@@ -1087,7 +1482,7 @@
                                 <div class="btn-book">mua ngay</div>
                             </div>
                         </div>
-                        <div class="float-content__right">
+                        <div class="float-content__right hide-on-mobile-table">
                             <ul class="feature__list">
                                 <li class="feature__item">
                                     <div class="feature-icon">
@@ -1164,9 +1559,9 @@
         <div class="service-plus">
             <div class="service-plus__head">
                 <div class="service-plus__head-title">CÁC DỊCH VỤ ĐI KÈM</div>
-                <div class="service-plus__head-content">Lựa chon tour - Combo du lịch hấp dẫn dựa trên phong cách, sở
+                <div class="service-plus__head-content hide-on-mobile-table">Lựa chon tour - Combo du lịch hấp dẫn dựa trên phong cách, sở
                     thích</div>
-                <div class="service-plus__head-content">của bạn!</div>
+                <div class="service-plus__head-content hide-on-mobile-table">của bạn!</div>
             </div>
             <div class="service-plus__body">
                 <ul class="service-plus__list">
@@ -1340,7 +1735,7 @@
                     </li>
                 </ul>
             </div>
-            <ul class="wrapper service-plus__pagination">
+            <ul class="wrapper service-plus__pagination hide-on-mobile-table">
                 <li class="service-plus__pagination-item ">
                     <i class="service-plus__pagination-item-icon fas fa-angle-left"></i>
                     <!-- <img src="./assets/images/icon-left-arrow.png" alt="" class="service-plus__pagination-item-icon"> -->
@@ -1364,7 +1759,7 @@
         <footer class="footer__container">
             <div class="footer__top__container">
                 <div class="wrapper footer__top">
-                    <div class="footer__top-social">
+                    <div class="footer__top-social hide-on-mobile">
                         <div class="footer__top-social-logo">
                             <img src="./assets/images/logo-FlyUp_1.png" alt="logo_flyup" class="nav__link-logo">
                         </div>
@@ -1396,7 +1791,7 @@
                         </ul>
 
                     </div>
-                    <div class="footer__top-menu">
+                    <div class="footer__top-menu hide-on-mobile-table">
                         <h5 class="footer__top-menu-title">MENU</h5>
                         <ul class="footer__top-menu-list">
                             <li class="footer__top-menu-item"><a href="">Vé máy bay</a></li>
@@ -1406,7 +1801,7 @@
                             <li class="footer__top-menu-item"><a href="">Cố vấn du lịch</a></li>
                         </ul>
                     </div>
-                    <div class="footer__top-menu">
+                    <div class="footer__top-menu hide-on-mobile-table">
                         <h5 class="footer__top-menu-title">Hợp tác - đầu tư</h5>
                         <ul class="footer__top-menu-list">
                             <li class="footer__top-menu-item"><a href="">Đăng nhập (nhà cung cấp)</a></li>
@@ -1454,7 +1849,7 @@
                
 
             </div>
-            <div class="footer__bottom__container">
+            <div class="footer__bottom__container hide-on-mobile-table">
                 <div class="wrapper footer__bottom">
                     <div class="footer__bottom-copyright">
                         Copyright@FlyUp2020

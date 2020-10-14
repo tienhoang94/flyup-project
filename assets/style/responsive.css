@@ -1,4 +1,41 @@
 /* Mobile- table */
+@media (width: 1024px) { 
+    html {
+        font-size: 50%; /* 1rem = 10px */
+    }
+    .flash__sale-bg-container {
+        left: -40%;
+    }
+    .flash__sale-view-list {
+        position: absolute;
+        left: -22%;
+    }
+
+    .flash__sale-view {
+        flex-direction: row;
+        right: 9rem;
+        bottom: -13px;
+    }
+
+    .flash__sale-view-action {
+        top: 74%;
+        right: 5rem;
+    }
+    .view-direction {
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
+
+    .view-direction-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .view-direction-item:first-child {
+        margin-bottom: 0;
+        margin-right: 4rem;
+    }
+    
+}
 
 @media (max-width: 1023px) {
    
@@ -14,9 +51,6 @@
         height: 4rem;
     }
 
-    .deal__container {
-        display: none;
-    }
     
     .nav__item {
         position: absolute;
@@ -26,6 +60,122 @@
         top: 0;
         margin: 0 auto;
         transform: translateX(-25%);
+    }
+
+    .wrapper__header-bg {
+        padding-bottom: 0.5rem;
+    }
+
+    .top__sale {
+        height: 20rem;
+    }
+    
+    .top__sale::before {
+        display: none;
+    }
+
+    .top__sale-title h1 {
+        width: 100%;
+        font-size: 3rem;
+        text-align: center;
+    }
+    .guide__heading-title h2 {
+        text-align: center;
+    }
+
+    .email-subcribe__content {
+        flex-direction: column;
+        left: 0;
+        bottom: 5%;
+    }
+
+    .email-subcribe__content-title {
+        width: 100%;
+        text-align: center;
+    }
+    .email-subcribe__content-input input {
+        width: 90%;
+    }
+    .email-subcribe__content-arrow {
+        right: 10%;
+    }
+
+    .form_search-mobile {
+        display: block;
+    }
+
+    .guide__list {
+        display: flex;
+        overflow-x: auto;
+    }
+    .guide__list__item {
+        margin-bottom: 2rem;
+        flex-shrink: 0;
+        margin: 0 10px;
+    }
+    .guide__list::-webkit-scrollbar {
+        display: none;
+    }
+    .service-plus {
+        margin-top: 2rem;
+    }
+    .service-plus__head-title {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .service-plus__list {
+        display: flex;
+        overflow-x: auto;
+    }
+    .service-plus__list::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .service-plus__item {
+        margin-bottom: 2rem;
+        flex-shrink: 0;
+        margin: 0 10px;
+    }
+    
+    .service-plus__item:not(:nth-child(-n+3)) {
+        display: block;
+    }
+    
+    .footer__top-contact::before {
+        background-color: transparent;
+    }
+
+    .footer__top {
+        padding-top: 5rem;
+    }
+
+    .des__wrapper {
+        flex-direction: column;
+    }
+
+    .destination__list {
+        flex-direction: row;
+    }
+    .des_country--active::after {
+        background-color: transparent;
+    }
+    .des__suggestion__city {
+        width: 33.33%;
+    }
+    .destination__list {
+        overflow-x: auto;
+    }
+
+    .destination__container-mb {
+        display: block;
+    }
+    .search__container__number-done {
+        position: absolute;
+        top: 2rem;
+        color: #7b7bc2;
+        font-weight: 700;
+        font-size: 2rem;
     }
 }
 
@@ -38,6 +188,89 @@
         display: none;
     }
 
+    .footer__top-social {
+        padding-left: 2rem;
+    }
+
+    .deal__head-nav-item:nth-child(6) {
+        line-height: 2rem;
+    }
+
+
+    .deal__attraction-img__left,.deal__attraction-img__right {
+        top: 48.5%;
+        height: 40%;
+    }
+    .deal__attraction-img__left::after {
+        position: absolute;
+        content: "";
+        width: 21%;
+        height: 336px;
+        /* background-color: red; */
+        top: 0;
+        left: -1rem;
+        z-index: 5;
+    }
+    .deal__attraction-img {
+        height: 35rem;
+        width: 100%;
+    }
+
+    .float-content__left {
+        top: -5%;
+        left: 5%;
+    }
+    .float-content__left__content {
+        margin-top: 13rem;
+    }
+    .float-content-btn {
+        margin-left: 6.5rem;
+    }
+
+    .deal__attraction-item {
+        width: 55rem;
+        height: 44rem;
+    }
+
+    .flash__sale-bg-container {
+        height: 76rem;
+        width: 38rem;
+    }
+    .flash__sale-view {
+        padding-left: 0;
+    }
+
+    .flash__sale-view-list {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+    .flash__sale-view-list::-webkit-scrollbar {
+        display: none;
+    }
+    .flash__sale-view-item {
+        display: block ;
+    }
+    .flash__sale-view-action {
+        top: 70rem;
+        left: -3rem;
+    }
+    .flash__sale-view-item:not(:nth-child(-n+3)) {
+        display: block;
+    }
+   
+    
+
+    .flash__sale-view-option {
+        background-color: #4db0fb;
+        padding: 1rem 0;
+    }
+
+    .search__container__number-mb {
+        height: 70%;
+    }
+
+
 }
 
 /* Mobile */
@@ -49,14 +282,7 @@
         display: none;
     }
 
-    .guide__list {
-        flex-wrap: wrap;
-    }
-
-    .guide__list__item {
-        margin-bottom: 2rem;
-    }
-    
+   
     .guide__standard {
         flex-wrap: wrap;
     }
@@ -65,24 +291,42 @@
         margin-bottom: 2rem;
     }
 
-    .service-plus {
-        display: none;
+    .email-subcribe__content-title {
+        font-size: 2rem;
     }
-    .footer-background {
-        height: 100%;
+
+    .email-subcribe__content-input input::placeholder {
+        font-size: 2rem;
+    }
+
+    .service-plus__item {
+        width: 27rem;
+    }
+    .service-plus__img {
+        height: 25rem;
+    }
+    .guide__list__item {
+        width: 25rem;
+    }
+    .guide__list__img {
+        height: 16.5rem;
     }
    
-    .footer-content {
-        padding: 2rem;
+    .search__flight__view__value {
+        width: 13rem;
     }
-    .footer__top {
-        flex-wrap: wrap;
+
+    .search__container__number-title {
+        text-align: center;
     }
-    .footer__top-item {
-        width: 100%;
-        padding: 2rem 0;
+
+    .search__flight__view__value input {
+        width: 98%;
     }
-    .footer_bottom {
-        padding-top: 5rem;
+    .search__mf__view__item--return-date {
+        padding-left: 15px;
+    }
+    .search__mf__view__date-icon {
+        left: calc(50% - 10px);
     }
 }

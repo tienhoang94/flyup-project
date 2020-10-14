@@ -12,7 +12,6 @@
 /* TOP SALES */
 
 .top__sale {
-    /* background-image: url(../images/top_sales_bg_demo1.png); */
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
@@ -20,7 +19,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 65rem;
+    height: 54rem;
     position: relative;
 }
 .top__sale::before {
@@ -48,12 +47,13 @@
 .top__sale-title {
     
 }
-.top__sale-title div {
+.top__sale-title h1 {
     font-size: 5rem;
     color: var(--white-color);
-    line-height: 5rem;
+    line-height: 5.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    width: 70%;
 }
 
 .top__sale-body {
@@ -226,7 +226,7 @@
 
 
 .email-subcribe__content-input input {
-    width: 150%;
+    width: 120%;
     height: 4rem;
     background-color: transparent;
     border: none;
@@ -254,7 +254,7 @@
     align-items: center;
     justify-content: center;
     top: -14%;
-    right: -50%;
+    right: -20%;
     cursor: pointer;
 }
 .email-subcribe__content-arrow i {

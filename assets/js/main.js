@@ -127,6 +127,7 @@ $(document).ready(function () {
         })
         $(".navbar__overlay").click(function() {
             $(".nav__mobile").css("transform","translateX(-100%)");
+            $(".search__container__number-mb").css("transform","translateY(200%)");
             $(".navbar__overlay").hide();
         })
     
@@ -291,7 +292,7 @@ $(document).ready(function () {
             if (infantNumber == 0)  $("#minusInfantNumber").addClass("disabled");
 
 
-            $("#totalNumberGuest").text(adultNumber + childrenNumber + infantNumber);
+            $(".totalNumberGuest").text(adultNumber + childrenNumber + infantNumber);
 
             $("#closeTabNumberGuest").click(function(){
                 console.log("AAA");
@@ -317,16 +318,19 @@ $(document).ready(function () {
             })
         })
 
+
         // Airport Destinaton
 
-        $("#des__name-from").click(function() {
+        $(".des__name-from").click(function() {
             $(".destination__container").css("left","0%")
             $(".destination__container").toggle();
+            $(".destination__container-mb").css("transform","translateX(0)");
         })
 
-        $("#des__name-to").click(function() {
+        $(".des__name-to").click(function() {
             $(".destination__container").css("left","26%")
             $(".destination__container").toggle();
+            $(".destination__container-mb").css("transform","translateX(0)");
         })
 
 
@@ -352,28 +356,129 @@ $(document).ready(function () {
         $(".des__suggestion__city").click(function () {
             let desText = $(this).text();
             $(".destination__container").hide();
+            $(".destination__container-mb").css("transform","translateX(-100%)");
             if ($(".destination__container").css("left") == "0%") {
-                $("#des__name-from").text(desText);
+                $(".des__name-from").text(desText);
             } else {
-                $("#des__name-to").text(desText);
-                $("#des__name-to").removeClass("placeholderName");
+                $(".des__name-to").text(desText);
+                $(".des__name-to").removeClass("placeholderName");
             }
         })
         $(".airport__result__item:not(.airport__result__item.airport__result__item--no-result)").click(function() {
             let airportText = $(this).text();
             $(".destination__container").hide();
             if ($(".destination__container").css("left") == "0%") {
-                $("#des__name-from").text(airportText);
+                $(".des__name-from").text(airportText);
             } else {
-                $("#des__name-to").text(airportText);
-                $("#des__name-to").removeClass("placeholderName");
+                $(".des__name-to").text(airportText);
+                $(".des__name-to").removeClass("placeholderName");
             }
         });
+        $(".reverseAirport").click(function(event ) {
+            event.preventDefault();
+            let airportNameFrom = "",  airportDescriptionFrom = "";
+            airportNameFrom = $(".des__name-from").text();
+            airportDescriptionFrom = $(".detail__name-from").text();
+            $(".des__name-from").text($(".des__name-to").text());
+            $(".detail__name-from").text($(".detail__name-to").text());
+            $(".des__name-to").text(airportNameFrom);
+            $(".detail__name-to").text(airportDescriptionFrom);
+        })
 
-        $(".turn__des-icon").click(function() {
-            let airportNameFrom = $("#des__name-from").text();
-            $("#des__name-from").text($("#des__name-to").text());
-            $("#des__name-to").text(airportNameFrom);
+        $("#searchTicketFly").click(function() {
+            $(".form_search-mb-list").hide();
+            $(".top__sale").hide();
+            $(".search__mf").show();
+        })
+
+        $("#oneWayFly").click(function() {
+            $(".oneWayFly").css("color","white");
+            $(".oneWayFly").css("background-color","#2f6eb7");
+            $(".twoWayFly").css("color","#2f6eb7");
+            $(".twoWayFly").css("background-color","white");
+            $(".search__mf__view__item--return-date").hide();
+            $(".search__mf__view__date-icon").hide();
+        })
+        $("#twoWayFly").click(function() {
+            $(".oneWayFly").css("color","#2f6eb7");
+            $(".oneWayFly").css("background-color","white");
+            $(".twoWayFly").css("color","white");
+            $(".twoWayFly").css("background-color","#2f6eb7");
+            $(".search__mf__view__item--return-date").show();
+            $(".search__mf__view__date-icon").show();
+            
+        })
+
+        $(".destination__container-mb-close").click(function() {
+            $(".destination__container-mb").css("transform","translateX(-100%)");
+        })
+
+        $(".search__mf__view__item--passenger").click (function () {
+
+            $(".navbar__overlay").show();
+            $(".search__container__number-mb").css("transform","translateY(100%)");
+
+            let adultNumberMobile, childrenNumberMobile, infantNumberMobile;
+            adultNumberMobile = parseInt($("#adultNumberMobile").text());
+            childrenNumberMobile = parseInt($("#childrenNumberMobile").text());
+            infantNumberMobile = parseInt($("#infantNumberMobile").text());
+
+            // Adult
+
+            $("#plusAdultNumberMobile").click(function(){
+                ++adultNumberMobile;
+                $("#minusAdultNumberMobile").removeClass("disabled");
+                $("#adultNumberMobile").text(adultNumberMobile);
+            })
+            $("#minusAdultNumberMobile").click(function(){
+                if (adultNumberMobile > 1) {
+                    --adultNumberMobile;
+                    $("#adultNumberMobile").text(adultNumberMobile);
+                }
+            })
+            if (adultNumberMobile == 1)  $("#minusAdultNumberMobile").addClass("disabled");
+
+
+            //Children
+
+            $("#plusChildrenNumberMobile").click(function(){
+                ++childrenNumberMobile;
+                $("#minusChildrenNumberMobile").removeClass("disabled");
+                $("#childrenNumberMobile").text(childrenNumberMobile);
+            })
+            $("#minusChildrenNumberMobile").click(function(){
+                if (childrenNumberMobile > 0) {
+                    --childrenNumberMobile;
+                    $("#childrenNumberMobile").text(childrenNumberMobile);
+                } else {
+                    $(this).addClass("disabled");
+                }
+            })
+            if (childrenNumberMobile == 0)  $("#minusChildrenNumberMobile").addClass("disabled");
+
+            // Infant 
+
+            $("#plusInfantNumberMobile").click(function(){
+                ++infantNumberMobile;
+                $("#infantNumberMobile").text(infantNumberMobile);
+                $("#minusInfantNumberMobile").removeClass("disabled");
+            })
+            $("#minusInfantNumberMobile").click(function(){
+                if (infantNumberMobile > 0) {
+                    --infantNumberMobile;
+                    $("#infantNumberMobile").text(infantNumberMobile);
+                } else {
+                    $(this).addClass("disabled");
+                }
+            })
+            if (infantNumberMobile == 0)  $("#minusInfantNumberMobile").addClass("disabled");
+
+            $(".totalNumberGuestMobile").text(adultNumberMobile + childrenNumberMobile + infantNumberMobile);
+        })
+
+        $(".search__container__number-mb-close , .search__container__number-done").click(function() {
+            $(".search__container__number-mb").css("transform","translateY(200%)");
+            $(".navbar__overlay").hide();
         })
 
         //Date Departure / Arrived
@@ -387,10 +492,12 @@ $(document).ready(function () {
             date.setDate(date.getDate() + days);
             return date;
         }
-        $('#dateDeparture').val(new Date().toDateInputValue());
-        $('#dateComeback').val(new Date().addDays(3).toDateInputValue());
+        $('.dateDeparture').val(new Date().toDateInputValue());
+        $('.dateComeback').val(new Date().addDays(3).toDateInputValue());
         // document.getElementById('dateDeparture').valueAsDate = new Date();
         // document.getElementById('dateComeback').valueAsDate = new Date();
+        
+
         
         // Deal attraction
         
@@ -428,6 +535,9 @@ $(document).ready(function () {
                 ShowSlideDeal(--indexMain);
             }
         })
+       
+
+
         // scroll back to top
         $('.btn-scroll-to-top').fadeOut();
         $(window).scroll(function() {
@@ -521,7 +631,12 @@ $(document).ready(function () {
 
         ChangeSlideServicePlus ();
 
-        
+        // Result fly page
+
+        $(".brand__item").click(function () {
+            $(".brand__item").removeClass("active");
+            $(this).addClass("active");
+        })
       
     }
     
@@ -578,6 +693,10 @@ $(document).ready(function () {
 
 
     }
+
+
+
+
     $.ModuleCountDown ();
     $.ModuleViewAction();
     
