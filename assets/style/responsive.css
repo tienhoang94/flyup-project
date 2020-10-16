@@ -1,5 +1,5 @@
 /* Mobile- table */
-@media (width: 1024px) { 
+@media (max-width: 1200px) and (min-width: 1024px) { 
     html {
         font-size: 50%; /* 1rem = 10px */
     }
@@ -35,6 +35,13 @@
         margin-right: 4rem;
     }
     
+    /* rearch result  */
+
+    .bill-fly-luggage {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
 }
 
 @media (max-width: 1023px) {
@@ -57,9 +64,12 @@
         left: 50%;
         right: 0;
         text-align: center;
-        top: 0;
+        top: 1%;
         margin: 0 auto;
         transform: translateX(-25%);
+    }
+    .nav__item-infor-name {
+        padding-left: 16%;
     }
 
     .wrapper__header-bg {
@@ -177,6 +187,15 @@
         font-weight: 700;
         font-size: 2rem;
     }
+
+    /* rearch result  */
+
+    .bill-fly-luggage {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    
 }
 
 /* Tablet */

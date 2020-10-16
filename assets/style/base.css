@@ -8,7 +8,7 @@
     --bg-blue-color: #004a80;
     --border-color: #d3d7d9;
     --white-color: #ffffff;
-    --green-fly-color: #a6ce39;
+    --green-fly-color: #a6ce39; 
     --blue-fly-color: #0079a7;
 }
 
@@ -47,6 +47,14 @@ html {
     src: url(../fonts/Alegreya-Bold.ttf);
 }
 @font-face {
+    font-family: 'Alegreya-Italic';
+    src: url(../fonts/Alegreya-Italic.ttf);
+}
+@font-face {
+    font-family: 'Alegreya-ExtraBold';
+    src: url(../fonts/Alegreya-ExtraBold.ttf);
+}
+@font-face {
     font-family: 'helvetica-neue-light';
     src: url(../fonts/helvetica-neue-light.ttf);
 }
@@ -57,6 +65,14 @@ html {
 @font-face {
     font-family: 'helvetica-neue-regular';
     src: url(../fonts/helvetica-neue-regular.ttf);
+}
+@font-face {
+    font-family: 'helvetica-neue-bold';
+    src: url(../fonts/helvetica-neue-bold.ttf);
+}
+@font-face {
+    font-family: 'helvetica-neue-medium';
+    src: url(../fonts/helvetica-neue-medium.ttf);
 }
 @font-face {
     font-family: 'helvetica-neue-ultra-light';

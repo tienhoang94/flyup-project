@@ -309,6 +309,10 @@
     text-decoration: none;
 }
 
+.action__search-link:hover {
+    text-decoration: none;
+}
+
 .action__search-icon {
     background-color: var(--primary-color);
     height: 100%;
