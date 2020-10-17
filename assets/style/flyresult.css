@@ -521,14 +521,31 @@
     border-bottom: 1px solid #d3dfe6;
     cursor: pointer;
     border-right: 2px solid #d3dfe6;    
+    z-index: 2;
 }
 .result__view-detail-head-item:last-child {
     border-right: none;    
 }
 
 .result__view-detail-head-item.active {
+   
     border-bottom: 6px solid #00aeef;
+    position: relative;
+    color: var(--white-color);
 }
+
+.result__view-detail-head-item.active::after {
+    background-color: var(--blue-fly-color);
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 93%;
+    width: 100%;
+    z-index: -1;
+}
+
+
 
 .result__view-detail-price { 
     position: absolute;
@@ -854,6 +871,7 @@
 }
 
 .bill-fly-total {
+    display: none;
     display: flex;
     flex-direction: column;
 }
@@ -861,7 +879,19 @@
 .bill-fly-total__title {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
+
+.bill-fly-total__title::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #00aeef;
+    bottom: -50%;
+    z-index: 1;
+}
+
 
 .bill-fly-total-text {
     font-family: 'helvetica-neue-medium';
@@ -904,7 +934,8 @@
     line-height: 1.4rem;
 }
 .bill-fly-price__list {
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     margin-top: 5rem;
 }
@@ -933,12 +964,6 @@
     color: #365e70;
     margin-top: 1rem;
 }
-.bill-fly-price__item-vat-total span{
-
-}
-.bill-fly-price__item-vat-total h5{
-
-}
 
 .bill-fly-luggage {
     display: flex;
@@ -948,6 +973,7 @@
     margin-top: 1.5rem;
     margin-right: -1.7rem;
     margin-left: -1.7rem;
+    z-index: 2;
 }
 .bill-fly-luggage h5{
     font-family: 'Alegreya-Regular';
@@ -1146,5 +1172,4 @@
     text-decoration: underline;
     margin-top: 1rem;
 }
-
 

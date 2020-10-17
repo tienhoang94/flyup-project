@@ -1,4 +1,26 @@
 $(document).ready(function () {
+      // Close outside to hide content
+      $(document).mouseup(function(e) {
+        var containerSlute = $(".guest__information-detail-slute");
+        var containerGender = $(".guest__information-detail-gender-list");
+        var containerLuggage = $(".guest__information-luggage-option-list");
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!containerSlute.is(e.target) && containerSlute.has(e.target).length === 0) 
+        {
+            containerSlute.hide();
+        }   
+        if (!containerGender.is(e.target) && containerGender.has(e.target).length === 0) 
+        {
+            containerGender.hide();
+        }   
+        if (!containerLuggage.is(e.target) && containerLuggage.has(e.target).length === 0) 
+        {
+            containerLuggage.hide();
+        }   
+        
+    });
+    
+
     $(".search__mf").css("display","block");
     $(".result__range-item").on('click',function(){
         $(".result__range-item").removeClass('active');
@@ -13,13 +35,28 @@ $(document).ready(function () {
         $(this).addClass('active');
         let idx =  $(this).attr('idx');
         $(".result__view-detail-item").hide();
-        $(".result__view-detail-item:nth-child("+idx+")").show()
+        $(".result__view-detail-item:nth-child("+idx+")").show();
         if (idx == 3) {
-            $(".result__view-detail-policy-bottom").show();
+            $(".result__view-detail-policy-bottom").css("display","flex");
             $(".result__view_name-infor-list").css("padding-left","7rem");
         } else {
             $(".result__view-detail-policy-bottom").hide();
             $(".result__view_name-infor-list").css("padding-left","5rem");
+        }
+    })
+
+   
+
+    $(".result__view-detail-head-item-pd").on('click',function(){
+        $(".result__view-detail-head-item-pd").removeClass('active');
+        $(this).addClass('active');
+        let idx =  $(this).attr('idx');
+        $(".result__view-detail-item-pd").hide();
+        $(".result__view-detail-item-pd:nth-child("+idx+")").show();
+        if (idx == 3) {
+            $(".result__view-detail-policy-bottom-pd").css("display","flex");
+        } else {
+            $(".result__view-detail-policy-bottom-pd").hide();
         }
     })
     $(".bill-fly-total__title-icon").click(function() {
@@ -74,6 +111,119 @@ $(document).ready(function () {
         var leftPosReturn = $('.result__range-item-group-return').scrollLeft();
         $(".result__range-item-group-return").animate({scrollLeft: leftPosReturn + 200}, 300);
     })
+
+
+    // Passenger Detail
+
+
+    $(".bill-fly-service-add-text").click(function(){
+        $(".bill-fly-service-add__content").toggle();
+        $(".bill-fly-service-add-icon .fa-sort-up").toggle();
+        $(".bill-fly-service-add-icon .fa-sort-down").toggle();
+    })
+
+
+    $(".adult-1 .guest__information-detail-nick-box").click(function () {
+        $(".adult-1 .guest__information-detail-slute").show();
+        $(".adult-1 .guest__information-slute-item").click(function () {
+            $(".adult-1 .guest__information-slute-item").removeClass('active');
+            $(this).addClass('active');
+            $(".adult-1 .guest__information-detail-nick-box span").text($(this).text());
+            $(".adult-1 .guest__information-detail-nick-box").css("color","#404057");
+            $(".adult-1 .guest__information-detail-nick-box").css("font-weight","bold");
+            $(".adult-1 .guest__information-detail-slute").hide();
+        })
+    })
+    $(".child-1 .guest__information-detail-nick-box").click(function () {
+        $(".child-1 .guest__information-detail-slute").show();
+        $(".child-1 .guest__information-slute-item").click(function () {
+            $(".child-1 .guest__information-slute-item").removeClass('active');
+            $(this).addClass('active');
+            $(".child-1 .guest__information-detail-nick-box span").text($(this).text());
+            $(".child-1 .guest__information-detail-nick-box").css("color","#404057");
+            $(".child-1 .guest__information-detail-nick-box").css("font-weight","bold");
+            $(".child-1 .guest__information-detail-slute").hide();
+        })
+    })
+
+
     
+
+    $(".adult-1 .guest__information-detail-gender-box").click(function () {
+        $(".adult-1 .guest__information-detail-gender-list").show();
+        $(".adult-1 .guest__information-gender-item").click(function () {
+            $(".adult-1 .guest__information-gender-item").removeClass('active');
+            $(this).addClass('active');
+            $(".adult-1 .guest__information-detail-gender-box span").text($(this).text());
+            $(".adult-1 .guest__information-detail-gender-box").css("color","#404057");
+            $(".adult-1 .guest__information-detail-gender-box").css("font-weight","bold");
+            $(".adult-1 .guest__information-detail-gender-list").hide();
+        })
+    })
+
+    $(".child-1 .guest__information-detail-gender-box").click(function () {
+        $(".child-1 .guest__information-detail-gender-list").show();
+        $(".child-1 .guest__information-gender-item").click(function () {
+            $(".child-1 .guest__information-gender-item").removeClass('active');
+            $(this).addClass('active');
+            $(".child-1 .guest__information-detail-gender-box span").text($(this).text());
+            $(".child-1 .guest__information-detail-gender-box").css("color","#404057");
+            $(".child-1 .guest__information-detail-gender-box").css("font-weight","bold");
+            $(".child-1 .guest__information-detail-gender-list").hide();
+        })
+    })
+
+
+
+
+
+    $(".adult-1 .guest__information-luggage-option").click(function () {
+        $(".adult-1 .guest__information-luggage-option-list").show();
+        $(".adult-1 .guest__information-luggage-option-item").click(function () {
+            $(".adult-1 .guest__information-luggage-option-item").removeClass('active');
+            $(this).addClass('active');
+            $(".adult-1 .guest__information-luggage-option-lable span").text($(this).text());
+            $(".adult-1 .guest__information-luggage-option-lable").css("color","#404057");
+            $(".adult-1 .guest__information-luggage-option-lable").css("font-weight","bold");
+            $(".adult-1 .guest__information-luggage-option-list").hide();
+        })
+    })
+
+    $(".child-1 .guest__information-luggage-option").click(function () {
+        $(".child-1 .guest__information-luggage-option-list").show();
+        $(".child-1 .guest__information-luggage-option-item").click(function () {
+            $(".child-1 .guest__information-luggage-option-item").removeClass('active');
+            $(this).addClass('active');
+            $(".child-1 .guest__information-luggage-option-lable span").text($(this).text());
+            $(".child-1 .guest__information-luggage-option-lable").css("color","#404057");
+            $(".child-1 .guest__information-luggage-option-lable").css("font-weight","bold");
+            $(".child-1 .guest__information-luggage-option-list").hide();
+        })
+    })
+
+
+
+    $(".guest__add-service-item-delete").click(function () {
+        $(".guest__add-service-item").removeClass('active');
+        $(".guest__add-service-btn").removeClass('disabled');
+    });
+
+    $(".guest__add-service-btn").click(function () {
+        let idx = $(this).attr('idx');
+        console.log(idx);
+        $(".guest__add-service-item").removeClass('active');
+        $(".guest__add-service-item:nth-child("+idx+")").addClass('active');
+        $(".guest__add-service-btn").removeClass('disabled');
+        $(".guest__add-service-btn[idx='" + idx + "']").addClass('disabled');
+    })
+
+    $(".guest__information-tick-infant").find("input").click(function () {
+        console.log("12");
+        if($(this).is(':checked') == true) {
+            $(".guest__information-tick-infant").css("color","#404057");
+        } else {
+            $(".guest__information-tick-infant").css("color","#b4b4c8");
+        }
+    })
 });
 

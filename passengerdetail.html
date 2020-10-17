@@ -12,11 +12,13 @@
     <link rel="stylesheet" type="text/css" href="./assets/style/header.css">
 
     <link rel="stylesheet" type="text/css" href="./assets/style/footer.css">
-    <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
 
     <!-- style.css -->
 	<link rel="stylesheet" type="text/css" href="./assets/style/flyresult.css">
-	<link rel="stylesheet" type="text/css" href="./assets/style/passengerdetail.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/passengerdetail.css">
+    
+    <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
+
 	<title>Passenger Detail</title>
 </head>
 <body>
@@ -82,16 +84,32 @@
                         <i class="fas fa-times"></i>
                     </div>
                     <ul class="nav__list-mobile ">
+
+                        <li class="nav__item-mobile"><div class="nav__item-infor-name"><span>Antonio Banderas</span></div></li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Chỉnh sửa profile</a></li>
                         <li class="nav__item-mobile"><a href="index.html" class="nav__link-mobile">Home</a></li>
                         <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Flash Sale</a></li>
                         <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Cố vấn du lịch</a></li>
                         <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Tin tức</a></li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Đăng xuất</a></li>
+                        <li class="nav__item nav__item--flex">
+                            <img src="https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-businessman-user-avatar-free-vector-png-image_1538405.jpg"
+                                alt="" class="nav__item-avatar">
+                            <!-- No Account -->
+                            <!-- <div class="nav__item-infor-account">
+                                <div class="nav__item-infor-name">Xin chào quý khách</div>
+                                <div class="nav__item-infor-logout">
+                                    <a href="" class="nav__item-infor-text">Đăng ký</a>
+                                    <a href="" class="nav__item-infor-text">Đăng nhập</a>
+                                </div>
+                            </div> -->
+                        </li>
                     </ul>
                 </nav>
             </header>
         </div>  
 
-        <div class="wrapper">
+        <div class="wrapper wrapper-guest-infor">
             <div class="change-search__head">
                 <div class="change-search__departure">
                     <div class="change-search-icon">
@@ -387,14 +405,14 @@
                         </div>
                         <div class="detail-arrival">
                             <ul class="result__view-detail-head">
-                                <li class="result__view-detail-head-item active" idx="1">Chiều đi</li>
-                                <li class="result__view-detail-head-item" idx="2">Tiện ích</li>
-                                <li class="result__view-detail-head-item" idx="3">Điều kiện/Chính sách</li>
+                                <li class="result__view-detail-head-item-pd active" idx="1">Chiều đi</li>
+                                <li class="result__view-detail-head-item-pd" idx="2">Tiện ích</li>
+                                <li class="result__view-detail-head-item-pd" idx="3">Điều kiện/Chính sách</li>
                             </ul>
                             <div class="result__view-detail">
                                 <div class="result__view-detail-title">Hành trình: Hà Nội - TP Hồ Chí Minh</div>
                                 <ul class="result__view-detail-list">
-                                    <li class="result__view-detail-item">
+                                    <li class="result__view-detail-item-pd">
                                         <div class="result__view-detail-time-item">
                                             <div class="result__view_name-brand">
                                                 <img src="./assets/images/icon_brand_vietnamairline_1.png" alt="" class="result__view__item-logo">
@@ -452,7 +470,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="result__view-detail-item">
+                                    <li class="result__view-detail-item-pd">
                                         <ul class="result__view-detail-feature-list">
                                             <li class="result__view-detail-feature-item">
                                                 <div class="result__view_name-brand result__view_name-brand--flex">
@@ -546,7 +564,7 @@
                                             </ul>
                                         </ul>
                                     </li>
-                                    <li class="result__view-detail-item">
+                                    <li class="result__view-detail-item-pd">
                                         <ul class="result__view-detail-policy-list">
                                             <li class="result__view-detail-feature-item">
                                                 <div class="result__view_name-brand result__view_name-brand--flex">
@@ -612,7 +630,7 @@
                                 </ul>
                             
                             </div>
-                            <div class="result__view-detail-policy-bottom">
+                            <div class="result__view-detail-policy-bottom-pd">
                                 <img src="./assets/images/logo-FlyUp_1.png" alt="">
                                 <h5 class="result__view-detail-policy-content">
                                     <span>Flyup.vn không tính thêm phí dịch vụ. Chí sách huỷ và thay đồi dự trên từng loại vé, bất kì khoản phí bổ sung nào cũng được xác định bởi hãng hàng không (nhà cung cấp)</span>
@@ -620,7 +638,6 @@
                                 </h5>
                             </div>
                         </div>
-
                     </div>
                  
                     <div class="summary-bill">
@@ -647,7 +664,7 @@
                                         <div class="bill-fly__departure-title">
                                             <div class="bill-fly__departure-text">
                                                 <i class="fad fa-plane-arrival"></i>
-                                                Chiều vế
+                                                Chiều về
                                             </div>
                                             <h5 class="bill-fly__departure-price">1.567.000đ</h5>
                                         </div>
@@ -664,12 +681,32 @@
                                 <h5>Hành lý kí gửi</h5>
                                 <span>Đã bao gồm</span>
                             </div>
-                            <div class="bill-fly-luggage-pd">
-                                <h5>Hành lý kí gửi</h5>
-                                <span>Đã bao gồm</span>
+                            <div class="bill-fly-service-add">
+                                <div class="bill-fly-service-add__head">
+                                    <div class="bill-fly-service-add-text">
+                                        <h5>Dịch vụ cộng thêm</h5>
+                                        <div class="bill-fly-service-add-icon">
+                                            <i class="fas fa-sort-down"></i>
+                                            <i class="fas fa-sort-up"></i>
+                                        </div>
+                                    </div>
+                                    <span class="bill-fly-service-add-price">
+                                        425.000đ
+                                    </span>
+                                </div>
+                                <ul class="bill-fly-service-add__content">
+                                    <li class="bill-fly-service-add__item">
+                                        <h5>Phòng chờ VIP bông sen</h5>
+                                        <span>350.000đ</span>
+                                    </li>
+                                    <li class="bill-fly-service-add__item">
+                                        <h5>Đưa đón sân bay (Hà Nội - Hà Nội)</h5>
+                                        <span>75.000đ</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="bill-fly-total">
-                                <div class="bill-fly-total__title">
+                            <div class="bill-fly-total bill-fly-total--margin">
+                                <div class="bill-fly-total__title bill-fly-total__title--margin">
                                     <h4 class="bill-fly-total-text">Tổng cộng</h4>
                                     <div class="bill-fly-total__title-icon">
                                         <i class="far fa-arrow-down"></i>
@@ -679,7 +716,7 @@
                                         <span>Đã bao gồm tất cả thuế, phí và phụ phí</span>
                                     </div>
                                 </div>
-                                <ul class="bill-fly-price__list">
+                                <ul class="bill-fly-price__list bill-fly-price__list--padding">
                                     <li class="bill-fly-price__item">
                                         <span>Giá vé (người lớn)</span>
                                         <h5>1 × 780.000 = <span>780.000đ</span></h5>
@@ -703,11 +740,327 @@
             
                                 </ul>
                             </div>
+                            <div class="bill-fly__voucher">
+                                <div class="bill-fly__voucher-btn">mã khuyến mại</div>
+                                <input type="text" placeholder="Nhập mã khuyến mại"/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="guest__information">
+                <div class="guest__information-head">
+                    <h2 class="guest__information-head-text">Thông tin hành khách</h2>
+                    <ul class="progress-bar-list infor-guest">
+                        <li class="progress-bar-item done">
+                            <h4 class="progress-bar-title">Tìm kiếm</h4>
+                            <div class="progress-bar-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </li>
+                        <li class="progress-bar-item done ">
+                            <h4 class="progress-bar-title">Chi tiết</h4>
+                            <div class="progress-bar-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </li>
+                        <li class="progress-bar-item progress">
+                            <h4 class="progress-bar-title">Thông tin</h4>
+                            <div class="progress-bar-icon">
+                                3
+                            </div>
+                        </li>
+                        <li class="progress-bar-item">
+                            <h4 class="progress-bar-title">Thanh toán</h4>
+                            <div class="progress-bar-icon">
+                                4
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="guest__information-wrapper">
+                    <div class="guest__information-content-adult">
+                        <div class="guest__information-type-text">
+                            <span>1</span>
+                            <h4>người lớn</h4>
+                        </div>
+                        <ul class="guest__information-list">
+                            <li class="guest__information-item adult-1">
+                                <h5 class="guest__information-number-text">Hành khách 1</h5>
+                                <div class="guest__information-detail">
+                                    <div class="guest__information-detail-name">
+                                        <h5>Họ và tên</h5>
+                                        <input type="tex" placeholder="Viết hoa không dấu"/>
+                                    </div>
+                                    <div class="guest__information-detail-nick">
+                                        <h5>Danh xưng</h5>
+                                        <div class="guest__information-detail-nick-box">
+                                            <span>Lựa chọn</span>
+                                            <i class="far fa-angle-down"></i>
+                                        </div>
+                                        <ul class="guest__information-detail-slute">
+                                            <li class="guest__information-slute-item">
+                                                <span>Mr</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                            <li class="guest__information-slute-item">
+                                                <span>Mrs</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                            <li class="guest__information-slute-item">
+                                                <span>Miss</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="guest__information-detail-gender">
+                                        <h5>Giới tính</h5>
+                                        <div class="guest__information-detail-gender-box">
+                                            <span>Lựa chọn</span>
+                                            <i class="far fa-angle-down"></i>
+                                        </div>
+                                        <ul class="guest__information-detail-gender-list">
+                                            <li class="guest__information-gender-item">
+                                                <span>Nam</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                            <li class="guest__information-gender-item">
+                                                <span>Nữ</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="guest__information-luggage">
+                                    <h5>Hành lý kí gửi</h5>
+                                    <div class="guest__information-luggage-option">
+                                        <span class="guest__information-luggage-option-lable"> <span> 23kg</span>
+                                            <i class="far fa-angle-down"></i>
+                                        </span>
+                                        <ul class="guest__information-luggage-option-list">
+                                            <li class="guest__information-luggage-option-item">
+                                                <span>32kg</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                            <li class="guest__information-luggage-option-item">
+                                                <span>46kg</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="guest__information-luggage-price">640.000đ</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="guest__information-content-children">
+                        <div class="guest__information-type-text">
+                            <span>2</span>
+                            <h4>trẻ em</h4>
+                        </div>
+                        <ul class="guest__information-list">
+                            <li class="guest__information-item child-1">
+                                <h5 class="guest__information-number-text">Hành khách 1</h5>
+                                <div class="guest__information-detail">
+                                    <div class="guest__information-detail-name">
+                                        <h5>Họ và tên</h5>
+                                        <input type="tex" placeholder="Viết hoa không dấu"/>
+                                    </div>
+                                    <div class="guest__information-detail-nick">
+                                        <h5>Danh xưng</h5>
+                                        <div class="guest__information-detail-nick-box">
+                                            <span>Lựa chọn</span>
+                                            <i class="far fa-angle-down"></i>
+                                        </div>
+                                        <ul class="guest__information-detail-slute">
+                                            <li class="guest__information-slute-item">
+                                                <span>Mr</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                            <li class="guest__information-slute-item">
+                                                <span>Mrs</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                            <li class="guest__information-slute-item">
+                                                <span>Miss</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="guest__information-detail-gender">
+                                        <h5>Giới tính</h5>
+                                        <div class="guest__information-detail-gender-box">
+                                            <span>Lựa chọn</span>
+                                            <i class="far fa-angle-down"></i>
+                                        </div>
+                                        <ul class="guest__information-detail-gender-list">
+                                            <li class="guest__information-gender-item">
+                                                <span>Nam</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                            <li class="guest__information-gender-item">
+                                                <span>Nữ</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="guest__information-detail-date">
+                                        <h5>Ngày sinh</h5>
+                                        <div class="guest__information-detail-date-box">
+                                            <input type="date" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="guest__information-tick-infant">
+                                    <input type="checkbox"/> Trẻ sơ sinh dưới 1 tháng tuổi
+                                </div>
+                                <div class="guest__information-luggage">
+                                    <h5>Hành lý kí gửi</h5>
+                                    <div class="guest__information-luggage-option">
+                                        <span class="guest__information-luggage-option-lable"> <span> 23kg</span>
+                                            <i class="far fa-angle-down"></i>
+                                        </span>
+                                        <ul class="guest__information-luggage-option-list">
+                                            <li class="guest__information-luggage-option-item">
+                                                <span>32kg</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                            <li class="guest__information-luggage-option-item">
+                                                <span>46kg</span>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="guest__information-luggage-price">640.000đ</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="guest__add-service">
+                        <h5 class="guest__information-number-text">Dịch vụ cộng thêm</h5>
+                        <ul class="guest__add-service-list" >
+                            <li class="guest__add-service-item">
+                                <div class="guest__add-service-icon"><i class="fas fa-heartbeat"></i></div>
+                                <h4 class="guest__add-service-title">No Packages</h4>
+                                <ul class="guest__add-service-feature-list">
+                                    <li class="guest__add-service-feature-item">
+                                        <i class="fas fa-times"></i>
+                                        <span>Medical Expenses</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item">
+                                        <i class="fas fa-times"></i>
+                                        <span>Trip Cancellation</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item">
+                                        <i class="fas fa-times"></i>
+                                        <span>Lost Baggage</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item">
+                                        <i class="fas fa-times"></i>
+                                        <span>Air Travel Insurance</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item">
+                                        <i class="fas fa-times"></i>
+                                        <span>Liability</span>
+                                    </li>
+                                </ul>
+                                <div class="guest__add-service-btn" idx="1"><span>0 $</span></div>
+                                <div class="guest__add-service-item-delete">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </li>
+                            <li class="guest__add-service-item active" >
+                                <div class="guest__add-service-icon"><i class="fas fa-star"></i></div>
+                                <h4 class="guest__add-service-title">Travel Basic</h4>
+                                <ul class="guest__add-service-feature-list">
+                                    <li class="guest__add-service-feature-item active">
+                                     <i class="fas fa-check"></i>
+                                        <span>Medical Expenses</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item active">
+                                     <i class="fas fa-check"></i>
+                                        <span>Trip Cancellation</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item">
+                                        <i class="fas fa-times"></i>
+                                        <span>Lost Baggage</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item">
+                                        <i class="fas fa-times"></i>
+                                        <span>Air Travel Insurance</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item">
+                                        <i class="fas fa-times"></i>
+                                        <span>Liability</span>
+                                    </li>
+                                </ul>
+                                <div class="guest__add-service-btn disabled" idx="2"><span>13 $</span></div>
+                                <div class="guest__add-service-item-delete ">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </li>
+                            <li class="guest__add-service-item">
+                                <div class="guest__add-service-icon"><i class="fas fa-star"></i></div>
+                                <h4 class="guest__add-service-title">Travel Plus</h4>
+                                <ul class="guest__add-service-feature-list">
+                                    <li class="guest__add-service-feature-item active">
+                                     <i class="fas fa-check"></i>
+                                        <span>Medical Expenses</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item active">
+                                     <i class="fas fa-check"></i>
+                                        <span>Trip Cancellation</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item active">
+                                        <i class="fas fa-check"></i>
+                                        <span>Lost Baggage</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item active">
+                                        <i class="fas fa-check"></i>
+                                        <span>Air Travel Insurance</span>
+                                    </li>
+                                    <li class="guest__add-service-feature-item active">
+                                        <i class="fas fa-check"></i>
+                                        <span>Liability</span>
+                                    </li>
+                                </ul>
+                                <div class="guest__add-service-btn" idx="3"><span>23 $</span></div>
+                                <div class="guest__add-service-item-delete">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guest__email-tel">
+                <div class="guest__information-head">
+                    <h2 class="guest__information-head-text">Thông tin liên hệ nhận mã vé/booking</h2>
+                </div>
+                <div class="guest__email-tel__body">
+                    <div class="guest__email-tel__infor">
+                        <h5>Địa chỉ Email</h5>
+                        <input type="text" placeholder="Nhập địa chỉ email liên hệ">
+                    </div>
+                    <div class="guest__email-tel__infor guest__email-tel__infor--margin">
+                        <h5>Điện thoại di động</h5>
+                        <input type="text" placeholder="Nhập số điện thoại nhận tin nhắn/cuộc gọi">
+                    </div>
+                    <div class="guest__email-tel-policy">
+                        <h5><i class="far fa-stop"></i>Tôi chấp nhận <span>Chính sách/Điều khoản </span></h5>
+                        <h5><i class="far fa-stop"></i>Email/Số điện thoại của tôi có thể nhận 
+                            thông báo khẩn cấp</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-next-step">
+                <div class="btn-book btn-next-step--modified">Tiếp tục</div>
+            </div>
         </div>
+
+
 
         <div class="btn-scroll-to-top"><i class="fa fa-chevron-up"></i></div>
         <!-- Footer -->

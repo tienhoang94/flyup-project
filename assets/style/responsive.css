@@ -195,7 +195,60 @@
         margin-right: 0;
     }
 
+    /* Passsenger Detail */
+    .guest__information-detail {
+        flex-wrap: wrap;
+    }
+    .guest__information-detail > *{
+        margin-bottom: 2rem ;
+    }
+
+    .guest__email-tel__body {
+        flex-wrap: wrap;
+    }
     
+    .guest__email-tel__body  > *{
+        margin-bottom: 2rem ;
+    }
+
+    .change-search-btn {
+        font-size: 1.8rem;
+        padding: 1rem;
+        text-align: center;
+        margin-right: 1rem;
+    }
+
+    .bill-fly-total__title {
+        flex-wrap: wrap;
+    }
+    .bill-fly-total-text {
+        left: 1rem;
+    }
+
+    .wrapper-guest-infor {
+        padding: 0;
+    }
+
+    .wrapper-fluid-bg-color{
+        width: 100%;
+    }
+    .wrapper-fluid-bg-color .btn-scroll-to-top{
+        right: 10rem;
+    }
+    .guest__information-wrapper {
+        padding-right: 0;
+    }
+
+    .guest__add-service-list {
+        flex-wrap: wrap;
+    }
+
+    .guest__email-tel__infor--margin {
+        margin-left: 0;
+    }
+    .guest__add-service-item {
+        padding: 3rem 3rem;
+    }
 }
 
 /* Tablet */
@@ -289,6 +342,11 @@
         height: 70%;
     }
 
+    /* passenger detail  */
+    .wrapper-guest-infor {
+        padding: 0 1rem;
+    }
+
 
 }
 
@@ -347,5 +405,104 @@
     }
     .search__mf__view__date-icon {
         left: calc(50% - 10px);
+    }
+
+
+    /* Guest Detail */
+
+    .flight__detail-head, .guest__information-head {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center  ;
+    }
+
+    .flight__detail-head, .guest__information-head > * {
+        margin-bottom: 1rem;
+
+    }
+
+    .change-search__head, .guest__information-head {
+        flex-wrap: wrap;
+    }
+
+    .change-search__head, .guest__information-head  > * {
+        margin-bottom: 1rem;
+
+    }
+    .change-search__departure, .change-search__return {
+        line-height: 3rem;
+    }
+
+    .detail-return-departure {
+        flex-direction: column;
+    }
+
+    .detail-group,.summary-bill {
+        width: 100%;
+    }
+
+    .result__view-detail {
+        padding: 3rem 0;
+    }
+    .result__view-detail-time-item {
+        flex-wrap: wrap;
+        padding: 0 1rem;
+    }
+    .result__view-detail-time-item, .result__view-detail-feature-item  > * {
+        margin-bottom: 1rem;
+    }
+
+    .result__view-detail-feature-item {
+        padding: 0 1rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .result__view-detail-policy-bottom, .result__view-detail-policy-bottom-pd {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .result__view-detail-policy-content, .result__view-detail-policy-content {
+        width: 84%;
+        margin: 1rem;
+    }
+
+
+    .guest__information-wrapper {
+        padding: 1rem;
+    }
+
+    .guest__information-detail-name input {
+        width: 100%;
+    }
+
+    .guest__information-detail-nick {
+        margin-left: 0;
+    }
+    .guest__information-luggage {
+        width: 100%;
+    }
+
+    .guest__information-luggage h5 {
+        padding-left: 0.5rem;
+    }
+    .guest__information-luggage-price {
+        padding: 1.4rem;
+    }
+    .guest__email-tel__body {
+        padding: 1rem;
+    }
+    .guest__email-tel__infor input {
+        width: 100%;
+    }
+
+    .btn-next-step {
+        justify-content: center;
+    }
+
+    .body {
+        width: 100%;
     }
 }
