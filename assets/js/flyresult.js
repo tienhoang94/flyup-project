@@ -31,7 +31,8 @@ $(document).ready(function () {
         $(this).addClass('active');
     })
     $(".result__view-detail-head-item").on('click',function(){
-        $(".result__view-detail-head-item").removeClass('active');
+        // $(this).parent()
+        $(this).parent().find(".result__view-detail-head-item").removeClass('active');
         $(this).addClass('active');
         let idx =  $(this).attr('idx');
         $(".result__view-detail-item").hide();

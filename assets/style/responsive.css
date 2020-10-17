@@ -342,11 +342,98 @@
         height: 70%;
     }
 
+    /* flight result */
+
+    .bill__container-result .bill-fly-title {
+        margin-left: 4rem;
+    }
+
+    .bill__container-result .bill-fly__container {
+        flex-direction: column;
+        margin-left: 3rem;
+    }
+    .service__container {
+        height: 70rem;
+    }
+
+    .service__wrapper {
+        flex-direction: column;
+    }
+
+    .service__list {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .service__intro {
+        width: 100%;
+        padding-left: 7rem;
+        margin-top: 2rem;
+    }
+
+
+
+
     /* passenger detail  */
     .wrapper-guest-infor {
         padding: 0 1rem;
     }
 
+    .bill-fly__container-pd {
+        padding: 0 1rem;
+    }
+
+    .bill-fly-price__item-pd {
+        flex-direction: column;
+    }
+
+    .bill-fly-price__item-pd h5 {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .bill-fly__departure-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 3rem;
+    }
+    
+    /* confirmation */
+
+    .confirm__containner {
+        margin-right: 1rem;
+    }
+
+    .confirm__bill-tax {
+        flex-wrap: wrap;
+    }
+
+    .bill__wrapper-cf {
+        width: 26rem;
+    }
+
+
+    .bill-fly-choose-cf, .bill-fly-total__title-cf,
+    .bill-fly__departure-cf, .bill-fly__return-cf {
+        margin-left: 1rem;
+    }
+
+    .bill-fly-choose-cf, .bill-fly-total__title-cf {
+        margin-left: 0rem;
+    }
+    .bill-fly-price__list-cf {
+        padding-left: 1rem;
+    }
+
+    .bill-fly-total-text-cf {
+        left: 3rem;
+    }
+
+    .bill-fly-title-cf {
+        margin-left: 3rem;
+    }
 
 }
 
@@ -505,4 +592,60 @@
     .body {
         width: 100%;
     }
+
+
+    /* confirmation */
+    .background__header-confirm {
+        height: 14rem;
+        width: 100%;
+    }
+
+    .confirm__containner__wrapper {
+        flex-direction: column;
+    }
+
+    .confirm__containner {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .confirm__content-icon {
+        width: 7rem;
+    }
+    .confirm__bill-icon {
+        width: 6rem;
+    }
+
+    .confirm__content__body {
+        padding-left: 1rem;
+    }
+
+    .confirm__bill-tax {
+        padding-left: 0;
+        flex-direction: column;
+    }
+
+    .confirm__bill-tax input {
+        width: 100%;
+    }
+
+    .confirm__bill__table {
+        margin-left: 0;
+    }
+
+    .confirm-view-invoice {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .bill__wrapper-cf {
+        width: 100%;
+    }
+
+    .confirm__bill-tax-item {
+        margin-top: 2rem;
+    }
+
+
 }

@@ -1,6 +1,4 @@
-.wrapper__header-height {
-    height: 8rem;
-}
+
 
 /* Notification  */
 
@@ -1056,10 +1054,10 @@
     height: 35rem;
     width: 80%;
     display: flex;
-    flex-direction: column;
     overflow-y: scroll;
     position: relative;
-
+    flex-direction: row;
+    flex-wrap: wrap;
 
 }
 
@@ -1091,6 +1089,8 @@
     color: var(--white-color);
     height: 35.5rem;
     margin-right: 3rem;
+    width: 27.5rem;
+    margin-bottom: 2rem;
 }
 
 .service__item:nth-child(even) {
@@ -1098,11 +1098,10 @@
 }
 
 .service__item-img {
-
     background-size: cover;
     background-repeat: no-repeat;
     height: 27.5rem;
-    width: 28.5rem;
+    width: 27.5rem;
     -webkit-background-size: cover;
     background-position: center center;
 }

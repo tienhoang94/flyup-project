@@ -60,21 +60,20 @@
 }
 
 .nav__item-view-cart {
-    background-color: var(--primary-color);
     height: 3.7rem;
     cursor: pointer;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid var(--green-fly-color);
 }
 
 .nav__item-text-cart {
     font-size: 1.546rem;
     font-weight: 700;
-    line-height: 1.5rem; 
-    color: var(--white-color);
-    padding: 0 1.4rem;
+    color: var(--green-fly-color);
+    padding: 0.8rem 1.4rem;
 }
 
 .nav__item-text {
@@ -213,3 +212,6 @@
 }
 
 
+.wrapper__header-height {
+    height: 8rem;
+}

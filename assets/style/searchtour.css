@@ -1,0 +1,336 @@
+
+
+/* search tour */
+.search-tour__fluid {
+    display: flex;
+    justify-content: center;
+}
+.search-tour__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 135rem;
+    margin-top: 8rem;
+}
+
+/* tour filter  */
+
+.search-tour__filter {
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+}
+
+.tour__filter-head {
+    font-family: 'helvetica-neue-regular';
+    font-size: 1.6rem;
+    color: var(--title-tour);
+    font-weight: 700;
+}
+
+.tour__filter-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.tour__filter-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    margin-bottom: 3.5rem;
+}
+
+.tour__filter-item-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tour__filter-item-title span{
+    font-size: 1.6rem;
+    font-family: 'helvetica-neue-regular';
+    color: #2c91bb;
+}
+
+.tour__filter-item-title i{
+    font-size: 1.4rem;
+    color: #e1e1e1;
+}
+
+.tour__filter-place,
+.tour__filter-duration {
+    margin-top: 3.5rem;
+}
+
+.tour__filter-place input,
+.tour__filter-duration input{
+    margin-bottom: 3.5rem;
+}
+
+.tour__filter-place label,
+.tour__filter-duration label{
+    font-family: 'helvetica-neue-regular';
+    font-size: 1.4rem;
+    color: var(--secondary-tour);
+    margin-left: 2rem;
+    font-weight: 600;
+}
+
+.tour__filter-rate {
+    margin-top: 3.5rem;
+}
+
+.tour__filter-rate input{
+    margin-bottom: 3rem;
+}
+
+.tour__filter-rate label{
+    margin-left: 2.2rem;
+}
+.tour__filter-rate label i{
+    font-size: 1.3rem;
+    color: var(--sub-title-tour);
+}
+
+
+.tour__filter-rate label span{
+    font-size: 1.4rem;
+    color: #959595;
+    font-weight: 600;
+}
+
+
+.tour__filter-range-price {
+    margin-top: 3.5rem;
+}
+
+.tour__filter-range-price input{
+
+}
+
+.tour__filter-btn {
+
+}
+
+.tour__filter-btn button{
+
+}
+
+/* List result */
+
+.search-tour__result {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-tour__result-title span{
+    color: #00364b;
+    background-color: #edf4f7;
+    padding: 1.3rem 2rem;
+    font-size: 1.2rem;
+    font-family: 'helvetica-neue-regular';
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.search-tour__result-title i{
+    color: #9c9c9d;
+    font-size: 1.5rem;
+    margin-left: 0.8rem;
+}
+
+
+.search-tour__result-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    margin-bottom: 7.3rem;
+}
+
+.search-tour__result-item {
+    display: flex;
+}
+
+
+.tour__result-img {
+    position: relative;
+}
+.tour__result-img img{
+    width: 30rem;
+    height: 25rem;
+}
+
+.result__view__item-sale {
+    position: absolute;
+    top: -1.7rem;
+    left: -0.7rem;
+    background-color: var(--primary-color);
+    padding: 1rem 1.6rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.result__view__item-sale.blue{
+    background-color: var(--sub-title-tour);
+}
+
+.result__view__item-sale-name {
+    font-family: 'helvetica-neue-medium';
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: var(--white-color);
+}
+
+.result__view__item-sale-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    border-top: 7px solid var(--primary-color);
+    border-left: 7px solid transparent;
+    filter: brightness(60%);
+}
+.result__view__item-sale.blue 
+.result__view__item-sale-name::after {
+  
+    border-top: 7px solid var(--sub-title-tour);
+}
+
+
+
+.tour__result-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    width: 37rem;
+    margin-top: 2.4rem;
+}
+
+.tour__result-place {
+    font-size: 1.4rem;
+    color: var(--sub-title-tour);
+    font-family: 'helvetica-neue-regular';
+    text-transform: uppercase;
+    margin-bottom: 2.1rem;
+}
+
+.tour__result-route {
+    font-family: 'helvetica-neue-regular';
+    font-size: 1.8rem;
+    color: var(--title-tour);
+    margin-bottom: 1.8rem;
+}
+
+.tour__result-description {
+    font-family: 'helvetica-neue-light';
+    font-size: 1.6rem;
+    color: #7d7d7d;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+}
+
+.tour__result-vote {
+    margin-bottom: 1.1rem;
+}
+
+.tour__result-vote i{
+    color: #7d7d7d;
+    font-size: 1.5rem;
+}
+
+.tour__result-vote span{
+    margin-left: 0.8rem;
+    color: var(--secondary-tour);
+    font-family: 'helvetica-neue-medium';
+}
+.tour__result-vote b{
+   font-weight: 700;
+}
+
+.tour__result-infor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tour__result-infor-item {
+    display: flex;
+    font-size: 1.1rem;
+    color: var(--secondary-tour);
+    font-weight: 700;
+    margin-right: 2.2rem;
+    margin-bottom: 0.7rem;
+}
+
+.tour__result-infor-item i{
+    margin-right: 0.6rem;
+}
+
+.tour__result-infor-item span{
+
+}
+
+.tour__result-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tour__result-price-title {
+    font-size: 1.5rem;
+    font-family: 'helvetica-neue-regular';
+    color: #000;
+    margin-bottom: 1.3rem;
+}
+
+.tour__result-price-number {
+    font-family: 'helvetica-neue-condensed-black';
+    color: var(--green-fly-color);
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.tour__result-price-duration {
+    font-size: 1.5rem;
+    font-family: 'helvetica-neue-regular';
+    color: #000;
+    margin-bottom: 3.4rem;
+}
+
+.btn-book-tour {
+    width: 14rem;
+    height: 4rem;
+    font-family: 'helvetica-neue-regular';
+    font-size: 1.2rem;
+}
+
+.btn-book-tour__link,
+.btn-book-tour__link:hover {
+    text-decoration: none;
+
+}
+
+
+/* pagination */
+
+.search-tour__paginate {
+    display: flex;
+    justify-content: center;
+}
+
+.search-tour__paginate-item {
+    margin-right: 5.4rem;
+    cursor: pointer;
+}
+
+.search-tour__paginate-previous,
+.search-tour__paginate-next {
+    font-size: 1.7rem;
+    color: var(--secondary-tour);
+}
+
+.search-tour__paginate-number {
+    font-size: 1.2rem;
+    color: #959595;
+}

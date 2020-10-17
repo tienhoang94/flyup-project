@@ -10,18 +10,16 @@
     <link rel="stylesheet" type="text/css" href="./assets/style/grid.css">
 
     <link rel="stylesheet" type="text/css" href="./assets/style/header.css">
-
     <link rel="stylesheet" type="text/css" href="./assets/style/footer.css">
 
     <!-- style.css -->
-    <link rel="stylesheet" type="text/css" href="./assets/style/flyresult.css">
-    <link rel="stylesheet" type="text/css" href="./assets/style/confirmation.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/searchtour.css">
     
     <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
-	<title>Confirmation</title>
+	<title>Search Tour</title>
 </head>
 <body>
-    <div class="wrapper-fluid wrapper-fluid-bg-confirmation">
+    <div class="wrapper-fluid wrapper-fluid-bg-color-pm">
          <!-- Header -->
          <div class="wrapper__header-bg wrapper__header-height">
             <header class="wrapper header">
@@ -92,212 +90,180 @@
             </header>
         </div>  
 
-        <div class="background__header-confirm" style="background-image: url(/assets/images/bg_head_confirmation.png);">
-        </div>
+        <!-- result tour -->
 
-        <div class="wrapper confirm__containner__wrapper">
-            <div class="confirm__containner">
-                <div class="confirm__content">
-                    <div class="confirm__content__head">
-                        <h4 class="confirm__content-icon">1</h4>
-                        <div class="confirm__content-title">
-                            <h4>Cảm ơn bạn - Đơn hàng của bạn đã được xác nhận!</h4>
-                            <h5>Tổng tiền còn lại phải thanh toán: 0 VND</h5>
-                        </div>
-                    </div>
-                    <div class="confirm__content__body">
-                        <h4>Mã đơn hàng của bạn là <span>FLP0058</span></h4>
-                        <p>Fly Up xuất vé ngay sau khi đơn hàng được thanh toán thành công. Trong trường hợp đơn hàng chưa được thanh toán, bạn có thể hoàn thành tại đây<a href="">{Quản lý đặt chỗ} </a></p>
-                        <p>Vé điện tử và chi tiết đơn hàng đã được gửi vào email của bạn! Hãy kiểm tra email để không bỏ sót bạn nhé<p>
-                        <p>Fly Up thân chúc quý khách một chuyến đi vui vẻ và thành công!</p>   
-                    </div>
-                </div>
-                <div class="confirm__bill">
-                    <div class="confirm__bill__head">
-                        <h4 class="confirm__bill-icon">2</h4>
-                        <div class="confirm__bill-title">
-                            <h4>Xuất hóa đơn đỏ</h4>
-                            <h5>Tóm tắt đơn hàng - nhập thông tin lập hóa đơn đỏ (nếu cần)</h5>
-                        </div>
-                    </div>
-                    <div class="confirm__bill-tax">
-                        <div class="confirm__bill-tax-item">
-                            <h5>Tên công ty</h5>
-                            <input type="text" placeholder="Nhập tên công ty"/>
-                        </div>
-                        <div class="confirm__bill-tax-item">
-                            <h5>Mã số thuế</h5>
-                            <input type="text" placeholder="Nhập MST"/>
-                        </div>
-                    </div>
-                    <table class="confirm__bill__table">
-                        <thead>
-                            <tr>
-                                <th>Tên hành khách</th>
-                                <th>Loại dịch vụ</th>
-                                <th>Mã vé điện tử/đặt chỗ</th>
-                                <th>Thành tiền</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4">
-                                    <h5>Tổng tiền </h5>
-                                    <h5>Thuế và phí dịch vụ</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="4">
-                                    <h4>Tổng cộng thanh toán</h4>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="confirm-view-invoice">
-                        <span>VIEW YOUR INVOICE</span>
+        <div class="search-tour__fluid">
+            <div class="search-tour__container">
+                <div class="search-tour__filter">
+                    <h3 class="tour__filter-head">BỘ LỌC TOURS</h3>
+                    <ul class="tour__filter-list">
+                        <li class="tour__filter-item">
+                            <h4 class="tour__filter-item-title"> <span>Lựa chọn điểm khởi hành</span><i class="fas fa-caret-down"></i></h4>
+                            <form action="" class="tour__filter-place">
+                                <input type="radio" name="place" id="hni">
+                                <label for="hni">Hà Nội ( 34 )</label>
+                                <input type="radio" name="place" id="dng">
+                                <label for="dng">Đà Nẵng ( 16 )</label>
+                                <input type="radio" name="place" id="hcm">
+                                <label for="hcm">Hồ Chí Minh  ( 12 )</label>
+                                <input type="radio" name="place" id="vih">
+                                <label for="vih">Vinh ( 12 )</label>
+                                <input type="radio" name="place" id="hpg">
+                                <label for="hpg">Hải Phòng  ( 56 )</label>
+                                <input type="radio" name="place" id="ntg">
+                                <label for="ntg">Nha Trang ( 13 )</label>
+                            </form>
+                        </li>
+                        <li class="tour__filter-item">
+                            <h4 class="tour__filter-item-title"> <span>Thời lượng Tours</span><i class="fas fa-caret-down"></i></h4>
+                            <form action="" class="tour__filter-duration">
+                                <input type="radio" name="duration" id="2d">
+                                <label for="2d">2 ngày  ( 34 )</label>
+                                <input type="radio" name="duration" id="5d">
+                                <label for="5d">5 ngày ( 16 )</label>
+                                <input type="radio" name="duration" id="3d">
+                                <label for="3d">3 ngày ( 12 )</label>
+                                <input type="radio" name="duration" id="6d">
+                                <label for="6d">6 ngày ( 12 )</label>
+                                <input type="radio" name="duration" id="4d">
+                                <label for="4d">4 ngày  ( 56 )</label>
+                                <input type="radio" name="duration" id="7d">
+                                <label for="7d">Trên 7 ngày ( 13 )</label>
+                            </form>
+                        </li>
+                        <li class="tour__filter-item">
+                            <h4 class="tour__filter-item-title"> <span>Xếp hạng Tours</span><i class="fas fa-caret-down"></i></h4>
+                            <form action="" class="tour__filter-rate">
+                                <input type="radio" name="rate" id="5s">
+                                <label for="5s">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>45</span>
+                                </label>
+                                <input type="radio" name="rate" id="4s">
+                                <label for="4s">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>23</span>
+                                </label>
+                                <input type="radio" name="rate" id="3s">
+                                <label for="3s">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>12</span>
+                                </label>
+                                <input type="radio" name="rate" id="2s">
+                                <label for="2s">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>15</span>
+                                </label>
+                                <input type="radio" name="rate" id="1s">
+                                <label for="1s">
+                                    <i class="fas fa-star"></i>
+                                    <span>5</span>
+                                </label>
+                            </form>
+                        </li>
+                        <li class="tour__filter-item">
+                            <h4 class="tour__filter-item-title"> <span>Khoảng giá</span><i class="fas fa-caret-down"></i></h4>
+                            <form action="" class="tour__filter-range-price">
+                                <input type="range" min="200000" max="1000000">
+                            </form>
+                        </li>
+                    </ul>
+                    <div class="tour__filter-btn">
+                        <button class="btn-book">TÌM KIẾM</button>
                     </div>
                 </div>
-            </div>
-            <div class="flight__detail">
-                <div class="bill__wrapper bill__wrapper-cf">
-                    <h2 class="bill__head-cf">TÓM TẮT ĐƠN HÀNG</h2>
-                    <div class="bill-fly-choose bill-fly-choose-cf">
-                        <h4 class="bill-fly-title bill-fly-title-cf">Chuyến bay đã chọn</h4>
-                        <div class="bill-fly__departure bill-fly__departure-cf">
-                            <div class="bill-fly__departure-title">
-                                <div class="bill-fly__departure-text">
-                                    <i class="fad fa-plane-departure"></i>
-                                    Chiều đi
+                <div class="search-tour__result">
+                    <h4 class="search-tour__result-title"> <span>SẮP XẾP THEO <i class="fas fa-caret-down"></i></span>
+                    </h4>
+                    <ul class="search-tour__result-list">
+                        <li class="search-tour__result-item">
+                            <div class="tour__result-img">
+                                <img src="https://dulichvietnam.com.vn/kinh-nghiem/wp-content/uploads/2018/08/mu-cang-chai-lua-chin.jpg" alt="">
+                                <div class="result__view__item-sale">
+                                    <span class="result__view__item-sale-name">XẾP HẠNG CAO</span>
                                 </div>
-                                <h5 class="bill-fly__departure-price">1.567.000đ</h5>
                             </div>
-                            <div class="bill-fly__departure-detail">
-                                <span>09:45AM | CN, 30 Thg 6 2020</span>
-                                <span>Sân bay quốc tế nội bài</span>
-                            </div>
-                            <div class="bill-fly__departure-detail">
-                                <span>12:55AM | CN, 30 Thg 6 2020</span>
-                                <span>Sân bay quốc tế tân sơn nhấT</span>
-                            </div>
-                            <div class="bill-fly__sub bill-fly__sub-cf">
-                                <h5>1 điểm dừng - London</h5>
-                                <h5>Người lớn        1x1.567.000 <span>= 1.567.000đ</span></h5>
-                            </div>
-                        </div>
-                        <div class="bill-fly__return bill-fly__return-cf">
-                            <div class="bill-fly__departure-title">
-                                <div class="bill-fly__departure-text">
-                                    <i class="fad fa-plane-arrival"></i>
-                                    Chiều về
+                            <div class="tour__result-content">
+                                <h5 class="tour__result-place">MÙ CANG CHẢI</h5>
+                                <h4 class="tour__result-route">Mù Cang Chải - Nghĩa Lộ - Tú Lệ</h4>
+                                <p class="tour__result-description">Mùa lúa ở huyện Mù Cang Chải, những cánh đồng ruộng bậc thang, trùng trùng điệp điệp hút mắt</p>
+                                <div class="tour__result-vote">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>trong <b>447</b> Đánh giá</span>
                                 </div>
-                                <h5 class="bill-fly__departure-price">1.567.000đ</h5>
+                                <ul class="tour__result-infor-list">
+                                    <li class="tour__result-infor-item">
+                                        <i class="fas fa-barcode"></i>
+                                        <span>Mã tour: MCC2N3D-158-GT</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-socks"></i>
+                                        <span>Số suất còn lại: 3</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="fal fa-calendar-alt"></i>
+                                        <span>Ngày khởi hành: 04/10/2020</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-clock"></i>
+                                        <span>Thời lượng tour: 3 ngày</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-map-marked-alt"></i>
+                                        <span>Điểm khởi hành: Hồ Chí Minh</span>
+                                    </li>
+                                </ul>   
                             </div>
-                            <div class="bill-fly__departure-detail">
-                                <span>09:45AM | CN, 30 Thg 6 2020</span>
-                                <span>Sân bay quốc tế nội bài</span>
+                            <div class="tour__result-price">
+                                <span class="tour__result-price-title">Chỉ</span>
+                                <h4 class="tour__result-price-number">3.200.000đ</h4>
+                                <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
+                                <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
                             </div>
-                            <div class="bill-fly__departure-detail">
-                                <span>12:55AM | CN, 30 Thg 6 2020</span>
-                                <span>Sân bay quốc tế tân sơn nhấT</span>
-                            </div>
-                            <div class="bill-fly__sub bill-fly__sub-cf">
-                                <h5>1 điểm dừng - London</h5>
-                                <h5>Người lớn        1x1.567.000 <span>= 1.567.000đ</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bill-fly-total bill-fly-total-cf">
-                        <div class="bill-fly-total__title bill-fly-total__title-cf">
-                            <h4 class="bill-fly-total-text bill-fly-total-text-cf">Tổng cộng</h4>
-                            <div class="bill-fly-total__title-icon">
-                                <i class="far fa-arrow-down"></i>
-                            </div>
-                            <div class="bill-fly-total__title-price">
-                                <h4>3.134.000đ</h4>
-                                <span>Đã bao gồm tất cả thuế, phí và phụ phí</span>
-                            </div>
-                        </div>
-                        <ul class="bill-fly-price__list bill-fly-price__list-cf">
-                            <li class="bill-fly-price__item">
-                                <span>Giá vé (người lớn)</span>
-                                <h5>1 × 780.000 = <span>780.000đ</span></h5>
-                            </li>
-                            <li class="bill-fly-price__item">
-                                <span>Giá vé (trẻ em)</span>
-                                <h5>1 × 120.000 = <span>120.000đ</span></h5>
-                            </li>
-                            <li class="bill-fly-price__item">
-                                <span>Thuế và các loại phí</span>
-                                <h5><span>700.000đ</span></h5>
-                            </li>
-                            <li class="bill-fly-price__item-vat-total">
-                                <span>Tổng VAT</span>
-                                <h5>115,000đ</h5>
-                            </li>
-                            <li class="bill-fly-price__item-vat-total">
-                                <span>Tổng chi phí Booking</span>
-                                <h5>3.134.000đ</h5>
-                            </li>
-    
-                        </ul>
-                    </div>
-                    <a href="" class="confirm_see_detail-book-btn"><span>XEM CHI TIẾT ĐẶT CHỖ</span></a>
-                    
-                </div>
-
-                <div class="confirm__support">
-                    <div class="confirm__support-icon">
-                        <i class="fal fa-user-headset"></i>
-                    </div>
-                    <h4>HỖ TRỢ ĐẶC BIỆT</h4>
-                    <h5>+45 423 445 99</h5>
-                    <span>Tổng đài trực 24/7</span>
+                        </li>
+                    </ul>
+                    <ul class="search-tour__paginate">
+                        <li class="search-tour__paginate-item">
+                            <span class="search-tour__paginate-previous">
+                                <i class="fas fa-caret-left"></i>
+                            </span>
+                        </li>
+                        <li class="search-tour__paginate-item">
+                            <span class="search-tour__paginate-number">1</span>
+                        </li>
+                        <li class="search-tour__paginate-item">
+                            <span class="search-tour__paginate-number">2</span>
+                        </li>
+                        <li class="search-tour__paginate-item">
+                            <span class="search-tour__paginate-number">3</span>
+                        </li>
+                        <li class="search-tour__paginate-item">
+                            <span class="search-tour__paginate-number">4</span>
+                        </li>
+                        <li class="search-tour__paginate-item">
+                            <span class="search-tour__paginate-next">
+                                <i class="fas fa-caret-right"></i>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
+        
         <div class="btn-scroll-to-top"><i class="fa fa-chevron-up"></i></div>
         <!-- Footer -->
         <footer class="footer__container">

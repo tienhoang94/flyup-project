@@ -918,6 +918,9 @@
     justify-content: flex-end;
     padding-bottom: 8rem;
 }
+.btn-next-step a, .btn-next-step a:hover{
+    text-decoration: none;
+}
 
 .btn-next-step--modified {
     font-size: 3rem;
