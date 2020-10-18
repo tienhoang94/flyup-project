@@ -90,6 +90,30 @@
             </header>
         </div>  
 
+        <!-- Form search tour -->
+
+        <div class="form__search__wrapper">
+            <div class="form__search-tour">
+                <div class="form__search-tour-head">
+                    <h4 class="form__search-head-title">Đang tìm kiếm cảm hứng du lịch? <a href="">Khám phá Fly Up Magazine</a></h4>
+                </div>
+                <div class="form__search-tour-body">
+                    <div class="form__search-item">
+                        <h5 class="form__search-title">Điểm đi</h5>
+                        <h4 class="form__search-name">Hồ Chí Minh</h4>
+                    </div>
+                    <div class="form__search-item">
+                        <h5 class="form__search-title">Điểm đến khám phá</h5>
+                        <h4 class="form__search-name">Mù Cang Chải</h4>
+                    </div>
+                    <div class="form__search-item">
+                        <h5 class="form__search-title">Tên địa danh, khách sạn, hoạt động...</h5>
+                        <input type="text" placeholder="Tìm kiếm"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- result tour -->
 
         <div class="search-tour__fluid">
@@ -100,41 +124,41 @@
                         <li class="tour__filter-item">
                             <h4 class="tour__filter-item-title"> <span>Lựa chọn điểm khởi hành</span><i class="fas fa-caret-down"></i></h4>
                             <form action="" class="tour__filter-place">
-                                <input type="radio" name="place" id="hni">
-                                <label for="hni">Hà Nội ( 34 )</label>
-                                <input type="radio" name="place" id="dng">
-                                <label for="dng">Đà Nẵng ( 16 )</label>
-                                <input type="radio" name="place" id="hcm">
-                                <label for="hcm">Hồ Chí Minh  ( 12 )</label>
-                                <input type="radio" name="place" id="vih">
-                                <label for="vih">Vinh ( 12 )</label>
-                                <input type="radio" name="place" id="hpg">
-                                <label for="hpg">Hải Phòng  ( 56 )</label>
-                                <input type="radio" name="place" id="ntg">
-                                <label for="ntg">Nha Trang ( 13 )</label>
+                                <div class="tour__filter-place-item" > <input type="radio" name="place" id="hni">
+                                <label for="hni">Hà Nội ( 34 )</label> </div>
+                                <div class="tour__filter-place-item" > <input type="radio" name="place" id="dng">
+                                <label for="dng">Đà Nẵng ( 16 )</label> </div>
+                                <div class="tour__filter-place-item" > <input type="radio" name="place" id="hcm">
+                                <label for="hcm">Hồ Chí Minh  ( 12 )</label> </div>
+                                <div class="tour__filter-place-item" > <input type="radio" name="place" id="vih">
+                                <label for="vih">Vinh ( 12 )</label> </div>
+                                <div class="tour__filter-place-item" > <input type="radio" name="place" id="hpg">
+                                <label for="hpg">Hải Phòng  ( 56 )</label> </div>
+                                <div class="tour__filter-place-item" > <input type="radio" name="place" id="ntg">
+                                <label for="ntg">Nha Trang ( 13 )</label> </div>
                             </form>
                         </li>
                         <li class="tour__filter-item">
                             <h4 class="tour__filter-item-title"> <span>Thời lượng Tours</span><i class="fas fa-caret-down"></i></h4>
                             <form action="" class="tour__filter-duration">
-                                <input type="radio" name="duration" id="2d">
-                                <label for="2d">2 ngày  ( 34 )</label>
-                                <input type="radio" name="duration" id="5d">
-                                <label for="5d">5 ngày ( 16 )</label>
-                                <input type="radio" name="duration" id="3d">
-                                <label for="3d">3 ngày ( 12 )</label>
-                                <input type="radio" name="duration" id="6d">
-                                <label for="6d">6 ngày ( 12 )</label>
-                                <input type="radio" name="duration" id="4d">
-                                <label for="4d">4 ngày  ( 56 )</label>
-                                <input type="radio" name="duration" id="7d">
-                                <label for="7d">Trên 7 ngày ( 13 )</label>
+                                <div class="tour__filter-duration-item"><input type="radio" name="duration" id="2d">
+                                <label for="2d">2 ngày  ( 34 )</label> </div>
+                                <div class="tour__filter-duration-item"><input type="radio" name="duration" id="5d">
+                                <label for="5d">5 ngày ( 16 )</label> </div>
+                                <div class="tour__filter-duration-item"><input type="radio" name="duration" id="3d">
+                                <label for="3d">3 ngày ( 12 )</label> </div>
+                                <div class="tour__filter-duration-item"><input type="radio" name="duration" id="6d">
+                                <label for="6d">6 ngày ( 12 )</label> </div>
+                                <div class="tour__filter-duration-item"><input type="radio" name="duration" id="4d">
+                                <label for="4d">4 ngày  ( 56 )</label> </div>
+                                <div class="tour__filter-duration-item"><input type="radio" name="duration" id="7d">
+                                <label for="7d">Trên 7 ngày ( 13 )</label> </div>
                             </form>
                         </li>
                         <li class="tour__filter-item">
                             <h4 class="tour__filter-item-title"> <span>Xếp hạng Tours</span><i class="fas fa-caret-down"></i></h4>
                             <form action="" class="tour__filter-rate">
-                                <input type="radio" name="rate" id="5s">
+                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="5s">
                                 <label for="5s">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -142,33 +166,33 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <span>45</span>
-                                </label>
-                                <input type="radio" name="rate" id="4s">
+                                </label> </div>
+                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="4s">
                                 <label for="4s">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <span>23</span>
-                                </label>
-                                <input type="radio" name="rate" id="3s">
+                                </label> </div>
+                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="3s">
                                 <label for="3s">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <span>12</span>
-                                </label>
-                                <input type="radio" name="rate" id="2s">
+                                </label> </div>
+                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="2s">
                                 <label for="2s">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <span>15</span>
-                                </label>
-                                <input type="radio" name="rate" id="1s">
+                                </label> </div>
+                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="1s">
                                 <label for="1s">
                                     <i class="fas fa-star"></i>
                                     <span>5</span>
-                                </label>
+                                </label> </div>
                             </form>
                         </li>
                         <li class="tour__filter-item">
@@ -235,21 +259,257 @@
                                 <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
                             </div>
                         </li>
+                        <li class="search-tour__result-item">
+                            <div class="tour__result-img">
+                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwoKCgcKCgoNBwoHBw0HBwcHDR0KDQcRIxMlJCIfIiEmKysvJik0KSEiJTUxNDk4MjI+JS44SUE8PSs9Mi8BCgsLDw4PFRAQGC8dHR0vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy82Ly8vLy8vL//AABEIAMEBBQMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECAwUGB//EAEYQAAEDAwAGBgcGAwYGAwEAAAIAAQMEERIFEyEiMTJBQlFSYXEUIzOBkbHBBmJygpKhQ/DxFSRTstHhY2RzdKLCdbPiNP/EABoBAAMBAQEBAAAAAAAAAAAAAAABAgMEBQb/xAArEQACAgICAgEDAgcBAAAAAAAAAQIRAxIhMQRBURMiMmGRFEKBocHR4TP/2gAMAwEAAhEDEQA/ADHooyHlVJ6MH7yr0T9oIqjCKfGml5APlCbs48H8P6LdYBXjy+pB0z6iDxZI7IwS0cXdUPQv5sui1H3Uz0woWZ+weKHo58YMUXTzSx8pD+AxyWidEKoOiJWsikZvHXRfDXj/ABBH9LIsKmAu7+lZTU5KwIiScV8i5+DXEoi7n7K4Gj6oj+lllRiigZZStFaJo0oxHuD+llezR90f0shoTAR3idWBLHJ7MxPDuExYfBYqTZyzirLLR90f0spYx90f0sqSdPdaJi0RJxj/AMMf0soPFH3Q/Sk7pK7Y9SLwj3R/SyZ4g7o/pZWM6YnSspFJRB3f2ZQ1Q90f0srnUXZBoipwHuj+llAxHuj+llYSqLJS4lpIg8Y90f0souA90f0spuSrMi6opas0VESaMeq37IeSsEeUR/SygcchdUlW9FIqUPlj49IolrpOriH4AZDHUSF1v/Fkb6AXeTtQD95apxRDhJmY5yd5NqpSWoVGPdUHER6qtS+CHj+TPanLrYp9QjmYU+Ip7MnQzZYOXd6O6ki5x5PekrTZk4o41oiVw5bm9ycn3GWo2i1IdGEvXcUeIpNAlLUyxlkJEBd8C+a3IvtJPkGUcRj1+Ikfvvs+CFDRasHRRLGeHHLtHRDPkj0zYj09TFzCcJfhYh/ZHU80dQOURZ/5g82WCGi5EXDQEJZCWBB1+Vck/Fj/ACnZj8uS/I19SmeIfuoV3nIcSl+WXxZVDRlzasljHxX7Zs/M+EHgIqE9THCOREP4OsaE1UnVEv0uqipyLeLL8av+HXsl+W2uimorJajm3I/8EOX39qqFyHeHIC/SiigHrJhiEixEhyWqxpKkjneVt8jNpKrHD15bnf3s/PtWpS6eEt2ePU9ww3h97cWWZ6MnamLuqZYYSXQlkaN3+0qbIPWjv8m3H49jokTy6wrnHoJB3iEsVp6P1sI4yCOq6mfMHl4Lnn49L7WbRy3wzQfHvMmdx7yk0g/dSdh+6sVCXtGykiF1F2VzRiSWqFOi9kDkxKGqLvIt402CWo1MEeFM8Svmlih9pIIfc63w4rKrNJljjBHh/wAY/o3+quOOTB5Ugk4MuYt1PqRWADzjLrRkLWZ575ZZ+Dt2Lco60Zt2QdTJ3Mt0/J/oqlhaCOdMd4R7qrMEcQKsgUKBr9QAeFVlD90loOKrIVWrFvZnvTiolEIo0w+8qijVqLJckZ1Q3J70lfVxez8ySVpGLYUGjMhDIuoptoke8tOOPdD8Aq0Y16TZ4qoyw0T97/xVgaNkFaggpsChtlcAA0Cn6CKPwTsKllWADR48op3g/Oj8EtWpKTM04pOqP61WVLOQ83/iwrWwFPgKQ7Ocn0dIXNkalFonEdYWX/suh1Yp9Wiw4OdGAh6xfgOxK0DIS5R/yrbenHuqLUw90UrGZoESdwWm8I90UniFIdmeLfdUSyLdJaLwCoFAgewMBkp64esrdQmaBS4plrI0UnUD1RL/ACqk55CHdxD/ADIwoPuqLwCjRA8jMgqfJRel+6td4EtSKonYyWofupHSYrWeNM8adBsARnIO7zj9/m+KuzyV7xCovGp0RSyP5ByVZIggUHjTUEP6jByVZOiCBVHGnohfVYBVv7PzL6JKVWHs/Mk6rQl5WdBGG6H4BVgsrwAcQ/APyU2jHurSzjRSzKTMrtUKWqSKK2U1LAUnFIZGyTp0zoCyKSTpWQFj3UmdQspMyVFWTZ0rJmUrqaHY1krJ0rJBY1k1k6V0UOyLsmsp3TO6KCyt2UXFWpnToLKsUsVN1EkUFjOIqDind1ByToVjEKg7J3JMRJisiTKsmTkaqORVQWMTKg3U3kVZn91VRNgVYfs/Mkk1W/s93pJJOibOrjLdD8A/JWsgwnHEMe4Ks1yVE2FsnFUxyZIkGUspEHTWVhAo4pDohgnaNJ3SzQBAwxUWZXs6lilYUUsBJ8FdZRJFlFdlFWWScEgIXSupukyAIZJXUnjVbgQoCx0nZMwklYkDFZNZSTJgNiouKsZPZAFDsoEiXFReNAgV2VZAiyjUSiTACKNVvEjXhUNSSYgXVqJRop4iUHjTsRmVkfs/MklfWhsh/N9Ek7EThkIRDe6iuGVRCmHEMu4PyUgj3t1aOjnVhcL7u8iI50KGQqEj72SzaNNqNYZRTk6xfSZBLmRQVuXMpcWUpoLN0MRbydzyHISVbl1kh2FxluqxiQIzFlkrgkyJKikwtiSdlDqphkxUsom6TqYlkpOCQA7qjWow4+6h5YUJgSA1bZChDjyq0STEW7qeyiO8piyY7IuAqOqFXWSQAMQYqCMsovEKdiYPinxVzRJYIAoSwVzgouKYitwUXBXWSwQFg7govEiHBNgmIzK6EfU/m+iSIrx9j+b6JIETGMcQ/APyTEOKmPsw/A3yUXcloQUFkhjYkcbEqSZOyWjPNsVESJFyxChiFMzaLBmIR5lc0+6hbJ1LRSky55eqnCchQ9iTjzJNFKRtU9QJJpJFmxlipvOSz1L3DBlkRcdUJLJCVSece9vI1GpG0x5J7LKCsxwVwaQEt1TqUpBeG8pMP3VUMo95SGVFDsmwiKlmq2NQIhQFl+aa6qB1cOJIGMpM6gk5YoEWJnZD6/eVjS5JhZNJ01kkCsWIpYpJ2TAayaylcUzugQDpBvY/m+iSfSH8H830STAQcofgH5J7KsS3Q/APyUsloZj4iouAqTMlZAFTxConDH3RRNksEmOgJ6VR9BJaGCi7JWGqACoC7yf+zh/xCRbmPeQhaRjH0nWCQakxDva672Z2slYUifoMePMSRQCI7qcZxIcsv/x59i5TSv2plympqTcLkhm5jvdr7H4dLe9S3XYcG5X1MFJEcssg7nUyYSO+xrN0/wBUJo6vGoqamDEDjhpopgML9LM7s/x/Zc4WjqurLX1shaybfDdyIxa2y7bGbsbxWoUp6OpjloYBOWEAhObHLZdtl/esJ5kmkOMWzpoqfLq4K4KURQFD9o8o8pcT3CzALZBZ7O7W4t4rVpq6mqvZyb2GeHLsTj5EJcWW4NKyOCYzIVm/aT7RRaKGEcRmnqd+GHJxHDpd3Zn+HT7ljHpnSFQQFrApo94DCAWHNtju7Xu7OrlkiiGzqSqC6qm0pEP3lzJ/aEhiMyEDlMNTCAXIdZ42/ngqab7VkQw6ukOsIMQrDyaPD6e57fVCyQfsLOn15COKkFWQkvO9Oz1o101TRS1BxTY1PNj6MexnGzPttZkAX2h0liAyyGAhNrt8ccHvfa/F228H2dCFOL6J3aZ6806ic48q8uotPTjIAjIQDnnzOWy97Wvw8F02j9Oz4zFLEVTKZlNDCBMJQt2O3FvBLdLstSs6ZmVsaEotJQVGAiRBIf8ABnHEr9jdDuiwcSHISzFaJp9DLmNO5qpnHvKVkASzTXVFRUxwjkX5A/nghdG6XjqyMRjwIEws0FJnTWSdkCBK9/Y/m+iSVf8AwfzfRJAEQ5Q/APyVjMqxLdD8A/JOxLUgtZ091XkmckAW5KmapGMciUDkQNTvcyQmyyPSM8xbojDH7yJXPMRcxIF5xj3RTNNrCxElDY0X1NRHCOUhFj9ze4ocpI5By/hnv59XFtt/BU1Jjy4583w4XXHHpmSMayKCQgGYy3D648LN2cVk5BZq6b0nHDTU0tJKXrvXBvasws7ttbpa7Ln9FwSTSgUQ9fn6sL+KEiYhzKQup3ss+1WFpGSMg1HqY9TyZZDfpfzf6rDJKTXAJG6VcNJGEEUhHqcoTMyx27fg3Z5Ieqr5aoYYikw1IYAB9Ruxm+rfF0BrY5N4i/GfW97dP87W4IUa4SIxxLc5O6a40rd+zRSrg3qJpNwcd6HfzC5GDN043u7ePitKfSVJHGZFHKEncC2Ju/m9u3sfzXM0+kZN+MRwjOEtdqN0r27W4dF/BaGja6KpkMfbCBhCAQi5FMe3i97u1md+Cwa1ezXCNFJNaoH0tWQVEYFkOQHuYDkdvO9uPQqJq2ph9DkGQZo5g3N7L0ZrWs7dD7V1JU2W7qj++GLj8tq5rTGh5NeBRCRlMG5Cd9x2Z3s+x3222X6ellWHyozlpVClja5IyVkZRw6shmlz12BiwhfwtbpVOkdLS6vHEoSPI6kAN/XP0v4N4KMTDSSQlqgCSHLOGqHWgZWdn6fq/Q6v0U0ckk0cmO4Gec/Kd2Z3Zu112ScVHZoyoCodLzlLDFrMBOYt/vk7/V0fpBq4iAZIhCLrni2J+L2v8FbHDQlIBS0hQkB5hMFxKG3B9jbVpj6NUeylCp/AWJXZuzp4rGWbRqkLX5OYpqaeSTejPEDzDAX37P0bFu0hkO9jvZ555YkD+CIIJB/iGH5nFQeQv4nrhP8AX5s/H47FL8nbijTG4wNOnlkqM5BLCWE+flGpG3T2P4q+PStWJBTRDMch44Qhy7eln4O3Btnaua9Knp5dbHlq8MAMyeUOFnd+x732ePF+K1KSojrYgEsfSabfMA5gvwcX9389K+6DU+4/p6HJqT47Nmmr6mGSaTIjLk1NULjqSbZfo/l0XTfaYtbq54sBPkOHe2beLfBYAvUxif8AeSmjwLDXCxED9G19qaY5MQxEpvU5zZiw7134M3HYuvHmjfErX6mdM1dJaRkKQxLCaMMjCbHEsduxnbg21ZtJpGSnLWR5B+b9kDS6RkGfVyR4R1O4HpQawNm3Zd7s/k61Dmpo49ZJGAYBvmA7vwW08yi6oi7Ok0ZpIph1knN3FpDOJLkKarHHKPHk6hfNWwV8uvPLHHDc156sTfwe1rojlUnRdnR15D6neHrfRJcnXaUNjxmbE7udrZ7H/omW4tkWVH230bDSU1SMozRnWegGHXB2FnJ28ndr+F7X2Lo45BIQkjLOOYBMD5cxdrs/wXhJzCUZxCIhFDkfM5FrH2O7+dmazPZvn3tJ9toIdEU0UBDNpSpmOjo6YBchhkJrjx6jO4hx6H4q1NGMZO+Tu7quSURFMEwlEEg74nCJ7l8drX2X2oEnIiyLl7iotsIkqBEcut1PNZOuLlIs/wDVXVEORazLdAFk6VqShHVx/wCDmfe8mUtiZZVaSih62eHOYIR9Pasg1WJiYD/W/FZVS5asC6p75h1gsoU1JPVkGopjPuYDu/F9i5smVL2aQxyYVPpOUp8opCPXAWcOT4g7s7Pbh2/sgm0URR6yQS1e8euC4j8bW7V0Wjvs1jIBVeM3/JQE4gb+JcX/AGW/A+JBlJ6sA1IU0AtGIM3Btmzo4eLrinlb6OuOBezzsKOKTMdYQEHf3hP3sz2+Sd9BlieI5jnzgbT+d2azt8F6FPo/R826VJFv7+5eIr+Ljb91h1eiNBQl6wpaYeudFMU4wv032Fa12+KhydcMHiRxVcwiOoj35MPXGdxKEm6Gb+eKHoh1I1Ms9N6SXUzsQQvxy2dP7LYH7L1tbU62kjMKKpmL0M6q0ksw4u7XZnttZn7G4MtiCuGOWpoYKKavKHIz/s/CrwZrNwEnttbaz9K0hT+1sx1rmgPROiZK+OEakogl0gEs1MBjjLMDW4O1r2Z7242fzT0dLHoyWaipq4Anm9sdKGs3md2xu7vZ2dtreXkra2sppNTEWiaiGr9JA4deHoMpu72dmN2fa92v4X4cVnwwQaGqwrq2UDL0zMKalm18sN73d3Z77L28bsoyQhWsZU38f6CN3Z0sMlcI71SEw/8ANUrF9boerhq5hAoihCUDzwC8Qn5t0tx+PFbdLp+hnjCWKuixmDcM4XHDwd7WZ/NWVNSMg4lIM0WHPSzNUiDt0uzMzt5te3FcKUov87f6pHTSaOCnqa6nL1tIFT/dgo9TVFrwsNmuzXZ2ftt4dFlPRddHJWwwSaPD+81IwnTBKUB8Ntnd9vve2xdDUPTSerkMJiMy1OZMR+Ts/F7X87P2XWTUaNjxMhET68IAfJ4s+2zfLw6aXlp/ZONP+zM3j+AyVtEUFTWQV1FV6uYx1OkDIhIAsz2Zr3szu7X23twWONFRR1cI6PnlrBACPMxaMcn6B7X7Ls17I+Ku0hqj1dWZjTGOupqoml9Gs99rPfZ4ts8UFUT6wspIgAs/bUoNFn5s2z32v4raXkxcdHGjPVJ8hgaUi3xl5Q683L/siApZJo9ZAOuH9Rf7ss+Yo5otZ/HDn/5xvHxbbt6W8W2wotKamQN4gwDD7vvZmXHKH27Y/wBi3CLL6fXzVPo0EEuvDLMMccPB78G89josGEvVz0R0dSB74YPEdr8W/wBtj+CLaem0jhjKVHWQhnDNA7ifudrO7eCE0nX6S1UNJWyBjrhANLHE0hgN77Hazfsz8eK1w5sU1rK4yXoTxuDtco0AgkId0gqfvgWJG3Rdu33qoccsRIeff6pB59K57RNVJST1hSSa4ZjEzM7iJ71uHbt82uuh11NV72Wpl757om/n2/v4KJwlCVvr5X+RqpFVbQjIOQkcJBv7l8TduF27ehRjyIjjx10fX7uKsepkhLVzjgPUm5hP3tsTSzRRyAWs1JVJ4ZgOsE/F+i23irjll138EzxpuyIUQxyBJHIQYdTmHhw2o0SyTOxCPKMw9+D1n7KD1UQ8251/vfBT/Eyk+TNwSB6ulj9Xa8e0tgpIer0vAB4STNE+8YvL6pjHJ2bjfa1rP5X6U69COTJS7I1PNTOWOQyxLcmIM+Yb9l/grKQsZKOSKP0yXXeppsd0y7PFtrdmxU6+SSUyIh9sXW3r3fatSKfVjTSQUxHGGq9MMyxiNmLjlxG7OzPZ2bzvs7XNdGeh7JoyQioaDWFnKFMMNTw9oOwm2bOLPw2LF+1GnRoIgGKQfSTPcDYWxuN26OxR0X9qtH0+i9FSTiFAU1MR02j6UXkCEGJ2ZmfjwZlzdO2jajSWlZ9KEYU0J+mAZk5hUs7u7Czs217vw4uzbOF0TzJKkaaNhVL9pJ6rP0uIJqaYMJocXGKGPbezdLvw2v2eKrrtK6zOURLLqQwbxbXZmZv54Mp/aHSMUw00Wj8AogApsADVAZbWZu1nZu3tdYJmXs9YQb47mbb7PfYz9DXXJLJsuzVQjHvk6DRlbogcJdITjNOc2Ho1UWs1Ls+x3FuLWs932N2XZdS2m9GjGEhaQpwHnAAPe7ODXft2Lxkoij9MHn9cUOZ2Ig6dnR0cfFatDVRQRnFOWAge5NMWRH4N2Nbb8Uvp1y2aRyM9LH7T6Nq5QiGtiOTkhAwOAT8ndmZ38FeY8+Rbob8xncRDtd9lmttXnXqJhxjkA8zHDe6X4eXFl2lTpmOoGpj1mpps/Rpt7VSzN0u79VuPDe2bXbgs51fBvHJZc2kIpoz9Glzi5Jpg3c3ttBn6LNtJ/GzdK5+p0pTYVOrzmlDOj1O2KCF2ez3uzbOy3Hy44sun5ab+5UJAEABzgGRg77Xa17e92u9musSbSchEZZHlvGZmOIg77XfzV/QbVmU8npdmx/bNZDB6NFEWR0xzHUwk5Fg2xmZ77G3X47XXN0+k5KepCSIjhIDHPAnErX2t5I2gr448BnjOpGYCCGECYdl22Wfj4bOLo06Km35y0fLiG+ZzNttdtu3j0cLrWMdLuNmLdrs7v7JUcWkaH02rjlphOpMKYNbiJxtZr348bt7lj/bTQ2jRwlppzmlMypvRoKhpShKzOzuz3fG4uz27WXLSyUJDlqhMufCYchD3W2I+mraaMco4hAefl+jWWfEVcMfJN2+WE6CeSiEBkIjH/B2EN+1n/nguh9PgkwyjHLv/ANFhtLTSYesI5N7MMWGIG6LPfa9ttrdLJDWwD/EDHDxva9rea8rPgnOW0ou/0N4SpG5V0UVRFmPJ1z5iDz8PHo8rrErqMoI8siMc8NxnIrbNuzY7dD9nkj6bSQiOUUmeG4fV2N5/ztRlRHGIazkHn1J+r2dFux2vs+HCywg543UujRpNWjmYp5IyCQZCCQOQ83zD49CKpnkmLVjJ6w+QDLnd+z/RI3xk1sBAfNDmYsQH2s7dD+P9VnvPjLiJamUD5ALdu227di9BVNdEWmjSjjLWgOt1Jb25Pugb+JNw228EJX1dIJZFnDIZ4TAYtiBdux7WvfY1+CJlqpK8jlqZCOUMqnABYRm2MzvZuL7L/F26UBKBSEfrA1gAOpmMWIjFuhn6OPh2XV44RUhOLS4DdGVZRyQyAWe/nqeXXNsva78f58W6RtMUc04UpiZlWBnge8HD4svPfSNT7SMsv1CfZ9UZFWjrITLclpjzCYLEF26bPwS8jwVN7L49Djkrg7Cp0SMJBJSS73UA97BrPtZ+zZbbdAU8gyFqsSCXMg7on4Oz9KM0Xp+KSTUSkMMuHOfspvf2/FH1ujYpvW4+s74c1vB+lvBeas88EtMtmuif3QMmmrJIS3T9XnhNCe8IeNn6E+kKuOT1AxejSAfrg5Rv0OzdDu3Z2pypPWHlIMJbxgZjuHfiz24Pt/2VkuOrCOeMgkDkqTtIB+DE2xvJ7LZZIbqcF+3H9SGuODMCqkh3hkIPuZYiqNKaWkGDKStlATmEAhMdYR7ejZw2Nx7FbpWjkn9XGQQ4b5w4NGW3a3k3B2WTpmtIdH+iTwYEB8/WuzWs3bfjfw8V6GNxm065ffyc0nyZFbWtNPKRO9Rd8gmM3IjHo6fD/d0lk0eV5t7u/VOvUUEiC0X9YY8nri57jsu6sk0nuhFvYhuYAT428um234rar6WhqBOSmItYAb4Ge7M7u7M7bGszWbZ4rm4h3g65Z4czYmzcXu+zxWcXGfLXRTVGnPpDWxQiYvDEB7gBcRMdjX/b5oQNJywl6uQgHXDNCHQBs72dux26HRB6WHVwxasMab2JnzBtu/79qzzqt0xERAcxPcHIuHa/DiiEflAzT0Zpo6bXa3+8jU0ZgYGTi13bjdtt2vwVH9p9/Lq4ccg8dqzichj5uvnze7+fNQjyMubL3/sq+lHliZtUtaEhHBOOYzch44kD7dt7XfpZRqa6MojHVicYGIHMA717bfLa1/cyzSn1fVwIMfu+P8+aullKTAZMYQmP0k4Q3cz7X/npR9NJ2F8ERqS3NUO6AeJZl9dvQtikqcojjnIspjzmz3RB2e7fuscaWrITkjgIx/4AZbHd2Z2t4s6ac93m7uZ36zjt42fodEoKQHSU2hyqJNbLVxUdNumc2La0xZrNiLbX49Hb5oqYNHyamkiiamj/AOM7FUVltruXZwd7eDssv7ORy1OAjKNNFrsJqyYHlGma2zY219nQ3au40ZorRFLNWBXVdPpGkAIg/tDUvEdY7ldwdncnd7O17Wuz7WZmdcsm06b6NVyjmKfR8UMsMkUmY67XHDVE1IYM21mF3u3jtddI32+pqIvQp6aooChAAANycQHzYn22Xc0+mtF1YnFr6GsjA8Iaado+VhazML7dnDghdIfZLQFWM0k+jYoS9tNNRSvSED2u7vZ7X811RuiHR5R9rNOwaR1I0xHlDnNnhqszd2ez327GZ/DasSmjqyHEfZhuHh/q/FbE4aGjqa/0SCWpgzwpvSqjKYLXZ32NZ22cHa+3ioRDRY62P0ijLnAMhn27eh2Z+zj2qG5V9pL7Ix6brYaapoYywgmmzOmmiYzN3ttZ2Z36G23+aAatkH2kZAS6PR8sUPpJFWAclTCIAc8JQEFnva45Wby7Ei0iJZjJJFNnz4XlHzu7bH2KdpLtGigmuzL0RXaPKrAtIRzeiBCZzQ0pMJ1L7GZm28L7ePQrtMVclLJWQRTlNBNCPoZ1U2Z1MFrC+L8rs1+no2MtIKqm1Wqxi1ZnnqcWHa7Wu/a9mZvihJ4aSoHVDEEPMYGAMJ3fxba/kpcoyfKK0pdkNGaRGDRkxS45b2BmT75PazPbg7bbfNZJyCMutjnzEMThPwvtbqvdvJElLFqqwMWAdcMwQ7MTK9naz32PvP70DRmPpJjuB644TCe0mA+bbHduGxTGCW0jN+jfoan1cNSPtIZhzwH5t07Fp17RyQUxwDFv8gQFyeHx4dt228VhRtJTkYx7hZ74cwmz9PjsdtqKgfePEfwAe7uu12Z/2suWUfaOqDdUxStriykjHLuY44O3ghjpij3oxHH8W772daBHl7QSAg3N8XHD3t8n/ZQKP8X7SfVlcMuopwsCgoZxl3iDL8eWx22Nsu39Vt0Gl6mgE94Zog35oTLdBu1uzpQb08cggO+Hf3XET+H+rK+scCiCOT1MRmeuPNhALtZ3azWZ9jdHnfi2c6zPWVfsQlKHMTX0f9p9H6TziMfQ5zPCED3tdd7NZ+3a2x0RJo6WH2ZmA/8ABLHD3dC86Kkkpp8oJ9dqTA4akN3e2O/ub6L0Gh09rospccu/Dcvltb9/cuLy/EeFqWLp+hwmpKp9kJayrpwOQootKiGIYGLRyntszM/Dpb4LjNOadnqRmjIAoxzzOHFil2NZmd77L2Z3ZrcPc27pD7QkNZq4IH/vOcIHVEwBM7k9na/Dblx6G6enkdPlLUl6ScUYZm0JnTO+Jltva+zjxdtl3su/wsDi9pxXPv8A4ZSfqwGifbN+X6pKGj/435fqkvZMztKPmP8A7M/8roAuX85fJJJc0PY2MXMkXX/L8kkluhCJMySSH0A78wJP/wC6SST9AbOj/wD+vRv/AMaP/wBbrGDm/V8nSSWUO2M0NF+zm/GP1VukuWj/AOskkuWf/qaLoHrOv/PQt77O+yD8dR/kJJJdUekZM52g9qH4C/zMrZ/a1P8A1i+iSSqPbGxmUB5Q/N83TpJzHEdldT+1h/H9XSSWBqCzc36vm6jFyw/9aX5Mkkr/AJWYvsMk5vyD8mUo+b9PzSSXI+jpiGTcx/jD6KhkklmaMugTVPsJvx/6pJJQ/NES6MuLlD8H0WjR85p0l2eR+Jy+yFf7QPwfVZ0nsz/7n/VJJVi/FCB0kkl2Af/Z" alt="">
+                            </div>
+                            <div class="tour__result-content">
+                                <h5 class="tour__result-place">MÙ CANG CHẢI</h5>
+                                <h4 class="tour__result-route">Mù Cang Chải - Nghĩa Lộ - Tú Lệ</h4>
+                                <p class="tour__result-description">Mùa lúa ở huyện Mù Cang Chải, những cánh đồng ruộng bậc thang, trùng trùng điệp điệp hút mắt</p>
+                                <div class="tour__result-vote">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>trong <b>447</b> Đánh giá</span>
+                                </div>
+                                <ul class="tour__result-infor-list">
+                                    <li class="tour__result-infor-item">
+                                        <i class="fas fa-barcode"></i>
+                                        <span>Mã tour: MCC2N3D-158-GT</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-socks"></i>
+                                        <span>Số suất còn lại: 3</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="fal fa-calendar-alt"></i>
+                                        <span>Ngày khởi hành: 04/10/2020</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-clock"></i>
+                                        <span>Thời lượng tour: 3 ngày</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-map-marked-alt"></i>
+                                        <span>Điểm khởi hành: Hồ Chí Minh</span>
+                                    </li>
+                                </ul>   
+                            </div>
+                            <div class="tour__result-price">
+                                <span class="tour__result-price-title">Chỉ</span>
+                                <h4 class="tour__result-price-number">3.200.000đ</h4>
+                                <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
+                                <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
+                            </div>
+                        </li>
+                        <li class="search-tour__result-item">
+                            <div class="tour__result-img">
+                                <img src="data:image/jpeg;base64,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" alt="">
+                                <div class="result__view__item-sale">
+                                    <span class="result__view__item-sale-name">XẾP HẠNG CAO</span>
+                                </div>
+                            </div>
+                            <div class="tour__result-content">
+                                <h5 class="tour__result-place">MÙ CANG CHẢI</h5>
+                                <h4 class="tour__result-route">Mù Cang Chải - Nghĩa Lộ - Tú Lệ</h4>
+                                <p class="tour__result-description">Mùa lúa ở huyện Mù Cang Chải, những cánh đồng ruộng bậc thang, trùng trùng điệp điệp hút mắt</p>
+                                <div class="tour__result-vote">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>trong <b>447</b> Đánh giá</span>
+                                </div>
+                                <ul class="tour__result-infor-list">
+                                    <li class="tour__result-infor-item">
+                                        <i class="fas fa-barcode"></i>
+                                        <span>Mã tour: MCC2N3D-158-GT</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-socks"></i>
+                                        <span>Số suất còn lại: 3</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="fal fa-calendar-alt"></i>
+                                        <span>Ngày khởi hành: 04/10/2020</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-clock"></i>
+                                        <span>Thời lượng tour: 3 ngày</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-map-marked-alt"></i>
+                                        <span>Điểm khởi hành: Hồ Chí Minh</span>
+                                    </li>
+                                </ul>   
+                            </div>
+                            <div class="tour__result-price">
+                                <span class="tour__result-price-title">Chỉ</span>
+                                <h4 class="tour__result-price-number">3.200.000đ</h4>
+                                <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
+                                <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
+                            </div>
+                        </li>
+                        <li class="search-tour__result-item">
+                            <div class="tour__result-img">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFMegf9Flpd_C0VlDy0mdWenTCHt8mZjEDBA&usqp=CAU" alt="">
+                            </div>
+                            <div class="tour__result-content">
+                                <h5 class="tour__result-place">MÙ CANG CHẢI</h5>
+                                <h4 class="tour__result-route">Mù Cang Chải - Nghĩa Lộ - Tú Lệ</h4>
+                                <p class="tour__result-description">Mùa lúa ở huyện Mù Cang Chải, những cánh đồng ruộng bậc thang, trùng trùng điệp điệp hút mắt</p>
+                                <div class="tour__result-vote">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>trong <b>447</b> Đánh giá</span>
+                                </div>
+                                <ul class="tour__result-infor-list">
+                                    <li class="tour__result-infor-item">
+                                        <i class="fas fa-barcode"></i>
+                                        <span>Mã tour: MCC2N3D-158-GT</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-socks"></i>
+                                        <span>Số suất còn lại: 3</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="fal fa-calendar-alt"></i>
+                                        <span>Ngày khởi hành: 04/10/2020</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-clock"></i>
+                                        <span>Thời lượng tour: 3 ngày</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-map-marked-alt"></i>
+                                        <span>Điểm khởi hành: Hồ Chí Minh</span>
+                                    </li>
+                                </ul>   
+                            </div>
+                            <div class="tour__result-price">
+                                <span class="tour__result-price-title">Chỉ</span>
+                                <h4 class="tour__result-price-number">3.200.000đ</h4>
+                                <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
+                                <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
+                            </div>
+                        </li>
+                        <li class="search-tour__result-item">
+                            <div class="tour__result-img">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSapCo9rXoGDVjQxCiP2KTPrINqyEa-SFr-5g&usqp=CAU" alt="">
+                                <div class="result__view__item-sale">
+                                    <span class="result__view__item-sale-name">XẾP HẠNG CAO</span>
+                                </div>
+                            </div>
+                            <div class="tour__result-content">
+                                <h5 class="tour__result-place">MÙ CANG CHẢI</h5>
+                                <h4 class="tour__result-route">Mù Cang Chải - Nghĩa Lộ - Tú Lệ</h4>
+                                <p class="tour__result-description">Mùa lúa ở huyện Mù Cang Chải, những cánh đồng ruộng bậc thang, trùng trùng điệp điệp hút mắt</p>
+                                <div class="tour__result-vote">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>trong <b>447</b> Đánh giá</span>
+                                </div>
+                                <ul class="tour__result-infor-list">
+                                    <li class="tour__result-infor-item">
+                                        <i class="fas fa-barcode"></i>
+                                        <span>Mã tour: MCC2N3D-158-GT</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-socks"></i>
+                                        <span>Số suất còn lại: 3</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="fal fa-calendar-alt"></i>
+                                        <span>Ngày khởi hành: 04/10/2020</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-clock"></i>
+                                        <span>Thời lượng tour: 3 ngày</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-map-marked-alt"></i>
+                                        <span>Điểm khởi hành: Hồ Chí Minh</span>
+                                    </li>
+                                </ul>   
+                            </div>
+                            <div class="tour__result-price">
+                                <span class="tour__result-price-title">Chỉ</span>
+                                <h4 class="tour__result-price-number">3.200.000đ</h4>
+                                <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
+                                <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
+                            </div>
+                        </li>
+                        <li class="search-tour__result-item">
+                            <div class="tour__result-img">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQrlJ3rG6p4eXVdyeJBhVUuOdLTDUbTOSXdyQ&usqp=CAU" alt="">
+                            </div>
+                            <div class="tour__result-content">
+                                <h5 class="tour__result-place">MÙ CANG CHẢI</h5>
+                                <h4 class="tour__result-route">Mù Cang Chải - Nghĩa Lộ - Tú Lệ</h4>
+                                <p class="tour__result-description">Mùa lúa ở huyện Mù Cang Chải, những cánh đồng ruộng bậc thang, trùng trùng điệp điệp hút mắt</p>
+                                <div class="tour__result-vote">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>trong <b>447</b> Đánh giá</span>
+                                </div>
+                                <ul class="tour__result-infor-list">
+                                    <li class="tour__result-infor-item">
+                                        <i class="fas fa-barcode"></i>
+                                        <span>Mã tour: MCC2N3D-158-GT</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-socks"></i>
+                                        <span>Số suất còn lại: 3</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="fal fa-calendar-alt"></i>
+                                        <span>Ngày khởi hành: 04/10/2020</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-clock"></i>
+                                        <span>Thời lượng tour: 3 ngày</span>
+                                    </li>
+                                    <li class="tour__result-infor-item">
+                                        <i class="far fa-map-marked-alt"></i>
+                                        <span>Điểm khởi hành: Hồ Chí Minh</span>
+                                    </li>
+                                </ul>   
+                            </div>
+                            <div class="tour__result-price">
+                                <span class="tour__result-price-title">Chỉ</span>
+                                <h4 class="tour__result-price-number">3.200.000đ</h4>
+                                <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
+                                <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="search-tour__paginate">
-                        <li class="search-tour__paginate-item">
-                            <span class="search-tour__paginate-previous">
+                        <li class="search-tour__paginate-item disabled">
+                            <span class="search-tour__paginate-previous ">
                                 <i class="fas fa-caret-left"></i>
                             </span>
                         </li>
-                        <li class="search-tour__paginate-item">
-                            <span class="search-tour__paginate-number">1</span>
+                        <li class="search-tour__paginate-item active">
+                            <span class="search-tour__paginate-number ">1</span>
                         </li>
                         <li class="search-tour__paginate-item">
-                            <span class="search-tour__paginate-number">2</span>
+                            <span class="search-tour__paginate-number ">2</span>
                         </li>
                         <li class="search-tour__paginate-item">
-                            <span class="search-tour__paginate-number">3</span>
+                            <span class="search-tour__paginate-number ">3</span>
                         </li>
                         <li class="search-tour__paginate-item">
                             <span class="search-tour__paginate-number">4</span>
@@ -387,7 +647,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/flyresult.js"></script>
+    <script src="./assets/js/tour.js"></script>
 </body>
 
 </html>

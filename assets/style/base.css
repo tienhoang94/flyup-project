@@ -83,6 +83,21 @@ html {
     src: url(../fonts/helvetica-neue-ultra-light.ttf);
 }
 
+@font-face {
+    font-family: 'helvetica-neue-ultra-light';
+    src: url(../fonts/helvetica-neue-ultra-light.ttf);
+}
+
+@font-face {
+    font-family: 'SVN-Aleo-Bold';
+    src: url(../fonts/SVN-Aleo-Bold.otf);
+}
+
+@font-face {
+    font-family: 'SVN-Aleo-Regular';
+    src: url(../fonts/SVN-Aleo-Regular.otf);
+}
+
 
 body {
     font-family: 'SVN-Avo', sans-serif;
