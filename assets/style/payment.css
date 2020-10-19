@@ -574,6 +574,11 @@
     justify-content: flex-end;
 }
 
+.box__pay-btn a,
+.box__pay-btn a:hover{
+   text-decoration: none;
+}
+
 .box__pay-btn span{
     font-family: 'helvetica-neue-medium';
     font-size: 1.8rem;
