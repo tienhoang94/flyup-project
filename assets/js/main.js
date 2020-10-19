@@ -223,7 +223,6 @@ $(document).ready(function () {
                 let textType = $(this).find("span").text();
                 $("#typeTicketlableSelected").text(textType);
                 // On off Date To 
-                console.log($(".search__container-option-ticket-item.active").attr("type"));
                 if ( $(".search__container-option-ticket-item.active").attr("type") == "1" ) {
                     $(".time-comeback").hide();
                 } else {

@@ -60,7 +60,12 @@ $(document).ready(function () {
         $(this).next().toggle();
     })
 
-    // input range 
+    $(".tour__style-item").click(function(){
+        $(".tour__style-item").removeClass('active');
+        $(this).addClass('active');
+    })
 
+    // input range 
+    
 });
 
