@@ -196,6 +196,7 @@
     font-weight: 600;
     font-size: 1.75rem;
     color: var(--white-color);
+    text-transform: uppercase;
 }
 
 .result__view__item-sale-name::after {

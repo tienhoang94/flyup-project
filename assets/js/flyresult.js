@@ -226,5 +226,15 @@ $(document).ready(function () {
             $(".guest__information-tick-infant").css("color","#b4b4c8");
         }
     })
+
+
+    // Payment 
+
+    $(".box__pay-type-item").click(function () {
+        $(".box__pay-type-item").removeClass('active');
+        $(this).addClass('active');
+    })
+
+
 });
 

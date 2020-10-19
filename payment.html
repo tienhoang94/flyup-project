@@ -158,7 +158,7 @@
                             <li class="box__pay-type-item">
                                 <img src="./assets/images/pay_momo.png" alt="" class="box__pay-type-img">
                             </li>
-                            <li class="box__pay-type-item">
+                            <li class="box__pay-type-item active">
                                 <img src="./assets/images/pay_visa.png" alt="" class="box__pay-type-img">
                             </li>
                             <li class="box__pay-type-item">
@@ -212,7 +212,7 @@
                     </div>
                     <div class="box__pay-btn"><span>THANH TOÁN</span></div>
                 </div>
-                <div class="flash__sale flash__sale-pm" style="display: block;">
+                <div class="flash__sale-pm hide-on-mobile">
                     <div class="flash__sale-countdown">
                         <div class="flash__sale-title flash__sale-title-pm">
                             <h4>ƯU ĐÃI GIỜ CHÓT</h4>
@@ -249,8 +249,8 @@
                         </div>
                     </div>
     
-                    <div class="flash__sale-view flash__sale-view-pm">
-                        <ul class="flash__sale-view-list flash__sale-view-list-pm">
+                    <div class="flash__sale-view-pm">
+                        <ul class="flash__sale-view-list-pm">
                             <li class="flash__sale-view-item" idx="1">
                                 <a href="" class="flash__sale-view__link">
                                     <div class="flash__sale-view__container flash__sale-view__container-pm">
@@ -392,7 +392,7 @@
                     <h2 class="bill__head-cf bill__head-pm">TÓM TẮT ĐƠN HÀNG</h2>
                     <div class="bill-fly-choose bill-fly-choose-cf">
                         <h4 class="bill-fly-title bill-fly-title-cf">Chi tiết giá vé</h4>
-                        <div class="bill-fly__departure bill-fly__departure-cf">
+                        <div class="bill-fly__departure bill-fly__departure-cf bill-fly__departure-pm ">
                             <div class="bill-fly__departure-title">
                                 <div class="bill-fly__departure-text">
                                     <i class="fad fa-plane-departure"></i>
@@ -408,12 +408,14 @@
                                 <span>12:55AM | CN, 30 Thg 6 2020</span>
                                 <span>Sân bay quốc tế tân sơn nhấT</span>
                             </div>
-                            <div class="bill-fly__sub bill-fly__sub-cf">
+                            <div class="bill-fly__sub-pm">
                                 <h5>1 điểm dừng - London</h5>
-                                <h5>Người lớn        1x1.567.000 <span>= 1.567.000đ</span></h5>
+                                <h5>Người lớn<p>1x1.567.000 <span>= 1.567.000đ</span></p></h5>
+                                <h5>Trẻ em<p> 0x1.567.000 <span>= 0đ</span></p></h5>
+                                <h5>Em bé<p> 0x1.567.000 <span>= 0đ</span></p></h5>
                             </div>
                         </div>
-                        <div class="bill-fly__return bill-fly__return-cf">
+                        <div class="bill-fly__return bill-fly__return-cf bill-fly__return-pm">
                             <div class="bill-fly__departure-title">
                                 <div class="bill-fly__departure-text">
                                     <i class="fad fa-plane-arrival"></i>
@@ -429,10 +431,56 @@
                                 <span>12:55AM | CN, 30 Thg 6 2020</span>
                                 <span>Sân bay quốc tế tân sơn nhấT</span>
                             </div>
-                            <div class="bill-fly__sub bill-fly__sub-cf">
-                                <h5>1 điểm dừng - London</h5>
-                                <h5>Người lớn        1x1.567.000 <span>= 1.567.000đ</span></h5>
+                            <div class="bill-fly__sub-pm">
+                                <h5>Bay thẳng - Không điểm dừng</h5>
+                                <h5>Người lớn<p>1x1.567.000 <span>= 1.567.000đ</span></p></h5>
+                                <h5>Trẻ em<p> 0x1.567.000 <span>= 0đ</span></p></h5>
+                                <h5>Em bé<p> 0x1.567.000 <span>= 0đ</span></p></h5>
                             </div>
+                        </div>
+                    </div>
+                    <div class="bill-fly-guest-pm">
+                        <h4 class="bill-fly-title-pm">
+                            <span>Hành khách</span>
+                            <span>$186</span>
+                        </h4>
+                        <div class="bill-guest">
+                            <h5 class="bill-guest-name">
+                                <i class="fas fa-user"></i>
+                                Olivia Davidson</h5>
+                            <ul class="bill-guest-infor-list">
+                                <li class="bill-guest-infor-item">
+                                    <span>Giới tính</span>
+                                    <span>Nữ</span>
+                                </li>
+                                <li class="bill-guest-infor-item">
+                                    <span>Ngày sinh</span>
+                                    <span>30/01/2000</span>
+                                </li>
+                                <li class="bill-guest-infor-item">
+                                    <span>Hành lý kí gửi</span>
+                                    <span>23 kg (đặt thêm)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bill-guest">
+                            <h5 class="bill-guest-name">
+                                <i class="fas fa-user"></i>
+                                Adult 2</h5>
+                            <ul class="bill-guest-infor-list">
+                                <li class="bill-guest-infor-item">
+                                    <span>Giới tính</span>
+                                    <span>Nữ</span>
+                                </li>
+                                <li class="bill-guest-infor-item">
+                                    <span>Ngày sinh</span>
+                                    <span>30/01/2000</span>
+                                </li>
+                                <li class="bill-guest-infor-item">
+                                    <span>Hành lý kí gửi</span>
+                                    <span>23 kg (đặt thêm)</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="bill-fly-luggage-pd">
@@ -464,12 +512,12 @@
                         </ul>
                     </div>
                     <div class="bill-fly-total bill-fly-total-cf">
-                        <div class="bill-fly-total__title bill-fly-total__title-cf">
+                        <div class="bill-fly-total__title-pm">
                             <h4 class="bill-fly-total-text bill-fly-total-text-cf">Tổng cộng</h4>
-                            <div class="bill-fly-total__title-icon">
+                            <div class="bill-fly-total__title-icon bill-fly-total__title-icon-pm">
                                 <i class="far fa-arrow-down"></i>
                             </div>
-                            <div class="bill-fly-total__title-price">
+                            <div class="bill-fly-total__title-price bill-fly-total__title-price-pm">
                                 <h4>3.134.000đ</h4>
                                 <span>Đã bao gồm tất cả thuế, phí và phụ phí</span>
                             </div>
@@ -509,12 +557,12 @@
 
         <div class="wrapper tour__guide tour__guide-pm">
             <div class="guide__heading guide__heading-pm">
-                <div class="guide__heading-title ">
+                <div class="guide__heading-title guide__heading-title-pm">
                     <h4 class="hide-on-mobile-table">Du lịch tự túc cùng</h4>
                     <h2>TOP <span>CỐ VẤN DU LỊCH</span> CỦA FLY UP</h2>
                 </div>
             </div>
-            <ul class="guide__list">
+            <ul class="guide__list guide__list-pm">
                 <li class="guide__list__item">
                     <img class="guide__list__img" src="https://cambodia-vietnam-tours.com/userfiles/images/10-things-you-need-to-know-before-coming-to-vietnam-3.jpg" alt="">
                     <h4 class="guide__list__name">NGUYỄN THỊ HẰNG</h4>

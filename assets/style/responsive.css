@@ -42,6 +42,15 @@
         margin-right: 0;
     }
 
+    /* Payment */
+    .confirm__containner-pm {
+        margin-left: 1rem;
+    }
+
+    .guide__heading-title-pm {
+        margin-left: 1rem;
+    }
+
 }
 
 @media (max-width: 1023px) {
@@ -249,6 +258,19 @@
     .guest__add-service-item {
         padding: 3rem 3rem;
     }
+
+    /* payment */
+
+    .box__pay {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .box__pay-type-list {
+        display: flex;
+        overflow-x: auto
+    }
+
 }
 
 /* Tablet */
@@ -435,7 +457,50 @@
         margin-left: 3rem;
     }
 
-}
+    /* payment */
+
+    .flash__sale-view-list-pm {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+    .flash__sale-view-list-pm::-webkit-scrollbar {
+        display: none;
+    }
+    .bill__wrapper-pm {
+        width: 20rem;
+    }
+    .bill-fly-guest-pm {
+        margin-left: 3rem;
+    }
+
+    .bill-guest {
+        margin-left: -2rem;
+    }
+
+    .bill-fly-total__title-pm {
+        flex-direction: column;
+    }
+    .bill-fly-total__title-icon-pm {
+        margin-left: 8rem;
+        margin-bottom: 1rem;
+    }
+
+    .bill-fly-total__title-price-pm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bill-fly__departure-pm, .bill-fly__return-pm {
+        margin-right: 1rem;
+    }
+
+    .bill-fly-total__title-pm::after {
+        bottom: -25%;
+    }
+
+
+}   
 
 /* Mobile */
 @media (max-width: 739px) {
@@ -518,6 +583,7 @@
     }
     .change-search__departure, .change-search__return {
         line-height: 3rem;
+        margin-bottom: 2rem;
     }
 
     .detail-return-departure {
@@ -647,5 +713,15 @@
         margin-top: 2rem;
     }
 
+    /* Payment */
 
+    .guide__heading-pm {
+        position: relative;
+        top: 0;
+        width: 30rem;
+    }
+
+    .box__pay-btn {
+        margin-bottom: 3rem;
+    }
 }
