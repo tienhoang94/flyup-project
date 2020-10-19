@@ -113,11 +113,12 @@
 
 .tour__filter-rate-item label span {
     float: right;
+    margin-right: 3rem;
 }
 
 .tour__filter-range-price {
     margin-top: 3.5rem;
-}
+    }
 
 .tour__filter-range-price input{
 
@@ -391,12 +392,14 @@
 /* Form search  */
 
 .form__search__wrapper {
-    display: flex;
-    justify-content: center;
+
 }
 
 .form__search-tour {
-    max-width: 11rem;
+    width: 11rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .form__search-tour-head {
