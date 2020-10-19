@@ -516,7 +516,9 @@ $(document).ready(function () {
             $(".float-content__note").text(arrDealAttractionFly[indexMain].description);
             if (arrDealAttractionFly[indexMain].turn == "1") {
                 $(".float-content__left-direction i:last-child").hide();
-            }        
+            } else {
+                $(".float-content__left-direction i:last-child").show();
+            }  
         }
       
         $(".deal__attraction-img__right").click(function(){
