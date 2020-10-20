@@ -199,6 +199,7 @@
 
 .tour-detail__container {
     display: flex;
+    justify-content: space-between;
 }
 
 .tour__body-left {
@@ -217,6 +218,19 @@
     font-family: 'helvetica-neue-regular';
     font-size: 2.2rem;
     margin-bottom: 3.7rem;
+    position: relative;
+}
+
+.tour__tips-title::after,
+.group__tour-travelled-title::after,
+.tour__follow-us h5::after {
+    position: absolute;
+    content: " ";
+    bottom: -1rem;
+    left: 0;
+    width: 10rem;
+    height: 2px;
+    background-color: #eee;
 }
 
 .tour__tips-list {
@@ -224,7 +238,11 @@
 }
 
 .tour__tips-item {
+    margin-bottom: 4rem;
+}
 
+.tour__tips-item:last-child {
+    margin-bottom: 0;
 }
 
 .tour__tips-item__link {
@@ -236,6 +254,7 @@
     height: 9.3rem;
     width: 9.3rem;
     margin-right: 2rem;
+    object-fit: cover;
 }   
 
 .tour__tips-item-content {
@@ -290,6 +309,7 @@
     line-height: 2rem;
     color: #666666;
     margin-bottom: 1.8rem;
+    text-align: center;
 }
 
 .phone-support{
@@ -313,12 +333,14 @@
     flex-direction: column;
     border: 1px solid #eaeaea;
     padding: 3.5rem 1rem;
+    margin-bottom: 4rem;
 }
 
 .group__tour-travelled-title {
     font-family: 'helvetica-neue-regular';
     font-size: 2.2rem;
     margin-bottom: 3.7rem;
+    position: relative;
 }
 
 .group__tour-travelled-list {
@@ -340,15 +362,22 @@
 }
 
 .tour__follow-us {
-    
+    border: 1px solid #eaeaea;
+    padding: 4rem 0 5rem 1.3rem;
+}
+.tour__follow-us h5{
+    font-family: 'helvetica-neue-regular';
+    font-size: 2.2rem;
+    margin-bottom: 3.7rem;
+    position: relative;
 }
 
 .tour__follow-us-list {
-    
+    display: flex;
 }
 
 .tour__follow-us-item {
-    
+    margin-right: 1.3rem;
 }
 
 .tour__follow-us__link {
@@ -356,20 +385,46 @@
 }
 
 .tour__follow-us__link i{
-    
+    font-size: 2.5rem;
+    color: #68cdf5;
 }
 
 
 .tour__body-content {
-
+    display: flex;
+    flex-direction: column;
+    width: 74rem;
 }
 
 .tour__body__tab-list {
-
+    display: flex;
+    border: 1px solid #cfdcea;
+    padding: 0.4rem;
+    margin-bottom: 1.6rem;
 }
 
 .tour__body__tab-item {
+    font-family: 'Alegreya-Regular';
+    font-size: 1.9rem;
+    color: #333333;
+    border-right: 1px solid #abc2d9;
+    padding: 0.6rem 2.1rem;
+    cursor: pointer;
+    position: relative;
+}
 
+.tour__body__tab-item.active::after {
+    position: absolute;
+    content: "";
+    bottom: -4px;
+    left: -2px;
+    height: 4px;
+    width: 102%;
+    background-color: #0073b7;
+}
+
+.tour__body__tab-item:last-child {
+    border-right: none;
 }
 
 .tour__body__detail-list {
@@ -377,32 +432,55 @@
 }
 
 .tour__body__detail-item {
-
+    border: 1px solid #8faecd;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
 }
 
 .tour__body__departure-head {
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.4rem 0 2.4rem 2.5rem;
 }
 
 .tour__body__departure-title {
-
+    font-family: 'helvetica-neue-regular';
+    font-size: 3rem;
+    color: #333333;
+    text-transform: uppercase;
 }
 
 .tour__body__month-list {
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .tour__body__month-item {
+    font-family: 'SVN-Avo';
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1.4rem 2rem;
+    cursor: pointer;
+    margin: 0 0.8rem;
+}
 
+.tour__body__month-item.active{
+   background-color: var(--green-fly-color);
 }
 
 
 .table__detail-departure {
-    
+    width: 100%;
 }
 
 .table__detail-departure th{
-
+    border: 1px solid #5483b2;
+    padding: 2.5rem 3.4rem;
+    font-family: 'SVN-Avo';
+    font-size: 1.7rem;
+    color: var(--green-fly-color);
+    font-weight: 700;
 }
 
 .table__detail-departure .table_des{
@@ -410,62 +488,98 @@
 }
 
 .table__detail-departure td{
-
+    border-right: 1px solid #5483b2;
+    font-size: 1.8rem;
+    font-family: 'helvetica-neue-regular';
+    color: #484848;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    padding: 1.3rem 3.4rem;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .table-price__container {
-
+    display: flex;
+    align-items: center;
 }
 
 .table-price {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
 }
 
 .table-price h4{
-
+    font-family: 'helvetica-neue-condensed-black';
+    font-size: 1.9rem;
+    color: var(--green-fly-color);
+    margin-bottom: 0.5rem;
 }
 
 .table-price h5{
-
+    font-family: 'helvetica-neue-light';
+    font-size: 1rem;
 }
 
 .table-price h5 span{
-
+    text-decoration: line-through;
 }
 
 .table__detail-departure .btn-buy-now{
-
+    font-family: 'helvetica-neue-condensed-black';
+    font-size: 1.3rem;
+    color: var(--white-color);
+    background-color: var(--green-fly-color);
+    padding: 1rem;
+    cursor: pointer;
 }
 
-.tour__route-head {
-
+.tour__route-head, .tour__policy-head {
+    font-family: 'helvetica-neue-regular';
+    font-size: 3rem;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 2.5rem 0 2rem 2.7rem;
 }
 
 .tour__route-list {
-
+    padding: 0 6rem 3.5rem 7.2rem;
 }
 
 .tour__route-item {
 
 }
 
-.tour__route-head {
-
+.tour__route-item > h4{
+    font-family: 'helvetica-neue-regular';
+    font-size: 2rem;
+    margin-bottom: 1.3rem;
 }
-.tour__route-head span{
 
+.tour__route-item > h4 span{
+    color: #00aeef;
 }
+
+
+
 
 .tour__route-detail {
-
+    
 }
 
 .tour__route-title {
-
+    font-family: 'helvetica-neue-light';
+    font-size: 1.6rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
 }
 
 .tour__route-img-list {
-
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
 }
 
 .tour__route-img-item {
@@ -473,27 +587,28 @@
 }
 
 .tour__route-img-item img{
-
+    width: 19.2rem;
+    height: 14.3rem;
+    border-radius: 7px;
 }
 
 .tour__route__content {
-
+    font-family: 'helvetica-neue-light';
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #484848;
 }
 
-.tour__body__detail-item {
 
-}
 
-.tour__body__detail-item:not(:first-child) {
+.tour__body__detail-item:not(:nth-child(3)) {
     display: none;
 }
 
-.tour__policy-head {
-
-}
 
 .tour__policy-list {
-
+    padding-left: 2.7rem;
+    padding-right: 3.8rem;
 }
 
 .tour__policy-item {
@@ -501,17 +616,84 @@
 }
 
 .tour__policy-title {
-
+    font-family: 'helvetica-neue-regular';
+    font-size: 2rem;
+    color: #3abefb;
+    margin-bottom: 1.5rem;
 }
 
 .tour__policy-content-list {
-
+    padding-left: 1rem;
 }
 
 .tour__policy-content-item {
+    display: flex;
+}
 
+.tour__policy-content-item i{
+    font-size: 1.6rem;
+    color: #b1d452;
+    margin-right: 1.7rem;
 }
 
 .tour__policy-content-item p{
-
+    font-family: 'helvetica-neue-light';
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #333333;
 }
+
+
+/* suggest guide */
+
+.suggest__guide {
+    height: 76rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 11rem;
+    margin-bottom: 11rem;
+    position: relative;
+    display: flex;
+}
+
+.suggest__guide-content {
+    margin: auto;
+    text-align: center;
+    width: 58%;
+}
+
+.suggest__guide-content h5{
+    font-family: 'Alegreya-Regular';
+    font-size: 2.5rem;
+    color: var(--white-color);
+    margin-bottom: 1.5rem;
+}
+
+.suggest__guide-content h3{
+    font-family: 'helvetica-neue-condensed-black';
+    font-size: 4.8rem;
+    line-height: 5rem;
+    color: var(--white-color);
+    margin-bottom: 1.5rem;
+}
+
+.suggest__guide-content h3 span{
+    color: var(--green-fly-color);
+}
+
+.suggest__guide-content p{
+    font-family: 'Alegreya-Regular';
+    font-size: 1.7rem;
+    line-height: 2rem;
+    color: var(--white-color);
+    margin-bottom: 3.3rem;
+}
+
+.link__find-more,
+.link__find-more:hover {
+    text-decoration: none;
+}
+
+.btn-tour-detail-more {
+
+}   

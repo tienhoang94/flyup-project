@@ -77,6 +77,24 @@ $(document).ready(function () {
         $(".tour__style-list").animate({scrollLeft: leftPos + 400}, 300);
     })
 
+    // Tour route
+
+    $(".tour__body__tab-item").click(function(){
+        $(".tour__body__tab-item").removeClass('active');
+        $(this).addClass('active');
+    })
+
+    $(".tour__body__month-item").click(function(){
+        $(".tour__body__month-item").removeClass('active');
+        $(this).addClass('active');
+    })
+
+    $(".tour__body__tab-item").click(function () {
+        let idx = $(this).attr("idx");
+        $(".tour__body__detail-item").hide();
+        $(".tour__body__detail-item:nth-child("+idx+")").show();
+    })
+
 
 
     // input range 
