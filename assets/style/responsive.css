@@ -271,6 +271,51 @@
         overflow-x: auto
     }
 
+
+    /* Tour search */
+
+    .form__search-tour {
+        width: 100%;
+    }
+
+    .tour__style {
+        width: 100%;
+    }
+
+    .tour__style-text {
+        position: absolute;
+        top: 4%;
+        right: 38%;
+        width: 31%;
+    }
+    .tour__style-paginate {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tour__style-previous, .tour__style-next {
+        display: none;
+    }
+    .tour__style-list {
+        width: 90%;
+    }
+    .search-tour__container {
+        flex-direction: column;
+    }
+    .search-tour__filter, .search-tour__result {
+        width: 100%;
+    }
+
+    .tour-offer__list {
+        overflow-x: auto;
+    }
+    .tour-offer__list::-webkit-scrollbar {
+        display: none;
+    }
+
+
+
+
 }
 
 /* Tablet */
@@ -724,4 +769,20 @@
     .box__pay-btn {
         margin-bottom: 3rem;
     }
+
+    /* Search Tour */
+    .form__search-tour-body {
+        flex-direction: column;
+    }
+    .form__search-item {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #a0b4c8;
+    }
+    .tour__style-text {
+        width: 75%;
+        right: 13%;
+    }
+
+
 }

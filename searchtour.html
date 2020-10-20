@@ -111,6 +111,9 @@
                         <h5 class="form__search-title">Tên địa danh, khách sạn, hoạt động...</h5>
                         <input type="text" placeholder="Tìm kiếm"/>
                     </div>
+                    <div class="form__search-tour-btn">
+                        <i class="fal fa-search"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,6 +130,22 @@
                     </div>
                     <ul class="tour__style-list">
                         <li class="tour__style-item active">
+                            <img src="./assets/images/icon_tour_type_suitcase.png" alt="">
+                            <span>COMBO TIẾT KIỆM</span>
+                        </li>
+                        <li class="tour__style-item">
+                            <img src="./assets/images/icon_tour_type_swimming.png" alt="">
+                            <span>LẶN NGẮM SAN HÔ</span>
+                        </li>
+                        <li class="tour__style-item">
+                            <img src="./assets/images/icon_tour_type_mountain.png" alt="">
+                            <span>LEO NÚI KHÁM PHÁ</span>
+                        </li>
+                        <li class="tour__style-item">
+                            <img src="./assets/images/icon_standard_slipper1.png" alt="">
+                            <span>DU LỊCH BÃI BIỂN</span>
+                        </li>
+                        <li class="tour__style-item">
                             <img src="./assets/images/icon_tour_type_suitcase.png" alt="">
                             <span>COMBO TIẾT KIỆM</span>
                         </li>
@@ -245,8 +264,13 @@
                 <div class="search-tour__result">
                     <h4 class="search-tour__result-title"> 
                         <span>
-                            SẮP XẾP THEO 
-                            <i class="fas fa-caret-down"></i>
+                            <label for="sortby"> SẮP XẾP THEO:</label>
+                            <select id="sortby">
+                                <option value="">Giá tăng</option>
+                                <option value="">Giá giảm</option>
+                                <option value="">Ngày</option>
+                            </select>
+                            <!-- <i class="fas fa-caret-down"></i> -->
                         </span>
                     </h4>
                     <ul class="search-tour__result-list">

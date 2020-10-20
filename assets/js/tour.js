@@ -12,7 +12,7 @@ $(document).ready(function () {
         
     });
     
-    // Pagination
+    // Pagination list tour
 
     $(".search-tour__paginate-item:not(':first-child, :last-child')").on('click',function(){
         let idxLast = $(".search-tour__paginate-item:last-child").index();
@@ -64,6 +64,20 @@ $(document).ready(function () {
         $(".tour__style-item").removeClass('active');
         $(this).addClass('active');
     })
+
+    // Pagination tour type
+
+    
+    $(".tour__style-previous").click (function () {
+        var leftPos = $('.tour__style-list').scrollLeft();
+        $(".tour__style-list").animate({scrollLeft: leftPos - 400}, 300);
+    })
+    $(".tour__style-next").click (function () {
+        var leftPos = $('.tour__style-list').scrollLeft();
+        $(".tour__style-list").animate({scrollLeft: leftPos + 400}, 300);
+    })
+
+
 
     // input range 
     
