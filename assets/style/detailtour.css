@@ -1,0 +1,517 @@
+/* tour overview */
+
+.tour__overview {
+    display: flex;
+    flex-direction: column;
+    margin-top: 9rem;
+    padding: 0 1.5rem;
+}
+
+.tour__overview__head {
+    background-color: #3abefb;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.tour__overview__head-left {
+    display: flex;
+    flex-direction: column;
+    color: var(--white-color);
+    width: 50rem;
+    padding: 4rem 3rem 2.7rem 3.5rem;
+}
+
+.tour-name {
+    font-family: 'Alegreya-Regular';
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+
+.tour-vote {
+    display: flex;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.tour-vote-list {
+    display: flex;
+    margin-right: 1.6rem;
+}
+
+.tour-vote-item {
+    margin-right: 0.4rem;
+}
+.tour-vote-item i{
+
+}
+
+
+.tour-vote-number span{
+    font-weight: 700;
+}
+
+.tour-feedback-list {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.tour-feedback-item {
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+.tour-feedback-item i{
+
+}
+
+
+.tour-infor-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 2.5rem;
+}
+
+.tour-infor-item {
+    font-size: 1.3rem;
+    font-family: 'helvetica-neue-regular';
+    margin-bottom: 0.7rem;
+}
+
+.tour-infor-item span{
+
+}
+
+
+.tour-activity {
+    margin-bottom: 2.5rem;
+}
+
+.tour-activity-title {
+    font-family: 'helvetica-neue-condensed-black';
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.tour-activity-list {
+
+}
+
+.tour-activity-item {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+
+.tour-activity-item i{
+    color: #95cc57;
+}
+
+
+.tour-price {
+    display: flex;
+}
+
+.tour-price__link {
+    margin-right: 8rem;
+}
+.tour-price__link,
+.tour-price__link:hover {
+    text-decoration: none;
+}
+
+.btn-book-price {
+    height: 4.7rem;
+    width: 14rem;
+    border-radius: 5px;
+    font-size: 2.4rem;
+}
+
+.tour-price-content {
+    display: flex;
+}
+
+.tour-price-content span{
+    font-family: 'helvetica-neue-regular';
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.tour-price-number {
+    font-size: 3.1rem;
+    font-family: 'helvetica-neue-regular';
+}
+
+.tour__overview__head-img {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tour__overview__head-img::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    border: 5px solid var(--white-color);
+}
+
+.tour__overview__img-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.5rem;
+}
+
+.tour__overview__img-item {
+
+}
+
+.tour__overview__img-item img{
+    width: 18rem;
+    height: 14rem;
+    cursor: pointer;
+}
+
+.tour__overview__content {
+    
+}
+
+.tour__overview__content p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #777777;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin-bottom: 2.7rem;
+}
+.tour__overview__content p:last-child{
+    font-weight: 700;
+}
+
+
+/* Tour Detail Infor */
+
+.tour-detail__container {
+    display: flex;
+}
+
+.tour__body-left {
+    display: flex;
+    flex-direction: column;
+    width: 37rem;
+}
+
+.tour__tips {
+    border: 1px solid #eaeaea;
+    padding: 4rem 0 4rem 1rem;
+    margin-bottom: 4rem;
+}
+
+.tour__tips-title {
+    font-family: 'helvetica-neue-regular';
+    font-size: 2.2rem;
+    margin-bottom: 3.7rem;
+}
+
+.tour__tips-list {
+
+}
+
+.tour__tips-item {
+
+}
+
+.tour__tips-item__link {
+    text-decoration: none;
+    display: flex;
+}
+
+.tour__tips-item-img {
+    height: 9.3rem;
+    width: 9.3rem;
+    margin-right: 2rem;
+}   
+
+.tour__tips-item-content {
+    color: #333333;
+    font-family: 'Alegreya-Regular';
+}
+.tour__tips-item-content h4{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.tour__tips-item-content h5{
+    font-size: 1.7rem;
+    margin-bottom: 1.6rem;
+}
+
+.tour__tips-vote {
+    font-size: 1.5rem;
+}
+
+.tour__tips-vote i{
+    color: var(--green-fly-color);
+}   
+
+.tour__tips-vote span{
+    color: #999999;
+    margin-left: 1rem;
+}
+
+.tour__question {
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem;
+    margin-bottom: 4rem;
+}
+.tour__question h3{
+    font-family: 'helvetica-neue-condensed-black';
+    font-size: 3rem;
+    color: #68ccf5;
+    margin-bottom: 1.6rem;
+}
+
+.tour__question h3 span{
+    color: var(--green-fly-color);
+}
+
+.tour__question p{
+    font-family: 'Alegreya-Regular';
+    font-size: 1.7rem;
+    line-height: 2rem;
+    color: #666666;
+    margin-bottom: 1.8rem;
+}
+
+.phone-support{
+    font-size: 1.2rem;
+    color: #666666;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+.phone-support i{
+    margin-right: 1rem;
+    color: #000;
+}
+.email-support{
+    font-family: 'Alegreya-Regular';
+    font-size: 1.7rem;
+    color: #666666;
+}
+
+.group__tour-travelled {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eaeaea;
+    padding: 3.5rem 1rem;
+}
+
+.group__tour-travelled-title {
+    font-family: 'helvetica-neue-regular';
+    font-size: 2.2rem;
+    margin-bottom: 3.7rem;
+}
+
+.group__tour-travelled-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.group__tour-travelled-item {
+    margin-bottom: 1rem;
+}
+
+.group__tour-travelled__link {
+    text-decoration: none;
+}
+.group__tour-travelled__link img{
+    width: 11rem;
+    height: 7.3rem;
+    object-fit: cover;
+}
+
+.tour__follow-us {
+    
+}
+
+.tour__follow-us-list {
+    
+}
+
+.tour__follow-us-item {
+    
+}
+
+.tour__follow-us__link {
+    
+}
+
+.tour__follow-us__link i{
+    
+}
+
+
+.tour__body-content {
+
+}
+
+.tour__body__tab-list {
+
+}
+
+.tour__body__tab-item {
+
+}
+
+.tour__body__detail-list {
+
+}
+
+.tour__body__detail-item {
+
+}
+
+.tour__body__departure-head {
+
+}
+
+.tour__body__departure-title {
+
+}
+
+.tour__body__month-list {
+
+}
+
+.tour__body__month-item {
+
+}
+
+
+.table__detail-departure {
+    
+}
+
+.table__detail-departure th{
+
+}
+
+.table__detail-departure .table_des{
+
+}
+
+.table__detail-departure td{
+
+}
+
+.table-price__container {
+
+}
+
+.table-price {
+
+}
+
+.table-price h4{
+
+}
+
+.table-price h5{
+
+}
+
+.table-price h5 span{
+
+}
+
+.table__detail-departure .btn-buy-now{
+
+}
+
+.tour__route-head {
+
+}
+
+.tour__route-list {
+
+}
+
+.tour__route-item {
+
+}
+
+.tour__route-head {
+
+}
+.tour__route-head span{
+
+}
+
+.tour__route-detail {
+
+}
+
+.tour__route-title {
+
+}
+
+.tour__route-img-list {
+
+}
+
+.tour__route-img-item {
+
+}
+
+.tour__route-img-item img{
+
+}
+
+.tour__route__content {
+
+}
+
+.tour__body__detail-item {
+
+}
+
+.tour__body__detail-item:not(:first-child) {
+    display: none;
+}
+
+.tour__policy-head {
+
+}
+
+.tour__policy-list {
+
+}
+
+.tour__policy-item {
+
+}
+
+.tour__policy-title {
+
+}
+
+.tour__policy-content-list {
+
+}
+
+.tour__policy-content-item {
+
+}
+
+.tour__policy-content-item p{
+
+}
