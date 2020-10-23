@@ -437,18 +437,13 @@
         margin-top: 2rem;
     }
 
-    .search__mf_flyresult {
-        display: none;
-    }
 
 
 }
 
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
-    :root {
-     
-    }
+
     .hide-on-table {
         display: none;
     }
@@ -657,9 +652,6 @@
 
 /* Mobile */
 @media (max-width: 739px) {
-    :root {
-       
-    }
     .hide-on-mobile {
         display: none;
     }
@@ -1063,7 +1055,5 @@
     .brand__item:first-child span {
         font-size: 1.5rem;
     }
-
-
 
 }
