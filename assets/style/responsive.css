@@ -437,6 +437,10 @@
         margin-top: 2rem;
     }
 
+    .result__view__list {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
 
 
 }
@@ -885,6 +889,8 @@
     }
 
     /* Fly search */
+
+
     .bill__content ,
     .bill-fly__container {
         flex-direction: column;
