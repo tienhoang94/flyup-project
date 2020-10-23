@@ -338,6 +338,7 @@
     color: #80979f;
 }
 
+
 .result__view_brand-name.result__view_brand-name--color {
     color: var(--blue-fly-color);
     font-family: 'helvetica-neue-bold';
@@ -1001,16 +1002,19 @@
     text-align: right;
     float: right;
 }
+
 .btn-next-page {
     display: flex;
     justify-content: flex-end;
     padding-right: 14rem;
     padding-top: 2.2rem;
+}
+.btn-next-page__link:hover,
+.btn-next-page__link {
     text-decoration: none;
 }
-.btn-next-page:hover {
-    text-decoration: none;
-}
+
+
 
 
 /* service accommodate */
@@ -1171,3 +1175,18 @@
     margin-top: 1rem;
 }
 
+
+/* flight search  */
+.change-flight-btn {
+    
+}
+.change-flight-btn span{
+    font-size: 2rem;
+    font-family: 'helvetica-neue-condensed-black';
+    color: var(--white-color);
+    background-color: var(--bg-blue-guest);
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 2rem;
+}

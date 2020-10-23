@@ -313,7 +313,133 @@
         display: none;
     }
 
+    /* Result Flight */
 
+    .brand__list {
+        overflow-x: auto;
+    }
+
+    .result_item_contain .result__view_name-brand {
+        /* margin-left: -10%; */
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        margin-right: -10%;
+    }
+    .result__view__item {
+        padding: 2rem 0rem;
+    }
+    .result__view-detail__container,
+    .result__view-detail__container-return  {
+        margin: 0;
+    }
+    
+    .result_item_contain .result__view_brand-name {
+        margin-left: 12%;
+    }
+    .result_item_contain .result__view_brand-name span:first-child {
+        display: none;
+    }
+
+    .result__view-detail-time-item .result__view_name-brand,
+    /* .result__view-time-total-label, */
+    .result__view-detail-head,
+    .result__view-detail-price,
+    .result__view-detail-title
+    /* .result__view-time-total-bar */
+    {
+        display: none;
+    }
+    .result__view-detail__container  .result__view-detail,
+    .result__view-detail__container-return  .result__view-detail {
+        padding: 0 1rem;
+    }
+
+    .result__view-detail__container .result__view-time-total-label,
+    .result__view-detail__container-return .result__view-time-total-label {
+        margin-bottom: 2rem;
+    }
+    /* .result__view-detail__container .result__view-time-total-label:first-child,
+    .result__view-detail__container-return .result__view-time-total-label:first-child {
+        margin-bottom: 0;
+    } */
+
+    .result__view-detail-time-item {
+        margin: 1rem 0;
+    }
+    .result__view-btn-detail, 
+    .result__view-btn-detail-return {
+        width: 130%;
+    }
+    .result__view_brand-name span:last-child{
+        font-weight: bold;
+        color: black;
+    }
+    
+
+    .result__view-time-total {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .result__view-detail-time-item {
+        flex-direction: column;
+    }
+    .result__view-detail-item:nth-child(1) {
+        display: block;
+    }
+    .result__view-detail-item:nth-child(2),
+    .result__view-detail-item:nth-child(3) {
+        display: none;
+    }
+
+    .result__view-head-direction {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+    .result__view-head-name {
+        font-size: 1.6rem;
+    }
+    .result__view-head-date {
+        font-size: 1.5rem;
+    }
+    .result__view__sort {
+        margin-top: 1rem;
+    }
+    .result__view-number-fly {
+        font-size: 1.4rem;
+    }
+    .result__view-sort-label {
+        font-size: 1.5rem;
+    }
+    .result__view-sorted {
+        margin-left: 0;
+        font-size: 1.3rem;
+    }
+
+
+
+    .service__container {
+        height: 70rem;
+    }
+
+    .service__wrapper {
+        flex-direction: column;
+    }
+
+    .service__list {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .service__intro {
+        width: 100%;
+        padding-left: 7rem;
+        margin-top: 2rem;
+    }
+
+    .search__mf_flyresult {
+        display: none;
+    }
 
 
 }
@@ -419,25 +545,7 @@
         flex-direction: column;
         margin-left: 3rem;
     }
-    .service__container {
-        height: 70rem;
-    }
-
-    .service__wrapper {
-        flex-direction: column;
-    }
-
-    .service__list {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .service__intro {
-        width: 100%;
-        padding-left: 7rem;
-        margin-top: 2rem;
-    }
-
+   
 
 
 
@@ -783,6 +891,179 @@
         width: 75%;
         right: 13%;
     }
+
+    /* Fly search */
+    .bill__content ,
+    .bill-fly__container {
+        flex-direction: column;
+    }
+
+    .bill-fly__departure,
+    .bill-fly__return {
+        margin-right: 0;
+    }
+
+    .bill-fly-total {
+        margin-top: 2rem;
+    }
+
+    .service__intro {
+        padding-left: 0;
+        margin-top: 0;
+    }
+    .service__intro p {
+        margin-bottom: 2rem;
+    }
+
+    .result__head {
+        margin-top: 1rem;
+    }
+    .result__head-title {
+        text-align: center;
+        line-height: 4rem;
+        font-size: 3rem;
+    }
+    .result__head-content {
+        display: none;
+    }
+    .result__brand {
+        margin-top: 0;
+        border: none;
+    }
+    .result__range-paginate {
+        display: none;
+    }
+    .result__view-head-direction {
+        font-size: 1.4rem;
+    }
+    .result__view-head-name,
+    .result__view-sort-label  {
+        display: none;
+    }
+    .result__view-head-date {
+        font-size: 1.2rem;
+    }
+    .result__view_range-time {
+        flex-direction: column;
+    }
+    .result__view-time-start,
+    .result__view-time-to {
+        font-size: 1.4rem;
+    }
+    .result__view_price-number {
+        font-size: 1rem;
+    }
+    .btn-book-ticket {
+        padding: 0.4rem;
+        font-size: 1.3rem;
+    }
+    .result__view__item-sale-name {
+        font-size: 1rem;
+    }
+    .result_item_contain .result__view_name-brand {
+        margin-right: 0;
+    }
+
+    .result__view__item {
+        padding-bottom: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .result__view-time-start {
+        order: 1;
+        margin-bottom: 0.5rem;
+    }
+    .result__view-time-total {
+        order: 3;
+    }
+    .result__view-time-to {
+        order: 2;
+        margin-bottom: 0.5rem;
+    }
+    .result__view-time-total-label,
+    .result__view-time-total-bar {
+        display: none;
+    }
+    .result__view-detail-policy-bottom {
+        display: none;
+    }
+
+    .result__view_detail-time {
+        flex-direction: column;
+    }
+    .result__view_detail-waiting {
+        flex-direction: column;
+        line-height: 1.5rem;
+    }
+
+    .result__view_detail-waiting li {
+        font-size: 1.2rem;
+    }
+    .result__view_detail-waiting li span{
+        display: inline-block;
+    }
+
+    .result__view-time-place:last-child {
+        text-align: left;
+        padding-top: 1rem;
+        border-top: 1px dashed;
+        margin-top: 1rem;
+    }
+    .result__view-time-place h5:nth-child(1) {
+        display: none;
+    }
+    .bill__container {
+        padding: 2rem;
+    }
+
+    .wrapper.result {
+        margin-bottom: 2rem;
+    }
+    .result__range {
+        margin: 1.5rem 0;
+        padding-top: 1rem;
+    }
+    .result__container-departure .result__range {
+        border-top: 0.5rem solid rgba(0,127,161,0.5);
+    }
+    .result__container-return .result__range {
+        border-top: 0.5rem solid rgba(166,206,57,0.5);
+    }
+    .result__range-item, .result__range-item-return {
+        padding: 0;
+        min-width: 7rem;
+    }
+    .result__range-date {
+        font-size: 1rem;
+    }
+    .result__range-price {
+        font-size: 0.8rem;
+    }
+    .result__range-item-group,
+    .result__range-item-group-return {
+        width: 100%;
+    }
+
+    .brand__item  {
+        width: 5rem;
+        justify-content: center;
+        padding: 0;
+        height: 3rem;
+    }
+    .brand__item-logo{
+        height: 80%;
+        padding-right: 0;
+    }
+
+    .brand__item:not(:first-child) span {
+        display: none;
+    }
+
+    .brand__item:first-child span {
+        font-size: 1.5rem;
+    }
+
 
 
 }

@@ -21,7 +21,21 @@ $(document).ready(function () {
     });
     
 
-    $(".search__mf").css("display","block");
+    $(".search__mf").css("display","none");
+
+
+    $(".change-flight-btn span").click(function() {
+        $(".change-flight-btn span").hide();
+        $(".search__mf").css("display","block");
+    })
+
+    $(".search__mf__submit button").click(function() {
+        $(".change-flight-btn span").show();
+        $(".search__mf").css("display","none");
+    })
+
+
+
     $(".result__range-item").on('click',function(){
         $(".result__range-item").removeClass('active');
         $(this).addClass('active');
@@ -69,13 +83,17 @@ $(document).ready(function () {
         $(".result__view-time-total").css("padding-right","10rem");
         $(".result__view-head-name").css("font-size","4rem");
         
+        $(".bill-fly__container .bill-fly__return").hide();
     } else {
         $(".result__container").css("width","49%");
-        $(".result__view-time-total").css("padding-left","4.4rem");
-        $(".result__view-time-total").css("padding-right","4.4rem");
+        $(".result__view-time-total").css("padding-left","10%");
+        $(".result__view-time-total").css("padding-right","10%");
+        // $(".result__view-time-total").css("padding-left","4.4rem");
+        // $(".result__view-time-total").css("padding-right","4.4rem");
         $(".result__view-detail-price").css("top","7rem");
         $(".result__view-head-name").css("font-size","1.9rem");
 
+        $(".bill-fly__container .bill-fly__return").show();
     }
 
     if ($(".bill-fly__return").attr("display") == "none") {
