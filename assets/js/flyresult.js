@@ -24,6 +24,7 @@ $(document).ready(function () {
     $(".search__mf").css("display","none");
 
 
+
     $(".change-flight-btn span").click(function() {
         $(".change-flight-btn span").hide();
         $(".search__mf").css("display","block");
@@ -45,18 +46,18 @@ $(document).ready(function () {
         $(this).addClass('active');
     })
     $(".result__view-detail-head-item").on('click',function(){
-        // $(this).parent()
         $(this).parent().find(".result__view-detail-head-item").removeClass('active');
         $(this).addClass('active');
         let idx =  $(this).attr('idx');
-        $(".result__view-detail-item").hide();
-        $(".result__view-detail-item:nth-child("+idx+")").show();
+        let classParent = $(this).closest("div").attr('class');
+        $( "." + classParent + " .result__view-detail-item").hide();
+        $( "." +classParent + " .result__view-detail-item:nth-child("+idx+")").show();
         if (idx == 3) {
-            $(".result__view-detail-policy-bottom").css("display","flex");
-            $(".result__view_name-infor-list").css("padding-left","7rem");
+            $("." + classParent + " .result__view-detail-policy-bottom").css("display","flex");
+            $("." + classParent + " .result__view_name-infor-list").css("padding-left","7rem");
         } else {
-            $(".result__view-detail-policy-bottom").hide();
-            $(".result__view_name-infor-list").css("padding-left","5rem");
+            $("." + classParent + " .result__view-detail-policy-bottom").hide();
+            $("." + classParent + " .result__view_name-infor-list").css("padding-left","5rem");
         }
     })
 
@@ -79,15 +80,28 @@ $(document).ready(function () {
     })
     if ($(".result__container").length == 1 || $(".result__container-return").css("display") == "none") {
         $(".result__container").css("width","100%");
-        $(".result__view-time-total").css("padding-left","10rem");
-        $(".result__view-time-total").css("padding-right","10rem");
-        $(".result__view-head-name").css("font-size","4rem");
+        $(window).resize(function(){
+            let width = $(window).width(); 
+            console.log(width);
+            if (width >= 1024){ 
+                $(".result__view-time-total").css("padding-left","10rem");
+                $(".result__view-time-total").css("padding-right","10rem");
+            }
+        })
+
+        $(".result__view-head-name").css("font-size","4rem");   
         
         $(".bill-fly__container .bill-fly__return").hide();
     } else {
         $(".result__container").css("width","49%");
-        $(".result__view-time-total").css("padding-left","10%");
-        $(".result__view-time-total").css("padding-right","10%");
+        $(window).resize(function(){
+            let width = $(window).width();
+            if (width <= 739){ 
+                $(".result__view-time-total").css("padding-left","10%");
+                $(".result__view-time-total").css("padding-right","10%");
+            }
+        })
+
         // $(".result__view-time-total").css("padding-left","4.4rem");
         // $(".result__view-time-total").css("padding-right","4.4rem");
         $(".result__view-detail-price").css("top","7rem");
@@ -130,6 +144,30 @@ $(document).ready(function () {
         var leftPosReturn = $('.result__range-item-group-return').scrollLeft();
         $(".result__range-item-group-return").animate({scrollLeft: leftPosReturn + 200}, 300);
     })
+
+    $(window).resize(function(){
+        let width = $(window).width();
+        if (width <= 739){
+            let arrPrice = $(".result__view_price-number");
+            for (let item of arrPrice) {
+                let priceItem = $(item).text().replace(".000đ","K");
+                $(item).text(priceItem);
+            }
+
+            let arrDate = $(".result__range-date");
+            for (let item of arrDate) {
+                let dateItem = $(item).text().replace("tháng","/");
+                $(item).text(dateItem);
+            }
+
+            let arrRangePrice = $(".result__range-price");
+            for (let item of arrRangePrice) {
+                let priceRangeItem = $(item).text().replace(".000đ","K");
+                $(item).text(priceRangeItem);
+            }
+
+        }
+    });
 
 
     // Passenger Detail
@@ -229,7 +267,6 @@ $(document).ready(function () {
 
     $(".guest__add-service-btn").click(function () {
         let idx = $(this).attr('idx');
-        console.log(idx);
         $(".guest__add-service-item").removeClass('active');
         $(".guest__add-service-item:nth-child("+idx+")").addClass('active');
         $(".guest__add-service-btn").removeClass('disabled');

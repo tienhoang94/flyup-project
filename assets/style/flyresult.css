@@ -1,32 +1,4 @@
 
-
-/* Notification  */
-
-.notification {
-    margin-top: 2.2rem;
-    display: flex;
-    align-items: center;
-}
-
-.noti-note {
-    font-family: 'Alegreya-Bold';
-    font-size: 1.9rem;
-    color: var(--green-fly-color);
-    width: 9rem;
-}
-
-.noti-contente {
-    font-size: 1.7rem;
-    line-height: 2rem;
-    color: var(--blue-fly-color);
-    font-family: 'Alegreya-Regular';
-    font-weight: 400;
-}
-
-.noti-contente a {
-    color: #00aeef;
-}
-
 /* Search */
 
 .search__container-fly--border {
@@ -298,12 +270,26 @@
 
 .result__view__list {
     margin-top: 3.4rem;
+    padding-top: 1rem;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.result__view__list::-webkit-scrollbar {
+    width: 3px;
+}
+.result__view__list::-webkit-scrollbar-track {
+    background: transparent; 
+}
+.result__view__list::-webkit-scrollbar-thumb {
+    background: rgb(177, 175, 175) ; 
 }
 
 .result__view__item {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 1.3rem 0 3rem;
+    padding: 2rem 1.3rem 0 1.3rem;
     border: 2px solid #f3f3f3;
     border-radius: 6px;
     margin-bottom: 1.3rem;
@@ -360,7 +346,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 4.4rem;
+    padding: 0 10%;
     position: relative;
 }
 
@@ -601,7 +587,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 3rem 0;
+    margin-top: 3rem;
 }
 
 .result__view_detail-time {
@@ -645,9 +631,6 @@
 }
 .result__view_detail-waiting span{
     font-family: 'Alegreya-Regular';
-}
-.result__view-time-total.result__view-time-total--padding{
-    padding: 0 15rem;
 }
 
 
@@ -733,13 +716,13 @@
     background-color: #00aeef;
     /* display: flex; */
     display: none;
-    padding: 1.5rem 4rem;
+    padding: 1.2rem 2rem;
     align-items: center;
     margin-top: -3rem;
 }
 .result__view-detail-policy-bottom img{
-    height: 5rem;
-    margin-right: 4rem;
+    height: 4.5rem;
+    margin-right: 1rem;
 }
 .result__view-detail-policy-content {
     font-family: 'Alegreya-Regular';
@@ -748,7 +731,7 @@
     color: var(--white-color);
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
 }
 .result__view-detail-policy-content span{
 

@@ -83,6 +83,7 @@
 
     .wrapper__header-bg {
         padding-bottom: 0.5rem;
+        height: 6rem;
     }
 
     .top__sale {
@@ -314,11 +315,6 @@
     }
 
     /* Result Flight */
-
-    .brand__list {
-        overflow-x: auto;
-    }
-
     .result_item_contain .result__view_name-brand {
         /* margin-left: -10%; */
         display: flex;
@@ -353,36 +349,31 @@
     .result__view-detail__container  .result__view-detail,
     .result__view-detail__container-return  .result__view-detail {
         padding: 0 1rem;
+        justify-content: center;
     }
 
     .result__view-detail__container .result__view-time-total-label,
     .result__view-detail__container-return .result__view-time-total-label {
         margin-bottom: 2rem;
     }
-    /* .result__view-detail__container .result__view-time-total-label:first-child,
-    .result__view-detail__container-return .result__view-time-total-label:first-child {
-        margin-bottom: 0;
-    } */
 
     .result__view-detail-time-item {
         margin: 1rem 0;
+        flex-direction: column;
+        align-items: stretch;
     }
+    .result__view_detail-time {
+        justify-content: space-between;
+    }
+
     .result__view-btn-detail, 
     .result__view-btn-detail-return {
         width: 130%;
+        text-align: center;
     }
     .result__view_brand-name span:last-child{
         font-weight: bold;
         color: black;
-    }
-    
-
-    .result__view-time-total {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    .result__view-detail-time-item {
-        flex-direction: column;
     }
     .result__view-detail-item:nth-child(1) {
         display: block;
@@ -415,9 +406,6 @@
         margin-left: 0;
         font-size: 1.3rem;
     }
-
-
-
     .service__container {
         height: 70rem;
     }
@@ -436,10 +424,14 @@
         padding-left: 7rem;
         margin-top: 2rem;
     }
-
-    .result__view__list {
-        max-height: 100%;
-        overflow-y: auto;
+    .result__head {
+        margin-top: 2rem;
+    }
+    .result__brand {
+        margin-top: 1rem;
+    }
+    .result__range {
+        margin-top: 0;
     }
 
 
@@ -651,6 +643,12 @@
         bottom: -25%;
     }
 
+    .result {
+        margin-bottom: 1rem;
+    }
+    .bill__container {
+        padding: 2rem 0;
+    }
 
 }   
 
@@ -918,8 +916,9 @@
     }
     .result__head-title {
         text-align: center;
-        line-height: 4rem;
-        font-size: 3rem;
+        line-height: 2.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 0;
     }
     .result__head-content {
         display: none;
@@ -947,14 +946,22 @@
     .result__view-time-start,
     .result__view-time-to {
         font-size: 1.4rem;
+        text-align: center;
     }
     .result__view_price-number {
-        font-size: 1rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.3rem;
+        font-weight: 700;
     }
     .btn-book-ticket {
-        padding: 0.4rem;
+        padding: 0.8rem;
         font-size: 1.3rem;
     }
+    .result__view__item-sale {
+        padding: 0.2rem;
+        top: -0.2rem;
+    }
+
     .result__view__item-sale-name {
         font-size: 1rem;
     }
@@ -963,9 +970,9 @@
     }
 
     .result__view__item {
-        padding-bottom: 1rem;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem 0 0 0;
+        margin-bottom: 0.1rem;
     }
 
     .result__view-time-start {
@@ -976,8 +983,7 @@
         order: 3;
     }
     .result__view-time-to {
-        order: 2;
-        margin-bottom: 0.5rem;
+        display: none;
     }
     .result__view-time-total-label,
     .result__view-time-total-bar {
@@ -1012,7 +1018,7 @@
         display: none;
     }
     .bill__container {
-        padding: 2rem;
+        padding: 1rem;
     }
 
     .wrapper.result {
@@ -1030,7 +1036,7 @@
     }
     .result__range-item, .result__range-item-return {
         padding: 0;
-        min-width: 7rem;
+        min-width: 5rem;
     }
     .result__range-date {
         font-size: 1rem;
@@ -1062,4 +1068,41 @@
         font-size: 1.5rem;
     }
 
+    .brand__list {
+        overflow-x: auto;
+        padding: 0.5rem 0;
+    }
+
+    .result__view__list {
+        margin-top: 1rem;
+    }
+
+    .result__view-number-fly {
+        display: none;
+    }
+    .result__view-sorted {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .result__view_brand-name span:last-child {
+        display: none;
+    }
+
+    .btn-next-page {
+        padding-top: 0;
+    }
+
+    .wrapper__header-bg {
+        height: 5.5rem;
+    }
+
+    .result__range-item::before, 
+    .result__range-item-return::before {
+        height: 100%
+    }
+    .result__range-item::after, 
+    .result__range-item-return::after {
+        height: 100%
+    }
 }
