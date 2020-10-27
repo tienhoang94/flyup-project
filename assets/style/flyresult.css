@@ -219,6 +219,11 @@
     justify-content: space-between;
     align-items: center;
 }
+.result__view-head-inter {
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+}
 
 .result__view-head-direction {
     font-family: 'helvetica-neue-condensed-black';
@@ -238,6 +243,22 @@
     font-family: 'helvetica-neue-condensed-black';
     font-size: 1.9rem;
     color: var(--blue-fly-color);
+    text-transform: uppercase;
+}
+
+.result__view-head-name-inter {
+    font-family: 'helvetica-neue-condensed-black';
+    font-size: 4rem;
+    color: var(--blue-fly-color);
+    text-align: center;
+    flex: 1;
+    margin-right: -24%;
+    text-transform: uppercase;
+}
+.result__view-head-date-inter-icon {
+    color: var(--blue-fly-color);
+    font-size: 1.4rem;
+    padding: 0 1%;
 }
 
 .result__view-head-date {
