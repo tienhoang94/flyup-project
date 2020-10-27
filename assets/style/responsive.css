@@ -666,6 +666,19 @@
         display: none;
     }
 
+    /* Home page */
+    .guide__heading-title h2 {
+        font-size: 2.5rem;
+        margin-top: 0;
+    }
+
+
+    /* End Home page */
+
+    .tour__guide {
+        margin-bottom: 1rem;
+    }
+
     .guide__standard {
         flex-wrap: wrap;
     }
@@ -686,13 +699,39 @@
         width: 27rem;
     }
     .service-plus__img {
-        height: 25rem;
+        height: 13rem;
     }
+
+    .guide__list {
+        margin-top: 1rem;
+    }
+    .guide__list::-webkit-scrollbar {
+        display: block;
+        width: 1rem;
+    }
+
+
     .guide__list__item {
-        width: 25rem;
+        width: 16rem;
     }
     .guide__list__img {
-        height: 16.5rem;
+       height: 11.5rem;
+    }
+
+    .guide__list__name {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+    .guide__list__feedback,
+    .guide__list__major {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+    .guide__list-btn {
+        margin-top: 1.2rem;
+        width: 9rem;
+        font-size: 1.4rem;
+        height: 2.4rem;
     }
    
     .search__flight__view__value {
@@ -713,7 +752,231 @@
         left: calc(50% - 10px);
     }
 
+    /* Deal Attraction */
+    .deal__container {
+        margin-top: 0rem;
+    }
 
+    .deal__head-title h3 {
+        font-size: 3rem;
+    }
+
+    .deal__head-title span,
+    .deal__head-title img {
+        display: none;
+    }
+
+    .deal__head-nav {
+        margin-top: 1rem;
+        overflow-x: scroll;
+        width: 228%;
+    }
+    
+    .deal__head-nav::-webkit-scrollbar {
+    }
+    
+
+    .deal__head-nav-item  {
+        line-height: 3rem;
+    } 
+    /* Flas sale */
+    .flash__sale-title,
+    .flash__sale-time-title {
+        display: none;
+    }
+
+    .flash__sale-time__list {
+        flex-direction: column;
+    }
+    .time__number__container  {
+        width: 8rem;
+        height: 8rem;
+        margin-bottom: 1rem;
+    }
+    .time__number {
+        height: 7rem;
+        width: 7rem;
+        font-size: 3rem;
+    }
+    .time__name {
+        font-size: 1.5rem;
+    }
+    .flash__sale {
+        display: flex;
+        margin-top: 3rem;
+        height: 35rem;
+    }
+
+    .flash__sale-view {
+        padding-left: 0;
+        margin-top: 0;
+        height: 35rem;
+    }
+    .flash__sale-time-item {
+        margin-bottom: 2rem;
+    }
+    .flash__sale-bg-container {
+        display: none;
+    }
+    .flash__sale-view-list {
+        justify-content: flex-start;
+        padding-left: 0;
+        padding-top: 0;
+        overflow-x: scroll;
+    }
+
+    .flash__sale-view-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .flash__sale-view-item:not(:nth-child(-n+3)) {
+        display: block;
+    }
+
+    .flash__sale-view-item {
+        padding-left: 1rem;
+    }
+    .flash__sale-view__container {
+        width: 19rem;
+    }
+    .flash__sale-view-img {
+        height: 13rem;
+    }
+    .flash__sale-view-name {
+        font-size: 1rem;
+        padding: 0 1rem;
+        line-height: 1.5rem;
+        margin-top: 1rem;
+    }
+    .flash__sale-view-subname {
+        font-size: 0.8rem;
+        margin-top: 0.7rem;
+    }
+    .flash__sale-view__number {
+        margin-top: 1rem;
+    }
+    .flash__sale-view-date i,
+    .flash__sale-view-date span,
+    .flash__sale-view-amount i,
+    .flash__sale-view-amount span,
+    .flash__sale-view__vote {
+        font-size: 1rem;
+    }
+    .flash__sale-view__number::after {
+        bottom: -12px;
+    }
+    .flash__sale-view__price {
+        padding: 2rem 0;
+    }
+    .flash__sale-view__price-number h5 {
+        font-size: 3rem;
+    }
+    .flash__sale-view__price-origin {
+        font-size: 1.3rem;
+    }
+    .flash__sale-btn {
+        margin-top: 2rem;
+        height: 3rem;
+        width: 59%;
+        font-size: 2rem;
+    }
+
+
+    /* Deal attraction  */ 
+    .deal__attraction {
+        padding: 4rem 0;
+    }
+
+    .deal__attraction-item {
+        width: 95%;
+        height: 25rem;
+    }
+
+    .deal__attraction-img {
+        height: 19rem;
+    }
+    .float-content__left__head {
+        margin: 1rem 0 0 1rem;
+        font-size: 1.4rem;
+    }
+    .float-content__left__content {
+        margin: 8rem 0 0 2rem;
+    }
+    .float-content__left-des {
+        font-size: 1.7rem;
+    }
+    .float-content__left-direction {
+        font-size: 1.2rem;
+    }
+    .float-content__price {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .float-content__note {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    .float-content-btn {
+        margin-top: 2rem;
+    }
+    .btn-book-attraction {
+        font-size: 1.8rem;
+        height: 3rem;
+        width: 12rem;
+    }
+    .deal__attraction-img__left {
+        top: 85%;
+        left: 39%;
+    }
+    .deal__attraction-img__right {
+        top: 85%;
+        right: 11%;
+    }
+    .deal__attraction-img-change {
+        height: 4rem;
+        width: 16%;
+    }
+
+    .deal__attraction-img {
+        border: 5px solid rgba(0,0,0,0.5);
+    }
+
+    /* Service plus */
+
+    .service-plus__head-title {
+        font-size: 3.2rem;
+    }
+    .service-plus__body {
+        margin-top: 2rem;
+    }
+
+    .service-plus__body-with {
+        margin-top: 1rem;
+    }
+    .service-plus__body-title {
+        font-size: 1.7rem;
+        margin-top: 1rem;
+    }
+    .service-plus__body-price {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+    .service-plus__body-vote {
+        margin-top: 1.2rem;
+    }
+
+    .service-plus-item__vote,
+    .service-plus-item__rating  {
+        font-size: 1rem;
+    }
+
+    .service-plus__body-btn {
+        margin-top: 1rem;
+        height: 3rem;
+        width: 12rem;
+    }
+    
+    
     /* Guest Detail */
 
     .flight__detail-head, .guest__information-head {
