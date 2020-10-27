@@ -50,14 +50,16 @@ $(document).ready(function () {
         $(this).addClass('active');
         let idx =  $(this).attr('idx');
         let classParent = $(this).closest("div").attr('class');
-        $( "." + classParent + " .result__view-detail-item").hide();
-        $( "." +classParent + " .result__view-detail-item:nth-child("+idx+")").show();
+        let idxParent = $(this).closest("div").attr('idx');
+        console.log(idxParent);
+        $( "." + classParent + "[idx="+idxParent+"] .result__view-detail-item").hide();
+        $( "." +classParent + "[idx="+idxParent+"] .result__view-detail-item:nth-child("+idx+")").show();
         if (idx == 3) {
-            $("." + classParent + " .result__view-detail-policy-bottom").css("display","flex");
-            $("." + classParent + " .result__view_name-infor-list").css("padding-left","7rem");
+            $("." + classParent + "[idx="+idxParent+"] .result__view-detail-policy-bottom").css("display","flex");
+            $("." + classParent + "[idx="+idxParent+"] .result__view_name-infor-list").css("padding-left","7rem");
         } else {
-            $("." + classParent + " .result__view-detail-policy-bottom").hide();
-            $("." + classParent + " .result__view_name-infor-list").css("padding-left","5rem");
+            $("." + classParent + "[idx="+idxParent+"] .result__view-detail-policy-bottom").hide();
+            $("." + classParent + "[idx="+idxParent+"] .result__view_name-infor-list").css("padding-left","5rem");
         }
     })
 
