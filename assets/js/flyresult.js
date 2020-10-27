@@ -80,30 +80,22 @@ $(document).ready(function () {
     })
     if ($(".result__container").length == 1 || $(".result__container-return").css("display") == "none") {
         $(".result__container").css("width","100%");
-        $(window).resize(function(){
-            let width = $(window).width(); 
-            console.log(width);
-            if (width >= 1024){ 
-                $(".result__view-time-total").css("padding-left","10rem");
-                $(".result__view-time-total").css("padding-right","10rem");
-            }
-        })
+        let width = $(window).width(); 
+        if (width >= 1024){ 
+            $(".result__container-departure .result__view-time-total").css("padding-left","10rem");
+            $(".result__container-departure .result__view-time-total").css("padding-right","10rem");
+        }
 
         $(".result__view-head-name").css("font-size","4rem");   
         
         $(".bill-fly__container .bill-fly__return").hide();
     } else {
         $(".result__container").css("width","49%");
-        $(window).resize(function(){
-            let width = $(window).width();
-            if (width <= 739){ 
-                $(".result__view-time-total").css("padding-left","10%");
-                $(".result__view-time-total").css("padding-right","10%");
-            }
-        })
-
-        // $(".result__view-time-total").css("padding-left","4.4rem");
-        // $(".result__view-time-total").css("padding-right","4.4rem");
+        let width = $(window).width();
+        if (width <= 739){ 
+            $(".result__view-time-total").css("padding-left","10%");
+            $(".result__view-time-total").css("padding-right","10%");
+        }
         $(".result__view-detail-price").css("top","7rem");
         $(".result__view-head-name").css("font-size","1.9rem");
 
@@ -145,29 +137,25 @@ $(document).ready(function () {
         $(".result__range-item-group-return").animate({scrollLeft: leftPosReturn + 200}, 300);
     })
 
-    $(window).resize(function(){
-        let width = $(window).width();
-        if (width <= 739){
-            let arrPrice = $(".result__view_price-number");
-            for (let item of arrPrice) {
-                let priceItem = $(item).text().replace(".000đ","K");
-                $(item).text(priceItem);
-            }
-
-            let arrDate = $(".result__range-date");
-            for (let item of arrDate) {
-                let dateItem = $(item).text().replace("tháng","/");
-                $(item).text(dateItem);
-            }
-
-            let arrRangePrice = $(".result__range-price");
-            for (let item of arrRangePrice) {
-                let priceRangeItem = $(item).text().replace(".000đ","K");
-                $(item).text(priceRangeItem);
-            }
-
+    if ($(window).width() <= 739){
+        let arrPrice = $(".result__view_price-number");
+        for (let item of arrPrice) {
+            let priceItem = $(item).text().replace(".000đ","K");
+            $(item).text(priceItem);
         }
-    });
+
+        let arrDate = $(".result__range-date");
+        for (let item of arrDate) {
+            let dateItem = $(item).text().replace("tháng","/");
+            $(item).text(dateItem);
+        }
+
+        let arrRangePrice = $(".result__range-price");
+        for (let item of arrRangePrice) {
+            let priceRangeItem = $(item).text().replace(".000đ","K");
+            $(item).text(priceRangeItem);
+        }
+    }
 
 
     // Passenger Detail

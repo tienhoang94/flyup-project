@@ -369,7 +369,6 @@
     .result__view-btn-detail, 
     .result__view-btn-detail-return {
         width: 130%;
-        text-align: center;
     }
     .result__view_brand-name span:last-child{
         font-weight: bold;
