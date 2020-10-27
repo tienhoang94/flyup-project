@@ -432,7 +432,16 @@
     .result__range {
         margin-top: 0;
     }
-
+    
+    .result_item-inter-btn {
+        font-size: 1.8rem;
+    }
+    .result_item_time-inter-select {
+        left: 1%;
+    }
+    .result_item_time-route-list-show, .result_item_time-route-list-hide {
+        font-size: 1.2rem;
+    }
 
 }
 

@@ -51,7 +51,6 @@ $(document).ready(function () {
         let idx =  $(this).attr('idx');
         let classParent = $(this).closest("div").attr('class');
         let idxParent = $(this).closest("div").attr('idx');
-        console.log(idxParent);
         $( "." + classParent + "[idx="+idxParent+"] .result__view-detail-item").hide();
         $( "." +classParent + "[idx="+idxParent+"] .result__view-detail-item:nth-child("+idx+")").show();
         if (idx == 3) {
@@ -63,7 +62,34 @@ $(document).ready(function () {
         }
     })
 
-   
+    $(".result_item_time-route-list-hide").click(function(){
+        let classParent = $(this).parent().attr('class');
+        let idxParent = $(this).parent().attr('idx');
+        $(this).hide();
+        $( "." +classParent + "[idx="+idxParent+"] .result_item_time-route-list-show").css("display","block");
+
+        $( "." +classParent + "[idx="+idxParent+"] .result_item_time-route-item-inter:nth-child(n+3)").css("display","none");
+    })
+
+    $(".result_item_time-route-list-show").click(function(){
+        let classParent = $(this).parent().attr('class');
+        let idxParent = $(this).parent().attr('idx');
+        $(this).hide();
+        $( "." +classParent + "[idx="+idxParent+"] .result_item_time-route-list-hide").css("display","block");
+
+        $( "." +classParent + "[idx="+idxParent+"] .result_item_time-route-item-inter:nth-child(n+3)").css("display","flex");
+    })
+
+    for (let item of $(".result_item_time-route-list-inter") ) {
+        let numberFlight = $(item).find(" .result_item_time-route-item-inter").length;
+        console.log(numberFlight);
+        let idx = $(item).attr('idx');
+        let classParent = $(item).attr('class');
+        if ( numberFlight >= 3) {
+            $( "." +classParent + "[idx="+idx+"] .result_item_time-route-list-show").show();
+            $( "." +classParent + "[idx="+idx+"] .result_item_time-route-list-show span").text(numberFlight-2);
+        }; 
+    }
 
     $(".result__view-detail-head-item-pd").on('click',function(){
         $(".result__view-detail-head-item-pd").removeClass('active');
