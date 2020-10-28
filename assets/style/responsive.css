@@ -1480,7 +1480,10 @@
         border: none;
         width: 100%;
     }
-    .result_item_time-inter-from h5, .result_item_time-inter-to h5,
+    .result_item_time-inter-from h5, .result_item_time-inter-to h5 {
+        margin: 0 0.5rem;
+    }
+
     .time-departure-inter-from-box span, .time-departure-inter-to-box span {
         display: none;
     }
@@ -1500,7 +1503,7 @@
 
     .result_item_time-inter-select {
         left: 2%;
-        top: 35%;
+        top: 50%;
     }
 
     .result__view-btn-detail-inter {

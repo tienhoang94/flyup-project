@@ -102,6 +102,21 @@ $(document).ready(function () {
             $(".result__view-detail-policy-bottom-pd").hide();
         }
     })
+
+    $(".result__view-detail-head-item-pd-return").on('click',function(){
+        $(".result__view-detail-head-item-pd-return").removeClass('active');
+        $(this).addClass('active');
+        let idx =  $(this).attr('idx');
+        $(".result__view-detail-item-pd-return").hide();
+        $(".result__view-detail-item-pd-return:nth-child("+idx+")").show();
+        if (idx == 3) {
+            $(".result__view-detail-policy-bottom-pd-return").css("display","flex");
+        } else {
+            $(".result__view-detail-policy-bottom-pd-return").hide();
+        }
+    })
+
+
     $(".bill-fly-total__title-icon").click(function() {
         $(".bill-fly-price__list").toggle("slow");
     })
