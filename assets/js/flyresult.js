@@ -82,7 +82,6 @@ $(document).ready(function () {
 
     for (let item of $(".result_item_time-route-list-inter") ) {
         let numberFlight = $(item).find(" .result_item_time-route-item-inter").length;
-        console.log(numberFlight);
         let idx = $(item).attr('idx');
         let classParent = $(item).attr('class');
         if ( numberFlight >= 3) {
@@ -136,6 +135,7 @@ $(document).ready(function () {
         $(".btn-next-page").css("padding-right","0");
     }
 
+
     $(".result__view-btn-detail").click(function() {
         let idx = $(this).attr("idx");
         $(".result__view-detail__container[idx='" + idx + "']").toggle("slow");
@@ -170,6 +170,12 @@ $(document).ready(function () {
         for (let item of arrPrice) {
             let priceItem = $(item).text().replace(".000đ","K");
             $(item).text(priceItem);
+        }
+
+        let arrPriceInter = $(".result_item-inter-price");
+        for (let item of arrPriceInter) {
+            let priceItemInter = $(item).text().replace(".000đ","K");
+            $(item).text(priceItemInter);
         }
 
         let arrDate = $(".result__range-date");

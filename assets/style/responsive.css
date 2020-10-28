@@ -437,6 +437,9 @@
     }
     .result_item_time-route-list-show, .result_item_time-route-list-hide {
         font-size: 1.2rem;
+        bottom: 1%;
+        width: 60%;
+        left: 55%;
     }
 
 }
@@ -1446,4 +1449,71 @@
     .result__range-item-return::after {
         height: 100%
     }
+
+    .result_item-inter-price {
+        font-size: 1.8rem;
+    }
+    .result_item-inter-btn {
+        font-size: 1.2rem;
+        padding: 1rem 0.5rem;
+    }
+    .result_item_time-inter-space {
+        width: 2rem;
+        margin-top: 1rem;
+    }
+    .result_item_logo-inter img {
+        height: 2rem;
+    }
+
+    .result__view-head-name-inter {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -29px;
+        margin-right: 0;
+    }
+    .result_item_time-route-item-inter {
+        position: relative;
+        height: 8rem;
+    }
+    .result_item_time-departure-inter {
+        align-items: flex-start;
+        border: none;
+        width: 100%;
+    }
+    .result_item_time-inter-from h5, .result_item_time-inter-to h5,
+    .time-departure-inter-from-box span, .time-departure-inter-to-box span {
+        display: none;
+    }
+    .result_item_time-inter-right {
+        position: absolute;
+        flex-direction: row;
+        width: 68%;
+        top: 33%;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: space-between;
+    }
+    .result_item_time-inter-right h5 {
+        font-size: 1.5rem;
+        font-weight: lighter;
+    }
+
+    .result_item_time-inter-select {
+        left: 2%;
+        top: 35%;
+    }
+
+    .result__view-btn-detail-inter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .result__view-head-inter {
+        justify-content: center;
+        margin-top: 3.5rem;
+    }
+
+
+
 }
