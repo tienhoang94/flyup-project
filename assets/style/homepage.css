@@ -780,6 +780,27 @@
     top: 50%;
     left: 0%;
 }
+.deal__attraction-img__icon-box  {
+    display: none;
+    height: 4rem;
+    width: 4rem;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    z-index: 13;
+}
+.deal__attraction-img__icon {
+    font-size: 2.8em;
+    color: #6684f2;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    right: 50%;
+}
+
 .deal__attraction-img__right {
     top: 50%;
     right: 0%;

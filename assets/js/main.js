@@ -521,6 +521,7 @@ $(document).ready(function () {
         }
       
         $(".deal__attraction-img__right").click(function(){
+            console.log('right');
             if (indexMain + 1 > arrDealAttractionFly.length - 1) {
                 indexMain = 0;
                 ShowSlideDeal(indexMain);
@@ -529,6 +530,7 @@ $(document).ready(function () {
             }
         })
         $(".deal__attraction-img__left").click(function(){
+            console.log('left');
             if (indexMain - 1 < 1) {
                 indexMain = arrDealAttractionFly.length - 1;
                 ShowSlideDeal(indexMain);
