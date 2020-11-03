@@ -1102,7 +1102,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 92%;
     height: 50%;
     box-shadow: 0 0 0.4rem;
     transform: translateY(200%);
@@ -1142,7 +1142,7 @@
 }
 
 .guest__information-mb {
-
+    display: none;
 }
 
 .guest__information-mb-check {
@@ -1153,6 +1153,7 @@
 .guest__information-mb-option {
     box-shadow: 0 0 0.1rem;
     margin-top: 1rem;
+    display: none;
 }
 
 .guest__information-mb-option >div{

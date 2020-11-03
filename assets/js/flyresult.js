@@ -344,6 +344,13 @@ $(document).ready(function () {
         $(".buy__luggage__overlay").hide();
     })
 
+    $(".guest__information-mb-check input").click(function() {
+        if ($(this).is(":checked") === true) {
+            $(".guest__information-mb-option").show();
+        } else {
+            $(".guest__information-mb-option").hide();
+        }
+    })
 
 
 
