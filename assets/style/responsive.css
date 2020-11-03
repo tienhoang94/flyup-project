@@ -256,6 +256,18 @@
         padding: 3rem 3rem;
     }
 
+    .service-plus-pd { 
+        display: flex;
+    }
+    .btn-next-step {
+        justify-content: flex-end;
+        padding-bottom: 2rem;
+    }
+    .detail-group {
+        width: 100%;
+    }
+
+
     /* payment */
 
     .box__pay {
@@ -1052,6 +1064,18 @@
     
     
     /* Guest Detail */
+    .result__view-detail-pd {
+        padding: 1rem 0.5rem;
+    }
+    .result__view-detail-title-pd {
+        text-align: center;
+    }
+    .result__view-time-total-label-pd:first-child {
+        margin-bottom: 2rem;
+    }
+    .result__view-time-total-label-pd:last-child {
+        margin-bottom: 0;
+    }
 
     .flight__detail-head, .guest__information-head {
         flex-wrap: wrap;
@@ -1062,19 +1086,6 @@
     .flight__detail-head, .guest__information-head > * {
         margin-bottom: 1rem;
 
-    }
-
-    .change-search__head, .guest__information-head {
-        flex-wrap: wrap;
-    }
-
-    .change-search__head, .guest__information-head  > * {
-        margin-bottom: 1rem;
-
-    }
-    .change-search__departure, .change-search__return {
-        line-height: 3rem;
-        margin-bottom: 2rem;
     }
 
     .detail-return-departure {
@@ -1142,12 +1153,33 @@
         width: 100%;
     }
 
-    .btn-next-step {
-        justify-content: center;
-    }
-
     .body {
         width: 100%;
+    }
+
+    .result__view-detail-head-item-pd,
+    .result__view-detail-head-item-pd-return,
+    .result__view-detail-policy-bottom-pd,
+    .flight__detail-head-text,
+    .guest__information-head-text{
+        display: none;
+    }
+    .progress-bar-item:first-child {
+        margin-left: 0;
+    }
+
+    .result__view_detail-waiting-pd {
+        flex-direction: row;
+    }
+
+    .btn-next-step--modified {
+        height: 4rem;
+        width: 16rem;
+        font-size: 2.5rem;
+    }
+
+    .guest__information-list {
+        margin-top: 2rem;
     }
 
 

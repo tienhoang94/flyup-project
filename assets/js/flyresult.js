@@ -311,13 +311,41 @@ $(document).ready(function () {
     })
 
     $(".guest__information-tick-infant").find("input").click(function () {
-        console.log("12");
         if($(this).is(':checked') == true) {
             $(".guest__information-tick-infant").css("color","#404057");
         } else {
             $(".guest__information-tick-infant").css("color","#b4b4c8");
         }
     })
+
+
+    $(".guest__email-tel-policy input").click(function() {
+        let classParent = $(this).parent();
+        if ($(this).is(":checked") === true) {
+            $(classParent).css('color','#404057');
+        } else {
+            $(classParent).css('color','#b4b4c8');
+        }
+    })
+
+    $(".guest__information-mb-choose").click(function(){
+        let classluggage = $(this).find('span');
+        $(".buy__luggage__overlay").show();
+        $(".buy__luggage-mb").css("transform","translateY(100%)");
+
+        $(".buy__luggage-mb-item").click(function() {
+            $(classluggage).text($(this).find('h5').text().replace('Mua ',''));
+        })
+
+    })
+
+    $(".buy__luggage-close").click(function() {
+        $(".buy__luggage-mb").css("transform","translateY(200%)");
+        $(".buy__luggage__overlay").hide();
+    })
+
+
+
 
 
     // Payment 
