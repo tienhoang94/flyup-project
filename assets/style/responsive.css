@@ -211,6 +211,13 @@
 
     .guest__email-tel__body {
         flex-wrap: wrap;
+        padding: 2rem;
+    }
+    .guest__email-tel__infor {
+        margin-right: 2rem;
+    }
+    .guest__email-tel-policy {
+        padding-top: 0;
     }
     
     .guest__email-tel__body  > *{
@@ -1069,6 +1076,13 @@
     
     
     /* Guest Detail */
+    .flight__detail {
+        margin-top: 0;
+    }
+    .result__view-time-place-pd h5:nth-child(3) {
+        display: none;
+    }
+
     .result__view-detail-pd {
         padding: 1rem 0.5rem;
     }
@@ -1082,15 +1096,18 @@
         margin-bottom: 0;
     }
 
-    .flight__detail-head, .guest__information-head {
+    .flight__detail-head {
         flex-wrap: wrap;
         justify-content: space-around;
         text-align: center  ;
     }
 
-    .flight__detail-head, .guest__information-head > * {
+    .flight__detail-head {
         margin-bottom: 1rem;
 
+    }
+    .guest__information-head {
+        display: none;
     }
 
     .detail-return-departure {
@@ -1138,9 +1155,7 @@
         width: 100%;
     }
 
-    .guest__information-detail-nick {
-        margin-left: 0;
-    }
+
     .guest__information-luggage {
         width: 100%;
     }
@@ -1151,16 +1166,21 @@
     .guest__information-luggage-price {
         padding: 1.4rem;
     }
-    .guest__email-tel__body {
-        padding: 1rem;
-    }
     .guest__email-tel__infor input {
         width: 100%;
+        padding: 0.5rem;
+    }
+    .guest__email-tel__infor--margin {
+        width: 45%;
+        margin-right: 0;
+    }
+    .guest__email-tel__infor h5 {
+        font-size: 1.2rem;
+    }
+    .guest__email-tel-policy {
+        margin: 0rem;
     }
 
-    .body {
-        width: 100%;
-    }
 
     .result__view-detail-head-item-pd,
     .result__view-detail-head-item-pd-return,
@@ -1186,8 +1206,42 @@
     .guest__information-list {
         margin-top: 2rem;
     }
+    .guest__information-detail-name {
+        width: 68%;
+        margin-right: 1rem;
+    }
+    .guest__information-detail-gender {
+        width: 29%;
+        margin-right: 0;
+    }
+    .guest__information-detail-gender-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .guest__information-detail-gender-box span {
+        margin-right: 0rem;
+    }
+    .result__view-time-total-bar-pd {
+        width: 100%;
+    }
+    .result__view-time-total-pd span {
+        width: 150%;
+    }
+
+    .guest__email-tel {
+        margin-top: 0;
+    }
+    .guest__email-tel__body {
+        padding: 1rem;
+    }
+    .guest__email-tel__infor:first-child {
+        width: 52%;
+        margin-right: 1rem;
+    }
 
 
+   
 
 
     /* confirmation */

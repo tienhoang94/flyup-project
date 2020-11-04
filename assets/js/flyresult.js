@@ -217,31 +217,6 @@ $(document).ready(function () {
     })
 
 
-    $(".adult-1 .guest__information-detail-nick-box").click(function () {
-        $(".adult-1 .guest__information-detail-slute").show();
-        $(".adult-1 .guest__information-slute-item").click(function () {
-            $(".adult-1 .guest__information-slute-item").removeClass('active');
-            $(this).addClass('active');
-            $(".adult-1 .guest__information-detail-nick-box span").text($(this).text());
-            $(".adult-1 .guest__information-detail-nick-box").css("color","#404057");
-            $(".adult-1 .guest__information-detail-nick-box").css("font-weight","bold");
-            $(".adult-1 .guest__information-detail-slute").hide();
-        })
-    })
-    $(".child-1 .guest__information-detail-nick-box").click(function () {
-        $(".child-1 .guest__information-detail-slute").show();
-        $(".child-1 .guest__information-slute-item").click(function () {
-            $(".child-1 .guest__information-slute-item").removeClass('active');
-            $(this).addClass('active');
-            $(".child-1 .guest__information-detail-nick-box span").text($(this).text());
-            $(".child-1 .guest__information-detail-nick-box").css("color","#404057");
-            $(".child-1 .guest__information-detail-nick-box").css("font-weight","bold");
-            $(".child-1 .guest__information-detail-slute").hide();
-        })
-    })
-
-
-    
 
     $(".adult-1 .guest__information-detail-gender-box").click(function () {
         $(".adult-1 .guest__information-detail-gender-list").show();

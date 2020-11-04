@@ -557,6 +557,7 @@
 .guest__information-detail-name {
     display: flex;
     flex-direction: column;
+    margin-right: 2rem;
 }
 .guest__information-detail-name h5,
 .guest__information-detail-nick h5,
