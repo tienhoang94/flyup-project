@@ -292,6 +292,10 @@
         overflow-x: auto
     }
 
+    /* Confirmation  */
+    .confirm__containner {
+        width: 100%;
+    }
 
     /* Tour search */
 
@@ -610,9 +614,7 @@
         margin-right: 1rem;
     }
 
-    .confirm__bill-tax {
-        flex-wrap: wrap;
-    }
+
 
     .bill__wrapper-cf {
         width: 26rem;
@@ -1258,6 +1260,8 @@
 
     .confirm__containner__wrapper {
         flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     .confirm__containner {
@@ -1304,12 +1308,25 @@
     }
 
     /* Payment */
+    .flight__detail-head-pm {
+        margin-top: 0;
+    }
 
     .guide__heading-pm {
         position: relative;
         top: 0;
         width: 30rem;
     }
+    .box__pay {
+        padding: 1rem;
+    }
+    .box__pay-input-item {
+        margin-bottom: 1rem;
+    }
+    .box__pay-acc-company-item {
+        width: 100%;
+    }
+
 
     .box__pay-btn {
         margin-bottom: 3rem;
