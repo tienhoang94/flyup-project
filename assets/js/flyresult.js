@@ -294,12 +294,14 @@ $(document).ready(function () {
     })
 
 
-    $(".guest__email-tel-policy input").click(function() {
+    $(".guest__email-tel-policy h5:first-child input").click(function() {
         let classParent = $(this).parent();
         if ($(this).is(":checked") === true) {
             $(classParent).css('color','#404057');
+            $(".guest__email-export-bill").css("display","flex");
         } else {
             $(classParent).css('color','#b4b4c8');
+            $(".guest__email-export-bill").css("display","none");
         }
     })
 
@@ -335,6 +337,27 @@ $(document).ready(function () {
     $(".box__pay-type-item").click(function () {
         $(".box__pay-type-item").removeClass('active');
         $(this).addClass('active');
+        console.log($(this).attr('pay'));
+        if ($(this).find('img').attr('pay') == 'transfer' ) {
+            $(".box__pay-input-list").hide();
+            $(".box__pay-acc-company").css('display','flex');
+        } else {
+            $(".box__pay-input-list").show();
+            $(".box__pay-acc-company").hide();
+        }
+    })
+
+    $(".box__pay-btn-copy").click(function() {
+        let copyText = $(this).prev().text();
+        /* Copy the text inside the text field */
+
+        var $temp = $("<input>");
+
+        $("body").append($temp);
+        $temp.val(copyText).select();
+        document.execCommand("copy");
+        $temp.remove();
+      
     })
 
 

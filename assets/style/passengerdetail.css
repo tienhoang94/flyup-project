@@ -870,8 +870,16 @@
     background-color: var(--white-color);
     padding: 5rem 7rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
+.guest__email-tel__body-top {
+    display: flex;
+    justify-content: flex-start;
+}
+.guest__email-tel__body-bottom {
+    margin-top: 1rem;
+}
+
 
 .guest__email-tel__infor {
     font-family: 'helvetica-neue-medium';
@@ -911,18 +919,53 @@
     line-height: 2rem;
     font-family: 'helvetica-neue-medium';
     color: #b4b4c8;
-    margin-left: 2.8rem;
-    padding-top: 4rem;
 }
+
+
 .guest__email-tel-policy h5:first-child{
     margin-bottom: 0.5rem;
 }
-.guest__email-tel-policy i{
-    margin-right: 1rem;
+
+.guest__email-export-bill {
+    padding-top: 1rem; 
+    flex-wrap: wrap;
+    display: none;
 }
-.guest__email-tel-policy span{
-    color: #32d093;
+
+.guest__email__infor_company {
+    font-family: 'helvetica-neue-medium';
+    color: #404057;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
 }
+.guest__email__infor_company:last-child {
+    margin-right: 0;
+}
+
+.guest__email__infor_company input::-webkit-input-placeholder,
+.guest__email__infor_company input::placeholder {
+   font-size: 1.6rem;
+   color: #b4b4c8;
+   font-family: 'helvetica-neue-light';
+}
+
+.guest__email__infor_company h5 {
+    margin-bottom: 0.5rem;
+}
+
+.guest__email__infor_company input {
+    border: 2px solid #b4b4c8;
+    color: #404057;
+    width: 33rem;
+    border-radius: 4px;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 0.7rem;
+    font-family: 'helvetica-neue-medium';
+}
+
+
+
 
 .btn-next-step {
     padding-top: 3.3rem;
@@ -1106,7 +1149,7 @@
     width: 92%;
     height: 50%;
     box-shadow: 0 0 0.4rem;
-    transform: translateY(200%);
+    transform: translateY(300%);
 }
 
 

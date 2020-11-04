@@ -1166,7 +1166,7 @@
     .guest__information-luggage-price {
         padding: 1.4rem;
     }
-    .guest__email-tel__infor input {
+    .guest__email-tel__infor input{
         width: 100%;
         padding: 0.5rem;
     }
@@ -1179,6 +1179,12 @@
     }
     .guest__email-tel-policy {
         margin: 0rem;
+    }
+    .guest__email__infor_company {
+        margin-right: 0;
+    }
+    .guest__email__infor_company input {
+        padding: 0.5rem;
     }
 
 
