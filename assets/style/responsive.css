@@ -51,6 +51,7 @@
         margin-left: 1rem;
     }
 
+
 }
 
 @media (max-width: 1023px) {
@@ -313,7 +314,32 @@
     .result__view-detail-pm  {
         display: flex;
     }
-    
+
+    .bill__head-pm {
+        margin-bottom: 0;
+    }
+
+    .bill-fly-price__list-pm {
+        padding-bottom: 2rem;
+    }
+    .bill-fly-total__title-pm::after {
+        display: none;
+    }
+    .bill-fly-total__title-pm {
+        padding-bottom: 2rem;
+    }
+    .bill-fly-price__list-pm {
+        margin-top: 0;
+    }
+    .bill-fly-total-cf {
+        padding-top: 0;
+    }
+    .bill-fly-guest-pm {
+        margin-top: 0;
+    }
+    .box__pay-acc-company {
+        padding-bottom: 2rem;
+    }
 
 
     /* Confirmation  */
@@ -659,24 +685,30 @@
     }
 
     /* payment */
+    .box__pay {
+        padding-bottom: 0;
+    }
+    .result__view-detail-pm {
+        padding-bottom: 0;
+        padding-top: 2rem;
+    }
+    .bill__head-pm {
+        margin-top: 2rem;
+    }
 
-    .flash__sale-view-list-pm {
-        justify-content: flex-start;
-        overflow-x: auto;
-    }
-    .flash__sale-view-list-pm::-webkit-scrollbar {
-        display: none;
-    }
     .bill-fly-guest-pm {
         margin-left: 3rem;
+        padding: 0 9rem 0 4rem;
     }
 
     .bill-guest {
         margin-left: -2rem;
     }
 
-    .bill-fly-total__title-pm {
-        flex-direction: column;
+    .bill-fly-total__title-pm,
+    .bill-fly-price__list-pm {
+        padding: 0 12rem 0 4rem;
+        flex-direction: row;
     }
     .bill-fly-total__title-icon-pm {
         margin-left: 8rem;
@@ -703,6 +735,10 @@
     .bill__container {
         padding: 2rem 0;
     }
+    .box__pay-btn-mb {
+        margin-right: 12rem;
+    }
+
 
 }   
 
