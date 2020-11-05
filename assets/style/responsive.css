@@ -310,6 +310,11 @@
         width: 100%;
     }
 
+    .result__view-detail-pm  {
+        display: flex;
+    }
+    
+
 
     /* Confirmation  */
     .confirm__containner {
@@ -1326,6 +1331,10 @@
     }
     .box__pay-acc-company-item {
         width: 100%;
+    }
+
+    .result__view-detail-pm {
+        padding: 1rem 0.5rem;
     }
 
 

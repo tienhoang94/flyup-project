@@ -759,3 +759,10 @@
 .guide__list-pm {
     margin-top: 2rem;
 }
+
+
+.result__view-detail-pm {
+    display: none;
+    flex-direction: column;
+    padding: 3rem 3.8rem;
+}
