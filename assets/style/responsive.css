@@ -281,6 +281,12 @@
 
 
     /* payment */
+    .confirm__containner__wrapper {
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
 
     .box__pay {
         padding-left: 1rem;
@@ -291,6 +297,19 @@
         display: flex;
         overflow-x: auto
     }
+
+    .box__pay-btn {
+        display: none;
+    }
+
+    .box__pay-btn-mb {
+        display: flex;
+    }
+
+    .bill__wrapper-pm {
+        width: 100%;
+    }
+
 
     /* Confirmation  */
     .confirm__containner {
@@ -614,13 +633,6 @@
         margin-right: 1rem;
     }
 
-
-
-    .bill__wrapper-cf {
-        width: 26rem;
-    }
-
-
     .bill-fly-choose-cf, .bill-fly-total__title-cf,
     .bill-fly__departure-cf, .bill-fly__return-cf {
         margin-left: 1rem;
@@ -649,9 +661,6 @@
     }
     .flash__sale-view-list-pm::-webkit-scrollbar {
         display: none;
-    }
-    .bill__wrapper-pm {
-        width: 20rem;
     }
     .bill-fly-guest-pm {
         margin-left: 3rem;
@@ -1258,11 +1267,6 @@
         width: 100%;
     }
 
-    .confirm__containner__wrapper {
-        flex-direction: column;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
 
     .confirm__containner {
         width: 100%;
@@ -1299,9 +1303,6 @@
         margin-bottom: 4rem;
     }
 
-    .bill__wrapper-cf {
-        width: 100%;
-    }
 
     .confirm__bill-tax-item {
         margin-top: 2rem;
@@ -1328,9 +1329,7 @@
     }
 
 
-    .box__pay-btn {
-        margin-bottom: 3rem;
-    }
+
 
     /* Search Tour */
     .form__search-tour-body {

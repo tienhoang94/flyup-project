@@ -1126,7 +1126,6 @@
     line-height: 1.4rem;
 }
 .bill-fly-price__list {
-    /* display: flex; */
     display: none;
     flex-direction: column;
     margin-top: 5rem;

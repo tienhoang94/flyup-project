@@ -185,7 +185,7 @@
 }
 
 .bill-fly-price__list-cf {
-    display: block;
+    display: none;
     padding-left: 5rem;
     padding-right: 2rem;    
 }
