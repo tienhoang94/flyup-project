@@ -847,19 +847,6 @@
     display: flex;
 }
 
-.guest__information-tick-infant {
-    font-size: 1.6rem;
-    font-family: 'Alegreya-Regular';
-    color: #b4b4c8;
-    margin-top: 1.5rem;
-    display: flex;
-}
-.guest__information-tick-infant input{
-    margin-right: 1rem;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
 /* Get email */
 
 .guest__email-tel {

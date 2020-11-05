@@ -285,15 +285,6 @@ $(document).ready(function () {
         $(".guest__add-service-btn[idx='" + idx + "']").addClass('disabled');
     })
 
-    $(".guest__information-tick-infant").find("input").click(function () {
-        if($(this).is(':checked') == true) {
-            $(".guest__information-tick-infant").css("color","#404057");
-        } else {
-            $(".guest__information-tick-infant").css("color","#b4b4c8");
-        }
-    })
-
-
     $(".guest__email-tel-policy h5:first-child input").click(function() {
         let classParent = $(this).parent();
         if ($(this).is(":checked") === true) {

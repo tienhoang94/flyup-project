@@ -270,3 +270,15 @@
 .guide__heading-title-cf h2 {
     font-size: 3rem;
 }
+
+.guide__heading-cf {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.guide__heading-cf h4{
+    font-size: 2rem;
+    color: var(--bg-blue-color);
+    text-decoration: underline;
+}
