@@ -253,7 +253,13 @@
                         <li class="tour__filter-item">
                             <h4 class="tour__filter-item-title"> <span>Khoảng giá</span><i class="fas fa-caret-down"></i></h4>
                             <form action="" class="tour__filter-range-price">
-                                <input type="range" min="200000" max="1000000">
+                                <!-- <input type="range" min="200000" max="1000000"> -->
+                                <p>
+                                    <label for="amount">Price range:</label>
+                                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                  </p>
+                                  
+                                <div id="slider-range"></div>
                             </form>
                         </li>
                     </ul>
