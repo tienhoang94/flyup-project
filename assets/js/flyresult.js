@@ -151,7 +151,7 @@ $(document).ready(function () {
     }
 
 
-    $(".result__view-btn-detail").click(function() {
+    $(".result__view-btn-detail, .result__view-btn-detail-inter").click(function() {
         let idx = $(this).attr("idx");
         $(".result__view-detail__container[idx='" + idx + "']").toggle("slow");
         $(".result__view-detail__container:not([idx='" + idx + "'])").hide("slow");

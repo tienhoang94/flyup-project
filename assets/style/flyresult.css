@@ -535,11 +535,17 @@
     height: 4rem;
 }
 
-.result__view-btn-detail {
+.result__view-btn-detail-inter {
     background-color: transparent;
     color: var(--bg-blue-guest);
     font-size: 1.8rem;
     font-weight: 400;
+    font-family: 'helvetica-neue-regular';
+    padding: 0.6rem 0.9rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    text-align: center;
 }
 .result_item_time-route-list-inter{
     display: flex;
