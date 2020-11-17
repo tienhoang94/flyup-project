@@ -396,6 +396,10 @@
     border-right: 2px solid #d3dfe6;
 }
 
+.result__view-detail-head-pd {
+    display: flex;
+}
+
 .result__view-detail-head-item-pd, 
 .result__view-detail-head-item-pd-return { 
     font-family: 'helvetica-neue-medium';
@@ -553,6 +557,7 @@
 .guest__information-detail-name {
     display: flex;
     flex-direction: column;
+    margin-right: 2rem;
 }
 .guest__information-detail-name h5,
 .guest__information-detail-nick h5,
@@ -842,19 +847,6 @@
     display: flex;
 }
 
-.guest__information-tick-infant {
-    font-size: 1.6rem;
-    font-family: 'Alegreya-Regular';
-    color: #b4b4c8;
-    margin-top: 1.5rem;
-    display: flex;
-}
-.guest__information-tick-infant input{
-    margin-right: 1rem;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
 /* Get email */
 
 .guest__email-tel {
@@ -865,8 +857,16 @@
     background-color: var(--white-color);
     padding: 5rem 7rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
+.guest__email-tel__body-top {
+    display: flex;
+    justify-content: flex-start;
+}
+.guest__email-tel__body-bottom {
+    margin-top: 1rem;
+}
+
 
 .guest__email-tel__infor {
     font-family: 'helvetica-neue-medium';
@@ -906,18 +906,53 @@
     line-height: 2rem;
     font-family: 'helvetica-neue-medium';
     color: #b4b4c8;
-    margin-left: 2.8rem;
-    padding-top: 4rem;
 }
+
+
 .guest__email-tel-policy h5:first-child{
     margin-bottom: 0.5rem;
 }
-.guest__email-tel-policy i{
-    margin-right: 1rem;
+
+.guest__email-export-bill {
+    padding-top: 1rem; 
+    flex-wrap: wrap;
+    display: none;
 }
-.guest__email-tel-policy span{
-    color: #32d093;
+
+.guest__email__infor_company {
+    font-family: 'helvetica-neue-medium';
+    color: #404057;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
 }
+.guest__email__infor_company:last-child {
+    margin-right: 0;
+}
+
+.guest__email__infor_company input::-webkit-input-placeholder,
+.guest__email__infor_company input::placeholder {
+   font-size: 1.6rem;
+   color: #b4b4c8;
+   font-family: 'helvetica-neue-light';
+}
+
+.guest__email__infor_company h5 {
+    margin-bottom: 0.5rem;
+}
+
+.guest__email__infor_company input {
+    border: 2px solid #b4b4c8;
+    color: #404057;
+    width: 33rem;
+    border-radius: 4px;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 0.7rem;
+    font-family: 'helvetica-neue-medium';
+}
+
+
+
 
 .btn-next-step {
     padding-top: 3.3rem;
@@ -936,4 +971,239 @@
     border-radius: 1rem;
     text-transform: none;
     font-family: 'helvetica-neue-bold';
+}
+
+
+.result__view-detail-title-pd {
+    font-family: 'helvetica-neue-bold';
+    font-size: 1.6rem;
+    color: #404057;
+}
+
+
+
+/* Service Plus */
+
+.service-plus-pd {
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+    flex-direction: column;
+    display: none;
+}
+
+.result__view_detail-waiting-pd {
+    display: flex;
+    justify-content: center;
+    background-color: #edf2f6;
+    padding: 1rem 0;
+    border-radius: 3px;
+}
+.result__view_detail-waiting-pd li{
+    font-family: 'Alegreya-Bold';
+    font-size: 1.4rem;
+    color: #404057;
+}
+.result__view_detail-waiting-pd span{
+    font-family: 'Alegreya-Regular';
+}
+
+
+.result__view-time-total-pd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10%;
+    position: relative;
+}
+
+.result__view-time-total-label-pd {
+    font-family: 'Alegreya-Bold';
+    font-size: 1.4rem;
+    color: #bac5c9;
+    margin-bottom: 3rem;
+    display: block;
+}
+
+.result__view-time-total-bar-pd {
+    width: 80%;
+    height: 3px;
+    background-color: #bac5c9;
+    position: absolute;
+    top: 32%;
+}
+
+.result__view-time-total-bar-pd::after {
+    position: absolute;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    background-color: #bac5c9;
+    border-radius: 50%;
+    top: -3px;
+    left: 0;
+}
+.result__view-time-total-bar-pd::before {
+    position: absolute;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    background-color: #bac5c9;
+    border-radius: 50%;
+    top: -3px;
+    right: 0;
+}
+
+
+.result__view-time-place-pd {
+    font-size: 1.3rem;
+    color: #404057;
+    font-weight: 700;
+}
+.result__view-time-place-pd h5:nth-child(1) {
+    font-family: 'Alegreya-Regular';
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.result__view-time-place-pd h5:nth-child(2) {
+    font-family: 'Alegreya-ExtraBold';
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.result__view-time-place-pd h5:nth-child(3) {
+    font-weight: 600;
+}
+.result__view-time-place-pd:last-child {
+    text-align: right;
+}
+
+.result__view_detail-time-pd {
+    display: flex;
+}
+
+
+.result__view-detail-pd {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 3.8rem;
+}
+
+
+.result__view_name-brand-pd {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+.result__view_brand-name-pd {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.2rem;
+    font-family: 'Alegreya-Regular';
+    font-size: 1.4rem;
+    color: #80979f;
+}
+
+.result__view_brand-name-pd span:first-child {
+    color: var(--blue-fly-color);
+    font-family: 'helvetica-neue-bold';
+}
+
+.result__view_brand-name-pd span:last-child {
+    color: black;
+}
+
+
+/* buy luggage  */
+.buy__luggage__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: none;
+}
+
+.buy__luggage-mb {
+    z-index: 999999;
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 92%;
+    height: 50%;
+    box-shadow: 0 0 0.4rem;
+    transform: translateY(300%);
+}
+
+
+.buy__luggage-mb-header {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+}
+.buy__luggage-close {
+    position: absolute;
+    top: -1rem;
+    right: 3rem;
+    font-size: 2.5rem;
+    color: #615959ee;
+}
+
+.buy__luggage-mb-list {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    border-top: 1px solid #e1e1e1;
+    overflow-y: auto;
+}
+.buy__luggage-mb-item {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px dashed;
+    display: flex;
+    align-items: center;
+}
+.buy__luggage-mb-item input{
+    margin-right: 1rem;
+}
+
+.guest__information-mb {
+    display: none;
+}
+
+.guest__information-mb-check {
+    font-size: 1.5rem;
+    font-family: 'helvetica-neue-light';
+}
+
+.guest__information-mb-option {
+    box-shadow: 0 0 0.1rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.guest__information-mb-option >div{
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.guest__information-mb-choose {
+    background-color: var(--white-color);
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    border-left: 1px solid #e1e1e1;
+    align-items: center;
+}
+
+.guest__information-mb-option h5 {
+    margin-right: 3rem;
 }

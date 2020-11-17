@@ -217,31 +217,6 @@ $(document).ready(function () {
     })
 
 
-    $(".adult-1 .guest__information-detail-nick-box").click(function () {
-        $(".adult-1 .guest__information-detail-slute").show();
-        $(".adult-1 .guest__information-slute-item").click(function () {
-            $(".adult-1 .guest__information-slute-item").removeClass('active');
-            $(this).addClass('active');
-            $(".adult-1 .guest__information-detail-nick-box span").text($(this).text());
-            $(".adult-1 .guest__information-detail-nick-box").css("color","#404057");
-            $(".adult-1 .guest__information-detail-nick-box").css("font-weight","bold");
-            $(".adult-1 .guest__information-detail-slute").hide();
-        })
-    })
-    $(".child-1 .guest__information-detail-nick-box").click(function () {
-        $(".child-1 .guest__information-detail-slute").show();
-        $(".child-1 .guest__information-slute-item").click(function () {
-            $(".child-1 .guest__information-slute-item").removeClass('active');
-            $(this).addClass('active');
-            $(".child-1 .guest__information-detail-nick-box span").text($(this).text());
-            $(".child-1 .guest__information-detail-nick-box").css("color","#404057");
-            $(".child-1 .guest__information-detail-nick-box").css("font-weight","bold");
-            $(".child-1 .guest__information-detail-slute").hide();
-        })
-    })
-
-
-    
 
     $(".adult-1 .guest__information-detail-gender-box").click(function () {
         $(".adult-1 .guest__information-detail-gender-list").show();
@@ -310,14 +285,42 @@ $(document).ready(function () {
         $(".guest__add-service-btn[idx='" + idx + "']").addClass('disabled');
     })
 
-    $(".guest__information-tick-infant").find("input").click(function () {
-        console.log("12");
-        if($(this).is(':checked') == true) {
-            $(".guest__information-tick-infant").css("color","#404057");
+    $(".guest__email-tel-policy h5:first-child input").click(function() {
+        let classParent = $(this).parent();
+        if ($(this).is(":checked") === true) {
+            $(classParent).css('color','#404057');
+            $(".guest__email-export-bill").css("display","flex");
         } else {
-            $(".guest__information-tick-infant").css("color","#b4b4c8");
+            $(classParent).css('color','#b4b4c8');
+            $(".guest__email-export-bill").css("display","none");
         }
     })
+
+    $(".guest__information-mb-choose").click(function(){
+        let classluggage = $(this).find('span');
+        $(".buy__luggage__overlay").show();
+        $(".buy__luggage-mb").css("transform","translateY(100%)");
+
+        $(".buy__luggage-mb-item").click(function() {
+            $(classluggage).text($(this).find('h5').text().replace('Mua ',''));
+        })
+
+    })
+
+    $(".buy__luggage-close").click(function() {
+        $(".buy__luggage-mb").css("transform","translateY(200%)");
+        $(".buy__luggage__overlay").hide();
+    })
+
+    $(".guest__information-mb-check input").click(function() {
+        if ($(this).is(":checked") === true) {
+            $(".guest__information-mb-option").show();
+        } else {
+            $(".guest__information-mb-option").hide();
+        }
+    })
+
+
 
 
     // Payment 
@@ -325,6 +328,27 @@ $(document).ready(function () {
     $(".box__pay-type-item").click(function () {
         $(".box__pay-type-item").removeClass('active');
         $(this).addClass('active');
+        console.log($(this).attr('pay'));
+        if ($(this).find('img').attr('pay') == 'transfer' ) {
+            $(".box__pay-input-list").hide();
+            $(".box__pay-acc-company").css('display','flex');
+        } else {
+            $(".box__pay-input-list").show();
+            $(".box__pay-acc-company").hide();
+        }
+    })
+
+    $(".box__pay-btn-copy").click(function() {
+        let copyText = $(this).prev().text();
+        /* Copy the text inside the text field */
+
+        var $temp = $("<input>");
+
+        $("body").append($temp);
+        $temp.val(copyText).select();
+        document.execCommand("copy");
+        $temp.remove();
+      
     })
 
 

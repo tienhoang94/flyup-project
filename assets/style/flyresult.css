@@ -1104,6 +1104,7 @@
     margin-top: 2rem;
     margin-right: 2rem;
     cursor: pointer;
+    z-index: 10;
 }
 .bill-fly-total__title-icon i{
     font-size: 1.4rem;
@@ -1125,7 +1126,6 @@
     line-height: 1.4rem;
 }
 .bill-fly-price__list {
-    /* display: flex; */
     display: none;
     flex-direction: column;
     margin-top: 5rem;

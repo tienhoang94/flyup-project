@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/style/grid.css">
 
     <link rel="stylesheet" type="text/css" href="./assets/style/header.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/tourguide.css">
 
     <link rel="stylesheet" type="text/css" href="./assets/style/footer.css">
 
@@ -83,10 +84,26 @@
                         <i class="fas fa-times"></i>
                     </div>
                     <ul class="nav__list-mobile ">
+
+                        <li class="nav__item-mobile"><div class="nav__item-infor-name"><span>Antonio Banderas</span></div></li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Chỉnh sửa profile</a></li>
                         <li class="nav__item-mobile"><a href="index.html" class="nav__link-mobile">Home</a></li>
                         <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Flash Sale</a></li>
                         <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Cố vấn du lịch</a></li>
                         <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Tin tức</a></li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Đăng xuất</a></li>
+                        <li class="nav__item nav__item--flex">
+                            <img src="https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-businessman-user-avatar-free-vector-png-image_1538405.jpg"
+                                alt="" class="nav__item-avatar">
+                            <!-- No Account -->
+                            <!-- <div class="nav__item-infor-account">
+                                <div class="nav__item-infor-name">Xin chào quý khách</div>
+                                <div class="nav__item-infor-logout">
+                                    <a href="" class="nav__item-infor-text">Đăng ký</a>
+                                    <a href="" class="nav__item-infor-text">Đăng nhập</a>
+                                </div>
+                            </div> -->
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -99,7 +116,7 @@
             <div class="confirm__containner">
                 <div class="confirm__content">
                     <div class="confirm__content__head">
-                        <h4 class="confirm__content-icon">1</h4>
+                        <h4 class="confirm__content-icon"></h4>
                         <div class="confirm__content-title">
                             <h4>Cảm ơn bạn - Đơn hàng của bạn đã được xác nhận!</h4>
                             <h5>Tổng tiền còn lại phải thanh toán: 0 VND</h5>
@@ -112,95 +129,47 @@
                         <p>Fly Up thân chúc quý khách một chuyến đi vui vẻ và thành công!</p>   
                     </div>
                 </div>
-                <div class="confirm__bill">
-                    <div class="confirm__bill__head">
-                        <h4 class="confirm__bill-icon">2</h4>
-                        <div class="confirm__bill-title">
-                            <h4>Xuất hóa đơn đỏ</h4>
-                            <h5>Tóm tắt đơn hàng - nhập thông tin lập hóa đơn đỏ (nếu cần)</h5>
+                <!-- Tour Guide -->
+                <div class="tour__guide tour__guide-cf">
+                    <div class="guide__heading-cf">
+                        <h4>Có thể bạn quan tâm</h4>
+                        <div class="guide__heading-title guide__heading-title-cf">
+                            <h2>TOP <span>CỐ VẤN DU LỊCH</span> CỦA FLY UP</h2>
                         </div>
                     </div>
-                    <div class="confirm__bill-tax">
-                        <div class="confirm__bill-tax-item">
-                            <h5>Tên công ty</h5>
-                            <input type="text" placeholder="Nhập tên công ty"/>
-                        </div>
-                        <div class="confirm__bill-tax-item">
-                            <h5>Mã số thuế</h5>
-                            <input type="text" placeholder="Nhập MST"/>
-                        </div>
-                    </div>
-                    <table class="confirm__bill__table">
-                        <thead>
-                            <tr>
-                                <th>Tên hành khách</th>
-                                <th>Loại dịch vụ</th>
-                                <th>Mã vé điện tử/đặt chỗ</th>
-                                <th>Thành tiền</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4">
-                                    <h5>Tổng tiền </h5>
-                                    <h5>Thuế và phí dịch vụ</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="4">
-                                    <h4>Tổng cộng thanh toán</h4>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="confirm-view-invoice">
-                        <span>VIEW YOUR INVOICE</span>
-                    </div>
+                    <ul class="guide__list">
+                        <li class="guide__list__item guide__list__item-cf">
+                            <img class="guide__list__img guide__list__img-cf" src="https://cambodia-vietnam-tours.com/userfiles/images/10-things-you-need-to-know-before-coming-to-vietnam-3.jpg" alt="">
+                            <h4 class="guide__list__name guide__list__name-cf">NGUYỄN THỊ HẰNG</h4>
+                            <h5 class="guide__list__feedback guide__list__feedback-cf"> <span>TOP 1:</span> ĐÁNH GIÁ TỐT NHẨT</h5>
+                            <h5 class="guide__list__major guide__list__major-cf">Du lịch Biển đảo - Châu Á</h5>
+                            <div class="btn-book guide__list-btn">
+                                <span>MUA NGAY</span>
+                            </div>
+                        </li>
+                        <li class="guide__list__item guide__list__item-cf">
+                            <img class="guide__list__img guide__list__img-cf" src="https://image.vietnamnews.vn/uploadvnnews/Article/2017/11/7/tourguide76535941PM.jpg" alt="">
+                            <h4 class="guide__list__name guide__list__name-cf">TRẦN TRUNG QUÂN</h4>
+                            <h5 class="guide__list__feedback guide__list__feedback-cf"> <span>TOP 1:</span> LƯỢT ĐẶT NHIỀU NHẤT</h5>
+                            <h5 class="guide__list__major guide__list__major-cf">Du lịch thiền/làm đẹp - Việt Nam</h5>
+                            <div class="btn-book guide__list-btn">
+                                <span>MUA NGAY</span>
+                            </div>
+                        </li>
+                        <li class="guide__list__item guide__list__item-cf">
+                            <img class="guide__list__img guide__list__img-cf" src="https://image.vietnamnews.vn/uploadvnnews/Storage/Images/2013/6/11/1402-du-khach-nuoc-ngoai.jpg?url=Storage/Images/2013/6/11/1402-du-khach-nuoc-ngoai.jpg" alt="">
+                            <h4 class="guide__list__name guide__list__name-cf">HOÀNG NGỌC QUÝ</h4>
+                            <h5 class="guide__list__feedback guide__list__feedback-cf"> <span>TOP 1:</span> NHIỀU ĐỊA ĐIỂM NHẤT</h5>
+                            <h5 class="guide__list__major guide__list__major-cf">Du lịch Thể thao/Leo núi - Việt Nam</h5>
+                            <div class="btn-book guide__list-btn">
+                                <span>MUA NGAY</span>
+                            </div>
+                        </li>
+        
+                    </ul>
                 </div>
             </div>
-            <div class="flight__detail">
+            <div class="flight__detail hide-on-mobile-table">
                 <div class="bill__wrapper bill__wrapper-cf">
                     <h2 class="bill__head-cf">TÓM TẮT ĐƠN HÀNG</h2>
                     <div class="bill-fly-choose bill-fly-choose-cf">

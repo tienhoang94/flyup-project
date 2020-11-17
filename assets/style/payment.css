@@ -539,24 +539,15 @@
     padding-left: 1rem;
 }
 .box__pay-input-item:nth-child(1) input,
-.box__pay-input-item:nth-child(2) input,
-.box__pay-input-item:nth-child(5) input,
-.box__pay-input-item:nth-child(6) input{
+.box__pay-input-item:nth-child(2) input{
     width: 23.5rem;
 }
 .box__pay-input-item:nth-child(3) input{
-    width: 17rem;
+    width: 18rem;
 }
 .box__pay-input-item:nth-child(4) input{
     width: 5rem;
 }
-.box__pay-input-item:nth-child(7) input{
-    width: 13rem;
-}
-.box__pay-input-item:nth-child(8) input{
-    width: 8rem;
-}
-
 .box__pay-input-item input::placeholder,
 .box__pay-input-item input:-ms-input-placeholder , /* Internet Explorer 10-11 */
 .box__pay-input-item input::-ms-input-placeholder /* Microsoft Edge */
@@ -567,6 +558,69 @@
     font-weight: 700;
 }
 
+.box__pay-acc-company {
+    flex-direction: column;
+    display: none;
+}
+.box__pay-acc-company-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.box__pay-acc-company-head span {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.box__pay-acc-company-head img {
+    height: 3rem;
+}
+.box__pay-acc-company-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.box__pay-acc-company-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #5d5656;
+    width: 47%;
+    margin-right: 2rem;
+}
+
+.box__pay-acc-company-item-head {
+    margin-bottom: 1rem;
+}
+.box__pay-acc-company-item-container {
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    height: 6rem;
+    align-items: center;
+}
+.box__pay-acc-company-number {
+    line-height: 2rem;
+}
+.box__pay-btn-copy {
+    display: block;
+    width: 8rem;
+    margin-left: 1rem;
+}
+.box__pay-btn-copy {
+    cursor: pointer;
+    color: var(--bg-blue-guest);
+}
+.box__pay-btn-copy:active {
+    color: #b63d3d;
+}
+
+.box__pay-acc-company-name {
+    font-size: 1.5rem;
+    color: #5d5656;
+}
+
 
 .box__pay-btn {
     margin-top: 3rem;
@@ -574,12 +628,22 @@
     justify-content: flex-end;
 }
 
+.box__pay-btn-mb {
+    margin-top: 3rem;
+    display: none;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
 .box__pay-btn a,
-.box__pay-btn a:hover{
+.box__pay-btn-mb a,
+.box__pay-btn a:hover,
+.box__pay-btn-mb a:hover{
    text-decoration: none;
 }
 
-.box__pay-btn span{
+.box__pay-btn span,
+.box__pay-btn-mb span{
     font-family: 'helvetica-neue-medium';
     font-size: 1.8rem;
     color: var(--white-color);
@@ -684,6 +748,21 @@
     z-index: 1;
 }
 
+.bill-fly-total-text-cf {
+    left: 5rem;
+}
+
+.bill-fly-total__title-icon-pm {
+    margin-top: 3rem;
+}
+
 .guide__list-pm {
     margin-top: 2rem;
+}
+
+
+.result__view-detail-pm {
+    display: none;
+    flex-direction: column;
+    padding: 3rem 3.8rem;
 }

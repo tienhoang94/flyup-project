@@ -51,6 +51,7 @@
         margin-left: 1rem;
     }
 
+
 }
 
 @media (max-width: 1023px) {
@@ -211,6 +212,13 @@
 
     .guest__email-tel__body {
         flex-wrap: wrap;
+        padding: 2rem;
+    }
+    .guest__email-tel__infor {
+        margin-right: 2rem;
+    }
+    .guest__email-tel-policy {
+        padding-top: 0;
     }
     
     .guest__email-tel__body  > *{
@@ -256,7 +264,30 @@
         padding: 3rem 3rem;
     }
 
+    .service-plus-pd { 
+        display: flex;
+    }
+    .btn-next-step {
+        justify-content: flex-end;
+        padding-bottom: 2rem;
+    }
+    .detail-group {
+        width: 100%;
+    }
+
+
+    .guest__information-mb {
+        display: block;
+    }
+
+
     /* payment */
+    .confirm__containner__wrapper {
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
 
     .box__pay {
         padding-left: 1rem;
@@ -268,6 +299,53 @@
         overflow-x: auto
     }
 
+    .box__pay-btn {
+        display: none;
+    }
+
+    .box__pay-btn-mb {
+        display: flex;
+    }
+
+    .bill__wrapper-pm {
+        width: 100%;
+    }
+
+    .result__view-detail-pm  {
+        display: flex;
+    }
+
+    .bill__head-pm {
+        margin-bottom: 0;
+    }
+
+    .bill-fly-price__list-pm {
+        padding-bottom: 2rem;
+    }
+    .bill-fly-total__title-pm::after {
+        display: none;
+    }
+    .bill-fly-total__title-pm {
+        padding-bottom: 2rem;
+    }
+    .bill-fly-price__list-pm {
+        margin-top: 0;
+    }
+    .bill-fly-total-cf {
+        padding-top: 0;
+    }
+    .bill-fly-guest-pm {
+        margin-top: 0;
+    }
+    .box__pay-acc-company {
+        padding-bottom: 2rem;
+    }
+
+
+    /* Confirmation  */
+    .confirm__containner {
+        width: 100%;
+    }
 
     /* Tour search */
 
@@ -586,15 +664,6 @@
         margin-right: 1rem;
     }
 
-    .confirm__bill-tax {
-        flex-wrap: wrap;
-    }
-
-    .bill__wrapper-cf {
-        width: 26rem;
-    }
-
-
     .bill-fly-choose-cf, .bill-fly-total__title-cf,
     .bill-fly__departure-cf, .bill-fly__return-cf {
         margin-left: 1rem;
@@ -616,27 +685,30 @@
     }
 
     /* payment */
+    .box__pay {
+        padding-bottom: 0;
+    }
+    .result__view-detail-pm {
+        padding-bottom: 0;
+        padding-top: 2rem;
+    }
+    .bill__head-pm {
+        margin-top: 2rem;
+    }
 
-    .flash__sale-view-list-pm {
-        justify-content: flex-start;
-        overflow-x: auto;
-    }
-    .flash__sale-view-list-pm::-webkit-scrollbar {
-        display: none;
-    }
-    .bill__wrapper-pm {
-        width: 20rem;
-    }
     .bill-fly-guest-pm {
         margin-left: 3rem;
+        padding: 0 9rem 0 4rem;
     }
 
     .bill-guest {
         margin-left: -2rem;
     }
 
-    .bill-fly-total__title-pm {
-        flex-direction: column;
+    .bill-fly-total__title-pm,
+    .bill-fly-price__list-pm {
+        padding: 0 12rem 0 4rem;
+        flex-direction: row;
     }
     .bill-fly-total__title-icon-pm {
         margin-left: 8rem;
@@ -663,6 +735,10 @@
     .bill__container {
         padding: 2rem 0;
     }
+    .box__pay-btn-mb {
+        margin-right: 12rem;
+    }
+
 
 }   
 
@@ -1052,29 +1128,38 @@
     
     
     /* Guest Detail */
+    .flight__detail {
+        margin-top: 0;
+    }
+    .result__view-time-place-pd h5:nth-child(3) {
+        display: none;
+    }
 
-    .flight__detail-head, .guest__information-head {
+    .result__view-detail-pd {
+        padding: 1rem 0.5rem;
+    }
+    .result__view-detail-title-pd {
+        text-align: center;
+    }
+    .result__view-time-total-label-pd:first-child {
+        margin-bottom: 2rem;
+    }
+    .result__view-time-total-label-pd:last-child {
+        margin-bottom: 0;
+    }
+
+    .flight__detail-head {
         flex-wrap: wrap;
         justify-content: space-around;
         text-align: center  ;
     }
 
-    .flight__detail-head, .guest__information-head > * {
+    .flight__detail-head {
         margin-bottom: 1rem;
 
     }
-
-    .change-search__head, .guest__information-head {
-        flex-wrap: wrap;
-    }
-
-    .change-search__head, .guest__information-head  > * {
-        margin-bottom: 1rem;
-
-    }
-    .change-search__departure, .change-search__return {
-        line-height: 3rem;
-        margin-bottom: 2rem;
+    .guest__information-head {
+        display: none;
     }
 
     .detail-return-departure {
@@ -1122,9 +1207,7 @@
         width: 100%;
     }
 
-    .guest__information-detail-nick {
-        margin-left: 0;
-    }
+
     .guest__information-luggage {
         width: 100%;
     }
@@ -1135,20 +1218,88 @@
     .guest__information-luggage-price {
         padding: 1.4rem;
     }
+    .guest__email-tel__infor input{
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .guest__email-tel__infor--margin {
+        width: 45%;
+        margin-right: 0;
+    }
+    .guest__email-tel__infor h5 {
+        font-size: 1.2rem;
+    }
+    .guest__email-tel-policy {
+        margin: 0rem;
+    }
+    .guest__email__infor_company {
+        margin-right: 0;
+    }
+    .guest__email__infor_company input {
+        padding: 0.5rem;
+    }
+
+
+    .result__view-detail-head-item-pd,
+    .result__view-detail-head-item-pd-return,
+    .result__view-detail-policy-bottom-pd,
+    .flight__detail-head-text,
+    .guest__information-head-text{
+        display: none;
+    }
+    .progress-bar-item:first-child {
+        margin-left: 0;
+    }
+
+    .result__view_detail-waiting-pd {
+        flex-direction: row;
+    }
+
+    .btn-next-step--modified {
+        height: 4rem;
+        width: 16rem;
+        font-size: 2.5rem;
+    }
+
+    .guest__information-list {
+        margin-top: 2rem;
+    }
+    .guest__information-detail-name {
+        width: 68%;
+        margin-right: 1rem;
+    }
+    .guest__information-detail-gender {
+        width: 29%;
+        margin-right: 0;
+    }
+    .guest__information-detail-gender-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .guest__information-detail-gender-box span {
+        margin-right: 0rem;
+    }
+    .result__view-time-total-bar-pd {
+        width: 100%;
+    }
+    .result__view-time-total-pd span {
+        width: 150%;
+    }
+
+    .guest__email-tel {
+        margin-top: 0;
+    }
     .guest__email-tel__body {
         padding: 1rem;
     }
-    .guest__email-tel__infor input {
-        width: 100%;
+    .guest__email-tel__infor:first-child {
+        width: 52%;
+        margin-right: 1rem;
     }
 
-    .btn-next-step {
-        justify-content: center;
-    }
 
-    .body {
-        width: 100%;
-    }
+   
 
 
     /* confirmation */
@@ -1157,9 +1308,6 @@
         width: 100%;
     }
 
-    .confirm__containner__wrapper {
-        flex-direction: column;
-    }
 
     .confirm__containner {
         width: 100%;
@@ -1196,25 +1344,37 @@
         margin-bottom: 4rem;
     }
 
-    .bill__wrapper-cf {
-        width: 100%;
-    }
 
     .confirm__bill-tax-item {
         margin-top: 2rem;
     }
 
     /* Payment */
+    .flight__detail-head-pm {
+        margin-top: 0;
+    }
 
     .guide__heading-pm {
         position: relative;
         top: 0;
         width: 30rem;
     }
-
-    .box__pay-btn {
-        margin-bottom: 3rem;
+    .box__pay {
+        padding: 1rem;
     }
+    .box__pay-input-item {
+        margin-bottom: 1rem;
+    }
+    .box__pay-acc-company-item {
+        width: 100%;
+    }
+
+    .result__view-detail-pm {
+        padding: 1rem 0.5rem;
+    }
+
+
+
 
     /* Search Tour */
     .form__search-tour-body {
