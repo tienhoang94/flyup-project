@@ -1,0 +1,148 @@
+/* Mobile- table */
+
+@media (max-width: 1023px) {
+   
+    .hide-on-mobile-table {
+        display: none;
+    }
+ 
+    /* Tour search */
+
+    .form__search-tour {
+        width: 100%;
+    }
+
+    .tour__style {
+        width: 100%;
+    }
+
+    .tour__style-text {
+        position: absolute;
+        top: 4%;
+        right: 38%;
+        width: 31%;
+    }
+    .tour__style-paginate {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tour__style-previous, .tour__style-next {
+        display: none;
+    }
+    .tour__style-list {
+        width: 90%;
+    }
+    .search-tour__container {
+        flex-direction: column;
+    }
+    .search-tour__filter, .search-tour__result {
+        width: 100%;
+    }
+
+    .tour-offer__list {
+        overflow-x: auto;
+    }
+    .tour-offer__list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tour__result-infor-list, .tour__result-vote, .tour__result-price-duration {
+        display: none;
+    }
+   
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    .hide-on-table {
+        display: none;
+    }
+
+    /* Search tour */
+
+    .search-tour__result-item {
+        margin-left: 2rem;
+        margin-right: 4rem;
+    }
+    .tour__result-content {
+        margin-right: 4rem;
+        margin-left: 2rem;
+    }
+
+
+}   
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+
+    /* Search Tour */
+    .search-tour__fluid {
+        margin-bottom: 4rem;
+    }
+    
+    .form__search-tour-body {
+        flex-direction: column;
+    }
+    .form__search-item {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #a0b4c8;
+    }
+    .tour__style-text {
+        width: 75%;
+        right: 13%;
+    }
+
+    .search-tour__result-item {
+        flex-direction: column;
+        /* margin-bottom: 2rem; */
+    }
+    .tour__result-img img {
+        width: 100%;
+        height: 20rem;
+    }
+    .tour__result-price {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .tour__result-price-number {
+        margin-bottom: 0;
+    }
+    .search-tour__result {
+        padding: 0 2rem;
+    }
+    .search-tour__result-list {
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 0;
+    }
+    .tour__result-content {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .tour__result-content::after {
+        display: none;
+    }
+    .tour__result-place, .tour__result-route, .tour__result-description {
+        margin-bottom: 1rem;
+    }
+
+    .result__view__item-sale {
+        padding: 1rem;
+        top: -1.7rem;
+    }
+
+    
+
+
+}

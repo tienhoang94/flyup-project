@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/style/searchtour.css">
     
     <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/responsive_tour.css">
 	<title>Search Tour</title>
 </head>
 <body>
@@ -82,10 +83,26 @@
                         <i class="fas fa-times"></i>
                     </div>
                     <ul class="nav__list-mobile ">
+
+                        <li class="nav__item-mobile"><div class="nav__item-infor-name"><span>Antonio Banderas</span></div></li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Chỉnh sửa profile</a></li>
                         <li class="nav__item-mobile"><a href="index.html" class="nav__link-mobile">Home</a></li>
                         <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Flash Sale</a></li>
                         <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Cố vấn du lịch</a></li>
                         <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Tin tức</a></li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Đăng xuất</a></li>
+                        <li class="nav__item nav__item--flex">
+                            <img src="https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-businessman-user-avatar-free-vector-png-image_1538405.jpg"
+                                alt="" class="nav__item-avatar">
+                            <!-- No Account -->
+                            <!-- <div class="nav__item-infor-account">
+                                <div class="nav__item-infor-name">Xin chào quý khách</div>
+                                <div class="nav__item-infor-logout">
+                                    <a href="" class="nav__item-infor-text">Đăng ký</a>
+                                    <a href="" class="nav__item-infor-text">Đăng nhập</a>
+                                </div>
+                            </div> -->
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -93,11 +110,8 @@
 
         <!-- Form search tour -->
 
-        <div class="form__search__wrapper">
+        <div class="form__search__wrapper hide-on-mobile-table">
             <div class="form__search-tour">
-                <div class="form__search-tour-head">
-                    <h4 class="form__search-head-title">Đang tìm kiếm cảm hứng du lịch? <a href="">Khám phá Fly Up Magazine</a></h4>
-                </div>
                 <div class="form__search-tour-body">
                     <div class="form__search-item">
                         <h5 class="form__search-title">Điểm đi</h5>
@@ -117,69 +131,17 @@
                 </div>
             </div>
         </div>
-        <!-- Choose Style -->
-
-        <div class="tour__style__wrapper">
-            <div class="tour__style">
-                <div class="tour__style-text">
-                    <span>LỰA CHỌN PHONG CÁCH CỦA BẠN</span>
-                </div>
-                <div class="tour__style-paginate">
-                    <div class="tour__style-previous">
-                        <i class="fas fa-caret-left"></i>
-                    </div>
-                    <ul class="tour__style-list">
-                        <li class="tour__style-item active">
-                            <img src="./assets/images/icon_tour_type_suitcase.png" alt="">
-                            <span>COMBO TIẾT KIỆM</span>
-                        </li>
-                        <li class="tour__style-item">
-                            <img src="./assets/images/icon_tour_type_swimming.png" alt="">
-                            <span>LẶN NGẮM SAN HÔ</span>
-                        </li>
-                        <li class="tour__style-item">
-                            <img src="./assets/images/icon_tour_type_mountain.png" alt="">
-                            <span>LEO NÚI KHÁM PHÁ</span>
-                        </li>
-                        <li class="tour__style-item">
-                            <img src="./assets/images/icon_standard_slipper1.png" alt="">
-                            <span>DU LỊCH BÃI BIỂN</span>
-                        </li>
-                        <li class="tour__style-item">
-                            <img src="./assets/images/icon_tour_type_suitcase.png" alt="">
-                            <span>COMBO TIẾT KIỆM</span>
-                        </li>
-                        <li class="tour__style-item">
-                            <img src="./assets/images/icon_tour_type_swimming.png" alt="">
-                            <span>LẶN NGẮM SAN HÔ</span>
-                        </li>
-                        <li class="tour__style-item">
-                            <img src="./assets/images/icon_tour_type_mountain.png" alt="">
-                            <span>LEO NÚI KHÁM PHÁ</span>
-                        </li>
-                        <li class="tour__style-item">
-                            <img src="./assets/images/icon_standard_slipper1.png" alt="">
-                            <span>DU LỊCH BÃI BIỂN</span>
-                        </li>
-                    </ul>
-                    <div class="tour__style-next">
-                        <i class="fas fa-caret-right"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- result tour -->
 
         <div class="search-tour__fluid">
             <div class="search-tour__container">
-                <div class="search-tour__filter">
+                <div class="search-tour__filter hide-on-mobile-table">
                     <h3 class="tour__filter-head">BỘ LỌC TOURS</h3>
                     <ul class="tour__filter-list">
                         <li class="tour__filter-item">
                             <h4 class="tour__filter-item-title"> <span>Lựa chọn điểm khởi hành</span><i class="fas fa-caret-down"></i></h4>
                             <form action="" class="tour__filter-place">
-                                <div class="tour__filter-place-item" > <input type="radio" name="place" id="hni">
+                                <div class="tour__filter-place-item" > <input type="radio" name="place" id="hni" checked>
                                 <label for="hni">Hà Nội ( 34 )</label> </div>
                                 <div class="tour__filter-place-item" > <input type="radio" name="place" id="dng">
                                 <label for="dng">Đà Nẵng ( 16 )</label> </div>
@@ -200,7 +162,7 @@
                                 <label for="2d">2 ngày  ( 34 )</label> </div>
                                 <div class="tour__filter-duration-item"><input type="radio" name="duration" id="5d">
                                 <label for="5d">5 ngày ( 16 )</label> </div>
-                                <div class="tour__filter-duration-item"><input type="radio" name="duration" id="3d">
+                                <div class="tour__filter-duration-item"><input type="radio" name="duration" id="3d" checked>
                                 <label for="3d">3 ngày ( 12 )</label> </div>
                                 <div class="tour__filter-duration-item"><input type="radio" name="duration" id="6d">
                                 <label for="6d">6 ngày ( 12 )</label> </div>
@@ -208,58 +170,6 @@
                                 <label for="4d">4 ngày  ( 56 )</label> </div>
                                 <div class="tour__filter-duration-item"><input type="radio" name="duration" id="7d">
                                 <label for="7d">Trên 7 ngày ( 13 )</label> </div>
-                            </form>
-                        </li>
-                        <li class="tour__filter-item">
-                            <h4 class="tour__filter-item-title"> <span>Xếp hạng Tours</span><i class="fas fa-caret-down"></i></h4>
-                            <form action="" class="tour__filter-rate">
-                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="5s">
-                                <label for="5s">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>45</span>
-                                </label> </div>
-                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="4s">
-                                <label for="4s">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>23</span>
-                                </label> </div>
-                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="3s">
-                                <label for="3s">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>12</span>
-                                </label> </div>
-                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="2s">
-                                <label for="2s">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span>15</span>
-                                </label> </div>
-                               <div class="tour__filter-rate-item"> <input type="radio" name="rate" id="1s">
-                                <label for="1s">
-                                    <i class="fas fa-star"></i>
-                                    <span>5</span>
-                                </label> </div>
-                            </form>
-                        </li>
-                        <li class="tour__filter-item">
-                            <h4 class="tour__filter-item-title"> <span>Khoảng giá</span><i class="fas fa-caret-down"></i></h4>
-                            <form action="" class="tour__filter-range-price">
-                                <!-- <input type="range" min="200000" max="1000000"> -->
-                                <p>
-                                    <label for="amount">Price range:</label>
-                                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                                  </p>
-                                  
-                                <div id="slider-range"></div>
                             </form>
                         </li>
                     </ul>
@@ -323,7 +233,6 @@
                                 </ul>   
                             </div>
                             <div class="tour__result-price">
-                                <span class="tour__result-price-title">Chỉ</span>
                                 <h4 class="tour__result-price-number">3.200.000đ</h4>
                                 <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
                                 <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
@@ -369,7 +278,6 @@
                                 </ul>   
                             </div>
                             <div class="tour__result-price">
-                                <span class="tour__result-price-title">Chỉ</span>
                                 <h4 class="tour__result-price-number">3.200.000đ</h4>
                                 <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
                                 <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
@@ -418,7 +326,6 @@
                                 </ul>   
                             </div>
                             <div class="tour__result-price">
-                                <span class="tour__result-price-title">Chỉ</span>
                                 <h4 class="tour__result-price-number">3.200.000đ</h4>
                                 <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
                                 <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
@@ -464,7 +371,6 @@
                                 </ul>   
                             </div>
                             <div class="tour__result-price">
-                                <span class="tour__result-price-title">Chỉ</span>
                                 <h4 class="tour__result-price-number">3.200.000đ</h4>
                                 <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
                                 <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
@@ -513,7 +419,6 @@
                                 </ul>   
                             </div>
                             <div class="tour__result-price">
-                                <span class="tour__result-price-title">Chỉ</span>
                                 <h4 class="tour__result-price-number">3.200.000đ</h4>
                                 <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
                                 <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
@@ -559,7 +464,6 @@
                                 </ul>   
                             </div>
                             <div class="tour__result-price">
-                                <span class="tour__result-price-title">Chỉ</span>
                                 <h4 class="tour__result-price-number">3.200.000đ</h4>
                                 <h5 class="tour__result-price-duration">3 ngày 2 đêm</h5>
                                 <a href="" class="btn-book-tour__link"><div class="btn-book btn-book-tour">MUA NGAY</div></a>
@@ -595,7 +499,7 @@
         </div>
 
         <!-- tour offer -->
-        <div class="tour-offer">
+        <div class="tour-offer hide-on-mobile-table">
             <div class="tour-offer__head">
                 <h5>SẢN PHẨM ĐỀ XUẤT</h5>
                 <h3>BẠN CŨNG CÓ THỂ THÍCH</h3>

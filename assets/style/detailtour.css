@@ -3,7 +3,7 @@
 .tour__overview {
     display: flex;
     flex-direction: column;
-    margin-top: 9rem;
+    margin-top: 4rem;
     padding: 0 1.5rem;
 }
 
@@ -431,7 +431,7 @@
 
 }
 
-.tour__body__detail-item {
+.tour__body__detail-item:not(:nth-child(2)) {
     border: 1px solid #8faecd;
     border-radius: 8px;
     box-shadow: 0 5px 5px rgba(0,0,0,.2);
@@ -472,6 +472,7 @@
 
 .table__detail-departure {
     width: 100%;
+    margin-bottom: 4rem;
 }
 
 .table__detail-departure th{
@@ -488,7 +489,7 @@
 }
 
 .table__detail-departure td{
-    border-right: 1px solid #5483b2;
+    border: 1px solid #5483b2;
     font-size: 1.8rem;
     font-family: 'helvetica-neue-regular';
     color: #484848;
@@ -541,7 +542,7 @@
     font-size: 3rem;
     color: #333333;
     text-transform: uppercase;
-    margin: 2.5rem 0 2rem 2.7rem;
+    margin: 2.5rem 0 2rem 2.5rem;
 }
 
 .tour__route-list {
@@ -549,17 +550,42 @@
 }
 
 .tour__route-item {
-
+    margin-top: 2.5rem;
+}
+.tour__route-each-day-container{
+    display: flex;
+    justify-content: space-between;
+}
+.tour__route-item:not(:last-child) {
+    border-bottom: 1px solid #a0bad4;
 }
 
-.tour__route-item > h4{
+.tour__route-each-day{
     font-family: 'helvetica-neue-regular';
     font-size: 2rem;
     margin-bottom: 1.3rem;
 }
 
-.tour__route-item > h4 span{
+.tour__route-each-day span{
     color: #00aeef;
+    margin-right: 1rem;
+}
+
+.tour__route-icon {
+    height: 3rem;
+    width: 3rem;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.tour__route-icon i{
+    color: #91a6f4;
+    font-size: 1.5rem;
 }
 
 
@@ -579,7 +605,6 @@
 .tour__route-img-list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2.5rem;
 }
 
 .tour__route-img-item {
@@ -597,22 +622,19 @@
     font-size: 1.6rem;
     line-height: 2rem;
     color: #484848;
+    margin: 2.5rem 0;
 }
 
-
-
-.tour__body__detail-item:not(:nth-child(3)) {
-    display: none;
-}
 
 
 .tour__policy-list {
     padding-left: 2.7rem;
     padding-right: 3.8rem;
+    padding-bottom: 2.5rem;
 }
 
 .tour__policy-item {
-
+    margin-top: 2rem;
 }
 
 .tour__policy-title {
@@ -635,6 +657,9 @@
     color: #b1d452;
     margin-right: 1.7rem;
 }
+.tour__policy-content-item .fa-times{
+    color: #115294;
+}
 
 .tour__policy-content-item p{
     font-family: 'helvetica-neue-light';
@@ -647,11 +672,11 @@
 /* suggest guide */
 
 .suggest__guide {
-    height: 76rem;
+    height: 34rem;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 11rem;
-    margin-bottom: 11rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
     position: relative;
     display: flex;
 }

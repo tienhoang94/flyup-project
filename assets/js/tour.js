@@ -65,17 +65,6 @@ $(document).ready(function () {
         $(this).addClass('active');
     })
 
-    // Pagination tour type
-
-    
-    $(".tour__style-previous").click (function () {
-        var leftPos = $('.tour__style-list').scrollLeft();
-        $(".tour__style-list").animate({scrollLeft: leftPos - 400}, 300);
-    })
-    $(".tour__style-next").click (function () {
-        var leftPos = $('.tour__style-list').scrollLeft();
-        $(".tour__style-list").animate({scrollLeft: leftPos + 400}, 300);
-    })
 
     // Tour route
 
@@ -89,11 +78,11 @@ $(document).ready(function () {
         $(this).addClass('active');
     })
 
-    $(".tour__body__tab-item").click(function () {
-        let idx = $(this).attr("idx");
-        $(".tour__body__detail-item").hide();
-        $(".tour__body__detail-item:nth-child("+idx+")").show();
-    })
+    // $(".tour__body__tab-item").click(function () {
+    //     let idx = $(this).attr("idx");
+    //     $(".tour__body__detail-item").hide();
+    //     $(".tour__body__detail-item:nth-child("+idx+")").show();
+    // })
 
 
 
