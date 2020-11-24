@@ -7,7 +7,12 @@
     }
  
     /* Tour search */
-
+    .form__search-tour-body {
+        display: none;
+    }
+    .change-seach-tour {
+        display: block;
+    }
     .form__search-tour {
         width: 100%;
     }
@@ -50,6 +55,21 @@
     .tour__result-infor-list, .tour__result-vote, .tour__result-price-duration {
         display: none;
     }
+
+    /* Tour & detail */
+
+    .tour__overview__head {
+        flex-direction: column;
+    }
+    .tour__overview__head-left {
+        order: 2;
+        width: 100%;
+    }
+    .tour__overview__head-img {
+        order: 1;
+        height: 20rem;
+    }
+
    
 
 }
@@ -72,6 +92,11 @@
         margin-left: 2rem;
     }
 
+    /* Detail tour */
+    .tour__overview__head-img {
+        height: 30rem;
+    }
+
 
 }   
 
@@ -89,6 +114,8 @@
     
     .form__search-tour-body {
         flex-direction: column;
+        border-right: none;
+        border-left: none;
     }
     .form__search-item {
         width: 100%;
@@ -98,6 +125,10 @@
     .tour__style-text {
         width: 75%;
         right: 13%;
+    }
+    .form__search-tour-btn {
+        width: 100%;
+        padding: 1rem 0;
     }
 
     .search-tour__result-item {
@@ -142,7 +173,55 @@
         top: -1.7rem;
     }
 
-    
+    /* detail tour */
+    .tour__overview {
+        margin-top: 1rem;
+    }
+    .tour__overview__head-left {
+        padding: 1rem;
+    }
+    .tour__overview__head-left {
+        padding: 1rem;
+    }
+    .tour-price__link, .tour-price__link:hover {
+        margin-right: 2rem;
+    }
+    .btn-book-price {
+        width: 11rem;
+        height: 4.5rem;
+        font-size: 2rem;
+    }
+    .tour-name {
+        padding: relative;
+    }
+    .tour-name::after {
+        position: absolute;
+        height: 1px;
+        width: 80%;
+        background-color: #eeeeee;
+        content: "";
+        left: 10%;
+    }
+    .tour__body-left {
+        display: none;
+    }
+    .table__detail-departure th {
+        padding: 2rem;
+    }
+    .table__detail-departure td {
+        padding: 1rem;
+    }   
+    .tour__body__departure-head {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .tour__body__departure-title {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+    .tour__body__month-item {
+        padding: 1rem;
+    }
 
 
 }

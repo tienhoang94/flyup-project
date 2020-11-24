@@ -385,6 +385,16 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+.change-seach-tour {
+    font-size: 2rem;
+    font-family: 'helvetica-neue-medium';
+    color: rgb(0 173 238);
+    border: 1px solid rgba(0,173,238,0.4);
+    padding: 1rem;
+    margin: 0 2rem;
+    display:  none;
+}
+
 .form__search-tour {
     width: 110rem;
     position: relative;

@@ -401,6 +401,7 @@
     border: 1px solid #cfdcea;
     padding: 0.4rem;
     margin-bottom: 1.6rem;
+    background-color: #fff;
 }
 
 .tour__body__tab-item {
@@ -551,10 +552,33 @@
 
 .tour__route-item {
     margin-top: 2.5rem;
+    position: relative;
 }
+.tour__route-item::after{
+    position: absolute;
+    top: 0.5rem;
+    left: -4rem;
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    background-color: #abd145;
+    border-radius: 50%;
+}
+.tour__route-item:not(:last-child)::before{
+    position: absolute;
+    top: 2rem;
+    left: -3rem;
+    content: "";
+    height: 128%;
+    width: 0.1rem;
+    background-color: #9db8d3;
+}
+
 .tour__route-each-day-container{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2.5rem;
+    align-items: center;
 }
 .tour__route-item:not(:last-child) {
     border-bottom: 1px solid #a0bad4;
@@ -563,7 +587,6 @@
 .tour__route-each-day{
     font-family: 'helvetica-neue-regular';
     font-size: 2rem;
-    margin-bottom: 1.3rem;
 }
 
 .tour__route-each-day span{
@@ -592,7 +615,6 @@
 
 
 .tour__route-detail {
-    
 }
 
 .tour__route-title {
@@ -722,3 +744,23 @@
 .btn-tour-detail-more {
 
 }   
+
+
+.sticky-route {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 4.8rem;
+}
+.sticky-price {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #3abefb;
+    left: 0;
+}
+.sticky-price .tour-price-content{
+    padding-top: 0.5rem;
+}

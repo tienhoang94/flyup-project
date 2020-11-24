@@ -84,20 +84,43 @@ $(document).ready(function () {
     //     $(".tour__body__detail-item:nth-child("+idx+")").show();
     // })
 
-
-
-    // input range 
-    $( "#slider-range" ).slider({
-        range: true,
-        min: 0,
-        max: 500,
-        values: [ 75, 300 ],
-        slide: function( event, ui ) {
-          $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+    $(".change-seach-tour").click(() => {
+        $(".change-seach-tour").toggle();
+        $(".form__search-tour-body").css("display","flex");
+    })
+    $(".form__search-tour-btn").click(() => {
+        if ($(window).width() <= 1023){ 
+            $(".form__search-tour-body").toggle();
+            $(".change-seach-tour").toggle();
         }
-      });
-      $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    })
+    
+    var arrTourRouteDetail = $(".tour__route-detail");
+    if (arrTourRouteDetail.length > 1) {
+        for ( let item in arrTourRouteDetail) {
+            // if (item > 0) {
+                $(arrTourRouteDetail[item]).hide();
+            // }
+        }
+    }
+
+    $(".tour__route-icon").click(function()  {
+        $(this).parent().next().toggle("slow");
+    })
+    
+    window.onscroll = function() {stickyChangeNav()};
+    var navbar = document.getElementById("navRouteTour");
+    var sticky = navbar.offsetTop;
+    function stickyChangeNav() {
+        if (window.pageYOffset >= sticky) {
+          $(".tour__body__tab-list").addClass("sticky-route")
+          $(".tour-price").addClass("sticky-price")
+        } else {
+          $(".tour__body__tab-list").removeClass("sticky-route");
+          $(".tour-price").removeClass("sticky-price");
+        }
+    }
+
     
 });
 

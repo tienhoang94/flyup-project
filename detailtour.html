@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/style/detailtour.css">
     
     <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/responsive_tour.css">
 	<title>Detail Tour</title>
 </head>
 <body>
@@ -97,7 +98,7 @@
             <div class="tour__overview__head">
                 <div class="tour__overview__head-left">
                     <h3 class="tour-name">TOUR MÙ CANG CHẢI - NGHĨA LỘ - TÚ LỆ MÙA LÚA CHÍN</h3>
-                    <div class="tour-vote">
+                    <div class="tour-vote hide-on-mobile">
                         <ul class="tour-vote-list">
                             <li class="tour-vote-item">
                                 <i class="fas fa-star"></i>
@@ -114,7 +115,7 @@
                         </ul>
                         <span class="tour-vote-number"> trong <span>357</span> đánh giá</span>
                     </div>
-                    <ul class="tour-feedback-list">
+                    <ul class="tour-feedback-list hide-on-mobile">
                         <li class="tour-feedback-item">
                             <i class="fas fa-eye"></i>
                             1121
@@ -128,7 +129,7 @@
                            320
                         </li>
                     </ul>
-                    <ul class="tour-infor-list">
+                    <ul class="tour-infor-list hide-on-mobile">
                         <li class="tour-infor-item">
                             Khởi hành từ: <span>08/10/2020</span>
                         </li>
@@ -181,7 +182,7 @@
                 <div class="tour__overview__head-img" style="background-image: url('https://vcdn-dulich.vnecdn.net/2019/08/13/13-8-201913-749866258-w500-7784-1565687429.png');">
                 </div>
             </div>
-            <ul class="tour__overview__img-list">
+            <ul class="tour__overview__img-list hide-on-mobile-table">
                 <li class="tour__overview__img-item">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRs58JzmkP5KGYLfgqNau7Fh1PUzE_MyHdKhg&usqp=CAU" alt="">
                 </li>
@@ -341,7 +342,7 @@
                 </div>
             </div>
             <div class="tour__body-content">
-                <ul class="tour__body__tab-list">
+                <ul class="tour__body__tab-list" id="navRouteTour">
                     <li class="tour__body__tab-item active" idx="1">
                         Lịch trình tour
                     </li>
@@ -546,14 +547,14 @@
                         <table class="table__detail-departure">
                             <thead>
                                 <tr>
-                                    <th>Điểm khởi hành</th>
+                                    <th class="hide-on-mobile">Điểm khởi hành</th>
                                     <th>Ngày khởi hành</th>
                                     <th>Khách sạn 3 - 4 sao</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td rowspan="1000" class="table_des">THÀNH PHỐ HÀ NỘI</td>
+                                    <td rowspan="1000" class="table_des hide-on-mobile">THÀNH PHỐ HÀ NỘI</td>
                                     <td>Ngày 02/9/2020</td>
                                     <td>
                                         <div class="table-price__container">
