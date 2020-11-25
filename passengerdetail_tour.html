@@ -132,7 +132,7 @@
 
             <div class="flight__detail">
                 <div class="flight__detail-head">
-                    <h2 class="flight__detail-head-text">Chi tiết đơn hàng</h2>
+                    <h2 class="tour__detail-head-text">Chi tiết đơn hàng</h2>
                     <ul class="progress-bar-list">
                         <li class="progress-bar-item done">
                             <h4 class="progress-bar-title">Tìm kiếm</h4>
@@ -198,8 +198,8 @@
             </div>
 
             <div class="guest__information">
-                <div class="guest__information-head">
-                    <h2 class="guest__information-head-text">Thông tin hành khách</h2>
+                <div class="guest__information-head-tour">
+                    <h2 class="tour__information-head-text">Thông tin hành khách</h2>
                     <ul class="progress-bar-list infor-guest">
                         <li class="progress-bar-item done">
                             <h4 class="progress-bar-title">Tìm kiếm</h4>
@@ -234,39 +234,61 @@
                             <h4>THÔNG TIN ĐOÀN DU LỊCH</h4>
                         </div>
                         <ul class="guest__information-list">
-                            <li class="guest__information-item adult-1">
+                            <li class="guest__information-item">
                                 <h5 class="guest__information-number-text">Tóm tắt đoàn</h5>
-                                <div class="guest__information-detail">
-                                    <div class="guest__information-detail-name">
-                                        <h5>Họ và tên</h5>
-                                        <input type="text" placeholder="Viết hoa không dấu"/>
-                                    </div>
-                                    <div class="guest__information-detail-gender">
-                                        <h5>Giới tính</h5>
-                                        <div class="guest__information-detail-gender-box">
-                                            <span>Lựa chọn</span>
-                                            <i class="far fa-angle-down"></i>
+                                <ul class="guest__summary-list">
+                                    <li class="guest__summary-item">
+                                        <div class="guest__summary-box">
+                                            <span>Người lớn</span>
+                                            <select>
+                                                <option>--</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
                                         </div>
-                                        <ul class="guest__information-detail-gender-list">
-                                            <li class="guest__information-gender-item">
-                                                <span>Nam</span>
-                                                <i class="fas fa-check"></i>
-                                            </li>
-                                            <li class="guest__information-gender-item">
-                                                <span>Nữ</span>
-                                                <i class="fas fa-check"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li class="guest__summary-item">
+                                        <div class="guest__summary-box">
+                                            <span>Trẻ em (2-11)</span>
+                                            <select>
+                                                <option>--</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li class="guest__summary-item">
+                                        <div class="guest__summary-box">
+                                            <span>Em bé (<2)</span>
+                                            <select>
+                                                <option>--</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ul>
 
                             </li>   
                             <li class="guest__information-item">
                                 <h5 class="guest__information-number-text">Thông tin liên hệ</h5>
                                 <ul class="guest__information-contact">
                                     <li class="guest__information-contact-item">
-                                        <h5>Họ và tên</h5>
-                                        <input type="text" placeholder="Ông/ Mr."/>
+                                        <h5>Giới tính</h5>
+                                        <!-- <input type="text" placeholder="Ông/ Mr."/> -->
+                                        <select>
+                                            <option>Nam</option>
+                                            <option>Nữ</option>
+                                        </select>
                                     </li>
                                     <li class="guest__information-contact-item">
                                         <h5>Họ và tên</h5>

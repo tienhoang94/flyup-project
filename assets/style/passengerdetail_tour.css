@@ -10,6 +10,7 @@
     font-size: 2.2rem;
     display: grid;
     grid-template-columns: auto auto;
+    line-height: 2.7rem;
 }
 .tour__passenger-detail-item {
     margin-bottom: 1rem;
@@ -19,6 +20,7 @@
     font-family: 'helvetica-neue-regular';
     font-size: 2.4rem;
     margin-bottom: 3rem;
+    line-height: 3rem;
 }
 
 .result__view-detail-item-pd h3 span{ 
@@ -62,6 +64,7 @@
     margin-top: 2rem;
     display: grid;
     grid-template-columns: auto auto auto;
+    margin-left: 3rem;
 }
 
 .guest__information-contact-item {
@@ -94,4 +97,65 @@
 .guest__information-contact-item .export-bill {
     width: 2rem;
     margin-right: 2rem;
+}
+
+.guest__information-contact-item select {
+    width: 87%;
+    height: 70%;
+    border-color: var(--border-color);
+    font-family: 'Alegreya-Regular';
+    font-size: 2.2rem;
+}
+.guest__information-contact-item option {
+
+}
+
+.guest__summary-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+}
+
+.guest__summary-box {
+    border: 1px solid var(--border-color);
+    display: inline-block;
+    font-family: 'Alegreya-Regular';
+    font-size: 2.5rem;
+    border-radius: 2px;
+}
+
+.guest__summary-box span{
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1rem 0.5rem;
+    background-color: #f1f1f1;
+}
+.guest__summary-box select{ 
+    height: 3.9rem;
+    width: 9rem;
+    border: none;
+    font-size: 2rem;
+}
+
+.guest__summary-box option{ 
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.tour__detail-head-text, .tour__information-head-text {
+    font-family: 'helvetica-neue-medium';
+    font-size: 2.4rem;
+    color: var(--white-color);
+}
+
+.guest__information-head-tour {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-blue-guest);
+    border-radius: 3px;
+    padding: 1.2rem 2rem;
+    align-items: center;
 }

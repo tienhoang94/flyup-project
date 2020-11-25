@@ -766,3 +766,11 @@
     flex-direction: column;
     padding: 3rem 3.8rem;
 }
+
+
+/* TOUR  */
+
+.confirm__containner.confirm__containner-pm.tour {
+    width: 100%;
+    margin-right: 0;
+}

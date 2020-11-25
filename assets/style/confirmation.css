@@ -282,3 +282,10 @@
     color: var(--bg-blue-color);
     text-decoration: underline;
 }
+
+
+/* TOUR */
+
+.confirm__containner.confirm__containner-tour {
+    width: 100%;
+}
