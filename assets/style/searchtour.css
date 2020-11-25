@@ -447,6 +447,10 @@
     cursor: pointer;
 }
 
+.form__search-tour-btn, .form__search-tour-btn:active  {
+    text-decoration: none;
+}
+
 .form__search-tour-btn i{
     font-size: 5rem;
     color: var(--white-color);
