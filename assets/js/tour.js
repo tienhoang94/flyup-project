@@ -112,13 +112,17 @@ $(document).ready(function () {
     var navbar = document.getElementById("navRouteTour");
     var sticky = navbar.offsetTop;
     function stickyChangeNav() {
-        if (window.pageYOffset >= sticky) {
-          $(".tour__body__tab-list").addClass("sticky-route")
-          $(".tour-price").addClass("sticky-price")
-        } else {
-          $(".tour__body__tab-list").removeClass("sticky-route");
-          $(".tour-price").removeClass("sticky-price");
+        if ($(window).width() >= 740){ 
+            if (window.pageYOffset >= sticky) {
+                $(".tour__body__tab-list").addClass("sticky-route")
+                $(".tour-price").addClass("sticky-price")
+              } else {
+                $(".tour__body__tab-list").removeClass("sticky-route");
+                $(".tour-price").removeClass("sticky-price");
+              }
         }
+
+    
     }
 
     

@@ -70,6 +70,10 @@
         height: 20rem;
     }
 
+    .tour__route-icon {
+        margin-right: 0;
+    }
+
    
 
 }
@@ -96,6 +100,19 @@
     .tour__overview__head-img {
         height: 30rem;
     }
+    .suggest__guide-content {
+        width: 90%;
+    }
+    .tour-price.sticky-price {
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 5px rgba(0,0,0,0.1);
+    }
+    .sticky-price .tour-price-content {
+        padding: 1rem;
+        color: #3abefb;
+    }
+
 
     /* Detail passenger tour */
     .guest__information-contact {
@@ -180,6 +197,10 @@
         padding: 1rem;
         top: -1.7rem;
     }
+    .tour__body__tab-item {
+        padding: 0;
+        text-align: center;
+    }
 
     /* detail tour */
     .tour__overview {
@@ -200,21 +221,24 @@
         font-size: 2rem;
     }
     .tour-name {
-        padding: relative;
+        position: relative;
     }
     .tour-name::after {
         position: absolute;
         height: 1px;
-        width: 80%;
+        width: 100%;
         background-color: #eeeeee;
         content: "";
-        left: 10%;
+        left: 0;
+        bottom: -10%;
     }
+
     .tour__body-left {
         display: none;
     }
     .table__detail-departure th {
-        padding: 2rem;
+        padding: 1rem;
+        line-height: 2rem;
     }
     .table__detail-departure td {
         padding: 1rem;
@@ -230,6 +254,28 @@
     .tour__body__month-item {
         padding: 1rem;
     }
+    .tour__route-list {
+        padding: 0 1rem 0 4.5rem;
+    }
+
+    .tour__route-each-day {
+        line-height: 2.2rem;
+    }
+    .suggest__guide {
+        height: 23rem;
+    }
+    .suggest__guide-content {
+        width: 90%;
+    }
+    .suggest__guide-content h5, .suggest__guide-content p {
+        display: none;
+    }
+    .suggest__guide-content h3 {
+        font-size: 3rem;
+    }
+
+
+  
 
     /* passenger detail  */
     .progress-bar-list {
