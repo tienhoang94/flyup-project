@@ -68,10 +68,10 @@ $(document).ready(function () {
 
     // Tour route
 
-    $(".tour__body__tab-item").click(function(){
-        $(".tour__body__tab-item").removeClass('active');
-        $(this).addClass('active');
-    })
+    // $(".tour__body__tab-item").click(function(){
+    //     $(".tour__body__tab-item").removeClass('active');
+    //     $(this).addClass('active');
+    // })
 
     $(".tour__body__month-item").click(function(){
         $(".tour__body__month-item").removeClass('active');

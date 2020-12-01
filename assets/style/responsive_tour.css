@@ -313,14 +313,15 @@
     }
 
     .guest__summary-list {
-        grid-template-columns: auto auto;
-        margin-left: 1rem;
+        grid-template-columns: auto auto auto;
+        margin-left: 0;
     }
     .guest__summary-item {
         margin-bottom: 1rem;
     }
-    .guest__summary-box select {
-        width: 5rem;
+    .guest__summary-box select, .guest__summary-box span {
+        width: auto;
+        font-size: 1.5rem;
     }
 
     .guest__information-contact {

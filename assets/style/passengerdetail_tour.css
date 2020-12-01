@@ -103,9 +103,9 @@
 .guest__information-contact-item select {
     width: 90%;
     height: 80%;
-    border-color: var(--border-color);
     font-family: 'Alegreya-Regular';
     font-size: 2.2rem;
+    border: 2px solid #edf2f6;
 }
 .guest__information-contact-item option {
 
@@ -125,7 +125,6 @@
     font-family: 'Alegreya-Regular';
     font-size: 2.5rem;
     border-radius: 2px;
-    width: 95%;
 }
 
 .guest__summary-box span{
