@@ -111,15 +111,22 @@ $(document).ready(function () {
     window.onscroll = function() {stickyChangeNav()};
     var navbar = document.getElementById("navRouteTour");
     var sticky = navbar.offsetTop;
+
+    var scheduleDetail = document.getElementById("scheduleDetail");
+
+    var departureDetail = document.getElementById("departureDetail");
+    var policyDetail = document.getElementById("policyDetail");
+
     function stickyChangeNav() {
         if ($(window).width() >= 740){ 
             if (window.pageYOffset >= sticky) {
                 $(".tour__body__tab-list").addClass("sticky-route")
                 $(".tour-price").addClass("sticky-price")
-              } else {
+            } else {
                 $(".tour__body__tab-list").removeClass("sticky-route");
                 $(".tour-price").removeClass("sticky-price");
-              }
+            }
+
         }
 
     

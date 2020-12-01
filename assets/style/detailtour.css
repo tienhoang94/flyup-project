@@ -412,6 +412,7 @@
     padding: 0.6rem 2.1rem;
     cursor: pointer;
     position: relative;
+    text-decoration: unset;
 }
 
 .tour__body__tab-item.active::after {
@@ -548,6 +549,7 @@
 
 .tour__route-list {
     padding: 0 6rem 3.5rem 7.2rem;
+    overflow: hidden;
 }
 
 .tour__route-item {
@@ -564,12 +566,12 @@
     background-color: #abd145;
     border-radius: 50%;
 }
-.tour__route-item:not(:last-child)::before{
+.tour__route-item::before{
     position: absolute;
     top: 2rem;
     left: -3rem;
     content: "";
-    height: 128%;
+    height: 300%;
     width: 0.1rem;
     background-color: #9db8d3;
 }
