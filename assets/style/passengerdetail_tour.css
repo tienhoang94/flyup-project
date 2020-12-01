@@ -79,10 +79,11 @@
 .guest__information-contact-item input{
     border: 2px solid #edf2f6;
     border-radius: 2px;
-    height: 100%;
+    height: 80%;
     font-family: 'Alegreya-Regular';
     font-size: 2.5rem;
     padding-left: 2rem;
+    width: 90%;
 }
 .guest__information-contact-item input::placeholder{
     font-size: 1.7rem;
@@ -100,8 +101,8 @@
 }
 
 .guest__information-contact-item select {
-    width: 87%;
-    height: 70%;
+    width: 90%;
+    height: 80%;
     border-color: var(--border-color);
     font-family: 'Alegreya-Regular';
     font-size: 2.2rem;
@@ -124,6 +125,7 @@
     font-family: 'Alegreya-Regular';
     font-size: 2.5rem;
     border-radius: 2px;
+    width: 95%;
 }
 
 .guest__summary-box span{
