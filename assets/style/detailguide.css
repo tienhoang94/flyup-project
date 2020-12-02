@@ -1,73 +1,11 @@
 
-/* Top Header  */
-.detail-guide__top-wrapper {
-    height: 20rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.detail-guide__top {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 8rem;
-}
-
-.detail-guide__top h3{ 
-    font-family: 'helvetica-neue-medium';
-    font-size: 3rem;
-    color: var(--white-color);
-    position: relative;
-}
-
-.detail-guide__top h3::after{ 
-    position: absolute;
-    content: "";
-    background-color: var(--white-color);
-    height: 0.1rem;
-    width: 7rem;
-    left: -2rem;
-    top: -2rem;
-} 
-.detail-guide__top h3::before{  
-    position: absolute;
-    content: "";
-    background-color: var(--white-color);
-    height: 7rem;
-    width: 0.1rem;
-    left: -2rem;
-    top: -2rem;
-}
-
-.detail-guide_breadcrumb {
-    display: flex;
-}
-
-.detail-guide_breadcrumb h5, .detail-guide-destination, .detail-guide-name{ 
-    font-family: 'Alegreya-Regular';
-    font-size: 1.7rem;
-    color: var(--white-color);
-    margin-right: 4rem;
-    position: relative;
-}
-.detail-guide_breadcrumb h5::after, .detail-guide-destination::after {
-    position: absolute;
-    content: "";
-    height: 0.1rem;
-    width: 3rem;
-    background-color: var(--white-color);
-    top: 0.8rem;
-    right: -3.6rem;
-}
-
-.detail-guide-name {
-    font-weight: 700;
-}
 
 /* information guide  */
 
 .infor-guide__wrapper {
-    margin: 10rem auto;
+    margin: 5rem auto;
     display: flex;
+    justify-content: center;
 }
 
 .infor-box {
@@ -77,14 +15,7 @@
 }
 
 .infor-box__left {
-    width: 100rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     position: relative;
-    flex: 4;
 }
 .infor-name__box {
     background-color: rgba(6,134, 208,0.7);
@@ -93,6 +24,7 @@
     width: 100%;
     position: absolute;
     bottom: 15%;
+    z-index: 9;
 }
 
 .infor-name__box h4{ 
@@ -128,10 +60,10 @@
     color: var(--green-fly-color);
 } 
 .infor-box__right {
-    flex: 5;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 3rem;
 }
 
 .infor-box__content {
@@ -264,63 +196,6 @@
     color: var(--white-color);
     padding: 1.5rem 3rem;
 }
-
-.infor-box__img-list {
-    display: flex;
-}
-
-.infor-box__img-item {
-    flex: 1;
-}
-
-.infor-box__img-item img{ 
-    height: 12rem;
-}
-
-
-/* feature guide */
-
-.feature-guide__fluid {
-    height: 40rem;
-    display: flex;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.feature-guide__list {
-    display: flex;
-
-}
-.feature-guide__item {
-    text-align: center;
-    margin-right: 3.6rem;
-}
-.feature-guide__item:last-child {
-    margin-right: 0;
-}
-
-.feature-guide__item i{ 
-    font-size: 3.6rem;
-    color: var(--white-color);
-}
-
-.feature-guide__item h5{ 
-    font-family: 'Alegreya-Regular';
-    font-weight: 700;
-    color: var(--white-color);
-    font-size: 2.2rem;
-    margin-top: 2rem;
-}
-
-.feature-guide__item span{ 
-    font-family: 'Alegreya-Regular';
-    color: var(--white-color);
-    font-size: 1.7rem;
-    margin-top: 2rem;
-    display: block;
-    line-height: 2rem;
-} 
 
 
 /* guide offer  */

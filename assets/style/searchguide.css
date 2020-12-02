@@ -1,5 +1,29 @@
 
 
+/* Form search  */
+.form__search-item-sg {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.filter-advanced {
+    
+}
+.filter-advanced i{
+    font-size: 2rem;
+    color: var(--sub-title-tour);
+    margin-right: 1rem;
+}
+.filter-advanced span{
+    font-size: 1.4rem;
+    color: var(--sub-title-tour);
+    font-family: 'SVN-Aleo-Bold';
+    cursor: pointer;
+}
+
+
 /* Result tour */
 
 .search-guide__container {
@@ -146,3 +170,4 @@
     color: var(--white-color);
     padding: 1.2rem 1.8rem;
 }
+

@@ -1,0 +1,94 @@
+/* Mobile- table */
+
+@media (max-width: 1023px) {
+   
+    .hide-on-mobile-table {
+        display: none;
+    }
+    /* detail tour */
+    .infor-box {
+        flex-direction: column;
+    }
+
+    .infor-guide__wrapper {
+        margin-top: 0;
+    }
+    .infor-box {
+        position: relative;
+    }
+    .infor-box__left {
+        margin-top: 9rem;
+    }
+    .infor-box_profile {
+        position: absolute;
+        top: 1rem;
+        font-size: 2.5rem;
+    }
+    .infor-box__title {
+        position: absolute;
+        top: 5rem;
+        font-size: 2.5rem;
+    }
+
+   
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    .hide-on-table {
+        display: none;
+    }
+
+}   
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    /* search guide */
+    .search-guide__container {
+        margin-top: 2rem;
+    }
+    .search-guide__header h5 {
+        font-size: 2.5rem;
+    }
+    .search-guide__header h2 {
+        text-align: center;
+        font-size: 3.5rem;
+    }
+    .search-guide__body {
+        margin-top: 2rem;
+    }
+
+    .filter-advanced {
+        padding: 1rem 0;
+    }
+    
+    /* detail tour */
+
+    .infor-name__box {
+        padding-top: 1rem;
+    }
+    .infor-name__box h4 {
+        font-size: 2.5rem;
+    }
+    .infor-name__box h5 {
+        font-size: 1.5rem;
+    }
+    .infor-box__right {
+        padding: 1rem;
+    }
+    .detail-guide__comment i, .detail-guide__trip i {
+        font-size: 2rem;
+    }
+    .detail-guide__comment span, .detail-guide__trip span {
+        font-size: 1.2rem;
+    }
+    .detail-guide__price span {
+        font-size: 3rem;
+    }
+
+}
