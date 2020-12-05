@@ -20,6 +20,7 @@
         <link rel="stylesheet" type="text/css" href="./assets/style/profileguide.css">
         
         <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
+        <link rel="stylesheet" type="text/css" href="./assets/style/responsive_guide.css">
 
         <title>Profile Guide</title>
     </head>
@@ -155,7 +156,7 @@
                     </li>
                     <li class="profile_infor-item">
                         <h5 class="profile_infor-title">HOẠT ĐỘNG ẤN TƯỢNG BẠN SẼ ĐƯA KHÁCH HÀNG TỚI </h5>
-                        <input type="text" class="profile_infor-name"/>
+                        <textarea type="text" class="profile_infor-activity" placeholder="Tối đa 250 từ"></textarea>
                     </li>
                     <li class="profile_infor-item">
                         <h5 class="profile_infor-title">KIỂU HÌNH DU LỊCH</h5>
@@ -163,16 +164,29 @@
                     </li>
                     <li class="profile_infor-item">
                         <h5 class="profile_infor-title">Giá dẫn tour</h5>
-                        <input type="text" class="profile_infor-name"/>
+                        <div class="profile_infor-price__box">
+                            <input type="text" class="profile_infor-price" placeholder="16.000đ/giờ"/>
+                            <span>VND</span>
+                        </div>
+                        <h5 class="profile_infor-price-free">
+                            <input type="checkbox">
+                            Tôi muốn dẫn tour miễn phí
+                        </h5>
                     </li>
                     <h4 class="infor-contact-title">Thông tin liên hệ</h4>
                     <li class="profile_infor-item">
                         <h5 class="profile_infor-title">Email của bạn</h5>
-                        <input type="text" class="profile_infor-name"/>
+                        <input type="email" class="profile_infor-email"/>
                     </li>
                     <li class="profile_infor-item">
                         <h5 class="profile_infor-title">Số điện thoại <span>(Nhận thông báo đặt tour)</span></h5>
-                        <input type="text" class="profile_infor-name"/>
+                        <input type="number" class="profile_infor-phone"/>
+                        <div class="content__send-otp">
+                            <h5>Xác thực số điện thoại của bạn. <span>Gửi lại mã</span></h5>
+                            <h5>Để xác thực số điện thoại, vui lòng nhập mã xác thực đã 
+                                được gửi tới điện thoại của bạn qua SMS.</h5>
+                            <input type="text" placeholder="XXXXXX" maxlength="6"/>
+                        </div>
                     </li>
                     <li class="profile_infor-item">
                         <div class="confirm-btn__box">

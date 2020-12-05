@@ -160,3 +160,23 @@
     padding: 1.2rem 2rem;
     align-items: center;
 }
+
+/* GUIDE  */
+.change-search-content h4 span {
+    font-family: 'helvetica-neue-light';
+    color: #f0f0f0;
+}
+
+.guest-guide__date-range {
+    font-size: 2rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.guest-guide__date-range span{ 
+    margin-right: 1rem;
+}
+
+.guest-guide__date-range input{ 
+    font-size: 1.7rem;
+}

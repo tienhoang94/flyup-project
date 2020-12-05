@@ -332,6 +332,12 @@
         justify-content: center;
     }
 
-
+    /* GUIDE  */
+    .guest-guide__date-range {
+        margin-left: 1rem;
+    }
+    .guest-guide__date-range input:first-of-type {
+        margin-bottom: 1rem;
+    }
     
 }
