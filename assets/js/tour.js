@@ -150,8 +150,20 @@ $(document).ready(function () {
             scrollTop: $( anchortag ).offset().top - 50
         }, 700);
         return false;
-	});
+    });
+    
+    // form search tour
 
+    $(".form__search-name").click(function() {
+        $(".destination-tour__container").toggle('fast');
+    })
+    $(".destination-tour__item").click(function() {
+        $(".destination-tour__container").toggle('fast');
+        $(".form__search-name").text($(this).find('h4').text());
+    })
+    $(".destination-tour_close").click(function() {
+        $(".destination-tour__container").toggle('fast')
+    })
     
 });
 

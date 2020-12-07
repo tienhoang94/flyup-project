@@ -335,6 +335,8 @@
     /* GUIDE  */
     .guest-guide__date-range {
         margin-left: 1rem;
+        display: grid;
+        grid-template-columns: auto auto;
     }
     .guest-guide__date-range input:first-of-type {
         margin-bottom: 1rem;

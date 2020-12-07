@@ -412,12 +412,20 @@
 
 .form__search-item {
     padding: 1.7rem 0 2rem 2.5rem;
-    width: 31%;
     border-right: 1px solid #a0b4c8;
+    position: relative;
+    z-index: 999999;
+}
+.form__search-item:first-child { 
+    flex: 3;
+}   
+.form__search-item:last-child { 
+    flex: 1;
 }
 
 .form__search-item input{
     border: none;
+    margin-right: 2rem;
 }
 .form__search-item input::placeholder{
     color: #e6e6e6;
@@ -590,4 +598,64 @@
 .btn-book-tour-offer__link,
 .btn-book-tour-offer__link:hover{
     text-decoration: none;
+}
+
+/* destination tour  */
+
+.destination-tour__container {
+    position: absolute;
+    z-index: 9;
+    background-color: var(--white-color);
+    width: 100%;
+    top: 9rem;
+    left: 0rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 1px solid #ccc;
+    padding: 2rem;
+    display: none;
+}
+
+.destination-tour__title {
+    font-size: 1.8rem;
+    color: var( --bg-blue-color);
+}
+
+.destination-tour__title span{ 
+    font-family: 'helvetica-neue-regular';
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.destination-tour__list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.destination-tour__item {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.destination-tour__item img{ 
+    width: 8rem;
+}
+.destination-tour__infor {
+    margin-left: 2rem;
+}
+.destination-tour__infor h4{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.destination-tour__infor h5{
+    font-size: 1.3rem;
+}
+
+.destination-tour_close {
+    position: absolute;
+    right: 2rem;
+    font-size: 2.4rem;
+    color: var(--title-tour);
+    cursor: pointer;
 }

@@ -23,32 +23,6 @@
     margin-bottom: 3rem;
 }
 
-.profile__top__container h4{
-    font-family: 'helvetica-neue-regular';
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-    color: #707070;
-    margin-bottom: 2.5rem;
-}
-
-.profile__top__container h4 span{
-    color: #111111;
-}
-
-.profile__top__container a{
-    text-decoration: none;
-    background-color: var(--bg-blue-guest);
-    display: inline-block;
-    border-radius: 5rem;
-}
-
-.profile__top__container a span{
-    font-size: 1.8rem;
-    color: var(--white-color);
-    padding: 2.5rem 6rem;
-    display: inline-block;
-}
-
 
 .profile__body__fluid {
     background-color: #ffffff;

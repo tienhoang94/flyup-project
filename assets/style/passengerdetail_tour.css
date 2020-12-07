@@ -21,9 +21,11 @@
     font-size: 2.4rem;
     margin-bottom: 3rem;
     line-height: 3rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.result__view-detail-item-pd h3 span{ 
+.result__view-detail-item-pd h3 span:last-child{ 
     color: var(--green-fly-color);
 }
 
