@@ -151,6 +151,7 @@
     color: var(--white-color);
     padding: 3rem 0;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .content__send-otp {
@@ -229,4 +230,31 @@
 
 .profile_infor-activity{
     padding-top: 1rem;
+}
+
+
+.filter-option-inner-inner {
+    font-size: 1.6rem;
+    font-family: 'helvetica-neue-medium';
+    color: #707070;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 3rem;
+}
+
+.btn.dropdown-toggle.btn-light {
+    height: 5rem;
+    border-radius: 1rem;
+}
+
+.bootstrap-select.show-tick .dropdown-menu li a span.text {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-family: 'helvetica-neue-medium';
+}
+
+.dropdown-toggle::after {
+    font-size: 2rem;
+    margin-right: 2rem;
 }

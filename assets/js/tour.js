@@ -164,6 +164,8 @@ $(document).ready(function () {
     $(".destination-tour_close").click(function() {
         $(".destination-tour__container").toggle('fast')
     })
+
+    $('select').selectpicker();
     
 });
 
