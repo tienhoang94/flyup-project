@@ -401,6 +401,7 @@
     left: 50%;
     transform: translateX(-50%);
     padding: 2.3rem 0 3.5rem;
+    z-index: 1;
 }
 
 .form__search-tour-body {
