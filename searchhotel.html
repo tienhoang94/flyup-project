@@ -1,0 +1,441 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome -->
+    
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/css/all.min.css">
+    <!-- css for style  -->
+    <link rel="stylesheet" type="text/css" href="./assets/style/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/base.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/grid.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/style/header.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/footer.css">
+
+
+    <!-- style.css -->
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/style/searchhotel.css"> -->
+    <link rel="stylesheet/less" type="text/css" href="./assets/style/searchhotel.less" />
+    
+    <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/responsive_tour.css">
+    
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<title>Search hotel</title>
+</head>
+<body>
+    <div class="wrapper-fluid wrapper-fluid-search-hotel">
+         <!-- Header -->
+         <div class="wrapper__header-bg wrapper__header-height">
+            <header class="wrapper header">
+                <nav >
+                    <ul class="nav__list hide-on-mobile-table">
+                        <li class="nav__item"><a href="index.html" class="nav__link">
+                                <img src="./assets/images/logo-FlyUp.png" alt="logo_flyup" class="nav__link-logo">
+                            </a></li>
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Flash Sale</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Cố vấn du lịch</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Tin tức</a></li>
+                        <li class="nav__item">
+                            <div class="nav__item-view-cart">
+                                <div class="nav__item-text-cart">Tra cứu đơn hàng</div>
+                            </div>
+                        </li>
+                        <li class="nav__item nav__item--flex">
+                            <img src="https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-businessman-user-avatar-free-vector-png-image_1538405.jpg"
+                                alt="" class="nav__item-avatar">
+                            <!-- Has Account -->
+                            <div class="nav__item-infor-account">
+                                <div class="nav__item-infor-name">Xin chào <span>Antonio Banderas</span></div>
+                                <div class="nav__item-infor-logout">
+                                    <a href="" class="nav__item-infor-text">Đăng xuất</a>
+                                    <a href="" class="nav__item-infor-text">Chỉnh sửa profile</a>
+                                </div>
+                            </div>
+                            <!-- No Account -->
+                            <!-- <div class="nav__item-infor-account">
+                                <div class="nav__item-infor-name">Xin chào quý khách</div>
+                                <div class="nav__item-infor-logout">
+                                    <a href="" class="nav__item-infor-text">Đăng ký</a>
+                                    <a href="" class="nav__item-infor-text">Đăng nhập</a>
+                                </div>
+                            </div> -->
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- navbar for mobile and tablet -->
+                <div class="nav__list-mobile-tablet">
+                    <div class="nav__icon-menu" id="openTabMenu">
+                        <div class="nav__icon-list">
+                            <div class="nav__icon-item"></div>
+                            <div class="nav__icon-item"></div>
+                            <div class="nav__icon-item"></div>
+                        </div>
+                    </div>
+                    <div class="nav__logo-home-page"><a href="index.html" class="nav__link">
+                            <img src="./assets/images/logo-FlyUp.png" alt="logo_flyup" class="nav__link-logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar__overlay"></div>
+
+                <nav class="nav__mobile">
+                    <div class="nav_mobile-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <ul class="nav__list-mobile ">
+
+                        <li class="nav__item-mobile"><div class="nav__item-infor-name"><span>Antonio Banderas</span></div></li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Chỉnh sửa profile</a></li>
+                        <li class="nav__item-mobile"><a href="index.html" class="nav__link-mobile">Home</a></li>
+                        <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Flash Sale</a></li>
+                        <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Cố vấn du lịch</a></li>
+                        <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Tin tức</a></li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Đăng xuất</a></li>
+                        <li class="nav__item nav__item--flex">
+                            <img src="https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-businessman-user-avatar-free-vector-png-image_1538405.jpg"
+                                alt="" class="nav__item-avatar">
+                            <!-- No Account -->
+                            <!-- <div class="nav__item-infor-account">
+                                <div class="nav__item-infor-name">Xin chào quý khách</div>
+                                <div class="nav__item-infor-logout">
+                                    <a href="" class="nav__item-infor-text">Đăng ký</a>
+                                    <a href="" class="nav__item-infor-text">Đăng nhập</a>
+                                </div>
+                            </div> -->
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>  
+
+        <!-- Form search hotel -->
+        <div class="search__wrapper">
+            <div class="search__container">
+                <div class="search-text">
+                    <div class="search-input">
+                        <input type="text" placeholder="Nhập điểm đến, khách sạn"/>
+                        <i class="far fa-search"></i>
+                    </div>
+                </div>
+                <div class="search-date">
+                    <input type="text" name="dates" />
+                </div>
+                <div class="search-button">
+                    <span>Tìm kiếm</span>
+                </div>
+            </div>
+        </div>
+        <main class="body-hotel">
+            <div class="body__wrapper">
+                <div class="filter-container">
+                    <div class="top">
+                        <h5 class="title">Xem giá</h5>
+                    </div>
+                    <div class="body">
+                        <h5 class="title">Mức giá</h5>
+                        <ul class="list-price">
+                            <li>
+                                <input type="checkbox" id="1">
+                                <label for="1">Dưới 500.000 ₫</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="2">
+                                <label for="2">500.000 ₫ – 1.000.000 ₫</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="3">
+                                <label for="3">1.000.000 ₫ – 2.000.000 ₫</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="4">
+                                <label for="4">2.000.000 ₫ – 5.000.000 ₫</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="5">
+                                <label for="5">Trên 5.000.000 ₫</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom">
+                        <h5 class="title">Xếp hạng khách sạn</h5>
+                        <ul class="list-star">
+                            <li>
+                                <input type="checkbox" id="5s">
+                                <label for="5s" class="box-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="4s">
+                                <label for="4s" class="box-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="3s">
+                                <label for="3s" class="box-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="2s">
+                                <label for="2s" class="box-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="1">
+                                <label for="1s" class="box-star">
+                                    <i class="fas fa-star"></i>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content__wrapper">
+                    <h3 class="title">Khách sạn tại <span>Thành phố Hồ Chí Minh</span></h3>
+                    <div class="sort__box">
+                        <h5><span class="number">157</span> khách sạn</h5>
+                        <ul class="list__sort">
+                            <li>
+                                <input type="radio" name="sort" id="suggest">
+                                <label for="suggest">Được gợi ý</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="sort" id="priceMinimum">
+                                <label for="priceMinimum">Giá thấp nhất</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="sort" id="priceMaximum">
+                                <label for="priceMaximum">Giá cao nhất</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="sort" id="highVote">
+                                <label for="highVote">Đánh giá cao</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="list-hotel">
+                        <li class="item-hotel">
+                            <div class="image-box">
+                                <img src="https://i.vntrip.vn/200x200/smart/https://statics.vntrip.vn/data-v2/hotels/6791/img_max/6791_1598087647_city_1.jpg" alt="">
+                            </div>
+                            <div class="infor-box">
+                                <h5 class="name-hotel">Khách sạn The Odys Boutique</h5>
+                                <ul class="vote-star">
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="address"><i class="far fa-map-marker-alt"></i><span>65-67-69  Nguyễn Thái Bình, Phường Nguyễn Thái Bình, Quận 1, Hồ Chí Minh, Việt Nam</span></p>
+                                <ul class="list-service">
+                                    <li>
+                                        <i class="fas fa-wifi"></i>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-taxi"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-dumbbell"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fad fa-utensils-alt"></i>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-golf-club"></i>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-spa"></i>
+                                    </li>
+                                </ul>
+                                <div class="member">
+                                    <i class="fas fa-user"></i>
+                                    <span>Ưu đãi đặc biệt cho thành viên</span>
+                                </div>
+                            </div>
+                            <div class="price-box">
+                                <div class="top">
+                                    <h5>
+                                        <span>Tốt</span>
+                                        <svg width="32" height="10" viewBox="0 0 32 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9044 10L16.224 8.2918L19.5436 10L18.9096 6.38197L21.5952 3.81966L17.8838 3.2918L16.224 0L14.5642 3.2918L10.8528 3.81966L13.5384 6.38197L12.9044 10ZM11.1806 7.45236C10.8445 7.93589 6.1599 5.25182 4.25782 3.96241C4.01059 3.79823 3.79641 3.59082 3.62604 3.3506C3.43729 3.0902 3.39202 2.7554 3.50506 2.45591C3.52894 2.39111 3.56052 2.32928 3.59915 2.2717V2.24539C3.64287 2.19105 3.69121 2.14043 3.74366 2.09408C3.99412 1.8828 4.3362 1.80867 4.65437 1.89672C4.94329 1.97089 5.21563 2.09693 5.45754 2.26841C7.34954 3.58414 11.5066 6.95897 11.1705 7.44249L11.1806 7.45236ZM11.1974 8.53756C11.0025 9.25134 4.34184 8.05403 1.5425 7.33367C1.18011 7.24621 0.837988 7.09218 0.534329 6.87975C0.201688 6.65647 0.00203054 6.28774 0 5.89296C0.0010422 5.80753 0.0123212 5.72253 0.0336056 5.63968V5.60021C0.0579015 5.51777 0.0917258 5.43831 0.134422 5.36338C0.337646 5.01738 0.702445 4.79207 1.10898 4.76143C1.47969 4.72822 1.85347 4.76279 2.21125 4.8634C5.00387 5.60679 11.3822 7.82378 11.1873 8.54743L11.1974 8.53756ZM27.7388 3.9624C25.8367 5.2518 21.1555 7.93588 20.8194 7.45235L20.8362 7.44248C20.5002 6.95896 24.6605 3.58413 26.5492 2.2684C26.7914 2.0975 27.0637 1.97152 27.3524 1.89671C27.6663 1.8104 28.0036 1.88184 28.253 2.08749C28.3017 2.13509 28.3445 2.18808 28.3807 2.24538L28.3975 2.27169C28.4385 2.3284 28.4713 2.39039 28.4949 2.45589C28.6082 2.75579 28.5616 3.0912 28.3706 3.35058C28.2002 3.59081 27.986 3.79821 27.7388 3.9624ZM20.8026 8.53793C20.9975 9.25171 27.6581 8.05441 30.4575 7.33405C30.8196 7.24592 31.1616 7.09193 31.4657 6.88012C31.7992 6.65762 31.9991 6.2884 32 5.89333C31.9983 5.80815 31.9882 5.72332 31.9697 5.64005V5.60058C31.9428 5.51858 31.9079 5.43928 31.8656 5.36375C31.6632 5.01693 31.2979 4.79131 30.891 4.76181C30.5192 4.72872 30.1443 4.76329 29.7854 4.86378C26.9927 5.60716 20.6144 7.82416 20.8093 8.5478L20.8026 8.53793Z" fill="#FA8C16"></path></svg>
+                                    </h5>
+                                    <p><span>(50 đánh giá)</span><b>7.8</b></p>
+                                </div>
+                                <div class="bottom">
+                                    <h5 class="sale">
+                                        <span class="old-price">900.000đ</span>
+                                        <span class="number">-70%</span>
+                                    </h5>
+                                    <div class="price">
+                                        <i class="far fa-usd-circle"></i>
+                                        <div class="number">366.213đ</div>
+                                    </div>
+                                    <div class="button">
+                                        <span>Xem phòng</span>
+                                    </div>
+                                    <p>Chỉ còn 3 phòng!</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <div class="btn-scroll-to-top"><i class="fa fa-chevron-up"></i></div>
+        <!-- Footer -->
+        <footer class="footer__container">
+            <div class="footer__top__container">
+                <div class="wrapper footer__top">
+                    <div class="footer__top-social hide-on-mobile">
+                        <div class="footer__top-social-logo">
+                            <img src="./assets/images/logo-FlyUp_1.png" alt="logo_flyup" class="nav__link-logo">
+                        </div>
+                        <div class="footer__top-social-des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod
+                        </div>
+                        <ul class="footer__top-social-icon-list">
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-youtube"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-twitter"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-google-plus-g"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-instagram"></i></a>
+                            </li>
+                           
+                        </ul>
+
+                    </div>
+                    <div class="footer__top-menu hide-on-mobile-table">
+                        <h5 class="footer__top-menu-title">MENU</h5>
+                        <ul class="footer__top-menu-list">
+                            <li class="footer__top-menu-item"><a href="">Vé máy bay</a></li>
+                            <li class="footer__top-menu-item"><a href="">Tour - Combo du lịch</a></li>
+                            <li class="footer__top-menu-item"><a href="">Khách sạn</a></li>
+                            <li class="footer__top-menu-item"><a href="">Thuê xe - Đưa đón</a></li>
+                            <li class="footer__top-menu-item"><a href="">Cố vấn du lịch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__top-menu hide-on-mobile-table">
+                        <h5 class="footer__top-menu-title">Hợp tác - đầu tư</h5>
+                        <ul class="footer__top-menu-list">
+                            <li class="footer__top-menu-item"><a href="">Đăng nhập (nhà cung cấp)</a></li>
+                            <li class="footer__top-menu-item"><a href="">Chính sách hợp tác</a></li>
+                            <li class="footer__top-menu-item"><a href="">Lĩnh vực - Danh mục đầu tư</a></li>
+                            <li class="footer__top-menu-item"><a href="">Cơ hội đầu tư </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__top-contact">
+                        <div class="footer__top-address">
+                            <div class="footer__top-icon">
+                                <img src="./assets/images/icon_address.png" alt="" class="footer__top-icon-img">
+                            </div>
+                            <div class="footer__top-title footer__top-title--margin">Địa chỉ</div>
+                            <div class="footer__top-detail">3931 Hinkle Deegan Lake Road </div>
+                            <div class="footer__top-detail">Binghamton, NY 13904 </div>
+                        </div>
+                        <div class="footer__top-email-tel">
+                            <div class="footer__top-email-tel-wrap">
+                                <div class="footer__top-icon">
+                                    <img src="./assets/images/icon_mail.png" alt="" class="footer__top-icon-img">
+                                </div>
+                                <div class="footer__top-title">Email</div>
+                            </div>
+                            <div>
+                                <div class="footer__top-detail">info@travel.com </div>
+                                <div class="footer__top-detail">info@tourism.com</div>
+                            </div>
+                        </div>
+                        <div class="footer__top-email-tel">
+                            <div class="footer__top-email-tel-wrap">
+                                <div class="footer__top-icon">
+                                    <img src="./assets/images/icon_phone.png" alt="" class="footer__top-icon-img">
+                                </div>
+                                <div class="footer__top-title">Tổng đài 24/7</div>
+                            </div>
+                           
+                            <div>
+                                <div class="footer__top-detail">+1800 246 7813 </div>
+                                <div class="footer__top-detail">+1800 246 7813 </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </div>
+            <div class="footer__bottom__container hide-on-mobile-table">
+                <div class="wrapper footer__bottom">
+                    <div class="footer__bottom-copyright">
+                        Copyright@FlyUp2020
+                    </div>
+                    <ul class="footer__bottom-infor-list">
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Chính sách bảo mật </a>
+                        </li>
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Chính sách bảo hành </a>
+                        </li>
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Điều khoản sử dụng </a>
+                        </li>
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Các câu hỏi thường gặp </a>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+        </footer>
+    </div>
+
+      <!-- Script  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/hotel.js"></script>
+</body>
+
+</html>

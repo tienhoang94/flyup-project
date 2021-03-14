@@ -130,6 +130,13 @@ $(document).ready(function () {
             $(".search__container__number-mb").css("transform","translateY(200%)");
             $(".navbar__overlay").hide();
         })
+
+        // Choose type service 
+        // search__type__item--active
+        $(".search__type__item").click(function() {
+            $(".search__type__item").removeClass("search__type__item--active");
+            $(this).addClass("search__type__item--active");
+        })
     
         // Flash Sales 
         $("#flashSaleClick").click(function(){
