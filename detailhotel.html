@@ -1,0 +1,380 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome -->
+
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/css/all.min.css">
+    <!-- css for style  -->
+    <link rel="stylesheet" type="text/css" href="./assets/style/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/base.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/grid.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/style/header.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/footer.css">
+    <!-- Fotorama from CDNJS, 19 KB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+    <!-- style.css -->
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/style/searchhotel.css"> -->
+    <link rel="stylesheet/less" type="text/css" href="./assets/style/searchhotel.less" />
+
+    <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/responsive_tour.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <title>Search hotel</title>
+</head>
+
+<body>
+    <div class="wrapper-fluid wrapper-fluid-search-hotel">
+        <!-- Header -->
+        <div class="wrapper__header-bg wrapper__header-height">
+            <header class="wrapper header">
+                <nav>
+                    <ul class="nav__list hide-on-mobile-table">
+                        <li class="nav__item"><a href="index.html" class="nav__link">
+                                <img src="./assets/images/logo-FlyUp.png" alt="logo_flyup" class="nav__link-logo">
+                            </a></li>
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Flash Sale</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Cố vấn du lịch</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Tin tức</a></li>
+                        <li class="nav__item">
+                            <div class="nav__item-view-cart">
+                                <div class="nav__item-text-cart">Tra cứu đơn hàng</div>
+                            </div>
+                        </li>
+                        <li class="nav__item nav__item--flex">
+                            <img src="https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-businessman-user-avatar-free-vector-png-image_1538405.jpg"
+                                alt="" class="nav__item-avatar">
+                            <!-- Has Account -->
+                            <div class="nav__item-infor-account">
+                                <div class="nav__item-infor-name">Xin chào <span>Antonio Banderas</span></div>
+                                <div class="nav__item-infor-logout">
+                                    <a href="" class="nav__item-infor-text">Đăng xuất</a>
+                                    <a href="" class="nav__item-infor-text">Chỉnh sửa profile</a>
+                                </div>
+                            </div>
+                            <!-- No Account -->
+                            <!-- <div class="nav__item-infor-account">
+                                <div class="nav__item-infor-name">Xin chào quý khách</div>
+                                <div class="nav__item-infor-logout">
+                                    <a href="" class="nav__item-infor-text">Đăng ký</a>
+                                    <a href="" class="nav__item-infor-text">Đăng nhập</a>
+                                </div>
+                            </div> -->
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- navbar for mobile and tablet -->
+                <div class="nav__list-mobile-tablet">
+                    <div class="nav__icon-menu" id="openTabMenu">
+                        <div class="nav__icon-list">
+                            <div class="nav__icon-item"></div>
+                            <div class="nav__icon-item"></div>
+                            <div class="nav__icon-item"></div>
+                        </div>
+                    </div>
+                    <div class="nav__logo-home-page"><a href="index.html" class="nav__link">
+                            <img src="./assets/images/logo-FlyUp.png" alt="logo_flyup" class="nav__link-logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar__overlay"></div>
+
+                <nav class="nav__mobile">
+                    <div class="nav_mobile-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <ul class="nav__list-mobile ">
+
+                        <li class="nav__item-mobile">
+                            <div class="nav__item-infor-name"><span>Antonio Banderas</span></div>
+                        </li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Chỉnh sửa profile</a></li>
+                        <li class="nav__item-mobile"><a href="index.html" class="nav__link-mobile">Home</a></li>
+                        <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Flash Sale</a></li>
+                        <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Cố vấn du lịch</a></li>
+                        <li class="nav__item-mobile"><a href="#" class="nav__link-mobile">Tin tức</a></li>
+                        <li class="nav__item-mobile"><a href="" class="nav__link-mobile">Đăng xuất</a></li>
+                        <li class="nav__item nav__item--flex">
+                            <img src="https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-businessman-user-avatar-free-vector-png-image_1538405.jpg"
+                                alt="" class="nav__item-avatar">
+                            <!-- No Account -->
+                            <!-- <div class="nav__item-infor-account">
+                                <div class="nav__item-infor-name">Xin chào quý khách</div>
+                                <div class="nav__item-infor-logout">
+                                    <a href="" class="nav__item-infor-text">Đăng ký</a>
+                                    <a href="" class="nav__item-infor-text">Đăng nhập</a>
+                                </div>
+                            </div> -->
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <!-- Form search hotel -->
+        <div class="search__wrapper">
+            <div class="search__container">
+                <div class="search-text">
+                    <div class="search-input">
+                        <input type="text" placeholder="Nhập điểm đến, khách sạn" />
+                        <i class="far fa-search"></i>
+                    </div>
+                </div>
+                <div class="search-date">
+                    <input type="text" name="dates" />
+                </div>
+                <div class="search-button">
+                    <span>Tìm kiếm</span>
+                </div>
+            </div>
+        </div>
+        <main class="body-hotel">
+            <div class="body__wrapper">
+                <div class="top">
+                    <div class="hotel-name">
+                        <h5 class="name">Khách sạn The Odys Boutique</h5>
+                        <ul class="vote-star">
+                            <li>
+                                <i class="fas fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="address">
+                        <i class="far fa-map-marker-alt"></i>
+                        <span>65-67-69 Nguyễn Thái Bình, Phường Nguyễn Thái Bình, Quận 1, Hồ Chí Minh, Việt Nam
+                        </span>
+                    </p>
+                    <div class="list-gallery">
+                        <div class="fotorama" data-width="600" data-ratio="1" data-allowfullscreen="true"
+                            data-fit="cover" data-nav="thumbs">
+                            <img src="https://ttol.vietnamnetjsc.vn//2016/06/01/16/24/nu-sinh-da-nang-xinh-xan-da-tai-tu-lap-tu-nam-16-tuoi_6.jpg"
+                                width="144" height="96">
+                            <img src="https://media.vietravel.net/Images/NewsPicture/nghe-hdv(2).jpg" width="144"
+                                height="96">
+                            <img src="https://caodang.fpt.edu.vn/wp-content/uploads/149-500x333.jpg" width="144"
+                                height="96">
+                            <img src="http://ionetour.com/wp-content/uploads/2015/06/huong-dan-vien-du-lich-fix.png"
+                                width="144" height="96">
+                            <img src="http://blogdulich.com.vn/uploads/001-Blogdulich/4-Cam-nang-du-lich/2-Ky-nang-kinh-nghiem/Nhung-viec-can-thiet-khi-chuan-bi-di-du-lich/Nhung-viec-can-thiet-khi-chuan-bi-di-du-lich-1.jpg"
+                                width="144" height="96">
+                            <img src="https://dulichsaigon.edu.vn/upload/images/IMG_4388.jpg" width="144" height="96">
+                            <img src="https://hanoimoi.com.vn/Uploads/images/anhthu/2019/11/17/hdv.jpg" width="144"
+                                height="96">
+                            <img src="https://www.bachkhoasaigon.edu.vn/images/2017/trungcapdulich/hng%20dn%20vin%20du%20lch%20vit%20nam.jpg"
+                                width="144" height="96">
+                        </div>
+                    </div>
+                </div>
+                <div class="roomFilter">
+                    <ul>
+                        <li class="liTitle">
+                            <p>Chọn lọc:</p>
+                        </li>
+                        <li class="liItem">
+                            <button type="button">
+                                <span>Miễn phí hủy phòng</span>
+                            </button>
+                        </li>
+                        <li class="liItem">
+                            <button type="button">
+                                <span>Bao gồm bữa ăn</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="list-hotel">
+                    <li class="item-hotel">
+                        <div class="top-hotel">
+                            <img src="https://statics2.vntrip.vn/165x165/data-v2/hotels/616573/img_max/616573_1591258192_the_odys_hotel_2_3.jpg"
+                                alt="">
+                            <div class="roomItem__info">
+                                <div class="roomItem__info__left">
+                                    <div class="roomItem__name"><button type="button"
+                                            class="yellow-1 semibold"><i class="fad fa-bed"></i><span>Superior Double/Twin </span></button></div>
+                                    <div class="roomItem__flex">
+                                        <div class="roomItem__facilities">
+                                            <div class="facilities">
+                                                <div class="facilities__item">
+                                                    <div class="tooltip"><span>Diện tích 18.0 m2</span></div>
+                                                </div>
+                                                <div class="facilities__item">
+                                                    <div class="tooltip"><span>Điều hòa</span></div>
+                                                </div>
+                                                <div class="facilities__item">
+                                                    <div class="tooltip"><span>Không hút thuốc</span></div>
+                                                </div>
+                                                <div class="facilities__item">
+                                                    <div class="tooltip"><span>Mini bar</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="roomItem__bed dropdown "><button type="button"
+                                                class="ant-dropdown-trigger dropdown-toggle dropdown-toggle_sm">
+                                                <span><strong>1 Giường cỡ Queen</strong></span></button></div>
+                                    </div>
+                                </div>
+                                <div class="roomItem__info__right">
+                                    <div class="roomItem__show">
+                                        <button type="button" class="btnShowDetail">
+                                            <span>Xem chi tiết</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <div class="btn-scroll-to-top"><i class="fa fa-chevron-up"></i></div>
+        <!-- Footer -->
+        <footer class="footer__container">
+            <div class="footer__top__container">
+                <div class="wrapper footer__top">
+                    <div class="footer__top-social hide-on-mobile">
+                        <div class="footer__top-social-logo">
+                            <img src="./assets/images/logo-FlyUp_1.png" alt="logo_flyup" class="nav__link-logo">
+                        </div>
+                        <div class="footer__top-social-des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod
+                        </div>
+                        <ul class="footer__top-social-icon-list">
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-youtube"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-twitter"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-google-plus-g"></i></a>
+                            </li>
+                            <li class="footer__top-social-icon-item">
+                                <a href="" class="footer_top-link"><i
+                                        class="footer_top-link-icon fab fa-instagram"></i></a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <div class="footer__top-menu hide-on-mobile-table">
+                        <h5 class="footer__top-menu-title">MENU</h5>
+                        <ul class="footer__top-menu-list">
+                            <li class="footer__top-menu-item"><a href="">Vé máy bay</a></li>
+                            <li class="footer__top-menu-item"><a href="">Tour - Combo du lịch</a></li>
+                            <li class="footer__top-menu-item"><a href="">Khách sạn</a></li>
+                            <li class="footer__top-menu-item"><a href="">Thuê xe - Đưa đón</a></li>
+                            <li class="footer__top-menu-item"><a href="">Cố vấn du lịch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__top-menu hide-on-mobile-table">
+                        <h5 class="footer__top-menu-title">Hợp tác - đầu tư</h5>
+                        <ul class="footer__top-menu-list">
+                            <li class="footer__top-menu-item"><a href="">Đăng nhập (nhà cung cấp)</a></li>
+                            <li class="footer__top-menu-item"><a href="">Chính sách hợp tác</a></li>
+                            <li class="footer__top-menu-item"><a href="">Lĩnh vực - Danh mục đầu tư</a></li>
+                            <li class="footer__top-menu-item"><a href="">Cơ hội đầu tư </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__top-contact">
+                        <div class="footer__top-address">
+                            <div class="footer__top-icon">
+                                <img src="./assets/images/icon_address.png" alt="" class="footer__top-icon-img">
+                            </div>
+                            <div class="footer__top-title footer__top-title--margin">Địa chỉ</div>
+                            <div class="footer__top-detail">3931 Hinkle Deegan Lake Road </div>
+                            <div class="footer__top-detail">Binghamton, NY 13904 </div>
+                        </div>
+                        <div class="footer__top-email-tel">
+                            <div class="footer__top-email-tel-wrap">
+                                <div class="footer__top-icon">
+                                    <img src="./assets/images/icon_mail.png" alt="" class="footer__top-icon-img">
+                                </div>
+                                <div class="footer__top-title">Email</div>
+                            </div>
+                            <div>
+                                <div class="footer__top-detail">info@travel.com </div>
+                                <div class="footer__top-detail">info@tourism.com</div>
+                            </div>
+                        </div>
+                        <div class="footer__top-email-tel">
+                            <div class="footer__top-email-tel-wrap">
+                                <div class="footer__top-icon">
+                                    <img src="./assets/images/icon_phone.png" alt="" class="footer__top-icon-img">
+                                </div>
+                                <div class="footer__top-title">Tổng đài 24/7</div>
+                            </div>
+
+                            <div>
+                                <div class="footer__top-detail">+1800 246 7813 </div>
+                                <div class="footer__top-detail">+1800 246 7813 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="footer__bottom__container hide-on-mobile-table">
+                <div class="wrapper footer__bottom">
+                    <div class="footer__bottom-copyright">
+                        Copyright@FlyUp2020
+                    </div>
+                    <ul class="footer__bottom-infor-list">
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Chính sách bảo mật </a>
+                        </li>
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Chính sách bảo hành </a>
+                        </li>
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Điều khoản sử dụng </a>
+                        </li>
+                        <li class="footer__bottom-infor-item">
+                            <a href="">Các câu hỏi thường gặp </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/hotel.js"></script>
+</body>
+
+</html>
