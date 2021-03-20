@@ -19,6 +19,7 @@
     <!-- style.css -->
     <!-- <link rel="stylesheet" type="text/css" href="./assets/style/searchhotel.css"> -->
     <link rel="stylesheet/less" type="text/css" href="./assets/style/searchhotel.less" />
+    <link rel="stylesheet/less" type="text/css" href="./assets/style/detailhotel.less" />
 
     <link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
     <link rel="stylesheet" type="text/css" href="./assets/style/responsive_tour.css">
@@ -204,41 +205,144 @@
                 </div>
                 <ul class="list-hotel">
                     <li class="item-hotel">
-                        <div class="top-hotel">
+                        <div class="header-hotel">
                             <img src="https://statics2.vntrip.vn/165x165/data-v2/hotels/616573/img_max/616573_1591258192_the_odys_hotel_2_3.jpg"
                                 alt="">
                             <div class="roomItem__info">
                                 <div class="roomItem__info__left">
-                                    <div class="roomItem__name"><button type="button"
-                                            class="yellow-1 semibold"><i class="fad fa-bed"></i><span>Superior Double/Twin </span></button></div>
+                                    <div class="roomItem__name">
+                                        <button type="button" class="yellow-1 semibold">
+                                            <i class="fad fa-bed"></i><span>Superior Double/Twin </span>
+                                        </button>
+                                    </div>
                                     <div class="roomItem__flex">
                                         <div class="roomItem__facilities">
                                             <div class="facilities">
                                                 <div class="facilities__item">
-                                                    <div class="tooltip"><span>Diện tích 18.0 m2</span></div>
+                                                    <div class="tooltip"><i class="fal fa-chart-area"></i><span>Diện
+                                                            tích 18.0 m2</span></div>
                                                 </div>
                                                 <div class="facilities__item">
-                                                    <div class="tooltip"><span>Điều hòa</span></div>
+                                                    <div class="tooltip"><i
+                                                            class="far fa-air-conditioner"></i><span>Điều hòa</span>
+                                                    </div>
                                                 </div>
                                                 <div class="facilities__item">
-                                                    <div class="tooltip"><span>Không hút thuốc</span></div>
+                                                    <div class="tooltip"><i class="far fa-smoking-ban"></i><span>Không
+                                                            hút thuốc</span></div>
                                                 </div>
                                                 <div class="facilities__item">
-                                                    <div class="tooltip"><span>Mini bar</span></div>
+                                                    <div class="tooltip"><i
+                                                            class="far fa-glass-martini-alt"></i><span>Mini bar</span>
+                                                    </div>
+                                                </div>
+                                                <div class="facilities__item">
+                                                    <div class="tooltip"><i class="fal fa-tv-retro"></i><span>Tivi TV +
+                                                            Truyền hình cáp</span></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="roomItem__bed dropdown "><button type="button"
+                                        <div class="roomItem__bed dropdown ">
+                                            <button type="button"
                                                 class="ant-dropdown-trigger dropdown-toggle dropdown-toggle_sm">
-                                                <span><strong>1 Giường cỡ Queen</strong></span></button></div>
+                                                <span><strong>1 Giường cỡ Queen</strong></span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="roomItem__info__right">
                                     <div class="roomItem__show">
                                         <button type="button" class="btnShowDetail">
                                             <span>Xem chi tiết</span>
+                                            <i class="far fa-arrow-right"></i>
                                         </button>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="roomItem__body">
+                            <div class="roomItem__row">
+                                <div class="roomItem__policy">
+                                    <div class="roomPolicy">
+                                        <div class="roomPolicy__item green">
+                                            <div class="roomPolicy__icon">
+                                                <i class="far fa-dollar-sign"></i>
+                                            </div>
+                                            <div class="roomPolicy__text">
+                                                <span>Hủy phòng</span>
+                                                <span>Có hoàn hủy
+                                                    <div class="tooltipBox">
+                                                        <i class="fal fa-question-circle"></i>
+                                                        <div class="tooltipBox__cont">
+                                                            <p class="semibold">Chính sách hủy phòng</p>
+                                                            <p class="mb0">Nếu hủy bỏ hoặc sửa đổi trước 24 giờ so với ngày
+                                                                đến khách sạn, bạn sẽ không bị tính phí. Nếu hủy bỏ hoặc sửa
+                                                                đổi muộn hơn 24 giờ trước ngày đến khách sạn, bạn sẽ phải
+                                                                trả toàn bộ giá trị đặt phòng. Nếu bạn vắng mặt, bạn sẽ phải
+                                                                trả toàn bộ giá trị đặt phòng.</p>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="roomPolicy__item red">
+                                            <div class="roomPolicy__icon">
+                                                <i class="far fa-utensils-alt"></i>
+                                            </div>
+                                            <div class="roomPolicy__text">
+                                                <span>Bữa ăn</span>
+                                                <span>Không bao gồm</span>
+                                            </div>
+                                        </div>
+                                        <div class="roomPolicy__item green">
+                                            <div class="roomPolicy__icon">
+                                                <i class="fas fa-user-friends"></i>
+                                            </div>
+                                            <div class="roomPolicy__text">
+                                                <span>Sức chứa</span>
+                                                <span>2 người lớn</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="roomItem__price">
+                                    <div class="pricing">
+                                        <p class="pricing__old"><s>1.000.000₫</s><span class="pricing__percent">-65%</span>
+                                        </p>
+                                        <div class="pricing__current">
+                                            <p class="pPrice">
+                                                <i class="far fa-exclamation-circle"></i>350.000₫</p>
+                                            <div class="priceTooltip">
+                                                <div class="priceTooltip__group">
+                                                    <div class="priceTooltip__line"><span>Giá chưa thuế
+                                                            phí</span><span>850.000₫</span></div>
+                                                    <div class="priceTooltip__line"><span>Thuế và
+                                                            phí</span><span>+150.000₫</span></div>
+                                                </div>
+                                                <div class="priceTooltip__group">
+                                                    <div class="priceTooltip__line"><span>Giá từ khách sạn</span><span
+                                                            class="text-through"><s>1.000.000₫</s></span></div>
+                                                    <ul>
+                                                        <li><span>Khuyến mại</span><span>-650.000₫</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="priceTooltip__total"><span>Giá mỗi đêm</span><span
+                                                        class="yellow-3 bold">350.000₫</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="pricing__promotion">
+                                            <div class="promotion">
+                                                <p class="promotion__title">Giá mỗi đêm đã áp dụng</p>
+                                                <p class="promotion__price">Khuyến mại<span>(-650.000₫)</span></p>
+                                                <p class="promotion__price green-1">Giá đã bao gồm phí và thuế</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="roomItem__btn">
+                                    <button type="button" class="ant-btn ant-btn-primary">
+                                        <span>Đặt phòng</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
