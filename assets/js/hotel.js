@@ -2,6 +2,7 @@ $(document).ready(function () {
     $(document).mouseup(function(e) {
         var containerNumber = $(".search-number .number__container");
         var containerLocation = $(".search-input .select-location");
+        var containerSelectTypeRoom = $(".roomItem__flex .roomItem__bed");
         // if the target of the click isn't the container nor a descendant of the container
         if (!containerNumber.is(e.target) && containerNumber.has(e.target).length === 0) 
         {
@@ -10,7 +11,11 @@ $(document).ready(function () {
         if (!containerLocation.is(e.target) && containerLocation.has(e.target).length === 0) 
         {
             $(".search-input .select-location").hide();
-        }    
+        }
+        if (!containerSelectTypeRoom.is(e.target) && containerSelectTypeRoom.has(e.target).length === 0) 
+        {
+            $(".roomItem__flex .roomItem__bed .select-type-room").hide();
+        } 
         
     });
 
@@ -100,8 +105,19 @@ $(document).ready(function () {
     })
 
     $('.liItem button').click(function () {
-        console.log("AAAA");
         $(this).toggleClass('select')
     })
+    
+    // select type room
+    $('.roomItem__flex .roomItem__bed button').click(function () {
+        $(this).parent().find('.select-type-room').toggle();
+    });
+    $('.roomItem__flex .roomItem__bed .item').click(function () {
+        const contentType = $(this).find('span').text();
+        const selector = $(this).parent().parent().prev();
+        $(selector).find('span').text(contentType);
+        $(this).parent().parent().hide();
+    });
+
 
 });

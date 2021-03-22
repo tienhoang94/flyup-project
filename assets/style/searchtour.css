@@ -409,6 +409,7 @@
     justify-content: space-between;
     width: 100%;
     border: 1px solid var(--sub-title-tour);
+    border-radius: 1rem;
 }
 
 .form__search-item {
@@ -454,6 +455,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .form__search-tour-btn, .form__search-tour-btn:active  {
