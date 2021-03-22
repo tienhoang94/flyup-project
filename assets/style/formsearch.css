@@ -11,6 +11,13 @@
     padding-bottom: 3.9rem;
 }
 
+.form-search-all .form-seach-item {
+    display: none;
+}
+.form-search-all .form-seach-item.show {
+    display: block;
+}
+
 .search__container-fly {
    
     height: 13.2rem;

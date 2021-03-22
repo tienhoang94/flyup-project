@@ -147,6 +147,15 @@
         border-right: none;
         border-bottom: 1px solid #a0b4c8;
     }
+    .form__search-item:nth-child(2) {
+        z-index: 1;
+    }
+    .destination-tour__list {
+        grid-template-columns: auto;
+        max-height: 25rem;
+        overflow-y: auto;
+    }
+
     .tour__style-text {
         width: 75%;
         right: 13%;

@@ -136,6 +136,11 @@ $(document).ready(function () {
         $(".search__type__item").click(function() {
             $(".search__type__item").removeClass("search__type__item--active");
             $(this).addClass("search__type__item--active");
+            const idx = $(this).attr('idx');
+            $(".form-seach-item").hide();
+            console.log(idx);
+            $(`.form-seach-item:nth-child(${idx})`).show();
+
         })
     
         // Flash Sales 
@@ -503,6 +508,7 @@ $(document).ready(function () {
         // document.getElementById('dateDeparture').valueAsDate = new Date();
         // document.getElementById('dateComeback').valueAsDate = new Date();
         
+
 
         
         // Deal attraction

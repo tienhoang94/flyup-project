@@ -165,7 +165,5 @@ $(document).ready(function () {
         $(".destination-tour__container").toggle('fast')
     })
 
-    $('select').selectpicker();
-    
 });
 
