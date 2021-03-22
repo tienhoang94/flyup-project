@@ -1,3 +1,5 @@
+@import './responsive.less';
+
 .wrapper-fluid-search-hotel {
     .search__wrapper {
         margin: 2rem 0;
@@ -93,15 +95,24 @@
                     margin-bottom: 2rem;
                     .header-hotel {
                         display: flex;
+                        .media-phone ({
+                            position: relative;
+                        });
                         img {
                             width: 100px;
                             border-top-left-radius: 1rem;
+                            .media-phone ({
+                                height: 100px;
+                            });
                         }
                         .roomItem__info {
                             display: flex;
                             justify-content: space-between;
                             width: 100%;
                             padding: 1rem;
+                            .media-phone ({
+                                flex-direction: column;
+                            });
                             .roomItem__info__left {
                                 width: 100%;
                                 .roomItem__name {
@@ -110,12 +121,18 @@
                                         font-family: 'helvetica-neue-medium';
                                         font-size: 1.8rem;
                                         color: var(--bg-blue-guest);
+                                        .media-phone ({
+                                            font-size: 1.4rem;
+                                        });
                                     }
                                 }
                                 .roomItem__flex {
                                     display: flex;
                                     flex-direction: row;
                                     align-items: center;
+                                    .media-phone ({
+                                        flex-wrap: wrap;
+                                    });
                                     .roomItem__bed {
                                         position: relative;
                                         button {
@@ -153,6 +170,12 @@
                                             display: flex;
                                             justify-content: flex-start;
                                             width: 100%;
+                                            .media-phone ({
+                                                display: grid;
+                                                grid-template-columns: auto auto;
+                                                gap: 1rem;
+                                                margin: 1rem 0 2rem;
+                                            });
                                             .facilities__item {
                                                 margin: 0 1rem;
                                                 .tooltip {
@@ -175,6 +198,11 @@
                             }
                             .roomItem__info__right {
                                 width: 12rem;
+                                .media-phone ({
+                                    position: absolute;
+                                    bottom: 5px;
+                                    right: 0;
+                                });
                                 .roomItem__show {
                                     button {
                                         background-color: transparent;
@@ -193,6 +221,9 @@
                                             font-size: 1.4rem;
                                         }
                                     }
+                                    .see-detail__box {
+                                        display: none;
+                                    }
                                 }
                             }
                         }
@@ -203,6 +234,9 @@
                             justify-content: space-between;
                             padding: 1rem;
                             border-top: 1px solid #e1e1e1;
+                            .media-phone ({
+                                position: relative;
+                            });
                             .roomItem__policy {
                                 flex: 3;
                                 .roomPolicy {
@@ -210,8 +244,15 @@
                                     justify-content: space-around;
                                     height: 100%;
                                     align-items: center;
+                                    .media-phone ({
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                    });
                                     .roomPolicy__item {
                                         display: flex;
+                                        .media-phone ({
+                                            margin-bottom: 1rem;
+                                        });
                                         .roomPolicy__icon {
                                             border-radius: 50%;
                                             border: 2px solid;
@@ -221,6 +262,10 @@
                                             justify-content: center;
                                             align-items: center;
                                             margin-right: 1rem;
+                                            .media-phone ({
+                                                height: 3rem;
+                                                width: 3rem;
+                                            });
                                             i {
                                                 font-size: 2rem;
                                             }
@@ -342,6 +387,11 @@
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: center;
+                                .media-phone ({
+                                    position: absolute;
+                                    bottom: 10px;
+                                    right: 10px;
+                                });
                                 button {
                                     text-transform: uppercase;
                                     background-color: var(--title-tour);
@@ -383,6 +433,14 @@
                         color: var(--text-color);
                         line-height: 1.8rem;
                         font-family: 'SVN-Avo';
+                        .more {
+                            .morecontent span {
+                                display: none;
+                            }
+                            .morelink {
+                                display: block;
+                            }
+                        }
                     };
                 }
             }
@@ -390,3 +448,62 @@
 
     }
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, .4);
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        position: relative;
+        border-radius: 1rem;
+        max-height: 80vh;
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 1rem;
+            top: 0;
+            &:hover, &:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+        .box-content {
+            .name {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+            .content {
+                display: flex;
+                justify-content: space-between;
+                .library {
+                    flex: 1;
+                }
+                .roomDetail__text {
+                    flex: 1;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    overflow-y: auto;
+                }
+            }
+        }
+
+    }
+}
+

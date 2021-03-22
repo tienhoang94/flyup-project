@@ -1,3 +1,5 @@
+@import './responsive.less';
+
 .wrapper-fluid-search-hotel {
     .search__wrapper {
         margin: 2rem 0;
@@ -15,6 +17,9 @@
                 padding: 1rem;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                 border-radius: 4px;
+                .media-phone({
+                    display: none;
+                });
                 .top {
                     padding: 1rem 0;
                     border-bottom: 1px solid #e1e1e1;
@@ -69,6 +74,9 @@
             .content__wrapper {
                 width: 70%;
                 margin-left: 2vw;
+                .media-phone ({
+                    width: 100%;
+                });
                 h3.title {
                     font-size: 2rem;
                     color: var(--text-color);
@@ -81,10 +89,17 @@
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                     padding: 1.5rem;
                     border-radius: 4px;
+                    .media-phone ({
+                        flex-direction: column;
+                    });
                     h5 {
                         font-size: 1.5rem;
                         color: var(--text-color);
                         margin-right: 2rem;
+                        font-weight: bold;
+                        .media-phone ({
+                            margin-bottom: 1rem;
+                        })
                     }
                     .list__sort {
                         display: flex;
@@ -188,6 +203,9 @@
                                 flex-direction: column;
                                 justify-content: space-between;
                                 align-items: flex-end;
+                                .media-phone ({
+                                    flex: none;
+                                });
                                 .top {
                                     h5 {
                                         display: flex;
@@ -287,6 +305,13 @@
     border-radius: 1rem;
     color: var(--sub-title-tour);
     font-family: 'SVN-Aleo-Regular';
+    .media-phone ({
+        flex-direction: column;
+        >div {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    });
     .search-text {
         flex: 3;
         margin-right: 1rem;

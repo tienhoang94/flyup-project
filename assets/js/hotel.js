@@ -100,9 +100,9 @@ $(document).ready(function () {
     });
 
     //search
-    $('.search-button').click(function () {
-        console.log("search");
-    })
+    // $('.search-button').click(function () {
+    //     console.log("search");
+    // })
 
     $('.liItem button').click(function () {
         $(this).toggleClass('select')
@@ -119,5 +119,63 @@ $(document).ready(function () {
         $(this).parent().parent().hide();
     });
 
+    // See more information hotel 
 
+    // Configure/customize these variables.
+    var showChar = 500;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Xem thêm >";
+    var lesstext = "Rút gọn";
+    
+
+    $('.list-info .content .more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+
+    // Modal 
+    var modal = $('.modal');
+    var btn = $('.roomItem__show button');
+    var span = $('.close');
+
+    btn.click(function () {
+        const content = $(this).next().html();
+        console.log(content);
+        modal.show();
+        $('.modal .modal-content .box-content').html(content);
+
+    });
+
+    span.click(function () {
+        modal.hide();
+    });
+
+    $(window).on('click', function (e) {
+        if ($(e.target).is('.modal')) {
+        modal.hide();
+        }
+    });
 });
