@@ -7,5 +7,9 @@ $(document).ready(function () {
             "separator": " -> ",
         }
     });
-
+    $('#aniimated-thumbnials').lightGallery({
+        thumbnail:true,
+        animateThumb: true,
+        showThumbByDefault: false
+    }); 
 });

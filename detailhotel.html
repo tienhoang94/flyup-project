@@ -26,7 +26,8 @@
 
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css" />
+    
     <title>Search hotel</title>
 </head>
 
@@ -166,7 +167,7 @@
                         </span>
                     </p>
                     <div class="list-gallery">
-                        <div class="fotorama" data-width="600" data-ratio="1" data-allowfullscreen="true"
+                        <!-- <div class="fotorama" data-width="600" data-ratio="1" data-allowfullscreen="true"
                             data-fit="cover" data-nav="thumbs">
                             <img src="https://ttol.vietnamnetjsc.vn//2016/06/01/16/24/nu-sinh-da-nang-xinh-xan-da-tai-tu-lap-tu-nam-16-tuoi_6.jpg"
                                 width="144" height="96">
@@ -183,6 +184,25 @@
                                 height="96">
                             <img src="https://www.bachkhoasaigon.edu.vn/images/2017/trungcapdulich/hng%20dn%20vin%20du%20lch%20vit%20nam.jpg"
                                 width="144" height="96">
+                        </div> -->
+                        <div id="aniimated-thumbnials">
+                            <a href="https://ttol.vietnamnetjsc.vn//2016/06/01/16/24/nu-sinh-da-nang-xinh-xan-da-tai-tu-lap-tu-nam-16-tuoi_6.jpg">
+                                <img src="https://ttol.vietnamnetjsc.vn//2016/06/01/16/24/nu-sinh-da-nang-xinh-xan-da-tai-tu-lap-tu-nam-16-tuoi_6.jpg" />
+                            </a>
+                            <a href="https://caodang.fpt.edu.vn/wp-content/uploads/149-500x333.jpg">
+                                <img src="https://caodang.fpt.edu.vn/wp-content/uploads/149-500x333.jpg" />
+                            </a>
+                            <!-- <a
+                                href="https://ttol.vietnamnetjsc.vn//2016/06/01/16/24/nu-sinh-da-nang-xinh-xan-da-tai-tu-lap-tu-nam-16-tuoi_6.jpg">
+                            <a href="https://media.vietravel.net/Images/NewsPicture/nghe-hdv(2).jpg">
+                            <a href="https://caodang.fpt.edu.vn/wp-content/uploads/149-500x333.jpg">
+                            <a href="http://ionetour.com/wp-content/uploads/2015/06/huong-dan-vien-du-lich-fix.png">
+                            <a
+                                href="http://blogdulich.com.vn/uploads/001-Blogdulich/4-Cam-nang-du-lich/2-Ky-nang-kinh-nghiem/Nhung-viec-can-thiet-khi-chuan-bi-di-du-lich/Nhung-viec-can-thiet-khi-chuan-bi-di-du-lich-1.jpg">
+                            <a href="https://dulichsaigon.edu.vn/upload/images/IMG_4388.jpg">
+                            <a href="https://hanoimoi.com.vn/Uploads/images/anhthu/2019/11/17/hdv.jpg">
+                            <a
+                                href="https://www.bachkhoasaigon.edu.vn/images/2017/trungcapdulich/hng%20dn%20vin%20du%20lch%20vit%20nam.jpg"> -->
                         </div>
                     </div>
                 </div>
@@ -275,10 +295,14 @@
                                                         <i class="fal fa-question-circle"></i>
                                                         <div class="tooltipBox__cont">
                                                             <p class="semibold">Chính sách hủy phòng</p>
-                                                            <p class="mb0">Nếu hủy bỏ hoặc sửa đổi trước 24 giờ so với ngày
-                                                                đến khách sạn, bạn sẽ không bị tính phí. Nếu hủy bỏ hoặc sửa
-                                                                đổi muộn hơn 24 giờ trước ngày đến khách sạn, bạn sẽ phải
-                                                                trả toàn bộ giá trị đặt phòng. Nếu bạn vắng mặt, bạn sẽ phải
+                                                            <p class="mb0">Nếu hủy bỏ hoặc sửa đổi trước 24 giờ so với
+                                                                ngày
+                                                                đến khách sạn, bạn sẽ không bị tính phí. Nếu hủy bỏ hoặc
+                                                                sửa
+                                                                đổi muộn hơn 24 giờ trước ngày đến khách sạn, bạn sẽ
+                                                                phải
+                                                                trả toàn bộ giá trị đặt phòng. Nếu bạn vắng mặt, bạn sẽ
+                                                                phải
                                                                 trả toàn bộ giá trị đặt phòng.</p>
                                                         </div>
                                                     </div>
@@ -307,11 +331,13 @@
                                 </div>
                                 <div class="roomItem__price">
                                     <div class="pricing">
-                                        <p class="pricing__old"><s>1.000.000₫</s><span class="pricing__percent">-65%</span>
+                                        <p class="pricing__old"><s>1.000.000₫</s><span
+                                                class="pricing__percent">-65%</span>
                                         </p>
                                         <div class="pricing__current">
                                             <p class="pPrice">
-                                                <i class="far fa-exclamation-circle"></i>350.000₫</p>
+                                                <i class="far fa-exclamation-circle"></i>350.000₫
+                                            </p>
                                             <div class="priceTooltip">
                                                 <div class="priceTooltip__group">
                                                     <div class="priceTooltip__line"><span>Giá chưa thuế
@@ -475,10 +501,17 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- library image  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-thumbnail.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-fullscreen.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-zoom.min.js"></script>
+    
     <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/hotel.js"></script>
+    
 </body>
 
 </html>
