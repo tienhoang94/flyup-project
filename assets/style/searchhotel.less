@@ -3,7 +3,6 @@
 .wrapper-fluid-search-hotel {
     .search__wrapper {
         margin: 2rem 0;
-
     }
     .body-hotel {
         margin: 2rem 0;
@@ -306,6 +305,7 @@
     color: var(--sub-title-tour);
     font-family: 'SVN-Aleo-Regular';
     .media-phone ({
+        display: none;
         flex-direction: column;
         >div {
             width: 100%;
@@ -520,4 +520,19 @@
         font-size: 1.3rem; 
         color: var(--title-tour);
     }
+}
+
+.change-seach-hotel {
+    font-size: 2rem;
+    font-family: 'helvetica-neue-medium';
+    color: rgb(0 173 238);
+    border: 1px solid rgba(0, 173, 238, 0.4);
+    padding: 1rem;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    .media-phone({
+        display: block;
+    });
 }

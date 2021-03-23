@@ -178,4 +178,16 @@ $(document).ready(function () {
         modal.hide();
         }
     });
+
+    // change search hotel mobile 
+    $('.change-seach-hotel').click(function () {
+        $('.search__container').show();
+        $(this).hide();
+
+        $('.search__container .search-button').click(function () {
+            $('.change-seach-hotel').show();
+            $('.search__container').hide();
+        });
+    });
+
 });
